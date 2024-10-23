@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Instagram, Facebook, Menu } from 'lucide-react'
@@ -11,6 +11,26 @@ const cormorantGaramond = Cormorant_Garamond({ subsets: ['latin'], weight: ['400
 
 export function HeroWithNavbarComponent() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isNavbarVisible, setIsNavbarVisible] = useState(true)
+  const [lastScrollY, setLastScrollY] = useState(0)
+
+  const handleScroll = useCallback(() => {
+    const currentScrollY = window.scrollY
+    if (currentScrollY > lastScrollY) {
+      // Scrolling down
+      setIsNavbarVisible(false)
+    } else {
+      // Scrolling up
+      setIsNavbarVisible(true)
+    }
+    setLastScrollY(currentScrollY)
+  }, [lastScrollY])
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll, { passive: true })
+
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [handleScroll])
 
   return (
     <div className="relative h-screen w-full overflow-hidden">
@@ -24,7 +44,11 @@ export function HeroWithNavbarComponent() {
       />
       <div className="absolute inset-0 bg-black bg-opacity-30" />
       
-      <nav className={`fixed top-0 left-0 right-0 z-50 bg-white bg-opacity-90 py-4 ${cormorantGaramond.className}`}>
+      <nav 
+        className={`fixed top-0 left-0 right-0 z-50 bg-white py-4 transition-all duration-300 ease-in-out ${cormorantGaramond.className} ${
+          isNavbarVisible ? 'translate-y-0' : '-translate-y-full'
+        }`}
+      >
         <div className="container mx-auto px-4">
           {/* Mobile Navbar */}
           <div className="flex items-center justify-between lg:hidden">
@@ -89,7 +113,7 @@ export function HeroWithNavbarComponent() {
                   height={60}
                   className="mb-2"
                 />
-                <span className="text-[20px] text-gray-600">Boutique Hotel | Uvita, Costa Rica</span>
+                {/*<span className="text-[20px] text-gray-600">Boutique Hotel | Uvita, Costa Rica</span>*/}
               </div>
               <div>
                 <Link

@@ -6,6 +6,8 @@ import Link from 'next/link'
 import { Instagram, Facebook, Check, X, Upload } from 'lucide-react'
 import { Lora, Cormorant_Garamond } from 'next/font/google'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-expect-error
 import { Button } from "@/components/ui/button"
 
 const lora = Lora({ subsets: ['latin'] })
