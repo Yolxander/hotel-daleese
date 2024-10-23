@@ -75,7 +75,7 @@ export function GuestTestimonialsComponent() {
             {[...testimonials, ...testimonials].map((testimonial, index) => (
               <div key={index} className={`flex-shrink-0 ${viewportSize === 'mobile' ? 'w-full' : viewportSize === 'tablet' ? 'w-1/2' : 'w-1/3'} px-4`}>
                 <div className="bg-gray-100 p-6 rounded-lg shadow-sm h-full">
-                  <p className="text-lg mb-4">"{testimonial.quote}"</p>
+                  <p className="text-lg mb-4">&#34;{testimonial.quote}&#34;</p>
                   <p className="text-right font-bold">{testimonial.author}</p>
                 </div>
               </div>
