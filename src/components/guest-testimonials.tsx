@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Cormorant_Garamond } from 'next/font/google'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 
@@ -23,18 +23,51 @@ const testimonials: Testimonial[] = [
   {
     quote: "Got connected to this place last minute and Rosa and Dave were really accommodating. It is the perfect place to stay if you're traveling solo and want some down time!",
     author: "Liz D."
+  },
+  {
+    quote: "This was the best accommodations one could ask for. From their hospitality to the rooms and everything in between. They went above and beyond to satisfy any requests and make sure we're taken care of. We can't wait to stay there again. Thank you for everything!",
+    author: "Chase H."
   }
-]
+];
 
 export function GuestTestimonialsComponent() {
-  const [currentPage, setCurrentPage] = useState(0)
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const [viewportSize, setViewportSize] = useState('desktop')
 
-  const nextPage = () => {
-    setCurrentPage((prevPage) => (prevPage + 1) % Math.ceil(testimonials.length / 3))
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 640) {
+        setViewportSize('mobile')
+      } else if (window.innerWidth < 1024) {
+        setViewportSize('tablet')
+      } else {
+        setViewportSize('desktop')
+      }
+    }
+    handleResize()
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
+
+  const getVisibleCount = () => {
+    switch (viewportSize) {
+      case 'mobile': return 1
+      case 'tablet': return 2
+      default: return 3
+    }
   }
 
-  const prevPage = () => {
-    setCurrentPage((prevPage) => (prevPage - 1 + Math.ceil(testimonials.length / 3)) % Math.ceil(testimonials.length / 3))
+  const nextTestimonial = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length)
+  }
+
+  const prevTestimonial = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + testimonials.length) % testimonials.length)
+  }
+
+  const getVisibleTestimonials = () => {
+    const visibleCount = getVisibleCount()
+    return [...testimonials, ...testimonials].slice(currentIndex, currentIndex + visibleCount)
   }
 
   return (
@@ -42,31 +75,35 @@ export function GuestTestimonialsComponent() {
       <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">
         Read what our guests have to say:
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-        {testimonials.slice(currentPage * 3, (currentPage + 1) * 3).map((testimonial, index) => (
-          <div key={index} className="bg-gray-100 p-6 rounded-lg shadow-sm">
-            <p className="text-lg mb-4">"{testimonial.quote}"</p>
-            <p className="text-right font-bold">{testimonial.author}</p>
+      <div className="relative">
+        <div className="overflow-hidden">
+          <div className="flex transition-transform duration-300 ease-in-out" style={{ transform: `translateX(-${currentIndex * (100 / getVisibleCount())}%)` }}>
+            {[...testimonials, ...testimonials].map((testimonial, index) => (
+              <div key={index} className={`flex-shrink-0 ${viewportSize === 'mobile' ? 'w-full' : viewportSize === 'tablet' ? 'w-1/2' : 'w-1/3'} px-4`}>
+                <div className="bg-gray-100 p-6 rounded-lg shadow-sm h-full">
+                  <p className="text-lg mb-4">"{testimonial.quote}"</p>
+                  <p className="text-right font-bold">{testimonial.author}</p>
+                </div>
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
-      <div className="flex justify-center space-x-4 mb-8">
+        </div>
         <button
-          onClick={prevPage}
-          className="bg-gray-800 text-white rounded-full p-2 hover:bg-black transition-colors"
-          aria-label="Previous testimonials"
+          onClick={prevTestimonial}
+          className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-800 text-white rounded-full p-2 hover:bg-black transition-colors"
+          aria-label="Previous testimonial"
         >
           <ChevronLeft size={24} />
         </button>
         <button
-          onClick={nextPage}
-          className="bg-gray-800 text-white rounded-full p-2 hover:bg-black transition-colors"
-          aria-label="Next testimonials"
+          onClick={nextTestimonial}
+          className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-800 text-white rounded-full p-2 hover:bg-black transition-colors"
+          aria-label="Next testimonial"
         >
           <ChevronRight size={24} />
         </button>
       </div>
-      <div className="text-center">
+      <div className="text-center mt-8">
         <a
           href="https://www.google.com/search?q=Hotel+Daleese+reviews"
           target="_blank"
