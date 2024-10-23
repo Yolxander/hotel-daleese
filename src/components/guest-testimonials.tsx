@@ -53,14 +53,14 @@ export function GuestTestimonialsComponent() {
       <div className="flex justify-center space-x-4 mb-8">
         <button
           onClick={prevPage}
-          className="bg-[#0F758C] text-white rounded-full p-2 hover:bg-[#0D6579] transition-colors"
+          className="bg-gray-800 text-white rounded-full p-2 hover:bg-black transition-colors"
           aria-label="Previous testimonials"
         >
           <ChevronLeft size={24} />
         </button>
         <button
           onClick={nextPage}
-          className="bg-[#0F758C] text-white rounded-full p-2 hover:bg-[#0D6579] transition-colors"
+          className="bg-gray-800 text-white rounded-full p-2 hover:bg-black transition-colors"
           aria-label="Next testimonials"
         >
           <ChevronRight size={24} />
@@ -71,7 +71,7 @@ export function GuestTestimonialsComponent() {
           href="https://www.google.com/search?q=Hotel+Daleese+reviews"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block border-2 border-[#0F758C] text-[#0F758C] px-6 py-2 rounded hover:bg-[#0F758C] hover:text-white transition-colors"
+          className="inline-block border-2 border-gray-800 text-gray-800 px-6 py-2 rounded hover:bg-black hover:text-white transition-colors"
         >
           See Our Google Reviews
         </a>
