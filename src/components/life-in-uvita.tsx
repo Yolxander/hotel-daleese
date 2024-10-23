@@ -20,7 +20,7 @@ export function LifeInUvitaComponent() {
           </p>
           <Link 
             href="/discover-uvita" 
-            className="inline-block border-2 border-[#0F758C] text-[#0F758C] px-8 py-3 text-xl rounded hover:bg-[#0F758C] hover:text-white transition-colors"
+            className="inline-block border-2 border-gray-800 text-gray-800 px-8 py-3 text-xl rounded hover:bg-gray-800 hover:text-white transition-colors"
           >
             Discover Uvita
           </Link>

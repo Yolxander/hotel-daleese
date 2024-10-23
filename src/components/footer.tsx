@@ -22,7 +22,7 @@ const FacebookIcon = () => (
 )
 
 export function FooterComponent() {
-  const [currentYear, setCurrentYear] = useState(new Date().getFullYear())
+  const [currentYear, setCurrentYear] = useState(() => new Date().getFullYear())
 
   useEffect(() => {
     setCurrentYear(new Date().getFullYear())
@@ -41,12 +41,12 @@ export function FooterComponent() {
           <h3 className="text-xl font-bold mb-4">Links</h3>
           <ul className="space-y-2">
             <li>
-              <Link href="/policies" className="text-[#0F758C] hover:underline">
+              <Link href="/policies" className="text-gray-800 underline hover:no-underline transition-all duration-300">
                 Policies
               </Link>
             </li>
             <li>
-              <Link href="/book" className="text-[#0F758C] hover:underline">
+              <Link href="/book" className="text-gray-800 underline hover:no-underline transition-all duration-300">
                 Book now
               </Link>
             </li>
@@ -61,13 +61,13 @@ export function FooterComponent() {
         <div>
           <h3 className="text-xl font-bold mb-4">Reach Out</h3>
           <p className="text-base mb-2">
-            <a href="https://wa.me/19055980504" className="text-[#0F758C] hover:underline">
+            <a href="https://wa.me/19055980504" className="text-gray-800 underline hover:no-underline transition-all duration-300">
               +1 (905) 598-0504
             </a>
             {' '}(WhatsApp)
           </p>
           <p className="text-base">
-            <a href="mailto:admin@hoteldaleese.com" className="text-[#0F758C] hover:underline">
+            <a href="mailto:admin@hoteldaleese.com" className="text-gray-800 underline hover:no-underline transition-all duration-300">
               admin@hoteldaleese.com
             </a>
           </p>

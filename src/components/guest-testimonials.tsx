@@ -64,12 +64,6 @@ export function GuestTestimonialsComponent() {
   const prevTestimonial = () => {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + testimonials.length) % testimonials.length)
   }
-
-  const getVisibleTestimonials = () => {
-    const visibleCount = getVisibleCount()
-    return [...testimonials, ...testimonials].slice(currentIndex, currentIndex + visibleCount)
-  }
-
   return (
     <section className={`${cormorantGaramond.className} py-16 px-4 max-w-7xl mx-auto`}>
       <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">
@@ -88,22 +82,24 @@ export function GuestTestimonialsComponent() {
             ))}
           </div>
         </div>
+      </div>
+      <div className="flex justify-center space-x-4 mt-8 mb-4">
         <button
           onClick={prevTestimonial}
-          className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-800 text-white rounded-full p-2 hover:bg-black transition-colors"
+          className="bg-gray-800 text-white rounded-full p-2 hover:bg-black transition-colors"
           aria-label="Previous testimonial"
         >
           <ChevronLeft size={24} />
         </button>
         <button
           onClick={nextTestimonial}
-          className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-800 text-white rounded-full p-2 hover:bg-black transition-colors"
+          className="bg-gray-800 text-white rounded-full p-2 hover:bg-black transition-colors"
           aria-label="Next testimonial"
         >
           <ChevronRight size={24} />
         </button>
       </div>
-      <div className="text-center mt-8">
+      <div className="text-center mt-4">
         <a
           href="https://www.google.com/search?q=Hotel+Daleese+reviews"
           target="_blank"
