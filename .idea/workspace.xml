@@ -13,6 +13,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="f765edb8-f30b-49ed-b3a6-f231974ff4fd" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -47,7 +50,7 @@
       <updated>1729460497270</updated>
       <workItem from="1729460498363" duration="3267000" />
       <workItem from="1729713654735" duration="92000" />
-      <workItem from="1729718299290" duration="957000" />
+      <workItem from="1729718299290" duration="1389000" />
     </task>
     <servers />
   </component>
