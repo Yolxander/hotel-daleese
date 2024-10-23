@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c7e99333-aede-4333-a5d5-366958e0f415" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/guest-testimonials.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/guest-testimonials.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/life-in-uvita.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/life-in-uvita.tsx" afterDir="false" />
-    </list>
+    <list default="true" id="c7e99333-aede-4333-a5d5-366958e0f415" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,7 +47,7 @@
       <updated>1729460497270</updated>
       <workItem from="1729460498363" duration="3267000" />
       <workItem from="1729713654735" duration="92000" />
-      <workItem from="1729718299290" duration="604000" />
+      <workItem from="1729718299290" duration="957000" />
     </task>
     <servers />
   </component>
