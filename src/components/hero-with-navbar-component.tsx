@@ -3,7 +3,7 @@
 import { useState, useEffect, useCallback } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Instagram, Facebook, Menu, X, Phone } from 'lucide-react'
+import { Instagram, Facebook, X, Phone } from 'lucide-react'
 import { Lora, Cormorant_Garamond } from 'next/font/google'
 import { motion, AnimatePresence } from 'framer-motion'
 
