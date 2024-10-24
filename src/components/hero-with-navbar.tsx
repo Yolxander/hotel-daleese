@@ -66,7 +66,7 @@ export function HeroWithNavbarComponent() {
 
             {/* Mobile Menu */}
             {isMobileMenuOpen && (
-                <div className="fixed inset-0 bg-white z-[100] flex flex-col h-screen">
+                <div className="fixed inset-0 bg-white z-[100] flex flex-col h-screen mb-6">
                   <div className="flex justify-between items-center p-4">
                     <Image
                         src="/placeholder.svg?height=40&width=120"
