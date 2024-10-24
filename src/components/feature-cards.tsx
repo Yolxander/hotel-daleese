@@ -14,8 +14,8 @@ interface FeatureCardProps {
 }
 
 const FeatureCard: React.FC<FeatureCardProps> = ({ title, description, learnMoreLink, imageSrc }) => (
-  <div className={`${cormorantGaramond.className} flex flex-col items-center bg-white p-6 rounded-lg shadow-lg border border-gray-300`}>
-    <div className="relative h-64 w-full mb-4 overflow-hidden rounded-lg">
+  <div className={`${cormorantGaramond.className} flex flex-col items-center bg-white p-4 sm:p-6 rounded-lg shadow-lg border border-gray-300`}>
+    <div className="relative h-48 sm:h-64 w-full mb-4 overflow-hidden rounded-lg">
       <Image
         src={imageSrc}
         alt={title}
@@ -24,11 +24,11 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ title, description, learnMore
         className="transition-transform duration-300 hover:scale-105"
       />
     </div>
-    <h3 className={`${lora.className} text-3xl font-light text-gray-800 mb-4`}>{title}</h3>
-    <p className="text-xl text-gray-600 mb-6">{description}</p>
+    <h3 className={`${lora.className} text-2xl sm:text-3xl font-light text-gray-800 mb-2 sm:mb-4 text-center`}>{title}</h3>
+    <p className="text-base sm:text-xl text-gray-600 mb-4 sm:mb-6 text-center">{description}</p>
     <a 
       href={learnMoreLink}
-      className="inline-block border-2 border-gray-800 text-gray-800 px-8 py-3 text-lg rounded hover:bg-black hover:text-white transition-colors"
+      className="inline-block border-2 border-gray-800 text-gray-800 px-6 sm:px-8 py-2 sm:py-3 text-base sm:text-lg rounded hover:bg-black hover:text-white transition-colors"
     >
       Learn more
     </a>
@@ -37,9 +37,9 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ title, description, learnMore
 
 export function FeatureCards() {
   return (
-    <section className="bg-gray-100 py-16">
+    <section className="bg-gray-100 py-8 sm:py-16">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           <FeatureCard
             title="Accommodations"
             description="Our suites are uniquely designed & sleep up to 4 guests."
