@@ -7,7 +7,7 @@ const cormorantGaramond = Cormorant_Garamond({ subsets: ['latin'], weight: ['400
 
 interface AmenityCardProps {
     title: string
-    description: string
+    description: React.ReactNode
 }
 
 const AmenityCard: React.FC<AmenityCardProps> = ({ title, description }) => (

@@ -5,20 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c7e99333-aede-4333-a5d5-366958e0f415" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/app/pages/amenities.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/home.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/feature-cards.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/landing_page/feature-cards.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/guest-testimonials.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/landing_page/guest-testimonials.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/hero-with-navbar-component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/landing_page/hero-with-navbar-component.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/hero-with-navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/landing_page/hero-with-navbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/hotel-home-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/landing_page/hotel-home-section.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/life-in-uvita.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/landing_page/life-in-uvita.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/amenities/amenities-gallery-lightbox.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/amenities/amenities-gallery-lightbox.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +72,7 @@
       <workItem from="1729726589210" duration="5344000" />
       <workItem from="1729775238556" duration="144000" />
       <workItem from="1729787298665" duration="1505000" />
-      <workItem from="1729923531226" duration="7376000" />
+      <workItem from="1729923531226" duration="7741000" />
     </task>
     <servers />
   </component>

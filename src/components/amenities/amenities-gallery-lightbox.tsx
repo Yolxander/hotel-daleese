@@ -78,6 +78,8 @@ export function AmenitiesGalleryLightbox() {
     const [lightboxOpen, setLightboxOpen] = useState(false)
     const [currentImageIndex, setCurrentImageIndex] = useState(0)
 
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-expect-error
     const openLightbox = (index) => {
         setCurrentImageIndex(index)
         setLightboxOpen(true)
