@@ -19,7 +19,7 @@ const AmenityCard: React.FC<AmenityCardProps> = ({ title, description }) => (
 
 export function AmenitiesSectionComponent() {
     return (
-        <section className={`${cormorantGaramond.className} max-w-6xl mx-auto px-4 py-16 bg-gray-100`}>
+        <section className={`${cormorantGaramond.className} max-w-6xl mx-auto px-4 py-16`}>
             <div className="text-center mb-16">
                 <p className="text-gray-700 text-lg md:text-xl leading-relaxed font-medium max-w-2xl mx-auto">
                     During your stay, we encourage you to take full advantage of our property amenities and
