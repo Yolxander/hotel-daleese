@@ -3,7 +3,7 @@
 import { useState, useEffect, useCallback } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Instagram, Facebook, X, Phone } from 'lucide-react'
+import { Instagram, Facebook, X, } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Cormorant_Garamond } from 'next/font/google'
 
@@ -13,7 +13,6 @@ export function Navbar() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
     const [isNavbarVisible, setIsNavbarVisible] = useState(true)
     const [lastScrollY, setLastScrollY] = useState(0)
-    const [isPhoneNumberVisible, setIsPhoneNumberVisible] = useState(false)
 
     const handleScroll = useCallback(() => {
         const currentScrollY = window.scrollY

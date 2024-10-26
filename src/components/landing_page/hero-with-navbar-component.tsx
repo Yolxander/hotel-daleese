@@ -2,7 +2,6 @@
 
 import { Lora } from 'next/font/google'
 import Image from 'next/image'
-import { Navbar } from '../Navbar'
 
 const lora = Lora({ subsets: ['latin'] })
 

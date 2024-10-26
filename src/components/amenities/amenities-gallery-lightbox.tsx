@@ -50,6 +50,7 @@ const Lightbox = ({ currentIndex, onClose, onPrev, onNext }) => (
         </Button>
         <div className="text-white text-center">
             <div className="p-4">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                     src={galleryItems[currentIndex].src}
                     alt={galleryItems[currentIndex].alt}
