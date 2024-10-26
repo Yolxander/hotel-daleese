@@ -2,7 +2,7 @@
 
 import { Lora } from 'next/font/google'
 import Image from 'next/image'
-import { Navbar } from './Navbar'
+import { Navbar } from '../Navbar'
 
 const lora = Lora({ subsets: ['latin'] })
 
@@ -10,7 +10,7 @@ export function HeroWithNavbarComponent() {
   return (
       <div className="relative h-screen w-full overflow-hidden">
         <Image
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/bed%20suite%203-pVgueIl1Vk5hCjvzxu854gnfgM41B9.jpg"
+            src="https://storage.googleapis.com/sempre-studios-893c8.appspot.com/uploads/Casa%20Turul/Home/671c830dbadbf.png?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1761457806&Signature=WtvwGdlyKbrY6sLqcis7P8iLk7VewMY%2FXH3o9FLzsgFJ8zq0MGx10234OactoBXIQfF127cx1BJvikqM9BwlMZZWYp1crN8nlUCW6LUlxRCwJa0hRTDlXCMbdFwSv1tJ%2BPsvCcj%2BAhP999PnuD9VRJpmrojvlqOWGpGntVnaL%2BeMuhYT0HuO0pMu1KE%2F2d%2BT4hY66FE7M%2F8AEBYUdlNMQ0kWIaSs3V%2BF2S31iduU%2BWdJQih8kUPXbbQE9o9qO2kPxrZxYcx1GDzyWyKRWZNNqAgJe9o83EWpqY%2FSgqM7LrhUYsFWpjI57LIUEx05ohjxqODHNINaHXfvodZ20U2jSQ%3D%3D"
             alt="Boutique hotel room with wooden slatted headboard and wicker lamps"
             layout="fill"
             objectFit="cover"
@@ -18,8 +18,6 @@ export function HeroWithNavbarComponent() {
             priority
         />
         <div className="absolute inset-0 bg-black bg-opacity-30" />
-
-        <Navbar />
 
         <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
           <h1 className={`${lora.className} mb-4 text-4xl font-light md:text-5xl lg:text-6xl text-center`}>

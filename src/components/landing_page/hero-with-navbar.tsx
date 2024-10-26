@@ -149,29 +149,7 @@ export function HeroWithNavbarComponent() {
                   >
                     Book a Room
                   </Link>
-                  <div className="relative">
-                    <button
-                        onClick={() => setIsPhoneNumberVisible(!isPhoneNumberVisible)}
-                        className="text-gray-600 hover:text-gray-900"
-                    >
-                      <Phone size={20} />
-                    </button>
-                    <AnimatePresence>
-                      {isPhoneNumberVisible && (
-                          <motion.div
-                              initial={{ opacity: 0, y: -10 }}
-                              animate={{ opacity: 1, y: 0 }}
-                              exit={{ opacity: 0, y: -10 }}
-                              transition={{ duration: 0.2 }}
-                              className="absolute right-0 mt-2 bg-white p-2 rounded shadow-md"
-                          >
-                            <a href="tel:+50684569878" className="text-gray-800 hover:text-gray-600">
-                              +506 8456-9878
-                            </a>
-                          </motion.div>
-                      )}
-                    </AnimatePresence>
-                  </div>
+
                 </div>
               </div>
               <div className="mt-4 flex justify-center space-x-6">

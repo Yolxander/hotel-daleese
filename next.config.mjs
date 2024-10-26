@@ -2,9 +2,11 @@
 const nextConfig = {
     reactStrictMode: true,
     images: {
-        domains: ['hebbkx1anhila5yf.public.blob.vercel-storage.com'], // Add your image domain here
+        domains: [
+            'hebbkx1anhila5yf.public.blob.vercel-storage.com',
+            'storage.googleapis.com', // Add this line for Google Cloud Storage images
+        ],
     },
 };
 
-// Use ES module export syntax
 export default nextConfig;
