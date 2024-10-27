@@ -7,9 +7,9 @@ const lora = Lora({ subsets: ['latin'] })
 
 export function OurStorySection() {
   return (
-      <section className="bg-[#2d7a9c] min-h-[110vh] pt-[300px] flex items-center justify-center">
+      <section className="bg-[#2d7a9c]  flex items-center justify-center">
         <div className="w-[90%] h-full flex flex-col md:flex-row items-start justify-between py-12">
-          <div className={`w-full md:w-1/2 pr-8 text-white ${lora.className}`}>
+          <div className={`w-full md:w-1/2 pr-8 text-white min-h-[110vh] md:pt-[260px]  pt-[100px] ${lora.className}`}>
             <h1 className="text-4xl md:text-5xl font-light mb-8">Our Story</h1>
             <p className="mb-6 text-[22px]">It all begins with an idea.</p>
             <p className="mb-6 font-semibold text-[22px]">
@@ -34,7 +34,7 @@ export function OurStorySection() {
               We love living in Costa Rica. It has been an interesting experience learning a new culture and language in an entirely new country, but we have no regrets and absolutely love the new life we have built and continue to build today. Pura Vida.
             </p>
           </div>
-          <div className="w-full md:w-1/2 space-y-4 mb-6">
+          <div className="w-full md:w-1/2 space-y-4 mb-6 md:pt-[220px]  pt-[50px]">
             <Image
                 src="https://storage.googleapis.com/sempre-studios-893c8.appspot.com/uploads/Casa%20Turul/Our%20Story/671daa5c98cab.jpeg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1761533405&Signature=lLHACj%2FoK%2BSaquuNm%2BnkY2REJWuPtOh%2BmK98cjYeBrbMKwjXPMcnO8nTMY%2BfyrQ1iEktJ8UsDp0ZlozAfuGVQHxz0gBjdxuNeqUJfq4oMpwZ196KjNSXFxwlmyzl1GrF4LJZsG%2BdYnGyHIFoBOSHwVp%2Fwau%2BNBZvALNWUlAGD2i2fJ4KKEYROMPzrZ9ajE5Ji5382wfCYB2L4chg4QAcvrHM2FuH%2FWRSpjhNrEhuAkwND6e15bkhyxwMXqm%2Fem6Z4RanBXw%2F%2FBIzL96zYFtEPGcz5rWjFDvxuHFt3GOHCuR%2FzkCQ%2FfFJlwojRb5rsRN8jz8CFhLvn26n%2F8sVwEDkPw%3D%3D"
                 alt="Rosa and Dave sitting in beach chairs"
