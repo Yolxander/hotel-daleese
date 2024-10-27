@@ -30,7 +30,7 @@ export function Navbar() {
         return () => window.removeEventListener('scroll', handleScroll)
     }, [handleScroll])
 
-    const menuItems = ['Home', 'About', 'Suites', 'Tours & Attractions', 'Gallery', 'Contact', 'Blog']
+    const menuItems = ['About', 'Suites', 'Tours & Attractions', 'Gallery', 'Contact', 'Blog']
     const aboutDropdownItems = ['Amenities', 'Our Story', 'Life in Uvita']
 
     return (
