@@ -1,11 +1,10 @@
-
-import AmenitiesPage from "@/app/pages/amenities";
+import HomePage from "@/app/home/page";
 
 
 export default function Home() {
   return (
       <div>
-        <AmenitiesPage />
+          <HomePage/>
       </div>
   );
 }

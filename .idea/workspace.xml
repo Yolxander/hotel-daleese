@@ -5,6 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c7e99333-aede-4333-a5d5-366958e0f415" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/amenities.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/amenities/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/home/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/landing_page/hero-with-navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/landing_page/hero-with-navbar.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -53,6 +60,8 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app/amenities" />
+      <recent name="$PROJECT_DIR$/src/app/home" />
       <recent name="$PROJECT_DIR$/src/components/amenities" />
       <recent name="$PROJECT_DIR$/src/components/landing_page" />
     </key>
@@ -72,7 +81,7 @@
       <workItem from="1729726589210" duration="5344000" />
       <workItem from="1729775238556" duration="144000" />
       <workItem from="1729787298665" duration="1505000" />
-      <workItem from="1729923531226" duration="8071000" />
+      <workItem from="1729923531226" duration="11610000" />
     </task>
     <servers />
   </component>
