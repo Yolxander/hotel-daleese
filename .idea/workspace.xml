@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c7e99333-aede-4333-a5d5-366958e0f415" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/our-story/our-story-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/our-story/our-story-section.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/blog/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/blog/page.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,11 +56,11 @@
       <recent name="$PROJECT_DIR$/src/app/tours" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/blog" />
       <recent name="$PROJECT_DIR$/src/components/tours" />
       <recent name="$PROJECT_DIR$/src/components/life-in-uvita" />
       <recent name="$PROJECT_DIR$/src/components/our-story" />
       <recent name="$PROJECT_DIR$/src/app/amenities" />
-      <recent name="$PROJECT_DIR$/src/app/home" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -78,7 +78,7 @@
       <workItem from="1729726589210" duration="5344000" />
       <workItem from="1729775238556" duration="144000" />
       <workItem from="1729787298665" duration="1505000" />
-      <workItem from="1729923531226" duration="31585000" />
+      <workItem from="1729923531226" duration="36698000" />
     </task>
     <servers />
   </component>
