@@ -30,8 +30,8 @@ export function Navbar() {
         return () => window.removeEventListener('scroll', handleScroll)
     }, [handleScroll])
 
-    const menuItems = ['About', 'Suites', 'Tours & Attractions', 'Gallery', 'Contact', 'Blog']
-    const aboutDropdownItems = ['Amenities', 'Our Story', 'Life in Uvita']
+    const menuItems = ['About', 'Suites', 'Tours', 'Gallery', 'Contact', 'Blog']
+    const aboutDropdownItems = ['Amenities', 'Our Story', 'Life in Costa Rica']
 
     return (
         <motion.nav
@@ -123,11 +123,15 @@ export function Navbar() {
                                             </>
                                         ) : (
                                             <Link
-                                                href={item.toLowerCase() === 'home' ? '/' : `/${item.toLowerCase().replace(/ & /g, '-')}`}
+                                                href={
+                                                    item === 'Tours'
+                                                        ? '/tours-attractions'
+                                                        : `/${item.toLowerCase().replace(/ & /g, '-')}`
+                                                }
                                                 className="text-3xl text-gray-800 my-4 hover:text-gray-600"
                                                 onClick={() => setIsMobileMenuOpen(false)}
                                             >
-                                                {item}
+                                                {item === 'Tours' ? 'Tours & Attractions' : item}
                                             </Link>
                                         )}
                                     </div>
@@ -183,7 +187,6 @@ export function Navbar() {
                                     <>
                                         <button className="text-[20px] text-gray-600 hover:text-gray-900 flex items-center">
                                             {item}
-                                            <ChevronDown size={20} className="ml-1" />
                                         </button>
                                         <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                                             {aboutDropdownItems.map((subItem) => (
@@ -199,10 +202,14 @@ export function Navbar() {
                                     </>
                                 ) : (
                                     <Link
-                                        href={item.toLowerCase() === 'home' ? '/' : `/${item.toLowerCase().replace(/ & /g, '-')}`}
+                                        href={
+                                            item === 'Tours'
+                                                ? '/tours'
+                                                : `/${item.toLowerCase().replace(/ & /g, '-')}`
+                                        }
                                         className="text-[20px] text-gray-600 hover:text-gray-900"
                                     >
-                                        {item}
+                                        {item === 'Tours' ? 'Tours & Attractions' : item}
                                     </Link>
                                 )}
                             </div>
