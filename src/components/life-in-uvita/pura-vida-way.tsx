@@ -30,7 +30,7 @@ export function PuraVidaWayComponent() {
             Living a <span className="italic">pura vida</span> means treasuring your physical and mental well-being above things that we are used to holding in high regard, like punctuality, for example, and getting things done fast.
           </p>
           <p className="text-[22px]">
-            Chances are that you&#39;ll hear <span className="italic">pura vida</span> from Ticos and expats all over Costa Rica. It's our way of saying hello, making you feel welcome or saying goodbye in a happy way.
+            Chances are that you&#39;ll hear <span className="italic">pura vida</span> from Ticos and expats all over Costa Rica. It&#39;s our way of saying hello, making you feel welcome or saying goodbye in a happy way.
           </p>
         </div>
       </div>

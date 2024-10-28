@@ -1,6 +1,5 @@
 'use client'
 
-import Image from 'next/image'
 import { Cormorant_Garamond } from 'next/font/google'
 
 const cormorantGaramond = Cormorant_Garamond({ subsets: ['latin'], weight: ['400'] })

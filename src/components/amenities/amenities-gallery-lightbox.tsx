@@ -109,6 +109,7 @@ export function AmenitiesGalleryLightbox() {
                     <Card key={index} className="overflow-hidden cursor-pointer" onClick={() => openLightbox(index)}>
                         <CardContent className="p-0">
                             <div className="aspect-square bg-muted flex items-center justify-center text-muted-foreground">
+                                {/* eslint-disable-next-line @next/next/no-img-element */}
                                 <img src={item.src} alt={item.alt} className="object-cover w-full h-full" />
                             </div>
                         </CardContent>
