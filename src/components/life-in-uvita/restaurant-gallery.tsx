@@ -32,49 +32,49 @@ const images = [
     alt: "Large restaurant image",
     width: 800,
     height: 400,
-    caption: "Restaurant Name"
+    caption: "Indómitos"
   },
   {
     src: "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/uploads/Casa%20Turul/Live%20in%20Uvita/671f0d43e2643.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1761624260&Signature=hIKC9CRpQfvj5VwdMDqok50Ew6h31HxBockA9s%2ByBAo%2FGrCTtPPFRI1Jn5%2BxE1FCrSJpGcyKo8JfQVIhjrRwsMv%2FTsbn52p7ueTxi4LRnqoDT4xi7xO%2FkMGfnTxk2cWppGJbgfRtkL9LQTbC5OScHqiZuiWtgaGgMmGbiDbbhZ421RsEVX9nfaQgdfCe%2FGfrsp2RkoxisYfGvarJZPmIbdUqBrzn%2F4dNU77tXHnzr7rv30WIkYj8mig6RX7lfg2lOeY070lENP9Fc%2FrPgh3y4o8EnEick5c60Dq%2F61u2T52i1R%2BHNmyGmobRYILev%2B%2BS2rrFxyYyiumR4EIvhJew9A%3D%3D",
     alt: "Smaller restaurant image",
     width: 400,
     height: 400,
-    caption: "Restaurant Name"
+    caption: "Los Laureles"
   },
   {
     src: "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/uploads/Casa%20Turul/Live%20in%20Uvita/671f10cf23579.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1761625167&Signature=hm%2BUuH%2BHPteiBw8QX1yvziNsPoBSFlfk%2B3CyD5SdIMif%2FVipodTSwHq%2Fd0lNDvRyansKZWc7ZmK8gzF0KoFPURD6Uxk7hxFIK%2Fvv%2Fj1pAQlrTHoSnyp2FYqLE4J%2F7oed5Uxa%2FpKZhMJ7TAFn3wBtBGdO28b17t%2B9YhlCIs0B1vGP%2BS%2F%2FNq1RHYzlUCBkLk%2FXsVoNcnoZ12Xn5z34Yw5k7rU7KrHfyN6Unjd72%2F8u4ZkBjl1VU7HObGTAV4Xvxxpne2EmZWvlX%2Bcre4vWj9%2B1BZfcNjXUu8Hz84U5Ojn555T3pprFtFqJ2mgPvMW3p0cPlt5Wrk2qITU8HTF32RRqlw%3D%3D",
     alt: "Equal-sized restaurant image 1",
     width: 600,
     height: 400,
-    caption: "Restaurant Name"
+    caption: "Los Laureles"
   },
   {
     src: "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/uploads/Casa%20Turul/Live%20in%20Uvita/671f0d42ac32b.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1761624259&Signature=HBcLXfm%2FkWM3GBFJqNZrTLFtUHgc6k5Exm77PYHowWgQvfWLkPK%2BUfYNL5JBVtP9mWNAQBU7o%2FN4A4gHfqL5%2BiSmYO0E45P7fAo8yE4%2FKlfPvyjB5rGnfQ%2FWgJab0FAt8914JjX7sWs%2FRjfdHp%2F%2FCZ4Wk8PxHWAG2d0LkCL%2BnzCvtAcvMct8m%2BHcKmdFYW67u29Uf8rQdzNYZkSX5ZrJdqpnIzFzHsEXDHu%2F4Q%2BPYKk7XrKZaWiNPcI9ay%2FG747Ish98jLM8xmDS3p8MvIRHIl8VeROF7Xe4NNPHf984d1YBP6muH%2FpKsvoXGt3rSCe0iOglxRJOwe0L6t3vIO3E5w%3D%3D",
     alt: "Equal-sized restaurant image 2",
     width: 600,
     height: 400,
-    caption: "Restaurant Name"
+    caption: "Los Laureles"
   },
   {
     src: "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/uploads/Casa%20Turul/Live%20in%20Uvita/671f0d439d589.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1761624259&Signature=DdZd7b%2BLUDKcRF6463RXo7O1MbRxmc7ikHKzNbFOOgr2qksUMXgbuVJxA3qQrx2PcZVpDJL7wyR0nMA1aKsbxwMpzR%2Fs5AVN8KhVCSMv8rsUhxp7sg9uKepaHAj6tHO3p%2BW7OgYe3AT1xJUHloCTiDUjMcJLDRwadm37%2BEEFxbTEMTvbqDzwsGH2prw69kLHa2SY9mO5CR%2BzqwGlmg%2FiXcJYao2r9PjwQ1XkyITxhIYo2T%2FlV1AbYNPO5DmQtUCnSvxZ%2FQPUlM7r0nva7In52mpq8nuryEyifJJ6NauBP990IkwOZM0yoo0la6p%2FX8e3aB9xi43x9%2Bz3N6F%2FhbNBcg%3D%3D",
     alt: "Equal-sized restaurant image 3",
     width: 400,
     height: 400,
-    caption: "Restaurant Name"
+    caption: "Sebas Resto"
   },
   {
     src: "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/uploads/Casa%20Turul/Live%20in%20Uvita/671f0d433ca96.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1761624259&Signature=O%2Fx5TwMCH6V1LsKYoy%2BDNzXMg4Xjdd1hLmIVKW6GieqqlCVlRvoMiKx%2ByxU4p7lG8pr82h%2BdBZYuJIzpfGeFNC4lcmex8WDdtii0QejdSdtLBYsCFr1qOWeIK%2F37dLsmnSooU2TXItd5iyXMzRMLsb%2BAUgyarkprLr5yYidhBMCYe21ceMg%2B83fnD4yaWYxYTGKToPcXcLIpie%2F4ZCQGgavHo6u70EhKdxvb4IaPTdDld1xy3iF7%2BZbOLdVBxExt6K6mi9AsBtkij3486kAZjhDptFqCMVhyG3JtkbixG%2FK3NLekP0uM7TQ0%2B1VlAXeVFd3fTGHWviFx2btrgsnFGg%3D%3D",
     alt: "Equal-sized restaurant image 4",
     width: 400,
     height: 400,
-    caption: "Restaurant Name"
+    caption: "Sebas Resto"
   },
   {
     src: "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/uploads/Casa%20Turul/Live%20in%20Uvita/671f0d433ca96.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1761624259&Signature=O%2Fx5TwMCH6V1LsKYoy%2BDNzXMg4Xjdd1hLmIVKW6GieqqlCVlRvoMiKx%2ByxU4p7lG8pr82h%2BdBZYuJIzpfGeFNC4lcmex8WDdtii0QejdSdtLBYsCFr1qOWeIK%2F37dLsmnSooU2TXItd5iyXMzRMLsb%2BAUgyarkprLr5yYidhBMCYe21ceMg%2B83fnD4yaWYxYTGKToPcXcLIpie%2F4ZCQGgavHo6u70EhKdxvb4IaPTdDld1xy3iF7%2BZbOLdVBxExt6K6mi9AsBtkij3486kAZjhDptFqCMVhyG3JtkbixG%2FK3NLekP0uM7TQ0%2B1VlAXeVFd3fTGHWviFx2btrgsnFGg%3D%3D",
     alt: "Equal-sized restaurant image 5",
     width: 400,
     height: 400,
-    caption: "Restaurant Name"
+    caption: "Sebas Resto"
   }
 ]
 

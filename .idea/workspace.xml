@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c7e99333-aede-4333-a5d5-366958e0f415" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/components/tours/outdoor-activities.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tours/outdoor-activities.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/blog/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +35,7 @@
     "git-widget-placeholder": "main",
     "javascript.nodejs.core.library.configured.version": "22.2.0",
     "javascript.nodejs.core.library.typings.version": "22.2.0",
-    "last_opened_file_path": "/Users/humancontact/Downloads/extra-learning/demos/casa-turul/src/components/tours",
+    "last_opened_file_path": "/Users/humancontact/Downloads/extra-learning/demos/casa-turul/src/app/blog",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -48,11 +50,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app/blog" />
+      <recent name="$PROJECT_DIR$/src/app" />
       <recent name="$PROJECT_DIR$/src/components/tours" />
       <recent name="$PROJECT_DIR$/src/components" />
       <recent name="$PROJECT_DIR$/src/app/tours" />
-      <recent name="$PROJECT_DIR$/src/app/pages" />
-      <recent name="$PROJECT_DIR$/src/app" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/components/tours" />
@@ -77,7 +79,7 @@
       <workItem from="1729726589210" duration="5344000" />
       <workItem from="1729775238556" duration="144000" />
       <workItem from="1729787298665" duration="1505000" />
-      <workItem from="1729923531226" duration="28717000" />
+      <workItem from="1729923531226" duration="29412000" />
     </task>
     <servers />
   </component>

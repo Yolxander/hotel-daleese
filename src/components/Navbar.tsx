@@ -101,7 +101,6 @@ export function Navbar() {
                                                     onClick={() => setIsAboutDropdownOpen(!isAboutDropdownOpen)}
                                                 >
                                                     {item}
-                                                    <ChevronDown size={24} className="ml-1" />
                                                 </button>
                                                 {isAboutDropdownOpen && (
                                                     <div className="flex flex-col items-center mt-2">
