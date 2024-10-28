@@ -7,9 +7,9 @@ const lora = Lora({ subsets: ['latin'] })
 
 export function OurStorySection() {
   return (
-      <section className="bg-[#2d7a9c]  flex items-center justify-center">
-        <div className="w-[90%] h-full flex flex-col md:flex-row items-start justify-between py-12">
-          <div className={`w-full md:w-1/2 pr-8 text-white min-h-[110vh] md:pt-[260px]  pt-[100px] ${lora.className}`}>
+      <section className="bg-gray-100 flex items-center justify-center border b-6">
+        <div className="w-[90%] h-full flex flex-col md:flex-row items-start justify-between py-12 ">
+          <div className={`w-full md:w-1/2 pr-8 .text-gray-700 min-h-[110vh] md:pt-[260px] pt-[100px] ${lora.className}`}>
             <h1 className="text-4xl md:text-5xl font-light mb-8">Our Story</h1>
             <p className="mb-6 text-[22px]">It all begins with an idea.</p>
             <p className="mb-6 font-semibold text-[22px]">
@@ -22,7 +22,7 @@ export function OurStorySection() {
               With the same goals in mind, we sold our house, cottage, and all of our belongings in Canada and traveled with our two young children to buy a boutique hotel and live in beautiful Uvita, Costa Rica.
             </p>
             <p className="mb-6 text-[22px]">
-              We have been transforming Hotel Dalcese shortly after we arrived in Costa Rica, constantly making changes and updates to suit the needs of our guests and industry standards. We have a huge passion for our business, as it is something we have always dreamt of doing. The boutique-style hotel is run by us, and we are the first people you see with a good morning and the last with a good evening.
+              We have been transforming Hotel Dalseese shortly after we arrived in Costa Rica, constantly making changes and updates to suit the needs of our guests and industry standards. We have a huge passion for our business, as it is something we have always dreamt of doing. The boutique-style hotel is run by us, and we are the first people you see with a good morning and the last with a good evening.
             </p>
             <p className="mb-6 text-[22px]">
               Our favorite part of running the hotel is the opportunity to meet new guests from all over the world and hear their stories.
