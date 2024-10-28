@@ -124,7 +124,7 @@ export function Navbar() {
                                             <Link
                                                 href={
                                                     item === 'Tours'
-                                                        ? '/tours-attractions'
+                                                        ? '/tours'
                                                         : `/${item.toLowerCase().replace(/ & /g, '-')}`
                                                 }
                                                 className="text-3xl text-gray-800 my-4 hover:text-gray-600"
