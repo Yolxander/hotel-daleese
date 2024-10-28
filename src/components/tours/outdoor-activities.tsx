@@ -68,7 +68,7 @@ export function OutdoorActivitiesComponent() {
               </div>
               <h3 className="text-xl font-semibold text-center mb-2">{activity.title}</h3>
               <p className="text-lg text-center">{activity.description}</p>
-              <div className="mt-4 border-t border-gray-400 pt-4"></div>
+              {/*<div className="mt-4 border-t border-gray-400 pt-4"></div>*/}
             </div>
           ))}
         </div>
