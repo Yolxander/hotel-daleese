@@ -4,7 +4,7 @@ import { useState, useEffect, useCallback } from 'react'
 import { usePathname } from 'next/navigation'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Instagram, Facebook, X } from 'lucide-react'
+import { Instagram, Facebook, X, ChevronRight, ChevronLeft } from 'lucide-react'
 import { Cormorant_Garamond } from 'next/font/google'
 import { motion, AnimatePresence } from 'framer-motion'
 
@@ -15,6 +15,7 @@ export function Navbar() {
     const [isNavbarVisible, setIsNavbarVisible] = useState(true)
     const [lastScrollY, setLastScrollY] = useState(0)
     const [isAboutDropdownOpen, setIsAboutDropdownOpen] = useState(false)
+    const [isMobileAboutOpen, setIsMobileAboutOpen] = useState(false)
     const pathname = usePathname()
 
     const handleScroll = useCallback(() => {
@@ -105,63 +106,79 @@ export function Navbar() {
                                 </button>
                             </div>
                             <div className="flex flex-col items-center justify-center flex-grow bg-white">
-                                {menuItems.map((item) => (
-                                    <div key={item.name} className="relative">
-                                        {item.name === 'About' ? (
-                                            <>
-                                                <button
-                                                    className="text-3xl text-gray-800 my-4 hover:text-gray-600 flex items-center"
-                                                    onClick={() => setIsAboutDropdownOpen(!isAboutDropdownOpen)}
-                                                >
-                                                    {item.name}
-                                                </button>
-                                                {isAboutDropdownOpen && (
-                                                    <div className="flex flex-col items-center mt-2">
-                                                        {aboutDropdownItems.map((subItem) => (
-                                                            <Link
-                                                                key={subItem.name}
-                                                                href={subItem.path}
-                                                                className={`text-2xl my-2 relative group ${
-                                                                    pathname === subItem.path ? 'text-gray-800' : 'text-gray-600'
-                                                                } hover:text-gray-900`}
-                                                                onClick={() => {
-                                                                    setIsAboutDropdownOpen(false)
-                                                                    setIsMobileMenuOpen(false)
-                                                                }}
-                                                            >
-                                                                <span>{subItem.name}</span>
-                                                                <span
-                                                                    className={`absolute left-0 -bottom-1 w-full h-0.5 bg-gray-600 transform transition-transform duration-300 origin-left ${
-                                                                        pathname === subItem.path
-                                                                            ? 'scale-x-100'
-                                                                            : 'scale-x-0 group-hover:scale-x-100'
-                                                                    }`}
-                                                                ></span>
-                                                            </Link>
-                                                        ))}
-                                                    </div>
+                                {!isMobileAboutOpen ? (
+                                    <>
+                                        {menuItems.map((item) => (
+                                            <div key={item.name} className="relative">
+                                                {item.name === 'About' ? (
+                                                    <button
+                                                        className="text-3xl text-gray-800 my-4 hover:text-gray-600 flex items-center"
+                                                        onClick={() => setIsMobileAboutOpen(true)}
+                                                    >
+                                                        {item.name}
+                                                        <ChevronRight size={24} className="ml-2" />
+                                                    </button>
+                                                ) : (
+                                                    <Link
+                                                        href={item.path}
+                                                        className={`text-3xl my-4 relative group ${
+                                                            pathname === item.path ? 'text-gray-800' : 'text-gray-600'
+                                                        } hover:text-gray-900`}
+                                                        onClick={() => setIsMobileMenuOpen(false)}
+                                                    >
+                                                        <span>{item.name === 'Tours' ? 'Tours & Attractions' : item.name}</span>
+                                                        <span
+                                                            className={`absolute left-0 -bottom-1 w-full h-0.5 bg-gray-800 transform transition-transform duration-300 origin-left ${
+                                                                pathname === item.path
+                                                                    ? 'scale-x-100'
+                                                                    : 'scale-x-0 group-hover:scale-x-100'
+                                                            }`}
+                                                        ></span>
+                                                    </Link>
                                                 )}
-                                            </>
-                                        ) : (
+                                            </div>
+                                        ))}
+                                        <Link
+                                            href="/book-a-room"
+                                            className="text-3xl text-gray-800 my-4 hover:text-gray-600 border border-gray-800 px-4 py-2 rounded"
+                                            onClick={() => setIsMobileMenuOpen(false)}
+                                        >
+                                            Book a Room
+                                        </Link>
+                                    </>
+                                ) : (
+                                    <>
+                                        <button
+                                            className="text-3xl text-gray-800 my-4 hover:text-gray-600 flex items-center"
+                                            onClick={() => setIsMobileAboutOpen(false)}
+                                        >
+                                            <ChevronLeft size={24} className="mr-2" />
+                                            Back
+                                        </button>
+                                        {aboutDropdownItems.map((subItem) => (
                                             <Link
-                                                href={item.path}
-                                                className={`text-3xl my-4 relative group ${
-                                                    pathname === item.path ? 'text-gray-800' : 'text-gray-600'
+                                                key={subItem.name}
+                                                href={subItem.path}
+                                                className={`text-2xl my-2 relative group ${
+                                                    pathname === subItem.path ? 'text-gray-800' : 'text-gray-600'
                                                 } hover:text-gray-900`}
-                                                onClick={() => setIsMobileMenuOpen(false)}
+                                                onClick={() => {
+                                                    setIsMobileAboutOpen(false)
+                                                    setIsMobileMenuOpen(false)
+                                                }}
                                             >
-                                                <span>{item.name === 'Tours' ? 'Tours & Attractions' : item.name}</span>
+                                                <span>{subItem.name}</span>
                                                 <span
-                                                    className={`absolute left-0 -bottom-1 w-full h-0.5 bg-gray-800 transform transition-transform duration-300 origin-left ${
-                                                        pathname === item.path
+                                                    className={`absolute left-0 -bottom-1 w-full h-0.5 bg-gray-600 transform transition-transform duration-300 origin-left ${
+                                                        pathname === subItem.path
                                                             ? 'scale-x-100'
                                                             : 'scale-x-0 group-hover:scale-x-100'
                                                     }`}
                                                 ></span>
                                             </Link>
-                                        )}
-                                    </div>
-                                ))}
+                                        ))}
+                                    </>
+                                )}
                             </div>
                             <div className="flex justify-center space-x-6 mb-8">
                                 <Link href="https://instagram.com" className="text-gray-600 hover:text-gray-900">
