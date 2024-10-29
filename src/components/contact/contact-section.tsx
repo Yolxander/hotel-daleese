@@ -29,7 +29,7 @@ export default function ContactSection() {
   }
 
   return (
-      <section className={`h-[110vh] pt-[300px] pb-[100px] relative py-16 px-4 md:px-8 ${lora.className}`} style={{backgroundImage: "url('/placeholder.svg?height=800&width=1200')"}}>
+      <section className={`h-[110vh] md:pt-[300px] pt-[200px]  pb-[100px] relative py-16 px-4 md:px-8 ${lora.className}`} style={{backgroundImage: "url('/placeholder.svg?height=800&width=1200')"}}>
 
         <div className="relative z-9 max-w-7xl mx-auto flex flex-col md:flex-row gap-[100px]">
           <div className="md:w-1/2 text-white">
