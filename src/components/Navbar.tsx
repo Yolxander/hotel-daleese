@@ -199,7 +199,7 @@ export function Navbar() {
                         </div>
                         <div className="flex items-center">
                             <Link
-                                href="/book"
+                                href="/book-a-room"
                                 className="rounded border border-gray-800 px-4 py-2 text-[20px] text-gray-800 hover:bg-gray-800 hover:text-white transition-colors mr-4"
                             >
                                 Book a Room
