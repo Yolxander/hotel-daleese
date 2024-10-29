@@ -48,7 +48,7 @@ export function Navbar() {
 
     return (
         <motion.nav
-            className={`fixed top-0 left-0 right-0 z-10 bg-white py-4 overflow-hidden ${cormorantGaramond.className}`}
+            className={`fixed top-0 left-0 right-0 z-10 bg-white py-4 ${cormorantGaramond.className}`}
             initial={{ y: 0 }}
             animate={{ y: isNavbarVisible ? 0 : '-100%' }}
             transition={{ duration: 0.3 }}
