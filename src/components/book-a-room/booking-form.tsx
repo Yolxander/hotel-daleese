@@ -31,9 +31,9 @@ export function BookingFormComponent() {
   }
 
   return (
-    <section className={`bg-white text-black py-16 ${lora.className}`}>
+    <section className={`bg-white text-black py-16 md:pt-[250px] pt-[180px] ${lora.className}`}>
       <div className="container mx-auto px-4 max-w-2xl">
-        <h2 className="text-4xl font-bold mb-6 text-center">Book a room</h2>
+        <h2 className="text-4xl mb-6 text-center">Book a room</h2>
         <p className="mb-8 text-center">
           If your dates are at all flexible, please let us know. We book up quickly, especially
           during high season (December to April), but would love to find a way to host you.
