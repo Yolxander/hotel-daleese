@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect, useCallback } from 'react'
+import { useRouter } from 'next/navigation'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Instagram, Facebook, X } from 'lucide-react'
@@ -14,6 +15,15 @@ export function Navbar() {
     const [isNavbarVisible, setIsNavbarVisible] = useState(true)
     const [lastScrollY, setLastScrollY] = useState(0)
     const [isAboutDropdownOpen, setIsAboutDropdownOpen] = useState(false)
+    const [isMounted, setIsMounted] = useState(false)
+
+    const router = useRouter()
+
+    useEffect(() => {
+        setIsMounted(true)
+    }, [])
+
+    const currentPath = isMounted ? router.asPath : ''
 
     const handleScroll = useCallback(() => {
         const currentScrollY = window.scrollY
@@ -32,6 +42,8 @@ export function Navbar() {
 
     const menuItems = ['About', 'Suites', 'Tours', 'Gallery', 'Contact', 'Blog']
     const aboutDropdownItems = ['Amenities', 'Our Story', 'Life in Costa Rica']
+
+    if (!isMounted) return null // Only render navbar on the client side
 
     return (
         <motion.nav
@@ -104,19 +116,31 @@ export function Navbar() {
                                                 </button>
                                                 {isAboutDropdownOpen && (
                                                     <div className="flex flex-col items-center mt-2">
-                                                        {aboutDropdownItems.map((subItem) => (
-                                                            <Link
-                                                                key={subItem}
-                                                                href={`/${subItem.toLowerCase().replace(/ /g, '-')}`}
-                                                                className="text-2xl text-gray-600 my-2 hover:text-gray-900"
-                                                                onClick={() => {
-                                                                    setIsAboutDropdownOpen(false)
-                                                                    setIsMobileMenuOpen(false)
-                                                                }}
-                                                            >
-                                                                {subItem}
-                                                            </Link>
-                                                        ))}
+                                                        {aboutDropdownItems.map((subItem) => {
+                                                            const subItemPath = `/${subItem.toLowerCase().replace(/ /g, '-')}`
+                                                            return (
+                                                                <Link
+                                                                    key={subItem}
+                                                                    href={subItemPath}
+                                                                    className={`text-2xl my-2 relative group ${
+                                                                        currentPath === subItemPath ? 'text-gray-800' : 'text-gray-600'
+                                                                    } hover:text-gray-900`}
+                                                                    onClick={() => {
+                                                                        setIsAboutDropdownOpen(false)
+                                                                        setIsMobileMenuOpen(false)
+                                                                    }}
+                                                                >
+                                                                    <span>{subItem}</span>
+                                                                    <span
+                                                                        className={`absolute left-0 -bottom-1 w-full h-0.5 bg-gray-600 transform transition-transform duration-300 origin-left ${
+                                                                            currentPath === subItemPath
+                                                                                ? 'scale-x-100'
+                                                                                : 'scale-x-0 group-hover:scale-x-100'
+                                                                        }`}
+                                                                    ></span>
+                                                                </Link>
+                                                            )
+                                                        })}
                                                     </div>
                                                 )}
                                             </>
@@ -127,10 +151,19 @@ export function Navbar() {
                                                         ? '/tours'
                                                         : `/${item.toLowerCase().replace(/ & /g, '-')}`
                                                 }
-                                                className="text-3xl text-gray-800 my-4 hover:text-gray-600"
+                                                className={`text-3xl my-4 relative group ${
+                                                    currentPath === `/${item.toLowerCase()}` ? 'text-gray-800' : 'text-gray-600'
+                                                } hover:text-gray-900`}
                                                 onClick={() => setIsMobileMenuOpen(false)}
                                             >
-                                                {item === 'Tours' ? 'Tours & Attractions' : item}
+                                                <span>{item === 'Tours' ? 'Tours & Attractions' : item}</span>
+                                                <span
+                                                    className={`absolute left-0 -bottom-1 w-full h-0.5 bg-gray-800 transform transition-transform duration-300 origin-left ${
+                                                        currentPath === `/${item.toLowerCase()}`
+                                                            ? 'scale-x-100'
+                                                            : 'scale-x-0 group-hover:scale-x-100'
+                                                    }`}
+                                                ></span>
                                             </Link>
                                         )}
                                     </div>
@@ -184,19 +217,34 @@ export function Navbar() {
                             <div key={item} className="relative group">
                                 {item === 'About' ? (
                                     <>
-                                        <button className="text-[20px] text-gray-600 hover:text-gray-900 flex items-center">
-                                            {item}
+                                        <button className="text-[20px] text-gray-600 hover:text-gray-900 flex items-center relative group">
+                                            <span>{item}</span>
+                                            <span className="absolute left-0 -bottom-1 w-full h-0.5 bg-gray-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
                                         </button>
                                         <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-                                            {aboutDropdownItems.map((subItem) => (
-                                                <Link
-                                                    key={subItem}
-                                                    href={`/${subItem.toLowerCase().replace(/ /g, '-')}`}
-                                                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                                                >
-                                                    {subItem}
-                                                </Link>
-                                            ))}
+                                            {aboutDropdownItems.map((subItem) => {
+                                                const subItemPath = `/${subItem.toLowerCase().replace(/ /g, '-')}`
+                                                return (
+                                                    <Link
+                                                        key={subItem}
+                                                        href={subItemPath}
+                                                        className={`block px-4 py-2 text-sm relative group ${
+                                                            currentPath === subItemPath
+                                                                ? 'text-gray-700'
+                                                                : 'text-gray-600 hover:bg-gray-100'
+                                                        }`}
+                                                    >
+                                                        <span>{subItem}</span>
+                                                        <span
+                                                            className={`absolute left-0 -bottom-1 w-full h-0.5 bg-gray-700 transform transition-transform duration-300 origin-left ${
+                                                                currentPath === subItemPath
+                                                                    ? 'scale-x-100'
+                                                                    : 'scale-x-0 group-hover:scale-x-100'
+                                                            }`}
+                                                        ></span>
+                                                    </Link>
+                                                )
+                                            })}
                                         </div>
                                     </>
                                 ) : (
@@ -206,9 +254,20 @@ export function Navbar() {
                                                 ? '/tours'
                                                 : `/${item.toLowerCase().replace(/ & /g, '-')}`
                                         }
-                                        className="text-[20px] text-gray-600 hover:text-gray-900"
+                                        className={`text-[20px] relative group ${
+                                            currentPath === `/${item.toLowerCase()}`
+                                                ? 'text-gray-800'
+                                                : 'text-gray-600 hover:text-gray-900'
+                                        }`}
                                     >
-                                        {item === 'Tours' ? 'Tours & Attractions' : item}
+                                        <span>{item === 'Tours' ? 'Tours & Attractions' : item}</span>
+                                        <span
+                                            className={`absolute left-0 -bottom-1 w-full h-0.5 bg-gray-600 transform transition-transform duration-300 origin-left ${
+                                                currentPath === `/${item.toLowerCase()}`
+                                                    ? 'scale-x-100'
+                                                    : 'scale-x-0 group-hover:scale-x-100'
+                                            }`}
+                                        ></span>
                                     </Link>
                                 )}
                             </div>
