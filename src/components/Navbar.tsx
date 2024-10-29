@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect, useCallback } from 'react'
-import { useRouter } from 'next/navigation'
+import { usePathname } from 'next/navigation'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Instagram, Facebook, X } from 'lucide-react'
@@ -15,15 +15,7 @@ export function Navbar() {
     const [isNavbarVisible, setIsNavbarVisible] = useState(true)
     const [lastScrollY, setLastScrollY] = useState(0)
     const [isAboutDropdownOpen, setIsAboutDropdownOpen] = useState(false)
-    const [isMounted, setIsMounted] = useState(false)
-
-    const router = useRouter()
-
-    useEffect(() => {
-        setIsMounted(true)
-    }, [])
-
-    const currentPath = isMounted ? router.asPath : ''
+    const pathname = usePathname()
 
     const handleScroll = useCallback(() => {
         const currentScrollY = window.scrollY
@@ -40,10 +32,19 @@ export function Navbar() {
         return () => window.removeEventListener('scroll', handleScroll)
     }, [handleScroll])
 
-    const menuItems = ['About', 'Suites', 'Tours', 'Gallery', 'Contact', 'Blog']
-    const aboutDropdownItems = ['Amenities', 'Our Story', 'Life in Costa Rica']
-
-    if (!isMounted) return null // Only render navbar on the client side
+    const menuItems = [
+        { name: 'About', path: '/about' },
+        { name: 'Suites', path: '/suites' },
+        { name: 'Tours', path: '/tours' },
+        { name: 'Gallery', path: '/gallery' },
+        { name: 'Contact', path: '/contact' },
+        { name: 'Blog', path: '/blog' }
+    ]
+    const aboutDropdownItems = [
+        { name: 'Amenities', path: '/amenities' },
+        { name: 'Our Story', path: '/our-story' },
+        { name: 'Life in Costa Rica', path: '/life-in-costa-rica' }
+    ]
 
     return (
         <motion.nav
@@ -105,61 +106,54 @@ export function Navbar() {
                             </div>
                             <div className="flex flex-col items-center justify-center flex-grow bg-white">
                                 {menuItems.map((item) => (
-                                    <div key={item} className="relative">
-                                        {item === 'About' ? (
+                                    <div key={item.name} className="relative">
+                                        {item.name === 'About' ? (
                                             <>
                                                 <button
                                                     className="text-3xl text-gray-800 my-4 hover:text-gray-600 flex items-center"
                                                     onClick={() => setIsAboutDropdownOpen(!isAboutDropdownOpen)}
                                                 >
-                                                    {item}
+                                                    {item.name}
                                                 </button>
                                                 {isAboutDropdownOpen && (
                                                     <div className="flex flex-col items-center mt-2">
-                                                        {aboutDropdownItems.map((subItem) => {
-                                                            const subItemPath = `/${subItem.toLowerCase().replace(/ /g, '-')}`
-                                                            return (
-                                                                <Link
-                                                                    key={subItem}
-                                                                    href={subItemPath}
-                                                                    className={`text-2xl my-2 relative group ${
-                                                                        currentPath === subItemPath ? 'text-gray-800' : 'text-gray-600'
-                                                                    } hover:text-gray-900`}
-                                                                    onClick={() => {
-                                                                        setIsAboutDropdownOpen(false)
-                                                                        setIsMobileMenuOpen(false)
-                                                                    }}
-                                                                >
-                                                                    <span>{subItem}</span>
-                                                                    <span
-                                                                        className={`absolute left-0 -bottom-1 w-full h-0.5 bg-gray-600 transform transition-transform duration-300 origin-left ${
-                                                                            currentPath === subItemPath
-                                                                                ? 'scale-x-100'
-                                                                                : 'scale-x-0 group-hover:scale-x-100'
-                                                                        }`}
-                                                                    ></span>
-                                                                </Link>
-                                                            )
-                                                        })}
+                                                        {aboutDropdownItems.map((subItem) => (
+                                                            <Link
+                                                                key={subItem.name}
+                                                                href={subItem.path}
+                                                                className={`text-2xl my-2 relative group ${
+                                                                    pathname === subItem.path ? 'text-gray-800' : 'text-gray-600'
+                                                                } hover:text-gray-900`}
+                                                                onClick={() => {
+                                                                    setIsAboutDropdownOpen(false)
+                                                                    setIsMobileMenuOpen(false)
+                                                                }}
+                                                            >
+                                                                <span>{subItem.name}</span>
+                                                                <span
+                                                                    className={`absolute left-0 -bottom-1 w-full h-0.5 bg-gray-600 transform transition-transform duration-300 origin-left ${
+                                                                        pathname === subItem.path
+                                                                            ? 'scale-x-100'
+                                                                            : 'scale-x-0 group-hover:scale-x-100'
+                                                                    }`}
+                                                                ></span>
+                                                            </Link>
+                                                        ))}
                                                     </div>
                                                 )}
                                             </>
                                         ) : (
                                             <Link
-                                                href={
-                                                    item === 'Tours'
-                                                        ? '/tours'
-                                                        : `/${item.toLowerCase().replace(/ & /g, '-')}`
-                                                }
+                                                href={item.path}
                                                 className={`text-3xl my-4 relative group ${
-                                                    currentPath === `/${item.toLowerCase()}` ? 'text-gray-800' : 'text-gray-600'
+                                                    pathname === item.path ? 'text-gray-800' : 'text-gray-600'
                                                 } hover:text-gray-900`}
                                                 onClick={() => setIsMobileMenuOpen(false)}
                                             >
-                                                <span>{item === 'Tours' ? 'Tours & Attractions' : item}</span>
+                                                <span>{item.name === 'Tours' ? 'Tours & Attractions' : item.name}</span>
                                                 <span
                                                     className={`absolute left-0 -bottom-1 w-full h-0.5 bg-gray-800 transform transition-transform duration-300 origin-left ${
-                                                        currentPath === `/${item.toLowerCase()}`
+                                                        pathname === item.path
                                                             ? 'scale-x-100'
                                                             : 'scale-x-0 group-hover:scale-x-100'
                                                     }`}
@@ -214,58 +208,45 @@ export function Navbar() {
                     </div>
                     <div className="mt-4 flex justify-center space-x-6">
                         {menuItems.map((item) => (
-                            <div key={item} className="relative group">
-                                {item === 'About' ? (
+                            <div key={item.name} className="relative group">
+                                {item.name === 'About' ? (
                                     <>
                                         <button className="text-[20px] text-gray-600 hover:text-gray-900 flex items-center relative group">
-                                            <span>{item}</span>
+                                            <span>{item.name}</span>
                                             <span className="absolute left-0 -bottom-1 w-full h-0.5 bg-gray-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
                                         </button>
                                         <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-                                            {aboutDropdownItems.map((subItem) => {
-                                                const subItemPath = `/${subItem.toLowerCase().replace(/ /g, '-')}`
-                                                return (
-                                                    <Link
-                                                        key={subItem}
-                                                        href={subItemPath}
-                                                        className={`block px-4 py-2 text-sm relative group ${
-                                                            currentPath === subItemPath
-                                                                ? 'text-gray-700'
-                                                                : 'text-gray-600 hover:bg-gray-100'
+                                            {aboutDropdownItems.map((subItem) => (
+                                                <Link
+                                                    key={subItem.name}
+                                                    href={subItem.path}
+                                                    className={`block px-4 py-2 text-sm relative group ${
+                                                        pathname === subItem.path ? 'text-gray-700' : 'text-gray-600 hover:bg-gray-100'
+                                                    }`}
+                                                >
+                                                    <span>{subItem.name}</span>
+                                                    <span
+                                                        className={`absolute left-0 -bottom-1 w-full h-0.5 bg-gray-700 transform transition-transform duration-300 origin-left ${
+                                                            pathname === subItem.path
+                                                                ? 'scale-x-100'
+                                                                : 'scale-x-0 group-hover:scale-x-100'
                                                         }`}
-                                                    >
-                                                        <span>{subItem}</span>
-                                                        <span
-                                                            className={`absolute left-0 -bottom-1 w-full h-0.5 bg-gray-700 transform transition-transform duration-300 origin-left ${
-                                                                currentPath === subItemPath
-                                                                    ? 'scale-x-100'
-                                                                    : 'scale-x-0 group-hover:scale-x-100'
-                                                            }`}
-                                                        ></span>
-                                                    </Link>
-                                                )
-                                            })}
+                                                    ></span>
+                                                </Link>
+                                            ))}
                                         </div>
                                     </>
                                 ) : (
                                     <Link
-                                        href={
-                                            item === 'Tours'
-                                                ? '/tours'
-                                                : `/${item.toLowerCase().replace(/ & /g, '-')}`
-                                        }
+                                        href={item.path}
                                         className={`text-[20px] relative group ${
-                                            currentPath === `/${item.toLowerCase()}`
-                                                ? 'text-gray-800'
-                                                : 'text-gray-600 hover:text-gray-900'
+                                            pathname === item.path ? 'text-gray-800' : 'text-gray-600 hover:text-gray-900'
                                         }`}
                                     >
-                                        <span>{item === 'Tours' ? 'Tours & Attractions' : item}</span>
+                                        <span>{item.name === 'Tours' ? 'Tours & Attractions' : item.name}</span>
                                         <span
                                             className={`absolute left-0 -bottom-1 w-full h-0.5 bg-gray-600 transform transition-transform duration-300 origin-left ${
-                                                currentPath === `/${item.toLowerCase()}`
-                                                    ? 'scale-x-100'
-                                                    : 'scale-x-0 group-hover:scale-x-100'
+                                                pathname === item.path ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
                                             }`}
                                         ></span>
                                     </Link>
