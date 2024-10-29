@@ -14,7 +14,6 @@ export function Navbar() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
     const [isNavbarVisible, setIsNavbarVisible] = useState(true)
     const [lastScrollY, setLastScrollY] = useState(0)
-    const [isAboutDropdownOpen, setIsAboutDropdownOpen] = useState(false)
     const [isMobileAboutOpen, setIsMobileAboutOpen] = useState(false)
     const pathname = usePathname()
 
@@ -121,7 +120,7 @@ export function Navbar() {
                                                 ) : (
                                                     <Link
                                                         href={item.path}
-                                                        className={`text-3xl my-4 relative group ${
+                                                        className={`text-3xl my-4 relative group mb-6 ${
                                                             pathname === item.path ? 'text-gray-800' : 'text-gray-600'
                                                         } hover:text-gray-900`}
                                                         onClick={() => setIsMobileMenuOpen(false)}
