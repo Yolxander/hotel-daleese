@@ -111,7 +111,7 @@ export function Navbar() {
                                             <div key={item.name} className="relative">
                                                 {item.name === 'About' ? (
                                                     <button
-                                                        className="text-3xl text-gray-800 my-4 hover:text-gray-600 flex items-center"
+                                                        className="text-3xl text-gray-800 my-2 hover:text-gray-600 flex items-center"
                                                         onClick={() => setIsMobileAboutOpen(true)}
                                                     >
                                                         {item.name}
@@ -120,7 +120,7 @@ export function Navbar() {
                                                 ) : (
                                                     <Link
                                                         href={item.path}
-                                                        className={`text-3xl my-4 relative group mb-6 ${
+                                                        className={`text-3xl my-6 relative group ${
                                                             pathname === item.path ? 'text-gray-800' : 'text-gray-600'
                                                         } hover:text-gray-900`}
                                                         onClick={() => setIsMobileMenuOpen(false)}
@@ -139,7 +139,7 @@ export function Navbar() {
                                         ))}
                                         <Link
                                             href="/book-a-room"
-                                            className="text-3xl text-gray-800 my-4 hover:text-gray-600 border border-gray-800 px-4 py-2 rounded"
+                                            className="text-3xl text-gray-800 my-6 hover:text-gray-600 border border-gray-800 px-4 py-2 rounded"
                                             onClick={() => setIsMobileMenuOpen(false)}
                                         >
                                             Book a Room
@@ -148,7 +148,7 @@ export function Navbar() {
                                 ) : (
                                     <>
                                         <button
-                                            className="text-3xl text-gray-800 my-4 hover:text-gray-600 flex items-center"
+                                            className="text-3xl text-gray-800 my-6 hover:text-gray-600 flex items-center"
                                             onClick={() => setIsMobileAboutOpen(false)}
                                         >
                                             <ChevronLeft size={24} className="mr-2" />
