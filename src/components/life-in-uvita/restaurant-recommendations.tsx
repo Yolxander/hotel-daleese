@@ -118,7 +118,7 @@ export function RestaurantRecommendationsComponent() {
                       scale: 1.02,
                       transition: { duration: 0.3, ease: "easeOut" }
                     }}
-                    className="backdrop-blur-sm bg-white/10 p-6 rounded-lg"
+                    className="backdrop-blur-sm bg-white/10 p-6"
                 >
                   <motion.h3
                       variants={textVariants}
