@@ -1,6 +1,9 @@
 'use client'
 
 import { Cormorant_Garamond } from 'next/font/google'
+import { motion, easeOut } from 'framer-motion'
+import { useInView } from 'framer-motion'
+import { useRef } from 'react'
 
 const cormorantGaramond = Cormorant_Garamond({ subsets: ['latin'], weight: ['400'] })
 
@@ -32,21 +35,96 @@ const restaurants = [
 ]
 
 export function RestaurantRecommendationsComponent() {
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true, margin: "-20%" })
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.3,
+        ease: "easeOut"
+      }
+    }
+  }
+
+  const itemVariants = {
+    hidden: {
+      opacity: 0,
+      y: 50,
+      scale: 0.95
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut"
+      }
+    }
+  }
+
+  const textVariants = {
+    hidden: {
+      opacity: 0,
+      y: 20
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut"
+      }
+    }
+  }
+
   return (
-    <section className={`bg-gray-100 ${cormorantGaramond.className}`}>
-      <div className="container mx-auto px-4 py-16 md:py-24">
-        <h2 className="text-4xl md:text-5xl lg:text-6xl italic text-center mb-12">
-          Good food, memorable experiences
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {restaurants.map((restaurant, index) => (
-            <div key={index} className="p-6">
-              <h3 className="text-2xl font-semibold mb-2">{restaurant.name}</h3>
-              <p className="text-gray-700">{restaurant.description}</p>
-            </div>
-          ))}
+      <section ref={ref} className={`bg-gray-100 ${cormorantGaramond.className}`}>
+        <div className="container mx-auto px-4 py-16 md:py-24">
+          <motion.h2
+              initial="hidden"
+              animate={isInView ? "visible" : "hidden"}
+              variants={textVariants}
+              className="text-4xl md:text-5xl lg:text-6xl italic text-center mb-12"
+          >
+            Good food, memorable experiences
+          </motion.h2>
+          <motion.div
+              variants={containerVariants}
+              initial="hidden"
+              animate={isInView ? "visible" : "hidden"}
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          >
+            {restaurants.map((restaurant, index) => (
+                <motion.div
+                    key={index}
+                    variants={itemVariants}
+                    whileHover={{
+                      scale: 1.02,
+                      transition: { duration: 0.3, ease: "easeOut" }
+                    }}
+                    className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300"
+                >
+                  <motion.h3
+                      variants={textVariants}
+                      className="text-2xl font-semibold mb-4"
+                  >
+                    {restaurant.name}
+                  </motion.h3>
+                  <motion.p
+                      variants={textVariants}
+                      className="text-gray-700 text-[20px] leading-relaxed"
+                  >
+                    {restaurant.description}
+                  </motion.p>
+                </motion.div>
+            ))}
+          </motion.div>
         </div>
-      </div>
-    </section>
+      </section>
   )
 }

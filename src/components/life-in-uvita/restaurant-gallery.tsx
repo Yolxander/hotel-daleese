@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import { Lora } from 'next/font/google'
+import { motion } from 'framer-motion'
 
 const lora = Lora({ subsets: ['latin'] })
 
@@ -79,119 +80,143 @@ const images = [
 ]
 
 export function RestaurantGalleryComponent() {
-  return (
-    <section className={`container mx-auto px-4 py-16 ${lora.className}`}>
-      <div className="grid grid-cols-1 md:grid-cols-6 gap-4 mb-8 ">
-        <div className="space-y-2 md:col-span-3">
-          <Image
-            src={images[0].src}
-            alt={images[0].alt}
-            width={images[0].width}
-            height={images[0].height}
-            className="w-full h-[500px] object-cover"
-          />
-          <p className="text-sm">{images[0].caption}</p>
-        </div>
-        <div className="space-y-2 md:col-span-2">
-          <Image
-            src={images[1].src}
-            alt={images[1].alt}
-            width={images[1].width}
-            height={images[1].height}
-            className="w-full h-[500px]  object-cover"
-          />
-          <p className="text-sm">{images[1].caption}</p>
-        </div>
-        <div className="space-y-2 md:col-span-1">
-          <Image
-            src={images[2].src}
-            alt={images[2].alt}
-            width={images[2].width}
-            height={images[2].height}
-            className="w-full h-[500px] object-cover"
-          />
-          <p className="text-sm">{images[2].caption}</p>
-        </div>
-      </div>
-      
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-        <div className="space-y-2">
-          <Image
-            src={images[4].src}
-            alt={images[4].alt}
-            width={images[4].width}
-            height={images[4].height}
-            className="w-full  h-[500px] object-cover"
-          />
-          <p className="text-sm">{images[4].caption}</p>
-        </div>
-        <div className="space-y-2 md:col-span-2">
-          <Image
-              src={images[3].src}
-              alt={images[3].alt}
-              width={images[3].width}
-              height={images[3].height}
-              className="w-full h-[500px] object-cover"
-          />
-          <p className="text-sm">{images[3].caption}</p>
-        </div>
-      </div>
+    return (
+        <section className={`container mx-auto px-4 py-16 ${lora.className}`}>
+            <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="grid grid-cols-1 md:grid-cols-6 gap-4 mb-8"
+            >
+                <div className="space-y-2 md:col-span-3">
+                    <Image
+                        src={images[0].src}
+                        alt={images[0].alt}
+                        width={images[0].width}
+                        height={images[0].height}
+                        className="w-full h-[500px] object-cover"
+                    />
+                    <p className="text-sm">{images[0].caption}</p>
+                </div>
+                <div className="space-y-2 md:col-span-2">
+                    <Image
+                        src={images[1]?.src}
+                        alt={images[1]?.alt}
+                        width={images[1]?.width}
+                        height={images[1]?.height}
+                        className="w-full h-[500px]  object-cover"
+                    />
+                    <p className="text-sm">{images[1]?.caption}</p>
+                </div>
+                <div className="space-y-2 md:col-span-1">
+                    <Image
+                        src={images[2]?.src}
+                        alt={images[2]?.alt}
+                        width={images[2]?.width}
+                        height={images[2]?.height}
+                        className="w-full h-[500px] object-cover"
+                    />
+                    <p className="text-sm">{images[2]?.caption}</p>
+                </div>
+            </motion.div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-        <div className="space-y-2">
-          <Image
-            src={images[5].src}
-            alt={images[5].alt}
-            width={images[5].width}
-            height={images[5].height}
-            className="w-full  h-[500px] object-cover"
-          />
-          <p className="text-sm">{images[5].caption}</p>
-        </div>
-        <div className="space-y-2">
-          <Image
-            src={images[6].src}
-            alt={images[6].alt}
-            width={images[6].width}
-            height={images[6].height}
-            className="w-full  h-[500px] object-cover"
-          />
-          <p className="text-sm">{images[6].caption}</p>
-        </div>
-      </div>
+            <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8"
+            >
+                <div className="space-y-2">
+                    <Image
+                        src={images[4]?.src}
+                        alt={images[4]?.alt}
+                        width={images[4]?.width}
+                        height={images[4]?.height}
+                        className="w-full  h-[500px] object-cover"
+                    />
+                    <p className="text-sm">{images[4]?.caption}</p>
+                </div>
+                <div className="space-y-2 md:col-span-2">
+                    <Image
+                        src={images[3]?.src}
+                        alt={images[3]?.alt}
+                        width={images[3]?.width}
+                        height={images[3]?.height}
+                        className="w-full h-[500px] object-cover"
+                    />
+                    <p className="text-sm">{images[3]?.caption}</p>
+                </div>
+            </motion.div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div className="space-y-2">
-          <Image
-            src={images[7].src}
-            alt={images[7].alt}
-            width={images[7].width}
-            height={images[7].height}
-            className="w-full  h-[500px] object-cover"
-          />
-          <p className="text-sm">{images[7].caption}</p>
-        </div>
-        <div className="space-y-2">
-          <Image
-            src={images[8].src}
-            alt={images[8].alt}
-            width={images[8].width}
-            height={images[8].height}
-            className="w-full  h-[500px] object-cover"
-          />
-          <p className="text-sm">{images[8].caption}</p>
-        </div>
-        <div className="space-y-2">
-          <Image
-            src={images[9].src}
-            alt={images[9].alt}
-            width={images[9].width}
-            height={images[9].height}
-            className="w-full  h-[500px] object-cover"
-          />
-          <p className="text-sm">{images[9].caption}</p>
-        </div>
-      </div>
-    </section>
-  )
+            <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8"
+            >
+                <div className="space-y-2">
+                    <Image
+                        src={images[5]?.src}
+                        alt={images[5]?.alt}
+                        width={images[5]?.width}
+                        height={images[5]?.height}
+                        className="w-full  h-[500px] object-cover"
+                    />
+                    <p className="text-sm">{images[5]?.caption}</p>
+                </div>
+                <div className="space-y-2">
+                    <Image
+                        src={images[6]?.src}
+                        alt={images[6]?.alt}
+                        width={images[6]?.width}
+                        height={images[6]?.height}
+                        className="w-full  h-[500px] object-cover"
+                    />
+                    <p className="text-sm">{images[6]?.caption}</p>
+                </div>
+            </motion.div>
+
+            <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="grid grid-cols-1 md:grid-cols-3 gap-4"
+            >
+                <div className="space-y-2">
+                    <Image
+                        src={images[7]?.src}
+                        alt={images[7]?.alt}
+                        width={images[7]?.width}
+                        height={images[7]?.height}
+                        className="w-full  h-[500px] object-cover"
+                    />
+                    <p className="text-sm">{images[7]?.caption}</p>
+                </div>
+                <div className="space-y-2">
+                    <Image
+                        src={images[8]?.src}
+                        alt={images[8]?.alt}
+                        width={images[8]?.width}
+                        height={images[8]?.height}
+                        className="w-full  h-[500px] object-cover"
+                    />
+                    <p className="text-sm">{images[8]?.caption}</p>
+                </div>
+                <div className="space-y-2">
+                    <Image
+                        src={images[9]?.src}
+                        alt={images[9]?.alt}
+                        width={images[9]?.width}
+                        height={images[9]?.height}
+                        className="w-full  h-[500px] object-cover"
+                    />
+                    <p className="text-sm">{images[9]?.caption}</p>
+                </div>
+            </motion.div>
+        </section>
+    )
 }
