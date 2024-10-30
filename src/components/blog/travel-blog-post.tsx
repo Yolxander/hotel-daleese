@@ -21,7 +21,7 @@ export function TravelBlogPostComponent() {
         </div>
         <div className="md:w-1/2 flex flex-col justify-center md:gap-12">
           <p className="text-gray-500 mb-2 font-light text-[25px]">2024-03-15</p>
-          <h2 className="mmd:text-5xl mb-4 text-3xl">When is the best time to travel to Costa Rica?</h2>
+          <h2 className="md:text-5xl mb-4 text-3xl">When is the best time to travel to Costa Rica?</h2>
           <p className="mb-4 font-normal text-[21px]">
             The best time to travel to Costa Rica depends on your preferences and budget. Costa
             Rica offers two different seasons: Dry & Green seasons. Read our post to figure out
