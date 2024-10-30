@@ -1,6 +1,8 @@
 'use client'
 
 import Image from 'next/image'
+import { motion } from 'framer-motion'
+import { useInView } from 'react-intersection-observer'
 
 export function FeaturesGalleryComponent() {
   const features = [
@@ -18,62 +20,95 @@ export function FeaturesGalleryComponent() {
     { id: 12, src: 'https://storage.googleapis.com/sempre-studios-893c8.appspot.com/uploads/Casa%20Turul/Gallery/67206510563ca.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1761712272&Signature=gW6G89RXeKbXsjvBpvWt55bd3C4DyKbidb0mSE%2FRWZZTyAnTsi%2B0sOBFkf6j69yeujOyTKQGc80Xn4WuwKftYnzhr8Gs3Hj66WSmcbfH1%2FLwyTGQrZN3oba19vtRXm4XRN8CUBS6vOJz9mfdaeOHP7ffYnktlJzCQ5QBLRanMkpjzC7NSDD3Z1hdi7rsUERjQr8oI0UJuC%2B%2BSlWLfWsU1rRM9hgiCOlw18GFRzhudW2Ra9sglddzr19SVddbx7HjwsoNSJdXHO5H8Ji6InQ1kQJN4fBP%2BMuSgV0Ggg%2FSApx8Z0N0wBe4IAkLXJ1whatwMVsLOxXfusUf%2FMGJawwsgQ%3D%3D', alt: 'Additional feature 8' },
   ]
 
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  })
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  }
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    },
+  }
+
   return (
-    <section className="bg-white py-16">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
-          {features.slice(0, 4).map((feature) => (
-            <div key={feature.id} className="aspect-[3/4]">
-              <Image
-                src={feature.src}
-                alt={feature.alt}
-                width={300}
-                height={400}
-                className="w-full h-full object-cover"
-              />
-            </div>
-          ))}
+      <motion.section
+          ref={ref}
+          initial="hidden"
+          animate={inView ? "visible" : "hidden"}
+          variants={containerVariants}
+          className="bg-white py-16"
+      >
+        <div className="container mx-auto px-4">
+          <motion.div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
+            {features.slice(0, 4).map((feature) => (
+                <motion.div key={feature.id} className="aspect-[3/4]" variants={itemVariants}>
+                  <Image
+                      src={feature.src}
+                      alt={feature.alt}
+                      width={300}
+                      height={400}
+                      className="w-full h-full object-cover rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+                  />
+                </motion.div>
+            ))}
+          </motion.div>
+          <motion.div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-4">
+            {features.slice(4, 7).map((feature) => (
+                <motion.div key={feature.id} className="aspect-[3/4]" variants={itemVariants}>
+                  <Image
+                      src={feature.src}
+                      alt={feature.alt}
+                      width={300}
+                      height={400}
+                      className="w-full h-full object-cover rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+                  />
+                </motion.div>
+            ))}
+          </motion.div>
+          <motion.div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-4">
+            {features.slice(7, 10).map((feature) => (
+                <motion.div key={feature.id} className="aspect-[3/4]" variants={itemVariants}>
+                  <Image
+                      src={feature.src}
+                      alt={feature.alt}
+                      width={300}
+                      height={400}
+                      className="w-full h-full object-cover rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+                  />
+                </motion.div>
+            ))}
+          </motion.div>
+          <motion.div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {features.slice(10, 12).map((feature) => (
+                <motion.div key={feature.id} className="aspect-[3/4]" variants={itemVariants}>
+                  <Image
+                      src={feature.src}
+                      alt={feature.alt}
+                      width={300}
+                      height={400}
+                      className="w-full h-full object-cover rounded-lg"
+                  />
+                </motion.div>
+            ))}
+          </motion.div>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-4">
-          {features.slice(4, 7).map((feature) => (
-            <div key={feature.id} className="aspect-[3/4]">
-              <Image
-                src={feature.src}
-                alt={feature.alt}
-                width={300}
-                height={400}
-                className="w-full h-full object-cover"
-              />
-            </div>
-          ))}
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-4">
-          {features.slice(7, 10).map((feature) => (
-            <div key={feature.id} className="aspect-[3/4]">
-              <Image
-                src={feature.src}
-                alt={feature.alt}
-                width={300}
-                height={400}
-                className="w-full h-full object-cover"
-              />
-            </div>
-          ))}
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          {features.slice(10, 12).map((feature) => (
-            <div key={feature.id} className="aspect-[3/4]">
-              <Image
-                src={feature.src}
-                alt={feature.alt}
-                width={300}
-                height={400}
-                className="w-full h-full object-cover"
-              />
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
+      </motion.section>
   )
 }
