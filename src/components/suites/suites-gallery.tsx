@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image'
+import { motion } from 'framer-motion'
 
 export function SuitesGalleryComponent() {
   const suites = [
@@ -10,23 +11,64 @@ export function SuitesGalleryComponent() {
   ]
 
   return (
-    <section className="bg-white py-16">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {suites.map((suite) => (
-            <div key={suite.id} className="flex flex-col items-left ">
-              <Image
-                src={suite.image}
-                alt={suite.alt}
-                width={400}
-                height={400}
-                className="w-full h-[50vh] object-cover pointer"
-              />
-              <p className="mt-4 text-black text-xl">Suite {suite.id}</p>
-            </div>
-          ))}
+      <section className="bg-white py-16">
+        <div className="container mx-auto px-4">
+          <motion.div
+              className="grid grid-cols-1 md:grid-cols-3 gap-8"
+              initial="hidden"
+              animate="visible"
+              variants={{
+                hidden: { opacity: 0 },
+                visible: {
+                  opacity: 1,
+                  transition: {
+                    staggerChildren: 0.3
+                  }
+                }
+              }}
+          >
+            {suites.map((suite) => (
+                <motion.div
+                    key={suite.id}
+                    className="flex flex-col items-left"
+                    variants={{
+                      hidden: { opacity: 0, y: 20 },
+                      visible: {
+                        opacity: 1,
+                        y: 0,
+                        transition: {
+                          duration: 0.6,
+                          ease: "easeOut"
+                        }
+                      }
+                    }}
+                >
+                  <Image
+                      src={suite.image}
+                      alt={suite.alt}
+                      width={400}
+                      height={400}
+                      className="w-full h-[50vh] object-cover pointer"
+                  />
+                  <motion.p
+                      className="mt-4 text-black text-xl"
+                      variants={{
+                        hidden: { opacity: 0 },
+                        visible: {
+                          opacity: 1,
+                          transition: {
+                            delay: 0.2,
+                            duration: 0.4
+                          }
+                        }
+                      }}
+                  >
+                    Suite {suite.id}
+                  </motion.p>
+                </motion.div>
+            ))}
+          </motion.div>
         </div>
-      </div>
-    </section>
+      </section>
   )
 }
