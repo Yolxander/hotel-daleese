@@ -10,7 +10,7 @@ export default function AmenitiesPage() {
     return (
     <div>
        <Navbar />
-     <AmenitiesHeroComponent />
+        <AmenitiesHeroComponent />
         <AmenitiesSectionComponent />
         <AmenitiesGalleryLightbox />
         <FooterComponent />

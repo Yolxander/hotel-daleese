@@ -1,9 +1,11 @@
 'use client'
 
-import { useState } from "react"
+import { useState, useRef } from "react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { ChevronLeft, ChevronRight, X } from "lucide-react"
+import { motion, AnimatePresence } from "framer-motion"
+import { useInView } from "framer-motion"
 
 const galleryItems = [
     { src: "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/uploads/Casa%20Turul/Amenities/671d365de0a74.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1761503710&Signature=WBCgNVqDLCtTqy8c2bmvwBk0enVcOrZ9T26rXVIFygfwkhN6ns7dR1MSWhO8CQAt6mx8dscbJzxcest%2BMqY79tx6bPgYI9PaiVsY6FVxzXIpgr1drG2sQ6aQTs9nvMjnz%2FTkm2Kin3g4guLwEZU083E3%2FcpyiGyiEkMZ0dQiwQs74XPedcCyOp0eUgiCjSb7zLtQ8Fk9h%2B4bnnXiqtEskP%2BG5EjHqyNgsqDctkm%2BV9sSLN3G8N%2FCKVGNuz2IZluSjYy3HmLKjBlomWmArNUPwz6l5cUv0WbeZIsXq7QL5SDuZBmEvcSmJjR4lzxl7z1ipTtZ6%2BS9r4%2FUDocG2g6v4w%3D%3D", alt: "Luxurious bedroom with large windows and mountain view" },
@@ -22,66 +24,83 @@ const galleryItems = [
     { src: "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/uploads/Casa%20Turul/Amenities/671d365cc8263.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1761503709&Signature=Wrec3ZXvRp42yf3HGjIumGPDoWTtmveEdzctkQChUEBj3ia0pPswYsYKFd5Kev3AcgraTSXg0y8Z3IM45HOzB1k3fl40gQMh3jV4ibdSXLGlbsl1HH8h53z2eLSx%2B%2BWff5ET%2FTVq9%2BFEQPmO724zfMy1BbQM45uHuDU%2FeFi1fE8CvGEBCdl%2BgOKq0JOA0JY8TBLw63WrJvtFDoJxcxT%2BN%2BAvCelhghRL5A7elqO5W%2BcMPrikipGTgl4zpdaUlmlQhAqGZR3r67ITIWMw1Q48v4NJ8xYu21yFUV%2B6LYrsg%2FNNi1qA2mWBJ3VgXLOnt5PfOBLlAcASwluaB7%2BLtB9NjA%3D%3D", alt: "Outdoor dining area with stunning mountain backdrop" },
     { src: "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/uploads/Casa%20Turul/Amenities/671d365d9953c.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1761503709&Signature=azrdt92FeuY9SGVt6jNsYkARFQDuGhfC4ydtIcanaYmk8VNmhaQmF%2BawfPTgM0tpcv7WdShOlZLZ2%2B5NU2xlGAw5S7shkJn2VydzYP6FFRIhqWNDLNrkbS4ARJz04tPrQzcBvp1tNCC0EKMdRPDmFF17zJyg83z4Bnd1AWLIaojaYMG3POa1jnz3TV00uOFTDv9kt8o5Qe8LOpK99LK0XG77QUckmpQlsmkijQA%2B%2B5yFrnCPxeqkFRSiDSwyHWAa7EoT%2BjfeL3MU4VVtWZtEYOXPHSTndW%2F7Y5KCcpENEsuZn3%2Fw%2FNLlbzA3eR7aw1LWzSol3Eh1ybn2XL79T9VzAw%3D%3D", alt: "Bathroom with stylish fixtures" },
     { src: "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/uploads/Casa%20Turul/Amenities/671d36589b00a.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1761503705&Signature=kLQet8MR5gEIjGUih37uSUg7w5%2B1gFhUxxegRwjizEoZ7AYzCpNqFx94AkwoRgmY8TcbS%2BeFBTaOWjO2iyBTL05bumIPnXFnyinHeD1Lp3MoiQu9M5s07f%2FASRElmmtFMU1f1RrZjmCw6ZJsmoR6eBch8jrWUyG%2BTVpQOoicInhcO%2B1zh9C%2B6FfYvgw%2BSkCjNMcGDuj5%2BcDQnPSrs50VhGJRWO%2FDiP3sfy7zMxIo46RJu59W3mopFXsnyEgcb7sRoTRdzH04sGMf3b5w35iYx6DhpOh%2Fk22%2FhaGLE74JBa15E9rDF0jvXyZDKGpwXzapkY9i8YnEaIb91Bxd27hQtQ%3D%3D", alt: "Bathroom with stylish fixtures" }
-];
+]
 
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-expect-error
-const Lightbox = ({ currentIndex, onClose, onPrev, onNext }) => (
-    <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
-        <Button
-            variant="ghost"
-            size="icon"
-            className="absolute top-4 right-4 text-white"
-            onClick={onClose}
-            style={{ height: '72px', width: '72px' }} // Larger button size
+const Lightbox = ({ currentIndex, onClose, onPrev, onNext }: {
+    currentIndex: number
+    onClose: () => void
+    onPrev: () => void
+    onNext: () => void
+}) => (
+    <AnimatePresence>
+        <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50"
         >
-            <X className="h-16 w-16" /> {/* Larger icon */}
-            <span className="sr-only">Close</span>
-        </Button>
-        <Button
-            variant="ghost"
-            size="icon"
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white"
-            onClick={onPrev}
-            style={{ height: '72px', width: '72px' }} // Larger button size
-        >
-            <ChevronLeft className="h-16 w-16" /> {/* Larger icon */}
-            <span className="sr-only">Previous image</span>
-        </Button>
-        <div className="text-white text-center">
-            <div className="p-4">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                    src={galleryItems[currentIndex].src}
-                    alt={galleryItems[currentIndex].alt}
-                    className="max-h-[95vh] object-contain"
-                />
-            </div>
-            <p className="mt-2">Image {currentIndex + 1} of {galleryItems.length}</p>
-        </div>
-        <Button
-            variant="ghost"
-            size="icon"
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white"
-            onClick={onNext}
-            style={{ height: '72px', width: '72px' }} // Larger button size
-        >
-            <ChevronRight className="h-16 w-16" /> {/* Larger icon */}
-            <span className="sr-only">Next image</span>
-        </Button>
-    </div>
+            <Button
+                variant="ghost"
+                size="icon"
+                className="absolute top-4 right-4 text-white"
+                onClick={onClose}
+                style={{ height: '72px', width: '72px' }}
+            >
+                <X className="h-16 w-16" />
+                <span className="sr-only">Close</span>
+            </Button>
+            <Button
+                variant="ghost"
+                size="icon"
+                className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white"
+                onClick={onPrev}
+                style={{ height: '72px', width: '72px' }}
+            >
+                <ChevronLeft className="h-16 w-16" />
+                <span className="sr-only">Previous image</span>
+            </Button>
+            <motion.div
+                className="text-white text-center"
+                initial={{ scale: 0.9, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                exit={{ scale: 0.9, opacity: 0 }}
+                transition={{ duration: 0.3 }}
+            >
+                <div className="p-4">
+                    <motion.img
+                        key={currentIndex}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.3 }}
+                        src={galleryItems[currentIndex].src}
+                        alt={galleryItems[currentIndex].alt}
+                        className="max-h-[95vh] object-contain"
+                    />
+                </div>
+                <p className="mt-2">Image {currentIndex + 1} of {galleryItems.length}</p>
+            </motion.div>
+            <Button
+                variant="ghost"
+                size="icon"
+                className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white"
+                onClick={onNext}
+                style={{ height: '72px', width: '72px' }}
+            >
+                <ChevronRight className="h-16 w-16" />
+                <span className="sr-only">Next image</span>
+            </Button>
+        </motion.div>
+    </AnimatePresence>
 )
-
-
-
 
 export function AmenitiesGalleryLightbox() {
     const [lightboxOpen, setLightboxOpen] = useState(false)
     const [currentImageIndex, setCurrentImageIndex] = useState(0)
+    const ref = useRef(null)
+    const isInView = useInView(ref, { once: true, margin: "-100px" })
 
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-expect-error
-    const openLightbox = (index) => {
+    const openLightbox = (index: number) => {
         setCurrentImageIndex(index)
         setLightboxOpen(true)
     }
@@ -103,19 +122,41 @@ export function AmenitiesGalleryLightbox() {
     }
 
     return (
-        <section className="py-12 px-4 md:px-6 lg:px-8">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <section ref={ref} className="py-12 px-4 md:px-6 lg:px-8">
+            <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                transition={{ duration: 0.6 }}
+                className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
+            >
                 {galleryItems.map((item, index) => (
-                    <Card key={index} className="overflow-hidden cursor-pointer" onClick={() => openLightbox(index)}>
-                        <CardContent className="p-0">
-                            <div className="aspect-square bg-muted flex items-center justify-center text-muted-foreground">
-                                {/* eslint-disable-next-line @next/next/no-img-element */}
-                                <img src={item.src} alt={item.alt} className="object-cover w-full h-full" />
-                            </div>
-                        </CardContent>
-                    </Card>
+                    <motion.div
+                        key={index}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                        transition={{ duration: 0.5, delay: index * 0.1 }}
+                    >
+                        <Card
+                            className="overflow-hidden cursor-pointer"
+                            onClick={() => openLightbox(index)}
+                        >
+                            <CardContent className="p-0">
+                                <motion.div
+                                    className="aspect-square bg-muted flex items-center justify-center text-muted-foreground"
+                                    whileHover={{ scale: 1.05 }}
+                                    transition={{ duration: 0.3 }}
+                                >
+                                    <img
+                                        src={item.src}
+                                        alt={item.alt}
+                                        className="object-cover w-full h-full"
+                                    />
+                                </motion.div>
+                            </CardContent>
+                        </Card>
+                    </motion.div>
                 ))}
-            </div>
+            </motion.div>
             {lightboxOpen && (
                 <Lightbox
                     currentIndex={currentImageIndex}
