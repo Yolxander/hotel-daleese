@@ -16,10 +16,10 @@ export function TravelBlogPostComponent() {
             alt="Person sitting on a car overlooking a mountain in Costa Rica"
             width={800}
             height={200}
-            className="w-full h-[500px] object-cover"
+            className="w-full h-[560px] object-cover"
           />
         </div>
-        <div className="md:w-1/2 flex flex-col justify-center md:gap-12">
+        <div className="md:w-1/2 flex flex-col justify-center md:gap-8">
           <p className="text-gray-500 mb-2 font-light text-[25px]">2024-03-15</p>
           <h2 className="md:text-5xl mb-4 text-3xl">When is the best time to travel to Costa Rica?</h2>
           <p className="mb-4 font-normal text-[21px]">
