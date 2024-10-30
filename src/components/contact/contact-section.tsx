@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Lora } from 'next/font/google'
+import { motion } from 'framer-motion'
+import { useInView } from 'react-intersection-observer'
 
 const lora = Lora({ subsets: ['latin'] })
 
@@ -16,24 +18,75 @@ export default function ContactSection() {
     subject: '',
     message: ''
   })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  })
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
     setFormData(prevState => ({ ...prevState, [name]: value }))
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission here
-    console.log(formData)
+    setIsSubmitting(true)
+    setSubmitStatus('idle')
+    try {
+      // Simulating API call
+      await new Promise(resolve => setTimeout(resolve, 1500))
+      console.log(formData)
+      setSubmitStatus('success')
+      setFormData({
+        firstName: '',
+        lastName: '',
+        email: '',
+        subject: '',
+        message: ''
+      })
+    } catch (error) {
+      setSubmitStatus('error')
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  }
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    },
   }
 
   return (
-      <section className={`h-[110vh] md:pt-[300px] pt-[200px]  pb-[100px] relative py-16 px-4 md:px-8 ${lora.className}`} style={{backgroundImage: "url('/placeholder.svg?height=800&width=1200')"}}>
-
+      <motion.section
+          ref={ref}
+          initial="hidden"
+          animate={inView ? "visible" : "hidden"}
+          variants={containerVariants}
+          className={`h-[110vh] md:pt-[300px] pt-[200px] pb-[100px] relative py-16 px-4 md:px-8 ${lora.className}`}
+          style={{backgroundImage: "url('/placeholder.svg?height=800&width=1200')", backgroundSize: 'cover', backgroundPosition: 'center'}}
+      >
         <div className="relative z-9 max-w-7xl mx-auto flex flex-col md:flex-row gap-[100px]">
-          <div className="md:w-1/2 text-white">
-            <h2 className="text-4xl font-bold mb-2">Contact Us</h2>
+          <motion.div variants={itemVariants} className="md:w-1/2 text-white">
+            <h2 className="text-4xl mb-2">Contact Us</h2>
             <div className="w-full h-px bg-white mb-6"></div>
             <p className="mb-6">
               We always look forward to speaking with our guests. If you have any
@@ -57,9 +110,19 @@ export default function ContactSection() {
             <Button variant="default" className="bg-primary text-primary-foreground hover:bg-primary/90">
               Send a Message
             </Button>
-          </div>
-          <div className="md:w-1/2">
+          </motion.div>
+          <motion.div variants={itemVariants} className="md:w-1/2">
             <form onSubmit={handleSubmit} className="bg-white/80 py-10 px-6 rounded-lg shadow-lg z-9">
+              {submitStatus === 'success' && (
+                  <div className="mb-4 p-2 bg-green-100 text-green-700 rounded">
+                    Message sent successfully!
+                  </div>
+              )}
+              {submitStatus === 'error' && (
+                  <div className="mb-4 p-2 bg-red-100 text-red-700 rounded">
+                    Failed to send message. Please try again.
+                  </div>
+              )}
               <div className="mb-4 flex gap-4">
                 <div className="flex-1">
                   <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-1">First Name</label>
@@ -117,10 +180,12 @@ export default function ContactSection() {
                     onChange={handleChange}
                 />
               </div>
-              <Button type="submit" className="w-full">Submit</Button>
+              <Button type="submit" className="w-full" disabled={isSubmitting}>
+                {isSubmitting ? 'Submitting...' : 'Submit'}
+              </Button>
             </form>
-          </div>
+          </motion.div>
         </div>
-      </section>
+      </motion.section>
   )
 }
