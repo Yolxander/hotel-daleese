@@ -60,7 +60,7 @@ export function FaqSection() {
                   <AccordionItem value="item-1">
                     <AccordionTrigger>Where is your hotel located in Costa Rica?</AccordionTrigger>
                     <AccordionContent className="text-[20px] leading-relaxed ml-[20%]">
-                      We are located in Uvita, Puntarenas. It's a 3 hour drive south from the San Jose airport.
+                      We are located in Uvita, Puntarenas. It&#39;s a 3 hour drive south from the San Jose airport.
                     </AccordionContent>
                   </AccordionItem>
                 </motion.div>

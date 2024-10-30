@@ -10,7 +10,6 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Lora } from 'next/font/google'
 
 const lora = Lora({ subsets: ['latin'] })
-const cormorantGaramond = Cormorant_Garamond({ subsets: ['latin'], weight: ['400'] })
 
 export function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
