@@ -146,6 +146,7 @@ export function AmenitiesGalleryLightbox() {
                                     whileHover={{ scale: 1.05 }}
                                     transition={{ duration: 0.3 }}
                                 >
+                                    {/* eslint-disable-next-line @next/next/no-img-element */}
                                     <img
                                         src={item.src}
                                         alt={item.alt}

@@ -1,7 +1,7 @@
 'use client'
 
 import { Cormorant_Garamond } from 'next/font/google'
-import { motion, easeOut } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
 

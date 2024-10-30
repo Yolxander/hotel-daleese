@@ -5,7 +5,6 @@ import { usePathname } from 'next/navigation'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Instagram, Facebook, X, ChevronRight, ChevronLeft } from 'lucide-react'
-import { Cormorant_Garamond } from 'next/font/google'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Lora } from 'next/font/google'
 
