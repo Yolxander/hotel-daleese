@@ -82,7 +82,7 @@ export default function ContactSection() {
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
           variants={containerVariants}
-          className={`h-[110vh] md:pt-[300px] pt-[200px] pb-[100px] relative py-16 px-4 md:px-8 ${lora.className}`}
+          className={`h-fit md:pt-[300px] pt-[200px] pb-[100px] relative py-16 px-4 md:px-8 ${lora.className}`}
           style={{backgroundImage: "url('/placeholder.svg?height=800&width=1200')", backgroundSize: 'cover', backgroundPosition: 'center'}}
       >
         <div className="relative z-9 max-w-7xl mx-auto flex flex-col md:flex-row gap-[100px]">
