@@ -77,20 +77,20 @@ export function FeatureCards() {
         {
             title: "Accommodations",
             description: "Our suites are uniquely designed & sleep up to 4 guests.",
-            learnMoreLink: "/accommodations",
-            imageSrc: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/36c31ceb-32d2-45e7-b29f-58fc567c27fb-YfVLPrRTFvmfCYgUhqdUhyxiEql4vB.jpeg"
+            learnMoreLink: "/suites",
+            imageSrc: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/36c31ceb-32d2-45e7-b29f-58fc567c27fb-YfVLPrRTFvmfCYgUhqdUhyxiEql4vB.jpeg",
         },
         {
             title: "Amenities",
             description: "Guests can enjoy our gorgeous pool, on-site massages & more!",
             learnMoreLink: "/amenities",
-            imageSrc: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Image-oICsIJGcXDyT254WtnJzmQPKwRFJVr.jpeg"
+            imageSrc: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Image-oICsIJGcXDyT254WtnJzmQPKwRFJVr.jpeg",
         },
         {
             title: "Tours & Activities",
             description: "Discover what Costa Rica has to offer during your stay!",
-            learnMoreLink: "/tours-activities",
-            imageSrc: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-asset-s7zal6cEjEwXJm7mJeUrIGJT775KnL.jpeg"
+            learnMoreLink: "/tours",
+            imageSrc: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-asset-s7zal6cEjEwXJm7mJeUrIGJT775KnL.jpeg",
         }
     ]
 
