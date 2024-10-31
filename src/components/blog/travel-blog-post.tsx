@@ -27,7 +27,7 @@ export function TravelBlogPostComponent() {
             Rica offers two different seasons: Dry & Green seasons. Read our post to figure out
             which is best for you.
           </p>
-          <Link href="#" className="underline font-bold md:text-[25px] text-[20px]">
+          <Link href="#" className="underline md:text-[25px] text-[20px]">
             Read More
           </Link>
         </div>
