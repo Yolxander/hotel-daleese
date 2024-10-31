@@ -33,40 +33,40 @@ export function FooterComponent() {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-16">
         <div>
           <h2 className="text-3xl font-normal mb-4">Hotel Daleese</h2>
-          <p className="text-base leading-relaxed">
+          <p className="text-[20px] leading-relaxed">
             Situated in Southern Costa Rica, Hotel Daleese is an oasis located in the heart of Uvita. Our property features an outdoor swimming pool, free private parking & wifi.
           </p>
         </div>
         <div>
-          <h3 className="text-xl font-bold mb-4">Links</h3>
+          <h3 className="text-[23px] font-bold mb-4">Links</h3>
           <ul className="space-y-2">
             <li>
-              <Link href="/policies" className="text-gray-800 underline hover:no-underline transition-all duration-300">
+              <Link href="/policies" className="text-[20px] text-gray-800 underline hover:no-underline transition-all duration-300">
                 Policies
               </Link>
             </li>
             <li>
-              <Link href="/book" className="text-gray-800 underline hover:no-underline transition-all duration-300">
+              <Link href="/book" className="text-[20px]  text-gray-800 underline hover:no-underline transition-all duration-300">
                 Book now
               </Link>
             </li>
           </ul>
         </div>
         <div>
-          <h3 className="text-xl font-bold mb-4">Location</h3>
-          <p className="text-base leading-relaxed">
+          <h3 className="text-[23px] font-bold mb-4">Location</h3>
+          <p className="text-[20px] leading-relaxed">
             East of BCR, 500 Meters, Provincia de Puntarenas, Uvita, 60504, Costa Rica
           </p>
         </div>
         <div>
-          <h3 className="text-xl font-bold mb-4">Reach Out</h3>
-          <p className="text-base mb-2">
+          <h3 className="text-[23px] font-bold mb-4">Reach Out</h3>
+          <p className="text-[20px] mb-2">
             <a href="https://wa.me/19055980504" className="text-gray-800 underline hover:no-underline transition-all duration-300">
               +1 (905) 598-0504
             </a>
             {' '}(WhatsApp)
           </p>
-          <p className="text-base">
+          <p className="text-[20px]">
             <a href="mailto:admin@hoteldaleese.com" className="text-gray-800 underline hover:no-underline transition-all duration-300">
               admin@hoteldaleese.com
             </a>
