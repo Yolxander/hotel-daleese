@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 import { useState, useEffect } from 'react'
 
 export function HotelMapComponent() {
-    const [mapSize, setMapSize] = useState({ width: 1200, height: 600 })
+    const [, setMapSize] = useState({ width: 1200, height: 600 })
 
     useEffect(() => {
         const updateMapSize = () => {
