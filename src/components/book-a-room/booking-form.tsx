@@ -1,12 +1,14 @@
-'use client'
+'use client';
 
-import { useState, useRef, useEffect } from 'react'
-import { Lora } from 'next/font/google'
-import { motion, AnimatePresence } from 'framer-motion'
-import Image from 'next/image'
-import ReCAPTCHA from "react-google-recaptcha"
+import { useState, useRef, useEffect } from 'react';
+import { Lora } from 'next/font/google';
+import { motion, AnimatePresence } from 'framer-motion';
+import Image from 'next/image';
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-expect-error
+import ReCAPTCHA from 'react-google-recaptcha';
 
-const lora = Lora({ subsets: ['latin'] })
+const lora = Lora({ subsets: ['latin'] });
 
 export function BookingFormComponent() {
     const [formData, setFormData] = useState({
@@ -21,70 +23,78 @@ export function BookingFormComponent() {
         kids: '',
         hasPet: '',
         oneMoreThing: ''
-    })
-    const [captchaValue, setCaptchaValue] = useState<string | null>(null)
-    const [showOneMoreThing, setShowOneMoreThing] = useState(false)
-    const [showCaptcha, setShowCaptcha] = useState(false)
-    const [isSubmitted, setIsSubmitted] = useState(false)
-    const recaptchaRef = useRef<ReCAPTCHA>(null)
+    });
+    const [captchaValue, setCaptchaValue] = useState<string | null>(null);
+    const [showOneMoreThing, setShowOneMoreThing] = useState(false);
+    const [showCaptcha, setShowCaptcha] = useState(false);
+    const [isSubmitted, setIsSubmitted] = useState(false);
+    const recaptchaRef = useRef<ReCAPTCHA | null>(null);
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
-        const { name, value } = e.target
-        setFormData(prevState => ({ ...prevState, [name]: value }))
-    }
+        const { name, value } = e.target;
+        setFormData((prevState) => ({ ...prevState, [name]: value }));
+    };
 
     const handleSubmit = async (e: React.FormEvent) => {
-        e.preventDefault()
+        e.preventDefault();
         if (!captchaValue) {
-            alert("Please complete the captcha")
-            return
+            alert('Please complete the captcha');
+            return;
         }
         // Handle form submission here
-        console.log(formData)
-        console.log("Captcha value:", captchaValue)
+        console.log(formData);
+        console.log('Captcha value:', captchaValue);
         // Reset captcha after submission
-        recaptchaRef.current?.reset()
-        setCaptchaValue(null)
-        setIsSubmitted(true)
-    }
+        recaptchaRef.current?.reset();
+        setCaptchaValue(null);
+        setIsSubmitted(true);
+    };
 
     const handleCaptchaChange = (value: string | null) => {
-        setCaptchaValue(value)
-    }
+        setCaptchaValue(value);
+    };
 
     useEffect(() => {
-        const allFieldsFilled = Object.entries(formData).every(([key, value]) =>
-            key === 'oneMoreThing' ? true : value !== ''
-        )
-        setShowOneMoreThing(allFieldsFilled)
-    }, [formData])
+        const allFieldsFilled = Object.entries(formData).every(
+            ([key, value]) => (key === 'oneMoreThing' ? true : value !== '')
+        );
+        setShowOneMoreThing(allFieldsFilled);
+    }, [formData]);
 
     useEffect(() => {
-        if (showOneMoreThing && formData.oneMoreThing !== '') {
-            setShowCaptcha(true)
-        } else {
-            setShowCaptcha(false)
-        }
-    }, [showOneMoreThing, formData.oneMoreThing])
+        setShowCaptcha(showOneMoreThing && formData.oneMoreThing !== '');
+    }, [showOneMoreThing, formData.oneMoreThing]);
 
     const formFields = [
-        { name: 'Name', type: 'group', fields: [
+        {
+            name: 'Name',
+            type: 'group',
+            fields: [
                 { name: 'firstName', placeholder: 'First Name', type: 'text' },
                 { name: 'lastName', placeholder: 'Last Name', type: 'text' }
-            ]},
+            ]
+        },
         { name: 'Email', type: 'email', placeholder: 'Email' },
-        { name: 'Phone', type: 'group', fields: [
+        {
+            name: 'Phone',
+            type: 'group',
+            fields: [
                 { name: 'phoneCountry', type: 'select', options: ['Canada', 'USA'] },
                 { name: 'phoneNumber', type: 'tel', placeholder: 'Phone Number' }
-            ]},
-        { name: 'Dates', type: 'group', fields: [
+            ]
+        },
+        {
+            name: 'Dates',
+            type: 'group',
+            fields: [
                 { name: 'arrivalDate', type: 'date', placeholder: 'Date of Arrival' },
                 { name: 'departureDate', type: 'date', placeholder: 'Date of Departure' }
-            ]},
+            ]
+        },
         { name: 'Adults', type: 'select', placeholder: 'Number of Adults', options: ['', '1', '2', '3', '4'] },
         { name: 'Kids', type: 'select', placeholder: 'Number of Kids', options: ['', '0', '1', '2', '3', '4'] },
         { name: 'has Pet', type: 'radio', options: ['Yes', 'No'], label: 'Do you have a pet?' }
-    ]
+    ];
 
     return (
         <section className={`relative min-h-screen flex items-center justify-center py-16 md:pt-[250px] pt-[180px] ${lora.className}`}>
@@ -104,7 +114,7 @@ export function BookingFormComponent() {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
-                        transition={{ duration: 0.5 }}
+                        transition={{ duration: 0.8 }}
                     >
                         <iframe
                             src="https://lottie.host/embed/3b31a4f7-84e3-4e93-9e4e-0102d5a1d5b3/Z7lGDqVpQT.json"
@@ -278,5 +288,5 @@ export function BookingFormComponent() {
                 )}
             </AnimatePresence>
         </section>
-    )
+    );
 }
