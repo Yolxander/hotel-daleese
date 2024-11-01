@@ -46,7 +46,7 @@ export function FooterComponent() {
               </Link>
             </li>
             <li>
-              <Link href="/book" className="text-[20px]  text-gray-800 underline hover:no-underline transition-all duration-300">
+              <Link href="/book-a-room" className="text-[20px]  text-gray-800 underline hover:no-underline transition-all duration-300">
                 Book now
               </Link>
             </li>

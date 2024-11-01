@@ -5,7 +5,8 @@ const nextConfig = {
         domains: [
             'hebbkx1anhila5yf.public.blob.vercel-storage.com',
             'storage.googleapis.com', // Add this line for Google Cloud Storage images
-            'maps.googleapis.com'
+            'maps.googleapis.com',
+            'images.unsplash.com'
         ],
     },
 };

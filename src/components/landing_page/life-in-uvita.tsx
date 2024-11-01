@@ -20,7 +20,7 @@ export function LifeInUvitaComponent() {
               initial={{ opacity: 0, x: -50 }}
               animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="lg:w-1/2 lg:pr-12 mb-8 lg:mb-0"
+              className="w-full lg:w-1/2 lg:pr-12 mb-8 lg:mb-0"
           >
             <motion.h2
                 initial={{ opacity: 0, y: 20 }}
@@ -52,7 +52,7 @@ export function LifeInUvitaComponent() {
                 transition={{ duration: 0.6, delay: 0.6 }}
             >
               <Link
-                  href="/discover-uvita"
+                  href="/life-in-costa-rica"
                   className="inline-block border-2 border-gray-800 text-gray-800 px-8 py-3 text-xl rounded hover:bg-gray-800 hover:text-white transition-colors"
               >
                 Discover Uvita
@@ -63,20 +63,20 @@ export function LifeInUvitaComponent() {
               initial={{ opacity: 0, x: 50 }}
               animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="lg:w-1/2 relative"
+              className="w-full lg:w-1/2 relative"
           >
             <motion.div
                 initial={{ scale: 0.8 }}
                 animate={isInView ? { scale: 1 } : { scale: 0.8 }}
                 transition={{ duration: 0.6, delay: 0.5 }}
-                className="relative w-full h-[400px] md:h-[500px] rounded-lg overflow-hidden"
+                className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] rounded-lg overflow-hidden"
             >
               <Image
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/59c5d488-9e8e-481d-97b7-a7864ca3cec1-cgHQLzcvkUlq7mTWcASJLLbvWP4JjF.jpg"
                   alt="Lush green forest with waterfall in Uvita, Costa Rica"
                   fill
                   style={{ objectFit: 'cover' }}
-                  sizes="(max-width: 768px) 100vw, 50vw"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                   className="rounded-lg"
               />
             </motion.div>
@@ -84,13 +84,13 @@ export function LifeInUvitaComponent() {
                 initial={{ opacity: 0, scale: 0.5 }}
                 animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.5 }}
                 transition={{ duration: 0.6, delay: 0.7 }}
-                className="absolute -bottom-10 -left-10 w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden"
+                className="absolute -bottom-10 -left-10 w-32 h-32 sm:w-48 sm:h-48 md:w-64 md:h-64 rounded-full overflow-hidden"
             >
               <Image
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-asset-3JLZYcfflSE6dkaP6szN8iKpvF3517.jpeg"
                   alt="Aerial view of beautiful coastline in Uvita, Costa Rica"
                   fill
-                  sizes="(max-width: 768px) 192px, 256px"
+                  sizes="(max-width: 640px) 128px, (max-width: 768px) 192px, 256px"
                   className="object-cover"
               />
             </motion.div>

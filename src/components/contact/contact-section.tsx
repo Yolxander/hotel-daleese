@@ -7,6 +7,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { Lora } from 'next/font/google'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
+import Link from "next/link";
 
 const lora = Lora({ subsets: ['latin'] })
 
@@ -108,9 +109,11 @@ export default function ContactSection() {
               <h3 className="text-xl font-bold mb-2">Phone & Whatsapp</h3>
               <p>+1 (905) 598-0504</p>
             </div>
+            <Link href={'https://wa.me/+1(905)598-0504'}>
             <Button variant="default" className="bg-primary text-primary-foreground hover:bg-primary/90">
               Send a Message
             </Button>
+            </Link>
           </motion.div>
           <motion.div variants={itemVariants} className="md:w-1/2">
             <form onSubmit={handleSubmit} className="bg-white/80 py-10 px-6 rounded-lg shadow-lg z-9">

@@ -5,16 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c7e99333-aede-4333-a5d5-366958e0f415" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/suites/gallery.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.mjs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/suites/suite-1/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/suites/suite-1/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/suites/suite-2/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/suites/suite-2/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/suites/suite-3/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/suites/suite-3/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/landing_page/hero-with-navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/landing_page/hero-with-navbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/landing_page/hotel-home-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/landing_page/hotel-home-section.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/suites/suite-facilities.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/suites/suite-facilities.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/book-a-room/booking-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/book-a-room/booking-form.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/contact/contact-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/contact/contact-section.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/landing_page/life-in-uvita.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/landing_page/life-in-uvita.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,11 +68,11 @@
       <recent name="$PROJECT_DIR$/src/app" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/book-a-room" />
       <recent name="$PROJECT_DIR$/src/components/suites" />
       <recent name="$PROJECT_DIR$/src/components/life-in-uvita" />
       <recent name="$PROJECT_DIR$/src/components/contact" />
       <recent name="$PROJECT_DIR$/src/components/blog" />
-      <recent name="$PROJECT_DIR$/src/components/tours" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -93,7 +92,7 @@
       <workItem from="1729787298665" duration="1505000" />
       <workItem from="1729923531226" duration="39290000" />
       <workItem from="1730407132455" duration="220000" />
-      <workItem from="1730431932742" duration="6985000" />
+      <workItem from="1730431932742" duration="11150000" />
     </task>
     <servers />
   </component>
