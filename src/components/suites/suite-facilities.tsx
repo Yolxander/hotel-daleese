@@ -65,7 +65,7 @@ const SuiteFacilities: FC<SuiteFacilitiesProps> = ({ suiteInfo }) => {
   }
 
   return (
-      <section className={`bg-white py-16 ${lora.className}`}>
+      <section className={`bg-gray-100 py-16 ${lora.className}`}>
         <div className="container mx-auto px-4 flex justify-center items-center min-h-screen">
           <motion.div
               ref={ref}
@@ -74,7 +74,7 @@ const SuiteFacilities: FC<SuiteFacilitiesProps> = ({ suiteInfo }) => {
               className="grid md:grid-cols-2 md:gap-[200px] gap-12 max-w-4xl"
           >
             <div>
-              <motion.h2 className="text-2xl font-semibold mb-4" variants={listVariants}>
+              <motion.h2 className="text-2xl mb-4" variants={listVariants}>
                 Suite facilities:
               </motion.h2>
               <motion.ul className="space-y-2 list-none">
@@ -85,7 +85,7 @@ const SuiteFacilities: FC<SuiteFacilitiesProps> = ({ suiteInfo }) => {
             </div>
             <div>
               <div className="mb-8">
-                <motion.h2 className="text-2xl font-semibold mb-4" variants={listVariants}>
+                <motion.h2 className="text-2xl mb-4" variants={listVariants}>
                   In your private bathroom:
                 </motion.h2>
                 <motion.ul className="space-y-2 list-none">
@@ -95,7 +95,7 @@ const SuiteFacilities: FC<SuiteFacilitiesProps> = ({ suiteInfo }) => {
                 </motion.ul>
               </div>
               <div>
-                <motion.h2 className="text-2xl font-semibold mb-4" variants={listVariants}>
+                <motion.h2 className="text-2xl mb-4" variants={listVariants}>
                   View:
                 </motion.h2>
                 <motion.ul className="space-y-2 list-none">
@@ -104,7 +104,7 @@ const SuiteFacilities: FC<SuiteFacilitiesProps> = ({ suiteInfo }) => {
                   ))}
                 </motion.ul>
               </div>
-              <motion.p className="mt-8 text-lg italic" variants={listVariants}>
+              <motion.p className="mt-8 text-lg font-light italic" variants={listVariants}>
                 *Available for guests upon request.
               </motion.p>
             </div>

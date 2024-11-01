@@ -61,7 +61,7 @@ export function HotelHomeSectionComponent() {
                 >
                     <Link
                         href="/our-story"
-                        className={`${cormorantGaramond.className} bg-white text-[#0F758C] px-8 py-3 text-xl rounded hover:bg-[#0F758C] hover:text-white transition-colors`}
+                        className={`${cormorantGaramond.className} bg-white text-black px-8 py-3 text-xl rounded hover:bg-black hover:text-white transition-colors`}
                     >
                         Our Story
                     </Link>
