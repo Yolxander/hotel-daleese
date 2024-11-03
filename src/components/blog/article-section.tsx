@@ -20,14 +20,14 @@ export function ArticleSection() {
           <div>
             <h3 className={`${cormorantGaramond.className} font-bold text-xl mb-2`}>Rainy season is not enjoyable</h3>
             <p className="text-gray-800">
-              While the rainy season (May to November) does bring more precipitation, it doesn't mean constant downpours every day. Rainfall tends to be in the form of short, intense showers, often in the late afternoon or evening, leaving the mornings sunny and clear. This period also offers lush green landscapes, fewer tourists, and lower prices.
+              While the rainy season (May to November) does bring more precipitation, it doesn&#39;t mean constant downpours every day. Rainfall tends to be in the form of short, intense showers, often in the late afternoon or evening, leaving the mornings sunny and clear. This period also offers lush green landscapes, fewer tourists, and lower prices.
             </p>
           </div>
 
           <div>
             <h3 className={`${cormorantGaramond.className} font-bold text-xl mb-2`}>Dry season is always the best</h3>
             <p className="text-gray-800">
-              While the dry season (December to April) is indeed popular for its sunny weather and lower rainfall, it's also the peak tourist season. This means higher prices, more crowded attractions, and booked accommodations. Additionally, in some regions, particularly the Pacific coast, the dry season brings very dry conditions, leading to brown landscapes.
+              While the dry season (December to April) is indeed popular for its sunny weather and lower rainfall, it&#39;s also the peak tourist season. This means higher prices, more crowded attractions, and booked accommodations. Additionally, in some regions, particularly the Pacific coast, the dry season brings very dry conditions, leading to brown landscapes.
             </p>
           </div>
 
@@ -39,9 +39,9 @@ export function ArticleSection() {
           </div>
 
           <div>
-            <h3 className={`${cormorantGaramond.className} font-bold text-xl mb-2`}>It's always hot</h3>
+            <h3 className={`${cormorantGaramond.className} font-bold text-xl mb-2`}>It&#39;s always hot</h3>
             <p className="text-gray-800">
-              While Costa Rica generally has a tropical climate with warm temperatures year-round, it's important to note that the country's diverse geography leads to varying climates in different regions. Higher elevations, such as in the Central Valley and Monteverde, can be cooler, especially at night.
+              While Costa Rica generally has a tropical climate with warm temperatures year-round, it&#39;s important to note that the country&#39;s diverse geography leads to varying climates in different regions. Higher elevations, such as in the Central Valley and Monteverde, can be cooler, especially at night.
             </p>
           </div>
         </div>
@@ -66,7 +66,7 @@ export function ArticleSection() {
             <h3 className={`${cormorantGaramond.className} font-bold text-xl mb-2`}>Green Season (May to November):</h3>
             <ul className="list-disc pl-6 space-y-2">
               <li>While the rainy season brings more precipitation, it also results in lush green landscapes, fewer tourists, and lower prices on accommodations and tours.</li>
-              <li>Wildlife viewing is excellent during this time, with the rainforests teeming with life. You'll have a higher chance of spotting animals like monkeys, sloths, toucans, and more.</li>
+              <li>Wildlife viewing is excellent during this time, with the rainforests teeming with life. You&#39;ll have a higher chance of spotting animals like monkeys, sloths, toucans, and more.</li>
               <li>The waterfalls and rivers around Uvita are at their fullest during the rainy season, offering spectacular sights and opportunities for adventure activities like waterfall rappelling and river tubing.</li>
             </ul>
           </div>
