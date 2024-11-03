@@ -90,17 +90,17 @@ export default function ContactSection() {
           <motion.div variants={itemVariants} className="md:w-1/2 text-white">
             <h2 className="text-4xl mb-2">Contact Us</h2>
             <div className="w-full h-px bg-white mb-6"></div>
-            <p className="mb-6">
+            <p className="mb-6 text-[20px]">
               We always look forward to speaking with our guests. If you have any
               questions, do not hesitate to reach out. We do our best to reply as quickly as
               possible, answering all inquires. Your hosts Rosa and Dave will be there to
               greet you during the check in and check out process.
             </p>
-            <p className="mb-6">
+            <p className="mb-6 text-[20px]">
               If you need directions, contact us directly. Please be sure to read our policies
               prior to booking.
             </p>
-            <div className="mb-6">
+            <div className="mb-6 text-[20px]">
               <h3 className="text-xl font-bold mb-2">Address & Location</h3>
               <p>East of BCR, 500 Meters, Provincia de</p>
               <p>Puntarenas, Uvita, 60504, Costa Rica</p>
@@ -110,7 +110,7 @@ export default function ContactSection() {
               <p>+1 (905) 598-0504</p>
             </div>
             <Link href={'https://wa.me/+1(905)598-0504'}>
-            <Button variant="default" className="bg-primary text-primary-foreground hover:bg-primary/90">
+            <Button variant="default" className="bg-primary text-primary-foreground hover:bg-primary/90 text-[20px]">
               Send a Message
             </Button>
             </Link>

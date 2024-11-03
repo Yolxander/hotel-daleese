@@ -37,7 +37,7 @@ const Lightbox = ({ currentIndex, onClose, onPrev, onNext }: {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50"
+            className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-[105]"
         >
             <Button
                 variant="ghost"
@@ -78,7 +78,6 @@ const Lightbox = ({ currentIndex, onClose, onPrev, onNext }: {
                         className="max-h-[95vh] object-contain"
                     />
                 </div>
-                <p className="mt-2">Image {currentIndex + 1} of {galleryItems.length}</p>
             </motion.div>
             <Button
                 variant="ghost"

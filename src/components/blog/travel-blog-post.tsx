@@ -29,7 +29,7 @@ export function TravelBlogPostComponent() {
             Rica offers two different seasons: Dry & Green seasons. Read our post to figure out
             which is best for you.
           </p>
-            <Link href={`/blog/best-time-to-travel-costa-rica`} className="text-blue-600 hover:underline">
+            <Link href={`/blog/best-time-to-travel-costa-rica`} className="text-black underline text-[20px]">
                 Read More
             </Link>
         </div>
