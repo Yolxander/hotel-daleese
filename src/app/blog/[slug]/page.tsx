@@ -5,7 +5,6 @@ import Image from 'next/image'
 import { Cormorant_Garamond } from 'next/font/google'
 import {ArticleSection} from "@/components/blog/article-section";
 import {Navbar} from "@/components/Navbar";
-import {FooterComponent} from "@/components/footer";
 
 const cormorantGaramond = Cormorant_Garamond({ subsets: ['latin'], weight: ['300', '400', '700'] })
 
