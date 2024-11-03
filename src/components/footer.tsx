@@ -29,7 +29,7 @@ export function FooterComponent() {
   }, [])
 
   return (
-    <footer className={`${cormorantGaramond.className} bg-gray-100 text-gray-800 py-16 px-4`}>
+    <footer className={`${cormorantGaramond.className} bg-gray-100 text-gray-800 py-16 px-`}>
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-16">
         <div>
           <h2 className="text-3xl font-normal mb-4">Hotel Daleese</h2>

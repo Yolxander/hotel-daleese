@@ -6,6 +6,8 @@ import { Cormorant_Garamond } from 'next/font/google'
 
 const cormorantGaramond = Cormorant_Garamond({ subsets: ['latin'], weight: ['300', '400', '700'] })
 
+
+
 export function TravelBlogPostComponent() {
   return (
     <section className={`container mx-auto px-4 py-16 ${cormorantGaramond.className} md:mt-[200px] mt-[50px] md:h-[90vh] h-[110vh]`}>
@@ -27,9 +29,9 @@ export function TravelBlogPostComponent() {
             Rica offers two different seasons: Dry & Green seasons. Read our post to figure out
             which is best for you.
           </p>
-          <Link href="#" className="underline md:text-[25px] text-[20px]">
-            Read More
-          </Link>
+            <Link href={`/blog/best-time-to-travel-costa-rica`} className="text-blue-600 hover:underline">
+                Read More
+            </Link>
         </div>
       </div>
     </section>
