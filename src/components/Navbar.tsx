@@ -144,14 +144,18 @@ export function Navbar() {
                                     <Link
                                         href={item.path}
                                         className={`text-3xl relative group ${
-                                            pathname === item.path ? 'text-gray-800' : 'text-gray-600'
-                                        } hover:text-gray-900`}
+                                            (item.path === '/suites' && pathname.startsWith('/suites')) || pathname === item.path
+                                                ? 'text-gray-800'
+                                                : 'text-gray-600 hover:text-gray-900'
+                                        }`}
                                         onClick={() => setIsMobileMenuOpen(false)}
                                     >
                                       <span>{item.name === 'Tours' ? 'Tours & Attractions' : item.name}</span>
                                       <span
                                           className={`absolute left-0 -bottom-1 w-full h-0.5 bg-gray-800 transform transition-transform duration-300 origin-left ${
-                                              pathname === item.path ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+                                              (item.path === '/suites' && pathname.startsWith('/suites')) || pathname === item.path
+                                                  ? 'scale-x-100'
+                                                  : 'scale-x-0 group-hover:scale-x-100'
                                           }`}
                                       ></span>
                                     </Link>
@@ -173,8 +177,8 @@ export function Navbar() {
                                   key={subItem.name}
                                   href={subItem.path}
                                   className={`text-2xl my-4 relative group ${
-                                      pathname === subItem.path ? 'text-gray-800' : 'text-gray-600'
-                                  } hover:text-gray-900`}
+                                      pathname === subItem.path ? 'text-gray-800' : 'text-gray-600 hover:text-gray-900'
+                                  }`}
                                   onClick={() => {
                                     setIsMobileAboutOpen(false)
                                     setIsMobileMenuOpen(false)
@@ -265,13 +269,17 @@ export function Navbar() {
                         <Link
                             href={item.path}
                             className={`text-[20px] text-bold relative group ${
-                                pathname === item.path ? 'text-gray-800' : 'text-gray-600 hover:text-gray-900'
+                                (item.path === '/suites' && pathname.startsWith('/suites')) || pathname === item.path
+                                    ? 'text-gray-800'
+                                    : 'text-gray-600 hover:text-gray-900'
                             }`}
                         >
                           <span>{item.name === 'Tours' ? 'Tours & Attractions' : item.name}</span>
                           <span
                               className={`absolute left-0 -bottom-1 w-full h-0.5 bg-gray-600 transform transition-transform duration-300 origin-left ${
-                                  pathname === item.path ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+                                  (item.path === '/suites' && pathname.startsWith('/suites')) || pathname === item.path
+                                      ? 'scale-x-100'
+                                      : 'scale-x-0 group-hover:scale-x-100'
                               }`}
                           ></span>
                         </Link>
