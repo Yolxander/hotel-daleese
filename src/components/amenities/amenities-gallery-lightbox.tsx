@@ -26,12 +26,9 @@ const galleryItems = [
     { src: "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/uploads/Casa%20Turul/Amenities/671d36589b00a.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1761503705&Signature=kLQet8MR5gEIjGUih37uSUg7w5%2B1gFhUxxegRwjizEoZ7AYzCpNqFx94AkwoRgmY8TcbS%2BeFBTaOWjO2iyBTL05bumIPnXFnyinHeD1Lp3MoiQu9M5s07f%2FASRElmmtFMU1f1RrZjmCw6ZJsmoR6eBch8jrWUyG%2BTVpQOoicInhcO%2B1zh9C%2B6FfYvgw%2BSkCjNMcGDuj5%2BcDQnPSrs50VhGJRWO%2FDiP3sfy7zMxIo46RJu59W3mopFXsnyEgcb7sRoTRdzH04sGMf3b5w35iYx6DhpOh%2Fk22%2FhaGLE74JBa15E9rDF0jvXyZDKGpwXzapkY9i8YnEaIb91Bxd27hQtQ%3D%3D", alt: "Bathroom with stylish fixtures" }
 ]
 
-const Lightbox = ({ currentIndex, onClose, onPrev, onNext }: {
-    currentIndex: number
-    onClose: () => void
-    onPrev: () => void
-    onNext: () => void
-}) => (
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-expect-error
+const Lightbox = ({ currentIndex, onClose, onPrev, onNext }) => (
     <AnimatePresence>
         <motion.div
             initial={{ opacity: 0 }}
@@ -44,9 +41,9 @@ const Lightbox = ({ currentIndex, onClose, onPrev, onNext }: {
                 size="icon"
                 className="absolute top-4 right-4 text-white"
                 onClick={onClose}
-                style={{ height: '72px', width: '72px' }}
+                style={{ height: '100px', width: '100px' }}
             >
-                <X className="h-16 w-16" />
+                <X size={90} />
                 <span className="sr-only">Close</span>
             </Button>
             <Button
@@ -54,9 +51,9 @@ const Lightbox = ({ currentIndex, onClose, onPrev, onNext }: {
                 size="icon"
                 className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white"
                 onClick={onPrev}
-                style={{ height: '72px', width: '72px' }}
+                style={{ height: '100px', width: '100px' }}
             >
-                <ChevronLeft className="h-16 w-16" />
+                <ChevronLeft size={90} />
                 <span className="sr-only">Previous image</span>
             </Button>
             <motion.div
@@ -84,14 +81,15 @@ const Lightbox = ({ currentIndex, onClose, onPrev, onNext }: {
                 size="icon"
                 className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white"
                 onClick={onNext}
-                style={{ height: '72px', width: '72px' }}
+                style={{ height: '100px', width: '100px' }}
             >
-                <ChevronRight className="h-16 w-16" />
+                <ChevronRight size={90} />
                 <span className="sr-only">Next image</span>
             </Button>
         </motion.div>
     </AnimatePresence>
-)
+);
+
 
 export function AmenitiesGalleryLightbox() {
     const [lightboxOpen, setLightboxOpen] = useState(false)
