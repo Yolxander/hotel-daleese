@@ -17,6 +17,24 @@ export function Navbar() {
   const [isMobileAboutOpen, setIsMobileAboutOpen] = useState(false)
   const pathname = usePathname()
 
+  const aboutDropdownItems = [
+    { name: 'Amenities', path: '/amenities' },
+    { name: 'Our Story', path: '/our-story' },
+    { name: 'Life in Costa Rica', path: '/life-in-costa-rica' }
+  ]
+
+  const isAboutPage = pathname === '/about' || aboutDropdownItems.some((item) => pathname.startsWith(item.path))
+  const isBlogPage = pathname.startsWith('/blog')
+
+  const menuItems = [
+    { name: 'About', path: '#' },
+    { name: 'Suites', path: '/suites' },
+    { name: 'Tours', path: '/tours' },
+    { name: 'Gallery', path: '/gallery' },
+    { name: 'Contact', path: '/contact' },
+    { name: 'Blog', path: '/blog' }
+  ]
+
   const handleScroll = useCallback(() => {
     const currentScrollY = window.scrollY
     if (currentScrollY > lastScrollY) {
@@ -36,21 +54,6 @@ export function Navbar() {
     setIsMobileMenuOpen(false)
     setIsMobileAboutOpen(false)
   }, [pathname])
-
-  const menuItems = [
-    { name: 'About', path: '/about' },
-    { name: 'Suites', path: '/suites' },
-    { name: 'Tours', path: '/tours' },
-    { name: 'Gallery', path: '/gallery' },
-    { name: 'Contact', path: '/contact' },
-    { name: 'Blog', path: '/blog' }
-  ]
-
-  const aboutDropdownItems = [
-    { name: 'Amenities', path: '/amenities' },
-    { name: 'Our Story', path: '/our-story' },
-    { name: 'Life in Costa Rica', path: '/life-in-costa-rica' }
-  ]
 
   return (
       <motion.nav
@@ -244,10 +247,19 @@ export function Navbar() {
                   <div key={item.name} className="relative group">
                     {item.name === 'About' ? (
                         <>
-                          <button className="text-[20px] text-bold text-gray-600 hover:text-gray-900 flex items-center relative group">
+                          <Link
+                              href={item.path}
+                              className={`text-[20px] text-bold relative group ${
+                                  isAboutPage ? 'text-gray-800' : 'text-gray-600 hover:text-gray-900'
+                              }`}
+                          >
                             <span>{item.name}</span>
-                            <span className="absolute left-0 -bottom-1 w-full h-0.5 bg-gray-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
-                          </button>
+                            <span
+                                className={`absolute left-0 -bottom-1 w-full h-0.5 bg-gray-600 transform transition-transform duration-300 origin-left ${
+                                    isAboutPage ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+                                }`}
+                            ></span>
+                          </Link>
                           <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 py-2">
                             {aboutDropdownItems.map((subItem) => (
                                 <Link
@@ -255,16 +267,36 @@ export function Navbar() {
                                     href={subItem.path}
                                     className="block px-4 py-2 text-[18px] relative group/item"
                                 >
-                          <span className={`relative ${pathname === subItem.path ? 'text-gray-800' : 'text-gray-600'} group-hover/item:text-gray-900`}>
+                          <span
+                              className={`relative ${
+                                  pathname === subItem.path ? 'text-gray-800' : 'text-gray-600'
+                              } group-hover/item:text-gray-900`}
+                          >
                             {subItem.name}
-                            <span className={`absolute left-0 -bottom-0.5 w-full h-0.5 bg-gray-600 transform transition-transform duration-300 origin-left ${
-                                pathname === subItem.path ? 'scale-x-100' : 'scale-x-0'
-                            } group-hover/item:scale-x-100`}></span>
+                            <span
+                                className={`absolute left-0 -bottom-0.5 w-full h-0.5 bg-gray-600 transform transition-transform duration-300 origin-left ${
+                                    pathname === subItem.path ? 'scale-x-100' : 'scale-x-0'
+                                } group-hover/item:scale-x-100`}
+                            ></span>
                           </span>
                                 </Link>
                             ))}
                           </div>
                         </>
+                    ) : item.name === 'Blog' ? (
+                        <Link
+                            href={item.path}
+                            className={`text-[20px] text-bold relative group ${
+                                isBlogPage ? 'text-gray-800' : 'text-gray-600 hover:text-gray-900'
+                            }`}
+                        >
+                          <span>{item.name}</span>
+                          <span
+                              className={`absolute left-0 -bottom-1 w-full h-0.5 bg-gray-600 transform transition-transform duration-300 origin-left ${
+                                  isBlogPage ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+                              }`}
+                          ></span>
+                        </Link>
                     ) : (
                         <Link
                             href={item.path}
