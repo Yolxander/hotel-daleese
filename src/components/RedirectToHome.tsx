@@ -1,15 +1,16 @@
 // components/RedirectToHome.js
 
 "use client";
-import { useEffect } from 'react';
+import { useEffect, ReactNode } from 'react';
 import { useRouter } from 'next/navigation';
 
-export default function RedirectToHome() {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+export default function RedirectToHome({ children: _children }: { children: ReactNode }) {
     const router = useRouter();
 
     useEffect(() => {
         router.push('/'); // Redirect to the homepage
     }, [router]);
 
-    return null; // Prevents any content from being displayed on this page
+    return null;
 }

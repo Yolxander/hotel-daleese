@@ -8,9 +8,9 @@ export default function Page() {
     return (
         <div>
             <RedirectToHome >
-            <Navbar/>
-            <BookingFormComponent />
-            <FooterComponent />
+                <Navbar/>
+                <BookingFormComponent />
+                <FooterComponent />
             </RedirectToHome>
         </div>
     );
