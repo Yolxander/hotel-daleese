@@ -1,12 +1,9 @@
 'use client';
 
-import { useState, useRef, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Lora } from 'next/font/google';
 import { motion, AnimatePresence } from 'framer-motion';
-import Image from 'next/image';
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-expect-error
-import ReCAPTCHA from 'react-google-recaptcha';
+import emailjs from 'emailjs-com';
 
 const lora = Lora({ subsets: ['latin'] });
 
@@ -22,13 +19,17 @@ export function BookingFormComponent() {
         adults: '',
         kids: '',
         hasPet: '',
-        oneMoreThing: ''
+        oneMoreThing: '',
+        honeypot: '', // Honeypot field for spam prevention
     });
-    const [captchaValue, setCaptchaValue] = useState<string | null>(null);
-    const [showOneMoreThing, setShowOneMoreThing] = useState(false);
-    const [showCaptcha, setShowCaptcha] = useState(false);
     const [isSubmitted, setIsSubmitted] = useState(false);
-    const recaptchaRef = useRef<ReCAPTCHA | null>(null);
+    const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+    const [startTime, setStartTime] = useState<number | null>(null);
+
+    // Set start time when component mounts
+    useEffect(() => {
+        setStartTime(Date.now());
+    }, []);
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
         const { name, value } = e.target;
@@ -37,78 +38,127 @@ export function BookingFormComponent() {
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        if (!captchaValue) {
-            alert('Please complete the captcha');
-            return;
+
+        // Honeypot check
+        if (formData.honeypot) {
+            console.log('Bot detected via honeypot.');
+            return; // Early exit if honeypot field is filled
         }
-        // Handle form submission here
-        console.log(formData);
-        console.log('Captcha value:', captchaValue);
-        // Reset captcha after submission
-        recaptchaRef.current?.reset();
-        setCaptchaValue(null);
-        setIsSubmitted(true);
+
+        // Time-based check: minimum 3 seconds
+        const submissionTime = Date.now() - (startTime || 0);
+        if (submissionTime < 3000) {
+            console.log('Bot detected via quick submission.');
+            return; // Early exit if submitted too quickly
+        }
+
+        setSubmitStatus('idle');
+
+        try {
+            await emailjs.send(
+                'service_v98lvdp', // replace with your Email.js service ID
+                'template_dth6utm', // replace with your Email.js template ID
+                {
+                    firstName: formData.firstName,
+                    lastName: formData.lastName,
+                    email: formData.email,
+                    phoneCountry: formData.phoneCountry,
+                    phoneNumber: formData.phoneNumber,
+                    arrivalDate: formData.arrivalDate,
+                    departureDate: formData.departureDate,
+                    adults: formData.adults,
+                    kids: formData.kids,
+                    hasPet: formData.hasPet,
+                    oneMoreThing: formData.oneMoreThing,
+                },
+                'NxLLnhlEW3KDj2zPO' // replace with your Email.js public key
+            );
+            setSubmitStatus('success');
+            setFormData({
+                firstName: '',
+                lastName: '',
+                email: '',
+                phoneCountry: 'Canada',
+                phoneNumber: '',
+                arrivalDate: '',
+                departureDate: '',
+                adults: '',
+                kids: '',
+                hasPet: '',
+                oneMoreThing: '',
+                honeypot: '', // Reset honeypot field
+            });
+            setIsSubmitted(true);
+        } catch (error) {
+            console.error('Email sending error:', error);
+            setSubmitStatus('error');
+        }
     };
 
-    const handleCaptchaChange = (value: string | null) => {
-        setCaptchaValue(value);
-    };
-
-    useEffect(() => {
-        const allFieldsFilled = Object.entries(formData).every(
-            ([key, value]) => (key === 'oneMoreThing' ? true : value !== '')
-        );
-        setShowOneMoreThing(allFieldsFilled);
-    }, [formData]);
-
-    useEffect(() => {
-        setShowCaptcha(showOneMoreThing && formData.oneMoreThing !== '');
-    }, [showOneMoreThing, formData.oneMoreThing]);
-
+    // Form fields configuration
     const formFields = [
         {
             name: 'Name',
             type: 'group',
             fields: [
                 { name: 'firstName', placeholder: 'First Name', type: 'text' },
-                { name: 'lastName', placeholder: 'Last Name', type: 'text' }
-            ]
+                { name: 'lastName', placeholder: 'Last Name', type: 'text' },
+            ],
         },
-        { name: 'Email', type: 'email', placeholder: 'Email' },
+        { name: 'email', type: 'email', placeholder: 'Email' },
         {
             name: 'Phone',
             type: 'group',
             fields: [
                 { name: 'phoneCountry', type: 'select', options: ['Canada', 'USA'] },
-                { name: 'phoneNumber', type: 'tel', placeholder: 'Phone Number' }
-            ]
+                { name: 'phoneNumber', type: 'tel', placeholder: 'Phone Number' },
+            ],
         },
         {
             name: 'Dates',
             type: 'group',
             fields: [
                 { name: 'arrivalDate', type: 'date', placeholder: 'Date of Arrival' },
-                { name: 'departureDate', type: 'date', placeholder: 'Date of Departure' }
-            ]
+                { name: 'departureDate', type: 'date', placeholder: 'Date of Departure' },
+            ],
         },
-        { name: 'Adults', type: 'select', placeholder: 'Number of Adults', options: ['', '1', '2', '3', '4'] },
-        { name: 'Kids', type: 'select', placeholder: 'Number of Kids', options: ['', '0', '1', '2', '3', '4'] },
-        { name: 'has Pet', type: 'radio', options: ['Yes', 'No'], label: 'Do you have a pet?' }
+        {
+            name: 'adults',
+            type: 'select',
+            label: 'Number of Adults',
+            placeholder: 'Number of Adults',
+            options: ['', '1', '2', '3', '4'],
+        },
+        {
+            name: 'kids',
+            type: 'select',
+            label: 'Number of Kids',
+            placeholder: 'Number of Kids',
+            options: ['', '0', '1', '2', '3', '4'],
+        },
+        {
+            name: 'hasPet',
+            type: 'radio',
+            label: 'Do you have a pet?',
+            options: ['Yes', 'No'],
+        },
     ];
 
     return (
-        <section className={`relative min-h-screen flex items-center justify-center py-16 md:pt-[250px] pt-[180px] ${lora.className}`}>
-            <Image
-                src="https://storage.googleapis.com/sempre-studios-893c8.appspot.com/uploads/Casa%20Turul/Home/67246f6435b10.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1761977061&Signature=ZFciv0Oif%2BjkE8llZpzJuBJ8xGn8yK2AgnmiPb9BxiW%2FV%2Beb220M2JW94JXDOBA50SiHW6hg8ATkrsEVqn988I%2B4nEZ8kJxQ%2FBIcVKVOCiD%2BugUo%2BQRGl3%2BCkKd9tD3MOmIh64b%2BvC3RfFmFTTuX8dsVOBn0KevX13Ay7elRWPOHrvAnVIuvZNHPgWEFu2GlEil6MO9BEceky9z0V8ynDa3KRYkVX8Fd8%2FpMhsVwm1D9MkP5Z4VGXkOkT140rdQoJKpnAmWb21ZaNh7U8C%2BQSoIf1ffyGiQC%2Bv9Ijl4nYoT9EzvXxeZYCMpZo%2BShD7em9R5otDqUwppuyT9FTlwgkg%3D%3D"
-                alt="Luxurious hotel room"
-                layout="fill"
-                objectFit="cover"
-                quality={100}
-                priority
-            />
-            <div className="absolute inset-0 bg-black opacity-50"></div>
+        <section
+            className={`relative min-h-screen flex items-center justify-center py-16 md:pt-[250px] pt-[180px] bg-transparent ${lora.className}`}
+        >
+            <div className="absolute inset-0" style={{
+                backgroundImage: 'url("https://storage.googleapis.com/sempre-studios-893c8.appspot.com/uploads/Casa%20Turul/Gallery/6720646ee2450.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1761712111&Signature=ggKZ0Hnz9TZrYfnJubUlMX%2FSEmtVY%2F5fbKWE%2FwVNkL%2FOmaAYQ%2BLFXcz8aiCOkL60ll%2FAIhV41SuC5lBwHIZkE2Mgwg8At%2BSlMOYjye3pNyU6z3fre6B%2F8AcSfkJ4vWw0FgWbHHdexvHrPlLWRN%2FqvJn5KX8p4CngiKgX9bbBHZa4Nge8MRpV3EEh45XoMRjDJ30oaGNEVrV0sezEgraoohSQ8nr%2F0UqvUQzRoXu6MZRnvcak%2BOJ3Q%2BBhOGv1Jq0a8OhIQ%2Fnx2iy68vkenZ%2BYIvfSwwz3Tce7Aj1nDxV238zVbmCB5jxOmcL5wo20Sr%2FNS2oCCFo4nOSG%2FStaleR2Qw%3D%3D")',
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                minHeight: "100vh",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-between",
+            }}></div>
             <AnimatePresence mode="wait">
-                {isSubmitted ? (
+                {submitStatus === 'success' ? (
                     <motion.div
                         className="relative z-10 flex flex-col items-center"
                         initial={{ opacity: 0 }}
@@ -116,15 +166,13 @@ export function BookingFormComponent() {
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.8 }}
                     >
-                        <iframe
-                            src="https://lottie.host/embed/3b31a4f7-84e3-4e93-9e4e-0102d5a1d5b3/Z7lGDqVpQT.json"
-                            style={{ width: '300px', height: '300px' }}
-                        ></iframe>
-                        <p className="mt-6 text-2xl text-center text-white">Thank you! Your booking request has been submitted.</p>
+                        <p className="mt-6 text-2xl text-center text-white">
+                            Thank you! Your booking request has been submitted.
+                        </p>
                     </motion.div>
                 ) : (
                     <motion.div
-                        className="relative z-10 bg-white bg-opacity-90 rounded-lg shadow-xl p-8 w-full max-w-2xl mx-4"
+                        className="relative z-10 rounded-lg shadow-xl p-8 w-full max-w-2xl mx-4 bg-white"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -20 }}
@@ -144,8 +192,8 @@ export function BookingFormComponent() {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.3, duration: 0.5 }}
                         >
-                            If your dates are at all flexible, please let us know. We book up quickly, especially
-                            during high season (December to April), but would love to find a way to host you.
+                            If your dates are at all flexible, please let us know. We book up quickly, especially during
+                            high season (December to April), but would love to find a way to host you.
                         </motion.p>
                         <motion.form
                             onSubmit={handleSubmit}
@@ -153,6 +201,17 @@ export function BookingFormComponent() {
                             animate={{ opacity: 1 }}
                             transition={{ delay: 0.4, duration: 0.5 }}
                         >
+                            {/* Honeypot Field */}
+                            <input
+                                type="text"
+                                name="honeypot"
+                                value={formData.honeypot}
+                                onChange={handleChange}
+                                style={{ display: 'none' }}
+                                tabIndex={-1}
+                                autoComplete="off"
+                            />
+
                             {formFields.map((field, index) => (
                                 <motion.div
                                     key={field.name}
@@ -161,10 +220,12 @@ export function BookingFormComponent() {
                                     animate={{ opacity: 1, x: 0 }}
                                     transition={{ delay: 0.5 + index * 0.1, duration: 0.5 }}
                                 >
-                                    <label className="block mb-2 text-gray-700">{field.name}</label>
+                                    <label className="block mb-2 text-gray-700">
+                                        {field.label || field.name}
+                                    </label>
                                     {field.type === 'group' ? (
                                         <div className="flex gap-4">
-                                            {field.fields?.map((subField) => (
+                                            {field.fields?.map((subField) =>
                                                 subField.type === 'select' ? (
                                                     <select
                                                         key={subField.name}
@@ -175,7 +236,9 @@ export function BookingFormComponent() {
                                                         required
                                                     >
                                                         {subField.options?.map((option) => (
-                                                            <option key={option} value={option}>{option}</option>
+                                                            <option key={option} value={option}>
+                                                                {option}
+                                                            </option>
                                                         ))}
                                                     </select>
                                                 ) : (
@@ -190,7 +253,7 @@ export function BookingFormComponent() {
                                                         required
                                                     />
                                                 )
-                                            ))}
+                                            )}
                                         </div>
                                     ) : field.type === 'select' ? (
                                         <select
@@ -202,7 +265,9 @@ export function BookingFormComponent() {
                                         >
                                             <option value="">{field.placeholder}</option>
                                             {field.options?.map((option) => (
-                                                <option key={option} value={option}>{option}</option>
+                                                <option key={option} value={option}>
+                                                    {option}
+                                                </option>
                                             ))}
                                         </select>
                                     ) : field.type === 'radio' ? (
@@ -213,7 +278,9 @@ export function BookingFormComponent() {
                                                         type="radio"
                                                         name={field.name}
                                                         value={option}
-                                                        checked={formData[field.name as keyof typeof formData] === option}
+                                                        checked={
+                                                            formData[field.name as keyof typeof formData] === option
+                                                        }
                                                         onChange={handleChange}
                                                         className="mr-2 focus:ring-2 focus:ring-black"
                                                         required
@@ -235,51 +302,11 @@ export function BookingFormComponent() {
                                     )}
                                 </motion.div>
                             ))}
-                            <AnimatePresence>
-                                {showOneMoreThing && (
-                                    <motion.div
-                                        className="mb-6"
-                                        initial={{ opacity: 0, height: 0 }}
-                                        animate={{ opacity: 1, height: 'auto' }}
-                                        exit={{ opacity: 0, height: 0 }}
-                                        transition={{ duration: 0.3 }}
-                                    >
-                                        <label className="block mb-2 text-gray-700">One more thing</label>
-                                        <input
-                                            type="text"
-                                            name="oneMoreThing"
-                                            placeholder="Tell us one more thing..."
-                                            value={formData.oneMoreThing}
-                                            onChange={handleChange}
-                                            className="w-full p-2 border border-gray-300 rounded bg-white focus:outline-none focus:ring-2 focus:ring-black focus:border-black"
-                                            required
-                                        />
-                                    </motion.div>
-                                )}
-                            </AnimatePresence>
-                            <AnimatePresence>
-                                {showCaptcha && (
-                                    <motion.div
-                                        className="mb-6"
-                                        initial={{ opacity: 0, height: 0 }}
-                                        animate={{ opacity: 1, height: 'auto' }}
-                                        exit={{ opacity: 0, height: 0 }}
-                                        transition={{ duration: 0.3 }}
-                                    >
-                                        <ReCAPTCHA
-                                            ref={recaptchaRef}
-                                            sitekey="YOUR_RECAPTCHA_SITE_KEY"
-                                            onChange={handleCaptchaChange}
-                                        />
-                                    </motion.div>
-                                )}
-                            </AnimatePresence>
                             <motion.button
                                 type="submit"
                                 className="bg-black text-white px-6 py-2 rounded hover:bg-gray-800 transition-colors duration-300"
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
-                                disabled={!showCaptcha || !captchaValue}
                             >
                                 Submit
                             </motion.button>
