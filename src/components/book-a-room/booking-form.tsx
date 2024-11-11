@@ -22,6 +22,7 @@ export function BookingFormComponent() {
         oneMoreThing: '',
         honeypot: '', // Honeypot field for spam prevention
     });
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
     const [startTime, setStartTime] = useState<number | null>(null);
