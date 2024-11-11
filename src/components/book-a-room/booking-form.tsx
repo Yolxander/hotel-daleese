@@ -153,7 +153,7 @@ export function BookingFormComponent() {
                 backgroundImage: 'url("https://storage.googleapis.com/sempre-studios-893c8.appspot.com/uploads/Casa%20Turul/Gallery/6720646ee2450.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1761712111&Signature=ggKZ0Hnz9TZrYfnJubUlMX%2FSEmtVY%2F5fbKWE%2FwVNkL%2FOmaAYQ%2BLFXcz8aiCOkL60ll%2FAIhV41SuC5lBwHIZkE2Mgwg8At%2BSlMOYjye3pNyU6z3fre6B%2F8AcSfkJ4vWw0FgWbHHdexvHrPlLWRN%2FqvJn5KX8p4CngiKgX9bbBHZa4Nge8MRpV3EEh45XoMRjDJ30oaGNEVrV0sezEgraoohSQ8nr%2F0UqvUQzRoXu6MZRnvcak%2BOJ3Q%2BBhOGv1Jq0a8OhIQ%2Fnx2iy68vkenZ%2BYIvfSwwz3Tce7Aj1nDxV238zVbmCB5jxOmcL5wo20Sr%2FNS2oCCFo4nOSG%2FStaleR2Qw%3D%3D")',
                 backgroundSize: "cover",
                 backgroundPosition: "center",
-                minHeight: "100vh",
+                minHeight: "100%",
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "space-between",

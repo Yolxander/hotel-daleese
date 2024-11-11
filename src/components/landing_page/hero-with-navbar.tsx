@@ -1,6 +1,5 @@
 'use client'
 
-import Image from 'next/image'
 import { Lora, Cormorant_Garamond } from 'next/font/google'
 import { motion } from 'framer-motion'
 
@@ -9,23 +8,23 @@ const cormorantGaramond = Cormorant_Garamond({ subsets: ['latin'], weight: ['400
 
 export function HeroWithNavbarComponent() {
     return (
-        <div className="relative h-screen w-full overflow-hidden">
-            <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/bed%20suite%203-pVgueIl1Vk5hCjvzxu854gnfgM41B9.jpg"
-                alt="Boutique hotel room with wooden slatted headboard and wicker lamps"
-                fill
-                sizes="100vw"
-                style={{ objectFit: 'cover', objectPosition: 'center' }}
-                priority
-            />
+        <div className="relative h-screen w-full overflow-hidden" style={{
+            backgroundImage: 'url("https://storage.googleapis.com/sempre-studios-893c8.appspot.com/uploads/67322841779f6.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1762876354&Signature=mhPpLz8xVY7o1kR7kjmypvLScdCF0aA2oGQY1eLGl3Qkr68arHVBtZ9qUDAXndVSaf53IHqdvnJFZ8BITkZ71giidOltyC84ojOtPge9HD7WTD8iD6RWdgLI%2BMAVqKFVIXv7T%2FlouRT8W5d%2B6bdt5YnOOpaXfjfIv5rP17YhePJ7onUEbr05IncLROPLrAxB%2FPEHXVgoI2wrXFMUQwGBDP9xIayj9w%2BGY9qAoE891EhJ69O4PkZCAXzLjo1Mf%2FOvla6Ae55JkZ3s366ChNXYqN37I6cfvldJdmxMDZ7rB8xuHeRBLRpLzD%2FKncRAPwGX4Ait4KxiqM9ZluW5opRRRw%3D%3D")',
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            minHeight: "100%",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-between",
+        }}>
             <motion.div
-                className="absolute inset-0 bg-black bg-opacity-30 pointer-events-none"
+                className="absolute inset-0 bg-black bg-opacity-32 pointer-events-none "
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1 }}
             />
 
-            <div className="absolute inset-0 flex flex-col items-center justify-center text-white px-4 md:px-8">
+            <div className="absolute inset-0 flex flex-col items-center justify-center text-white px-4 md:px-8 pt-12">
                 <motion.h1
                     className={`${lora.className} mb-4 text-4xl font-light md:text-[42px] text-center`}
                     initial={{ opacity: 0, y: 20 }}
