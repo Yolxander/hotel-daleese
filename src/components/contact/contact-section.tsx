@@ -7,7 +7,8 @@ import { Textarea } from "@/components/ui/textarea"
 import { Lora } from 'next/font/google'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import Link from "next/link";
+import Link from "next/link"
+import emailjs from 'emailjs-com'
 
 const lora = Lora({ subsets: ['latin'] })
 
@@ -35,10 +36,20 @@ export default function ContactSection() {
     e.preventDefault()
     setIsSubmitting(true)
     setSubmitStatus('idle')
+
     try {
-      // Simulating API call
-      await new Promise(resolve => setTimeout(resolve, 1500))
-      console.log(formData)
+      await emailjs.send(
+          'service_v98lvdp', // replace with your Email.js service ID
+          'template_wjdk3cr', // replace with your Email.js template ID
+          {
+            firstName: formData.firstName,
+            lastName: formData.lastName,
+            email: formData.email,
+            subject: formData.subject,
+            message: formData.message,
+          },
+          'NxLLnhlEW3KDj2zPO' // replace with your Email.js public key
+      )
       setSubmitStatus('success')
       setFormData({
         firstName: '',
@@ -47,8 +58,8 @@ export default function ContactSection() {
         subject: '',
         message: ''
       })
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (error) {
+      console.error('Email sending error:', error)
       setSubmitStatus('error')
     } finally {
       setIsSubmitting(false)
@@ -110,9 +121,9 @@ export default function ContactSection() {
               <p>+1 (905) 598-0504</p>
             </div>
             <Link href={'https://wa.me/+1(905)598-0504'}>
-            <Button variant="default" className="bg-primary text-primary-foreground hover:bg-primary/90 text-[20px]">
-              Send a Message
-            </Button>
+              <Button variant="default" className="bg-primary text-primary-foreground hover:bg-primary/90 text-[20px]">
+                Send a Message
+              </Button>
             </Link>
           </motion.div>
           <motion.div variants={itemVariants} className="md:w-1/2">
