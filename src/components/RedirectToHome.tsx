@@ -1,5 +1,3 @@
-// components/RedirectToHome.js
-
 "use client";
 import { useEffect, ReactNode } from 'react';
 import { useRouter } from 'next/navigation';
