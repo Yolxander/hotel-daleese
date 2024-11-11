@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -18,14 +18,21 @@ export default function ContactSection() {
     lastName: '',
     email: '',
     subject: '',
-    message: ''
+    message: '',
+    honeypot: '' // Anti-spam honeypot field
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
+  const [startTime, setStartTime] = useState<number>(0) // Track form render time for spam prevention
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
   })
+
+  useEffect(() => {
+    // Record the time when the form renders
+    setStartTime(Date.now())
+  }, [])
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
@@ -34,6 +41,20 @@ export default function ContactSection() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+
+    // Anti-spam: Check honeypot field
+    if (formData.honeypot) {
+      console.log('Bot detected due to honeypot field')
+      return // Exit if honeypot is filled
+    }
+
+    // Anti-spam: Check time-based submission threshold
+    const submitTime = Date.now()
+    if (submitTime - startTime < 3000) { // Less than 3 seconds
+      console.log('Bot detected due to fast submission')
+      return // Exit if submitted too quickly
+    }
+
     setIsSubmitting(true)
     setSubmitStatus('idle')
 
@@ -56,7 +77,8 @@ export default function ContactSection() {
         lastName: '',
         email: '',
         subject: '',
-        message: ''
+        message: '',
+        honeypot: '' // Reset honeypot
       })
     } catch (error) {
       console.error('Email sending error:', error)
@@ -138,6 +160,17 @@ export default function ContactSection() {
                     Failed to send message. Please try again.
                   </div>
               )}
+              {/* Honeypot field */}
+              <div style={{ display: 'none' }}>
+                <label htmlFor="honeypot">Do not fill this out if you&#39;re human:</label>
+                <Input
+                    type="text"
+                    id="honeypot"
+                    name="honeypot"
+                    value={formData.honeypot}
+                    onChange={handleChange}
+                />
+              </div>
               <div className="mb-4 flex gap-4">
                 <div className="flex-1">
                   <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-1">First Name</label>
