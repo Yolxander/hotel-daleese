@@ -2,9 +2,9 @@ import {HeroWithNavbarComponent} from "@/components/landing_page/hero-with-navba
 import {FeatureCards} from "@/components/landing_page/feature-cards";
 import {LifeInUvitaComponent} from "@/components/landing_page/life-in-uvita";
 import {HotelHomeSectionComponent} from "@/components/landing_page/hotel-home-section";
-import {GuestTestimonialsComponent} from "@/components/landing_page/guest-testimonials";
 import {FooterComponent} from "@/components/footer";
 import {Navbar} from "@/components/Navbar";
+import {ResponsiveTestimonialSlider} from "@/components/landing_page/responsive-testimonial-slider";
 
 export default function HomePage() {
     return (
@@ -14,7 +14,7 @@ export default function HomePage() {
         <FeatureCards />
         <LifeInUvitaComponent />
         <HotelHomeSectionComponent />
-        <GuestTestimonialsComponent />
+        <ResponsiveTestimonialSlider />
         <FooterComponent />
     </div>
     );
