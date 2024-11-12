@@ -18,7 +18,7 @@ export function HeroWithNavbarComponent() {
             justifyContent: "space-between",
         }}>
             <motion.div
-                className="absolute inset-0 bg-black bg-opacity-32 pointer-events-none "
+                className="absolute inset-0 bg-black bg-opacity-10 pointer-events-none "
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1 }}
