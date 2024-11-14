@@ -38,7 +38,7 @@ export function OurStorySection() {
                 transition={{ duration: 0.6, delay: 0.3 }}
                 className="mb-6 font-semibold text-[22px] italic"
             >
-              Hi, we&#39;re Rosa and Dave and we are the owners of Hotel Dalcese.
+              Hi, we&#39;re Rosa and Dave and we are the owners of Hotel Daleese.
             </motion.p>
             <motion.p
                 initial={{ opacity: 0, y: 20 }}
