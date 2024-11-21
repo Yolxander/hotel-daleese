@@ -51,7 +51,7 @@ export function AmenitiesSectionComponent() {
             description: (
                 <>
                     Eat freshly prepared food from our garden and local farmers. We
-                    currently have a fixed dinner & <Link href="/breakfast-menu" className="hover:underline">breakfast menu</Link> with a unique course
+                    currently have a fixed dinner & breakfast menu with a unique course
                     each day of the week. Prepared fresh by Chef Rosa & Dave a la carte.
                 </>
             )
@@ -82,7 +82,7 @@ export function AmenitiesSectionComponent() {
                     initial={{ opacity: 0 }}
                     animate={isInView ? { opacity: 1 } : { opacity: 0 }}
                     transition={{ duration: 0.9, delay: 0.2 }}
-                    className="text-gray-700 text-[20px] leading-relaxed font-medium max-w-2xl mx-auto"
+                    className="text-gray-700 text-[22px] leading-relaxed font-medium max-w-2xl mx-auto"
                 >
                     During your stay, we encourage you to take full advantage of our property amenities and
                     services. We want our guests to feel at home. Our hotel offers free access to private parking
