@@ -20,7 +20,14 @@ const galleryItems = [
   { id: 10, src: 'https://storage.googleapis.com/sempre-studios-893c8.appspot.com/uploads/Casa%20Turul/Gallery/6720646fd4b65.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1761712112&Signature=cv6ZwqJn744Q%2BYX7%2Ffh%2FaakIkJxPIf%2FQTXpetnNyu9IgEyxLxAVjjrRS7R1%2BSE4%2FIOLK9md4QW3m6mU5JVFlU8tmuOcMzPSB%2BrOivrVVjq%2B6eFodZdwmGUPOQnEbHSmaNV78Dlz%2FADZLW7hUBadJcoPG7qoG0aN57eIHys8gC1EVvi37NqgsofOduo%2FQl22974uPGVq0lKIRgD721P%2B6u0M5UGDLmy1ku5XSF3nzXakXyboWp5swnXbVpzAlslsWs1a7ZuALC80I%2BQKJ5Ht0OB8FbcFRjxInoBL6oW5jERr4PyWSgGMFC%2BSM0TdY4MIw1OerStTqjGPObQsah%2FiPGw%3D%3D', alt: 'Additional feature 6' },
   { id: 11, src: 'https://storage.googleapis.com/sempre-studios-893c8.appspot.com/uploads/Casa%20Turul/Gallery/67206510d69b5.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1761712273&Signature=OI09%2FDesnUp%2FFXXbQxNr6M43rQnmC8M1oMOHXETQP8RHHe5qSIThnUFX3pmgWu00DXN9QKalEukkaCGY8Tk5yolWiZpUklcEqdLqVCK6WdewHNq%2Bjftojeikmz3WT%2B4nClhUXVGT5gbGYPsQSnwP2Yjp1eA7zu2uakgGNh4sFd2OSY53D5KrNbIu3Vli5fLP19X6ajh2jP75ez2wx97pbdAcl1IDyiBPvpJPTdQKW0pI3OZshDaEkFuWn5Ho%2BtLZQCogSu1UKBVMBvLcPTm8TNrzVx%2Bzer%2BHHVYT4Q1DQE7rEU2zbK5tgIQaFjhgrdmHWK41KScq6Eytsy6VnPL%2BvA%3D%3D', alt: 'Additional feature 7' },
   { id: 12, src: 'https://storage.googleapis.com/sempre-studios-893c8.appspot.com/uploads/Casa%20Turul/Gallery/67206510563ca.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1761712272&Signature=gW6G89RXeKbXsjvBpvWt55bd3C4DyKbidb0mSE%2FRWZZTyAnTsi%2B0sOBFkf6j69yeujOyTKQGc80Xn4WuwKftYnzhr8Gs3Hj66WSmcbfH1%2FLwyTGQrZN3oba19vtRXm4XRN8CUBS6vOJz9mfdaeOHP7ffYnktlJzCQ5QBLRanMkpjzC7NSDD3Z1hdi7rsUERjQr8oI0UJuC%2B%2BSlWLfWsU1rRM9hgiCOlw18GFRzhudW2Ra9sglddzr19SVddbx7HjwsoNSJdXHO5H8Ji6InQ1kQJN4fBP%2BMuSgV0Ggg%2FSApx8Z0N0wBe4IAkLXJ1whatwMVsLOxXfusUf%2FMGJawwsgQ%3D%3D', alt: 'Additional feature 8' },
+  { id: 13, src: "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/67401da32d86a.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1763791139&Signature=iVaWSOQ6%2BY%2FLnHKXJPgjcymRBETYPFwQbVc4p%2FfAvdBjYH5hWw%2FSs63fGSKRqmMQDoXRwRr0%2Bfr2XhOgpq3frgkNixO57aI6Y8Vl8ilLYstdphTWh6gC0wR4%2BHyyDK0o39MHyq77qRtZuw6UFzIgojiaPh4%2BQsSTi2PaRKibMOCZnOvF6yeGfHpQaCH3JIFh%2FQ%2F4kXWBjNpkPywT0Y9b7FoNVaW045pKgODJIMGYXlU10%2B9vmhPfKwNMp6uWF%2FBT7cUwI%2FCNwZE6j36ue66CAPA6dM9iu7dSc8uA%2BA0xBfgR0o3Fg1EUE%2Bk%2B4L5D5PtK4LRYUkvO7RAyREMhLBM6KA%3D%3D",alt: 'Additional feature 9' },
+  { id: 14, src: "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/67401da3cfbfd.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1763791140&Signature=iQslxduUQVDM4gZdzJBy%2F11qpgNPTTDr%2B%2FbCDH%2Fmzhe1RUOGqnR6B6XFrLlrbg4%2BHosYOWdtXBOj8ViVTD606MfhNcno%2FvdX5%2Bb9jhoIW0rNXwfADv7LreB8JbPCSNCEBfJJekNvdLdv6nMKLQPbxwCCbSSWY2SLQufJZngTAje7mI6VFfON0trek%2Bn2eKxNelL79v66nnjGF106Pb5159kAtItSX4jUKTCe9o%2BU29JdwgliE%2FF%2BcRCH5S%2BTPtlSJc32KzsYgbzkwaPq4L4vOdWR0d9uMpi3fflgqFpl9pgIN0d6ND4b9oeLl%2BqwiX7n%2B9P1NzdzypNnxYfg0Njhpg%3D%3D",alt: 'Additional feature 9' },
+  { id: 15, src: "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/67401dce55738.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1763791182&Signature=WXQ4saG1bVPo%2Bwqaf5RyN9P1Mo9WH8972XkS6fUQjn8T5GEcxVTpfuRCUUiuyueiUvhY8DpbUjn73pKLBFKZnkONjMEjoqpOtXdh5Fd9TOqxof%2BFrLlAgPVDsvA3z18zQ8n7IYuCyUN56YovxbA%2Fy%2FshHkYq7qKFOk2BH2rhPS3P9v56IiDlCJ1f1fC5n7AwFJvQVc01Oq%2Fo0ULMltxWXAEVvEdaEs0Erm6shjfwPzb%2BGiRA4DWPI1OoJgstNWe22MT%2Fy%2B9MjN733OZ0KiRM9xh41x2fcfxwrIjZyf8Fpz05DKyvQFVhU9K7Lgg0EaQfahEi1m10qW%2Bbjz0iiyWJUw%3D%3D",alt: 'Additional feature 10' },
+  { id: 16, src: "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/67401dcede7b0.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1763791183&Signature=lraHDde0YENNY%2F5WtHNRD2%2FDkSFGqseBO6n%2B3wJHfKlcbIqMZ%2BV8VnQleYIX0EAHUdWECqM7Xt%2Fh%2FG0TJN20aNCoEycAPiP42sykBj0G4mmapRod25LIGKg6fgQca7larTi5cWbn8bBDqinAo4ZcemLfUM5l8YoANdzpegSiEgwkARr%2FWr8b9eoJ7TFShWKykr3A0b%2FYGqmXH27AsvxinJgR0HprcYYs9ME4iJr4CvnijjQbAQacrZ9tkCn5kgxHpHxD5sU6zWZ8%2B2WSXrYXlj%2BujgXrLiL4QqKRiZMs%2FAJtOz1VxTNkJdDmDnyiF9SnKTgKmz1D9rhWYeIHiqQe3Q%3D%3D",alt: 'Additional feature 11' },
+  { id: 17, src: "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/67401dcf662dd.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1763791183&Signature=WuL2QGgbjU2kfkjHUDYEKPspG2C1VaDf9j1tvx5JWkIRi1F6SsrIvZjn4dQrjoI7xzYbgZUNaRVPRNgKegkrVQYwRmBCk1xnhyZVMN5XNivmY3sIqAnqAWkTfvy476EiWAmWn%2BYrouGh3TGKpt%2FvGlMQRu%2FyXUCrkR7bCqCu4YlSvIEiSaf%2BDrzC%2FkmPYIPLwZ84eWzDM%2BM5ejiDc0sqrNHEkocLccMIqWWIwTliaIptJPVLSphbxJ88ofyaAfdKFrV64snpbhUVkkA6SZSWkjqwWscYHTZ7nzH%2BeG7J%2Ff9zpbNnsDp49i0fQ2K0jrrw%2FigsyBq5RTYtdgKiIbHMQQ%3D%3D",alt: 'Additional feature 12' },
+  { id: 18, src: "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/67401e51161d4.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1763791313&Signature=Ichn241uGd%2BzuPclsXjt8lBxlRTsqk7D2qMul3J%2BUEUOL3kvKPAjQ8pWZZQb24FWAmZzlB8%2Bx8abT2OhM5CG6fPBWLB%2FLNdWRoWgtH6pY4GGpY2BBwA%2BLjoV63cYVJwzUjCkv%2Bv3%2BDeKmTT3h8f%2BP8NCyFfigx3MuWfIWSRB%2FZMO2gQeU2saQxY4qFH477w99rmpkrU1062Tha7uXRtSJcxOBWqnXsgPT1Wd6%2F1AFo50J7iEy%2BzcevB0YQ8eevJ23iZ93d3mPD9QJqm0C0xRMevx1pxDqkXI2T6iiZRj5JG4TToJf1uf0kLZaCSi4SAbnJKfy5iVDpZlHxErdd3%2BNQ%3D%3D",alt: 'Additional feature 13' },
 ]
+
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-expect-error
 const Lightbox = ({ currentIndex, onClose, onPrev, onNext }) => (
@@ -85,7 +92,6 @@ const Lightbox = ({ currentIndex, onClose, onPrev, onNext }) => (
     </AnimatePresence>
 )
 
-
 export function FeaturesGalleryComponent() {
   const [lightboxOpen, setLightboxOpen] = useState(false)
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
@@ -101,9 +107,7 @@ export function FeaturesGalleryComponent() {
     setLightboxOpen(true)
   }
 
-  const closeLightbox = () => {
-    setLightboxOpen(false)
-  }
+  const closeLightbox = () => setLightboxOpen(false)
 
   const goToPrevious = () => {
     setCurrentImageIndex((prevIndex) =>
@@ -170,7 +174,7 @@ export function FeaturesGalleryComponent() {
             {galleryItems.slice(7, 10).map((feature, index) => (
                 <motion.div
                     key={feature.id}
-                    className="aspect-[3/4] cursor-pointer"
+                    className="aspect-[3/5] cursor-pointer"
                     variants={itemVariants}
                     onClick={() => openLightbox(index + 7)}
                 >
@@ -202,7 +206,42 @@ export function FeaturesGalleryComponent() {
                 </motion.div>
             ))}
           </motion.div>
-
+          <motion.div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-4">
+            {galleryItems.slice(12, 15).map((feature, index) => (
+                <motion.div
+                    key={feature.id}
+                    className="aspect-[3/4] cursor-pointer"
+                    variants={itemVariants}
+                    onClick={() => openLightbox(index + 7)}
+                >
+                  <Image
+                      src={feature.src}
+                      alt={feature.alt}
+                      width={300}
+                      height={400}
+                      className="w-full h-full object-cover rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+                  />
+                </motion.div>
+            ))}
+          </motion.div>
+          <motion.div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-4">
+            {galleryItems.slice(15, 18).map((feature, index) => (
+                <motion.div
+                    key={feature.id}
+                    className="aspect-[3/4] cursor-pointer"
+                    variants={itemVariants}
+                    onClick={() => openLightbox(index + 4)}
+                >
+                  <Image
+                      src={feature.src}
+                      alt={feature.alt}
+                      width={300}
+                      height={400}
+                      className="w-full h-full object-cover rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+                  />
+                </motion.div>
+            ))}
+          </motion.div>
 
           {lightboxOpen && (
               <Lightbox
