@@ -55,7 +55,7 @@ export function HeroWithNavbarComponent() {
                 animate={{ y: 0 }}
                 transition={{ duration: 0.8, delay: 1.4 }}
             >
-                <p className={`${cormorantGaramond.className} mx-auto max-w-4xl text-[18px] md:text-[20px] text-gray-800`}>
+                <p className={`${cormorantGaramond.className} mx-auto max-w-4xl text-[20px] md:text-[22px] text-gray-800`}>
                     Welcome to Hotel Daleese. Located on the Southern Pacific Coast of Costa Rica, our family-owned boutique hotel is situated in Uvita, Puntarenas. We look forward to your visit!
                 </p>
             </motion.div>

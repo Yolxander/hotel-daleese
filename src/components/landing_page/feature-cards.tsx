@@ -55,7 +55,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ title, description, learnMore
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 transition={{ duration: 0.5, delay: index * 0.2 + 0.4 }}
-                className="text-base sm:text-xl text-gray-600 mb-4 sm:mb-6 text-center"
+                className="text-[20px] sm:text-[22px] text-gray-600 mb-4 sm:mb-6 text-center"
             >
                 {description}
             </motion.p>
