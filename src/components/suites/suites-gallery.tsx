@@ -18,12 +18,12 @@ export function SuitesGalleryComponent() {
         },
         {
             id: 3,
-            image: 'https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/673e4d20250e6.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1763672224&Signature=Px0ZVgtiVjK0e4EmJUmDBRIF4l%2BOI8XmippgA4nzZCd5n4yASX880NTSNuRj42fycAFyCcAxEJKTiFk0dt%2BRD6bzvpjypKkz8V4NYu6Ysv2cvCSpbforvYWdUt50vRQ0ppgh4s2PQ0leyBtS5goAI0ifD7fzQQ5S61sAAkUmgN1popsp4DnEAzzfSUY0R8KOvEClN2Xa%2BNkrlP9kCgiV9%2BAIwA1nPTNCO1kISo%2F5rhOaLnS4KhFod1O4qxxcBpFcKWk%2B6ishZrCP%2BfIHnRh4pufYL9%2FTNeqpLNlCcEEZsg66qerMoVOk9d3l821u4dDWUxQqb2WyYK0nnWoWA%2F75Dg%3D%3D',
+            image: 'https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/673e4d0c2e3b8.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1763672204&Signature=m1YtG3hTL1A9LQa7efkZPLvVDsjMMpvwvJB9Kn9PjvsVNY%2BKEaqlnfVSvTfUkT0XgqErNDZzSZ93eS6gwtnlwApfuWF1U8irXi42sMeKkcOEFUXEGy8ZUFId85IEbJj6WwEoNpJHzcJv9uiqbbyfZIFqaBPlNUqeg%2BX%2FVzP5s7Vaqd8qFG%2Fvo35lzrEPaVsNY61RiWLy2UCN4E%2FERuDkUrjg55k8TX10dd1U%2BQiKvpe3nfs%2B11ed600%2BY8QgCigJtOQ9HfegfpouFO3oYgNSffCwYYgB0VdbE2l7A3H%2BhIxaHPm7wpeSK9fcdF6Ry5iX08nrZi0FXBNjktOY27SIYQ%3D%3D',
             alt: 'Interior view of Suite 3 bedroom with wooden slat wall',
         },
         {
             id: 4,
-            image: 'https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/673eab88b32aa.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1763696393&Signature=pe62qDg1nrhp40YBx4lpi8DWtQyFlkA%2BnfWB7tXB4lWBr9bb5ngoLj25KJUcMnjaUQpU%2BG14A47m3ffR3PyjUWIP%2FXdpc3aMZ7JLs0A%2FHX00QgQtlufukqM%2FuEWlvI7DIffyq2ajUeXT30apUFidDydxvZ6gymgpvLMU7Tm1lRHwGdAMUqfwMAXzu0whxBxLHDJB72XypouBwqBXEJx8n3EJqCcvyl8Pp9N%2Fv0juTtsI7XNt%2BCwt4T0hOL6v7nExU2i6CVf6ToMJz5X6FyDPL7BWGNEPIvT70bznE%2BIdCgVo26jupkHVwL8r6AXkhqk%2FjWYae%2Ba7hpoC7h9qznEOog%3D%3D',
+            image: 'https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/673eab72b0240.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1763696371&Signature=WPgLYs%2F2uhb0uuulzbraWK9WyOIBfWl3KlUNqOYvnDkMKy9mRJU%2BVj1JHSL%2F6g3ZV1rd7nTHWzK3A1M9lshOKBk8aX3%2BCvoko9ldPwamtmDREBMgyNvqJhqT%2Bq9qh1hJAINDPubDfxLPJBMgyogdgdXoRin0UpJEZobLjcoz0cENSNcY6Y6sttrA0XyK9iLRc34LqiGf2LOOGrKFWW2NHct60Ns19Axsr78xIOF2f2TmWCy7YvMha7i0IUD%2BH3glJzSaLP%2BYj5ZiB7wyvjp08%2BYOZqoRQ%2BQKNmInUuUKoxbYpSXGtC0ID3H964PP6y3aVmY9q4%2B6d1WrSnvz8nt21A%3D%3D',
             alt: 'Interior view of Suite 4 bedroom with wooden slat wall',
         },
     ]
