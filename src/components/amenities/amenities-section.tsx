@@ -1,7 +1,6 @@
 'use client'
 
 import { Cormorant_Garamond } from 'next/font/google'
-import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
@@ -26,7 +25,7 @@ const AmenityCard: React.FC<AmenityCardProps> = ({ title, description, index, in
             initial={{ opacity: 0 }}
             animate={inView ? { opacity: 1 } : { opacity: 0 }}
             transition={{ duration: 0.5, delay: index * 0.2 + 0.2 }}
-            className={`${cormorantGaramond.className} text-2xl md:text-3xl font-bold mb-4`}
+            className={`${cormorantGaramond.className} text-2xl md:text-[24px] font-bold mb-4`}
         >
             {title}
         </motion.h3>
@@ -34,7 +33,7 @@ const AmenityCard: React.FC<AmenityCardProps> = ({ title, description, index, in
             initial={{ opacity: 0 }}
             animate={inView ? { opacity: 1 } : { opacity: 0 }}
             transition={{ duration: 0.5, delay: index * 0.2 + 0.3 }}
-            className="text-gray-700 text-[20px] font-medium"
+            className="text-gray-700 text-[22px] font-medium"
         >
             {description}
         </motion.p>
@@ -82,7 +81,7 @@ export function AmenitiesSectionComponent() {
                     initial={{ opacity: 0 }}
                     animate={isInView ? { opacity: 1 } : { opacity: 0 }}
                     transition={{ duration: 0.9, delay: 0.2 }}
-                    className="text-gray-700 text-[22px] leading-relaxed font-medium max-w-2xl mx-auto"
+                    className="text-gray-700 text-[24px] leading-relaxed font-medium max-w-2xl mx-auto"
                 >
                     During your stay, we encourage you to take full advantage of our property amenities and
                     services. We want our guests to feel at home. Our hotel offers free access to private parking

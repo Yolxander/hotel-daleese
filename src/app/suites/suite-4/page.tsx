@@ -39,33 +39,32 @@ const header = {
 const suiteInfo = {
     facilities: [
         { id: 1, description: "Second level suite with private entrance and spacious balcony" },
-        { id: 2, description: "Queen bed with fresh linens" },
-        { id: 3, description: "Full kitchen with 2-burner induction stovetop, coffee machine, mini fridge, microwave, toaster & electric kettle" },
-        { id: 4, description: "Iron*" },
-        { id: 5, description: "Smart TV with Netflix subscription included" },
-        { id: 6, description: "Sofa bed (sleeps 2 small children or 1 adult)" },
-        { id: 7, description: "Drying rack for clothing" },
-        { id: 8, description: "Bath towels, pool towels, bed linens" },
-        { id: 9, description: "Access to hotel pool & lounge area" },
-        { id: 10, description: "Tile floor" },
-        { id: 11, description: "Single-room air conditioning for guest accommodation & fan" },
-        { id: 12, description: "Washing machine ($)" },
-        { id: 13, description: "Clothing storage unit" },
-        { id: 14, description: "Glass & screen windows and doors" },
-        { id: 15, description: "Patio with outdoor dining area and bamboo privacy curtain" },
-        { id: 16, description: "Hammock" },
-        { id: 17, description: "Mosquito net" },
+        { id: 2, description: "Queen bed with fresh linens and decorative pillows" },
+        { id: 3, description: "Smart TV with Netflix subscription included" },
+        { id: 4, description: "Sofa bed accompanied by black accent pillows" },
+        { id: 5, description: "Drying rack for clothing" },
+        { id: 6, description: "Bath towels, pool towels, bed linens" },
+        { id: 7, description: "Terrazzo tile floors in bathroom and living area" },
+        { id: 8, description: "Single-room air conditioning unit and ceiling fan for guest accommodation" },
+        { id: 9, description: "Washing machine ($)" },
+        { id: 10, description: "Wooden clothing storage unit with a clean, minimalist design" },
+        { id: 11, description: "Glass and screen windows and doors, allowing natural light" },
+        { id: 12, description: "Mosquito net to ensure a comfortable stay" },
     ],
     bathroomAmenities: [
-        { id: 1, description: "Toilet & toilet paper" },
-        { id: 2, description: "Shower with complimentary shampoo, conditioner & body wash" },
+        { id: 1, description: "Modern toilet with toilet paper" },
+        { id: 2, description: "Spacious shower with terrazzo tile, complimentary shampoo, conditioner, and body wash" },
         { id: 3, description: "Hairdryer*" },
-        { id: 4, description: "Hand soap" },
+        { id: 4, description: "Hand soap and sleek countertop for toiletries" },
+        { id: 5, description: "Elegant round mirror above a wooden vanity" },
     ],
     views: [
-        { id: 1, description: "Private outdoor patio/terrace with pool, garden, and mountain views" },
+        { id: 1, description: "Private outdoor patio/terrace with views of the pool, garden, and distant mountains" },
+        { id: 2, description: "Well-lit suite with natural light through large windows" },
     ],
 };
+
+
 
 
 export default function Page() {

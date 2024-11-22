@@ -126,8 +126,8 @@ export function OutdoorActivitiesComponent() {
                         className="rounded-full object-cover"
                     />
                   </motion.div>
-                  <h3 className="text-xl font-semibold text-center mb-2">{activity.title}</h3>
-                  <p className="text-lg text-center">{activity.description}</p>
+                  <h3 className="text-[22px] font-semibold text-center mb-2">{activity.title}</h3>
+                  <p className="text-[20px] text-center">{activity.description}</p>
                 </motion.div>
             ))}
           </motion.div>
