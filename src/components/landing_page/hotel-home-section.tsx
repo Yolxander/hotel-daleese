@@ -50,7 +50,7 @@ export function HotelHomeSectionComponent() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.4 }}
-                    className={`${cormorantGaramond.className} text-xl md:text-2xl text-center max-w-3xl mb-8`}
+                    className={`${cormorantGaramond.className} text-[20px] md:text-[25px] text-center max-w-3xl mb-8`}
                 >
                     Hotel Daleese is your home away from home. We are committed to offering our guests a unique and relaxing experience. Get to know your hosts better here.
                 </motion.p>

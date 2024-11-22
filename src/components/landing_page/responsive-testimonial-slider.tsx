@@ -70,66 +70,67 @@ export function ResponsiveTestimonialSlider() {
   const visibleCount = getVisibleCount()
 
   return (
-    <section className={`${cormorantGaramond.className} py-16 px-4 max-w-7xl mx-auto`}>
-      <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">
-        Read what our guests have to say:
-      </h2>
-      <div className="relative overflow-hidden">
-        <motion.div
-          className="flex transition-all duration-300 ease-in-out"
-          style={{
-            width: `${(75 * testimonials.length) / visibleCount}%`,
-            transform: `translateX(-${(currentIndex * 100) / testimonials.length}%)`
-          }}
-        >
-          {testimonials.map((testimonial, index) => (
-            <div
-              key={index}
-              className={`flex-shrink-0 ${
-                viewportSize === 'mobile'
-                  ? 'w-full'
-                  : viewportSize === 'tablet'
-                  ? 'w-1/2'
-                  : 'w-1/3'
-              } px-4`}
-            >
-              <motion.div
-                whileHover={{ scale: 1.02 }}
-                className="bg-gray-100 p-6 rounded-lg shadow-sm h-full"
-              >
-                <p className="text-lg mb-4">&#34;{testimonial.quote}&#34;</p>
-                <p className="text-right font-bold">{testimonial.author}</p>
-              </motion.div>
-            </div>
-          ))}
-        </motion.div>
-      </div>
-      <div className="flex justify-center space-x-4 mt-8 mb-4">
-        <button
-          onClick={prevTestimonial}
-          className="bg-gray-800 text-white rounded-full p-2 hover:bg-black transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800"
-          aria-label="Previous testimonial"
-        >
-          <ChevronLeft size={24} />
-        </button>
-        <button
-          onClick={nextTestimonial}
-          className="bg-gray-800 text-white rounded-full p-2 hover:bg-black transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800"
-          aria-label="Next testimonial"
-        >
-          <ChevronRight size={24} />
-        </button>
-      </div>
-      <div className="text-center mt-4">
-        <a
-          href="https://www.google.com/search?q=Hotel+Daleese+reviews"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block border-2 border-gray-800 text-gray-800 px-6 py-2 rounded hover:bg-black hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800"
-        >
-          See Our Google Reviews
-        </a>
-      </div>
-    </section>
+      <section className={`${cormorantGaramond.className} py-16 px-4 max-w-7xl mx-auto overflow-x-hidden`}>
+        <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">
+          Read what our guests have to say:
+        </h2>
+        <div className="relative overflow-hidden">
+          <motion.div
+              className="flex transition-all duration-300 ease-in-out"
+              style={{
+                width: `${100 * testimonials.length / visibleCount}%`,
+                transform: `translateX(-${(currentIndex * 100) / testimonials.length}%)`
+              }}
+          >
+            {testimonials.map((testimonial, index) => (
+                <div
+                    key={index}
+                    className={`flex-shrink-0 ${
+                        viewportSize === 'mobile'
+                            ? 'w-full'
+                            : viewportSize === 'tablet'
+                                ? 'w-1/2'
+                                : 'w-1/3'
+                    } px-4`}
+                >
+                  <motion.div
+                      whileHover={{ scale: 1.02 }}
+                      className="bg-gray-100 p-6 rounded-lg shadow-sm h-full flex flex-col justify-between max-w-[85vw]"
+                  >
+                    <p className="text-[20px] mb-4">&#34;{testimonial.quote}&#34;</p>
+                    <p className="text-right font-bold text-[22px]">{testimonial.author}</p>
+                  </motion.div>
+                </div>
+            ))}
+          </motion.div>
+        </div>
+        <div className="flex justify-center space-x-4 mt-8 mb-4">
+          <button
+              onClick={prevTestimonial}
+              className="bg-gray-800 text-white rounded-full p-2 hover:bg-black transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800"
+              aria-label="Previous testimonial"
+          >
+            <ChevronLeft size={24} />
+          </button>
+          <button
+              onClick={nextTestimonial}
+              className="bg-gray-800 text-white rounded-full p-2 hover:bg-black transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800"
+              aria-label="Next testimonial"
+          >
+            <ChevronRight size={24} />
+          </button>
+        </div>
+        <div className="text-center mt-4">
+          <a
+              href="https://www.google.com/search?q=Hotel+Daleese+reviews"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[20px] inline-block border-2 border-gray-800 text-gray-800 px-6 py-2 rounded hover:bg-black hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800"
+          >
+            See Our Google Reviews
+          </a>
+        </div>
+      </section>
   )
 }
+
