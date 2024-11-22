@@ -50,7 +50,7 @@ export function AmenitiesSectionComponent() {
             description: (
                 <>
                     Eat freshly prepared food from our garden and local farmers. We
-                    currently have a fixed dinner & breakfast menu with a unique course
+                    currently have a fixed dinner & in house restaurant with a unique course
                     each day of the week. Prepared fresh by Chef Rosa & Dave a la carte.
                 </>
             )
