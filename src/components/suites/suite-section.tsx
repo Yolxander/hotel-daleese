@@ -70,7 +70,7 @@ export function Suite_Section({ src, header }: SuiteSectionProps) {
                 className="relative z-20 flex flex-col items-center justify-center h-full text-white text-center px-4"
             >
                 <h1 className={`${lora.className} text-6xl mb-4`}>{header.name}</h1>
-                <p className={`${lora.className} text-xl font-light max-w-md`}>
+                <p className={`${lora.className} text-[25px] font-light max-w-md`}>
                     {header.description}
                 </p>
             </motion.div>

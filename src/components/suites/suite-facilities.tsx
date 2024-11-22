@@ -36,7 +36,7 @@ const listVariants: Variants = {
 
 const ListItem: FC<{ item: Facility; index: number }> = ({ item, index }) => (
     <motion.li
-        className="pl-5 text-[18px] relative before:content-['•'] before:absolute before:left-0 before:text-gray-400"
+        className="pl-5 text-[20px] font-light relative before:content-['•'] before:absolute before:left-0 before:text-gray-400"
         variants={listVariants}
         custom={index}
     >
