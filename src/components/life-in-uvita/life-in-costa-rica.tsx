@@ -1,12 +1,12 @@
 'use client'
 
-import { Lora } from 'next/font/google'
+import {Cormorant_Garamond, Lora} from 'next/font/google'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
 
 const lora = Lora({ subsets: ['latin'], weight: ['400', '700'] })
-
+const cormorantGaramond = Cormorant_Garamond({ subsets: ['latin'], weight: ['400', '700'] })
 export function LifeInCostaRicaComponent() {
     const ref = useRef(null)
     const isInView = useInView(ref, { once: true, margin: "-100px" })
@@ -59,7 +59,7 @@ export function LifeInCostaRicaComponent() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                     transition={{ duration: 0.8, delay: 0.6 }}
-                    className={`${lora.className} text-lg sm:text-xl md:text-[22px] max-w-3xl mx-auto italic`}
+                    className={`${cormorantGaramond.className} text-lg sm:text-xl md:text-[24px] max-w-3xl mx-auto italic`}
                 >
                     Conveniently located in the heart of Uvita, Hotel Daleese is steps away from
                     stunning beaches, unique dining experiences and more.

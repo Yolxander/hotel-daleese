@@ -97,7 +97,7 @@ export function RestaurantGalleryComponent() {
                         height={images[0].height}
                         className="w-full h-[500px] object-cover"
                     />
-                    <p className="text-sm">{images[0].caption}</p>
+                    <p className="text-[20px]">{images[0].caption}</p>
                 </div>
                 <div className="space-y-2 md:col-span-2">
                     <Image
@@ -107,7 +107,7 @@ export function RestaurantGalleryComponent() {
                         height={images[1]?.height}
                         className="w-full h-[500px]  object-cover"
                     />
-                    <p className="text-sm">{images[1]?.caption}</p>
+                    <p className="text-[20px]">{images[1]?.caption}</p>
                 </div>
                 <div className="space-y-2 md:col-span-1">
                     <Image
@@ -117,7 +117,7 @@ export function RestaurantGalleryComponent() {
                         height={images[2]?.height}
                         className="w-full h-[500px] object-cover"
                     />
-                    <p className="text-sm">{images[2]?.caption}</p>
+                    <p className="text-[20px]">{images[2]?.caption}</p>
                 </div>
             </motion.div>
 
@@ -136,7 +136,7 @@ export function RestaurantGalleryComponent() {
                         height={images[4]?.height}
                         className="w-full  h-[500px] object-cover"
                     />
-                    <p className="text-sm">{images[4]?.caption}</p>
+                    <p className="text-[20px]">{images[4]?.caption}</p>
                 </div>
                 <div className="space-y-2 md:col-span-2">
                     <Image
@@ -146,7 +146,7 @@ export function RestaurantGalleryComponent() {
                         height={images[3]?.height}
                         className="w-full h-[500px] object-cover"
                     />
-                    <p className="text-sm">{images[3]?.caption}</p>
+                    <p className="text-[20px]">{images[3]?.caption}</p>
                 </div>
             </motion.div>
 
@@ -165,7 +165,7 @@ export function RestaurantGalleryComponent() {
                         height={images[5]?.height}
                         className="w-full  h-[500px] object-cover"
                     />
-                    <p className="text-sm">{images[5]?.caption}</p>
+                    <p className="text-[20px]">{images[5]?.caption}</p>
                 </div>
                 <div className="space-y-2">
                     <Image
@@ -175,7 +175,7 @@ export function RestaurantGalleryComponent() {
                         height={images[6]?.height}
                         className="w-full  h-[500px] object-cover"
                     />
-                    <p className="text-sm">{images[6]?.caption}</p>
+                    <p className="text-[20px]">{images[6]?.caption}</p>
                 </div>
             </motion.div>
 
@@ -194,7 +194,7 @@ export function RestaurantGalleryComponent() {
                         height={images[7]?.height}
                         className="w-full  h-[500px] object-cover"
                     />
-                    <p className="text-sm">{images[7]?.caption}</p>
+                    <p className="text-[20px]">{images[7]?.caption}</p>
                 </div>
                 <div className="space-y-2">
                     <Image
@@ -204,7 +204,7 @@ export function RestaurantGalleryComponent() {
                         height={images[8]?.height}
                         className="w-full  h-[500px] object-cover"
                     />
-                    <p className="text-sm">{images[8]?.caption}</p>
+                    <p className="text-[20px]">{images[8]?.caption}</p>
                 </div>
                 <div className="space-y-2">
                     <Image
@@ -214,7 +214,7 @@ export function RestaurantGalleryComponent() {
                         height={images[9]?.height}
                         className="w-full  h-[500px] object-cover"
                     />
-                    <p className="text-sm">{images[9]?.caption}</p>
+                    <p className="text-[20px]">{images[9]?.caption}</p>
                 </div>
             </motion.div>
         </section>

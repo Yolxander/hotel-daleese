@@ -95,7 +95,7 @@ export function RestaurantRecommendationsComponent() {
           />
           <div className="absolute inset-0 bg-black opacity-50" />
         </div>
-        <div className="container relative mx-auto px-4 py-16 md:py-24">
+        <div className={`container relative mx-auto px-4 py-16 md:py-24 ${cormorantGaramond.className}`}>
           <motion.h2
               initial="hidden"
               animate={isInView ? "visible" : "hidden"}
@@ -122,13 +122,13 @@ export function RestaurantRecommendationsComponent() {
                 >
                   <motion.h3
                       variants={textVariants}
-                      className="text-3xl font-semibold mb-4 text-white"
+                      className={`text-3xl font-semibold mb-4 text-white ${cormorantGaramond.className}`}
                   >
                     {restaurant.name}
                   </motion.h3>
                   <motion.p
                       variants={textVariants}
-                      className="text-gray-100 text-[22px] font-bold leading-relaxed"
+                      className={`text-gray-100 text-[24px] font-bold leading-relaxed ${cormorantGaramond.className}`}
                   >
                     {restaurant.description}
                   </motion.p>

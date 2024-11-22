@@ -1,21 +1,22 @@
 'use client'
 
 import Image from 'next/image'
-import { Lora } from 'next/font/google'
+import {Cormorant_Garamond} from 'next/font/google'
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
 
-const lora = Lora({ subsets: ['latin'] })
+const cormorantGaramond = Cormorant_Garamond({ subsets: ['latin'], weight: ['400', '700'] })
 
 export function OurStorySection() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
+
   return (
       <section className="bg-gray-100 flex items-center justify-center border b-6">
         <div className="w-[90%] h-full flex flex-col md:flex-row items-start justify-between py-12">
-          <div ref={ref} className={`w-full md:w-1/2 pr-8 text-gray-700 min-h-[100vh] md:pt-[300px] pt-[100px] ${lora.className}`}>
+          <div ref={ref} className={`w-full md:w-1/2 pr-8 text-gray-700 min-h-[100vh] md:pt-[300px] pt-[100px] ${cormorantGaramond.className}`}>
             <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
