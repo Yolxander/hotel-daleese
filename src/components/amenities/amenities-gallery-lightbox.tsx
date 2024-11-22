@@ -66,7 +66,7 @@ const Lightbox = ({ currentIndex, onClose, onPrev, onNext }) => (
             {/* Previous Button */}
             <button
                 onClick={onPrev}
-                className="absolute left-8 top-1/2 transform -translate-y-1/2 bg-transparent bg-opacity-80 rounded-full p-3 hover:bg-opacity-100 transition-transform transform hover:scale-105"
+                className="absolute top-[95%] left-8 md:top-1/2 transform -translate-y-1/2 bg-transparent bg-opacity-80 rounded-full p-3 hover:bg-opacity-100 transition-transform transform hover:scale-105"
                 style={{ height: '120px', width: '120px' }}
             >
                 <ChevronLeft className="h-[80px] w-[80px] text-white" />
@@ -98,7 +98,7 @@ const Lightbox = ({ currentIndex, onClose, onPrev, onNext }) => (
             {/* Next Button */}
             <button
                 onClick={onNext}
-                className="absolute right-8 top-1/2 transform -translate-y-1/2 bg-transparent bg-opacity-80 rounded-full p-3 hover:bg-opacity-100 transition-transform transform hover:scale-105"
+                className="absolute top-[95%] right-8 md:top-1/2 transform -translate-y-1/2 bg-transparent bg-opacity-80 rounded-full p-3 hover:bg-opacity-100 transition-transform transform hover:scale-105"
                 style={{ height: '120px', width: '120px' }}
             >
                 <ChevronRight className="h-[80px] w-[80px] text-white" />
