@@ -31,7 +31,10 @@ const galleryItems: GalleryItem[] = imageUrls.map((url, index) => ({
 
 const imageSrc = "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/673eab88b32aa.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1763696393&Signature=pe62qDg1nrhp40YBx4lpi8DWtQyFlkA%2BnfWB7tXB4lWBr9bb5ngoLj25KJUcMnjaUQpU%2BG14A47m3ffR3PyjUWIP%2FXdpc3aMZ7JLs0A%2FHX00QgQtlufukqM%2FuEWlvI7DIffyq2ajUeXT30apUFidDydxvZ6gymgpvLMU7Tm1lRHwGdAMUqfwMAXzu0whxBxLHDJB72XypouBwqBXEJx8n3EJqCcvyl8Pp9N%2Fv0juTtsI7XNt%2BCwt4T0hOL6v7nExU2i6CVf6ToMJz5X6FyDPL7BWGNEPIvT70bznE%2BIdCgVo26jupkHVwL8r6AXkhqk%2FjWYae%2Ba7hpoC7h9qznEOog%3D%3D";
 
-const header = { name: 'Suite 4', description: "Studio Suite with Pool, Garden & Mountain Views" };
+const header = {
+    name: 'Suite 4',
+    description: "Elegant Studio Suite with Terrazzo Shower, Modern Wooden Accents, and Natural Lighting"
+};
 
 const suiteInfo = {
     facilities: [
@@ -72,7 +75,7 @@ export default function Page() {
             <Suite_Section src={imageSrc} header={header} />
             <SuiteFacilities suiteInfo={suiteInfo} />
             <ImageGallery galleryItems={galleryItems} />
-            <SuiteNavigationComponent currentSuite={3} />
+            <SuiteNavigationComponent currentSuite={4} />
             <FooterComponent />
         </div>
     );

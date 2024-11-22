@@ -29,7 +29,7 @@ const galleryItems: GalleryItem[] = imageUrls.map((url, index) => ({
     alt: `Image ${index + 1}`,
 }))
 
-const imageSrc = "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/uploads/Casa%20Turul/Suite%203/672302a36c66c.jpeg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1761883683&Signature=ORmyurkEzmzlHwrOPLlJfLkDQIKBrElRXy%2BkxoPAyWF3gyvN34Pkn%2FXEuXpTNQW%2FJrqcqQ2J4FPl5lCUcL758tSvCYjM1U%2BtffZHDPXnP5SHtFOPlXgo2Zg0cj9pcwSrPjOnJcIhYm5JwwcAZcyzopksp4yVY1XS%2BeuHNvaaJTgTCniT9wCNhK9FYs3Gm8ZlQ68qt3X8cwFdb2DC9kP%2B6GYGWAClQgbLhxYYmThH6OxyPAOnduA2SZ%2FjsX%2B1XB52zSF%2FLk5JHL6YpE1pDEBKhHlt%2F6mlN2oujZvBja2hoaMIjj2EJkLDlTGsIyxpFLrOIO2b64s%2FpxEudhaZoWOs1A%3D%3D";
+const imageSrc = "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/673e4d20250e6.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1763672224&Signature=Px0ZVgtiVjK0e4EmJUmDBRIF4l%2BOI8XmippgA4nzZCd5n4yASX880NTSNuRj42fycAFyCcAxEJKTiFk0dt%2BRD6bzvpjypKkz8V4NYu6Ysv2cvCSpbforvYWdUt50vRQ0ppgh4s2PQ0leyBtS5goAI0ifD7fzQQ5S61sAAkUmgN1popsp4DnEAzzfSUY0R8KOvEClN2Xa%2BNkrlP9kCgiV9%2BAIwA1nPTNCO1kISo%2F5rhOaLnS4KhFod1O4qxxcBpFcKWk%2B6ishZrCP%2BfIHnRh4pufYL9%2FTNeqpLNlCcEEZsg66qerMoVOk9d3l821u4dDWUxQqb2WyYK0nnWoWA%2F75Dg%3D%3D";
 
 const header = { name: 'Suite 3', description: "Studio Suite with Pool, Garden & Mountain Views" };
 

@@ -13,9 +13,9 @@ type SuiteNavigationComponentProps = {
 }
 
 export function SuiteNavigationComponent({ currentSuite }: SuiteNavigationComponentProps) {
-    // Define previous and next suites based on the current suite
+    // Update logic for previous and next suites
     const previousSuite = currentSuite > 1 ? currentSuite - 1 : null
-    const nextSuite = currentSuite < 3 ? currentSuite + 1 : null
+    const nextSuite = currentSuite === 3 ? 4 : currentSuite < 3 ? currentSuite + 1 : null
 
     return (
         <motion.section
@@ -28,7 +28,10 @@ export function SuiteNavigationComponent({ currentSuite }: SuiteNavigationCompon
                 <div className="flex justify-between items-center">
                     {/* Show the previous suite link if it exists */}
                     {previousSuite && (
-                        <Link href={`/suites/suite-${previousSuite}`} className="group flex items-center space-x-2 hover:opacity-60 transition-opacity">
+                        <Link
+                            href={`/suites/suite-${previousSuite}`}
+                            className="group flex items-center space-x-2 hover:opacity-60 transition-opacity"
+                        >
                             <ChevronLeft className="w-12 h-12" />
                             <motion.span
                                 initial={{ x: -10, opacity: 0 }}
@@ -43,7 +46,10 @@ export function SuiteNavigationComponent({ currentSuite }: SuiteNavigationCompon
 
                     {/* Show the next suite link if it exists */}
                     {nextSuite && (
-                        <Link href={`/suites/suite-${nextSuite}`} className="group flex items-center space-x-2 hover:opacity-60 transition-opacity">
+                        <Link
+                            href={`/suites/suite-${nextSuite}`}
+                            className="group flex items-center space-x-2 hover:opacity-60 transition-opacity"
+                        >
                             <motion.span
                                 initial={{ x: 10, opacity: 0 }}
                                 animate={{ x: 0, opacity: 1 }}
