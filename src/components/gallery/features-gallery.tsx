@@ -36,28 +36,29 @@ const Lightbox = ({ currentIndex, onClose, onPrev, onNext }) => (
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-[105]"
+          className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-[105]"
       >
-        <Button
-            variant="ghost"
-            size="icon"
-            className="absolute top-4 right-4 text-white"
+        {/* Close Button */}
+        <button
             onClick={onClose}
-            style={{ height: '90px', width: '90px' }}
+            className="absolute top-4 right-4 bg-transparent bg-opacity-80 rounded-full p-3 hover:bg-opacity-100 transition-transform transform hover:scale-105"
+            style={{ height: '120px', width: '120px' }}
         >
-          <X className="h-[90px] w-[90px]" />
+          <X className="h-[60px] w-[60px] text-white" />
           <span className="sr-only">Close</span>
-        </Button>
-        <Button
-            variant="ghost"
-            size="icon"
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white"
+        </button>
+
+        {/* Previous Button */}
+        <button
             onClick={onPrev}
-            style={{ height: '90px', width: '90px' }}
+            className="absolute left-8 top-1/2 transform -translate-y-1/2 bg-transparent bg-opacity-80 rounded-full p-3 hover:bg-opacity-100 transition-transform transform hover:scale-105"
+            style={{ height: '120px', width: '120px' }}
         >
-          <ChevronLeft className="h-[90px] w-[90px]" />
+          <ChevronLeft className="h-[80px] w-[80px] text-white" />
           <span className="sr-only">Previous image</span>
-        </Button>
+        </button>
+
+        {/* Lightbox Image */}
         <motion.div
             className="text-white text-center"
             initial={{ scale: 0.9, opacity: 0 }}
@@ -74,23 +75,24 @@ const Lightbox = ({ currentIndex, onClose, onPrev, onNext }) => (
                 transition={{ duration: 0.3 }}
                 src={galleryItems[currentIndex].src}
                 alt={galleryItems[currentIndex].alt}
-                className="max-h-[95vh] object-contain"
+                className="max-h-[90vh] object-contain rounded-lg shadow-lg"
             />
           </div>
         </motion.div>
-        <Button
-            variant="ghost"
-            size="icon"
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white"
+
+        {/* Next Button */}
+        <button
             onClick={onNext}
-            style={{ height: '90px', width: '90px' }}
+            className="absolute right-8 top-1/2 transform -translate-y-1/2 bg-transparent bg-opacity-80 rounded-full p-3 hover:bg-opacity-100 transition-transform transform hover:scale-105"
+            style={{ height: '120px', width: '120px' }}
         >
-          <ChevronRight className="h-[90px] w-[90px]" />
+          <ChevronRight className="h-[80px] w-[80px] text-white" />
           <span className="sr-only">Next image</span>
-        </Button>
+        </button>
       </motion.div>
     </AnimatePresence>
 )
+
 
 export function FeaturesGalleryComponent() {
   const [lightboxOpen, setLightboxOpen] = useState(false)
@@ -156,7 +158,7 @@ export function FeaturesGalleryComponent() {
             {galleryItems.slice(4, 7).map((feature, index) => (
                 <motion.div
                     key={feature.id}
-                    className="aspect-[3/4] cursor-pointer"
+                    className="aspect-[4/4] cursor-pointer"
                     variants={itemVariants}
                     onClick={() => openLightbox(index + 4)}
                 >
@@ -174,7 +176,7 @@ export function FeaturesGalleryComponent() {
             {galleryItems.slice(7, 10).map((feature, index) => (
                 <motion.div
                     key={feature.id}
-                    className="aspect-[3/5] cursor-pointer"
+                    className="aspect-[3/4] cursor-pointer"
                     variants={itemVariants}
                     onClick={() => openLightbox(index + 7)}
                 >
@@ -228,7 +230,7 @@ export function FeaturesGalleryComponent() {
             {galleryItems.slice(15, 18).map((feature, index) => (
                 <motion.div
                     key={feature.id}
-                    className="aspect-[3/4] cursor-pointer"
+                    className="aspect-[4/4] cursor-pointer"
                     variants={itemVariants}
                     onClick={() => openLightbox(index + 4)}
                 >

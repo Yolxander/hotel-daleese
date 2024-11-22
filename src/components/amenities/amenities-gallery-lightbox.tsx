@@ -2,7 +2,6 @@
 
 import { useState, useRef } from "react"
 import { Card, CardContent } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
 import { ChevronLeft, ChevronRight, X } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 import { useInView } from "framer-motion"
@@ -52,28 +51,29 @@ const Lightbox = ({ currentIndex, onClose, onPrev, onNext }) => (
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-[105]"
+            className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-[105]"
         >
-            <Button
-                variant="ghost"
-                size="icon"
-                className="absolute top-4 right-4 text-white"
+            {/* Close Button */}
+            <button
                 onClick={onClose}
-                style={{ height: '100px', width: '100px' }}
+                className="absolute top-4 right-4 bg-transparent bg-opacity-80 rounded-full p-3 hover:bg-opacity-100 transition-transform transform hover:scale-105"
+                style={{ height: '120px', width: '120px' }}
             >
-                <X size={90} />
+                <X className="h-[60px] w-[60px] text-white" />
                 <span className="sr-only">Close</span>
-            </Button>
-            <Button
-                variant="ghost"
-                size="icon"
-                className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white"
+            </button>
+
+            {/* Previous Button */}
+            <button
                 onClick={onPrev}
-                style={{ height: '100px', width: '100px' }}
+                className="absolute left-8 top-1/2 transform -translate-y-1/2 bg-transparent bg-opacity-80 rounded-full p-3 hover:bg-opacity-100 transition-transform transform hover:scale-105"
+                style={{ height: '120px', width: '120px' }}
             >
-                <ChevronLeft size={90} />
+                <ChevronLeft className="h-[80px] w-[80px] text-white" />
                 <span className="sr-only">Previous image</span>
-            </Button>
+            </button>
+
+            {/* Lightbox Image */}
             <motion.div
                 className="text-white text-center"
                 initial={{ scale: 0.9, opacity: 0 }}
@@ -90,23 +90,24 @@ const Lightbox = ({ currentIndex, onClose, onPrev, onNext }) => (
                         transition={{ duration: 0.3 }}
                         src={galleryItems[currentIndex].src}
                         alt={galleryItems[currentIndex].alt}
-                        className="max-h-[95vh] object-contain"
+                        className="max-h-[90vh] object-contain rounded-lg shadow-lg"
                     />
                 </div>
             </motion.div>
-            <Button
-                variant="ghost"
-                size="icon"
-                className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white"
+
+            {/* Next Button */}
+            <button
                 onClick={onNext}
-                style={{ height: '100px', width: '100px' }}
+                className="absolute right-8 top-1/2 transform -translate-y-1/2 bg-transparent bg-opacity-80 rounded-full p-3 hover:bg-opacity-100 transition-transform transform hover:scale-105"
+                style={{ height: '120px', width: '120px' }}
             >
-                <ChevronRight size={90} />
+                <ChevronRight className="h-[80px] w-[80px] text-white" />
                 <span className="sr-only">Next image</span>
-            </Button>
+            </button>
         </motion.div>
     </AnimatePresence>
-);
+)
+
 
 
 export function AmenitiesGalleryLightbox() {
