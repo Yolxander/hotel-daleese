@@ -29,10 +29,10 @@ export function FooterComponent() {
   }, [])
 
   return (
-    <footer className={`${cormorantGaramond.className} bg-gray-100 text-gray-800 py-16 px-`}>
+    <footer className={`${cormorantGaramond.className} bg-gray-100 text-gray-800 py-16 px-2 text-center`}>
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-16">
         <div>
-          <h2 className="text-3xl font-normal mb-4">Hotel Daleese</h2>
+          <h2 className="text-3xl font-normal mb-4 ">Hotel Daleese</h2>
           <p className="text-[22px] leading-relaxed">
             Situated in Southern Costa Rica, Hotel Daleese is an oasis located in the heart of Uvita. Our property features an outdoor swimming pool, free private parking & wifi.
           </p>
