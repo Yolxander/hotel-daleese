@@ -4,6 +4,7 @@ import { AmenitiesSectionComponent } from "@/components/amenities/amenities-sect
 import { AmenitiesGalleryLightbox } from "@/components/amenities/amenities-gallery-lightbox"
 import { FooterComponent } from "@/components/footer"
 import {AmenitiesSectionTopComponent} from "@/components/amenities/amenities-section-top";
+import {AmenitiesCardLogoSectionComponent} from "@/components/amenities/amenities-card-logo-section";
 
 const amenities = [
     {
@@ -53,26 +54,25 @@ const galleryItems = [
 
 const galleryItems2 = [
     {
-        id:'5',
-        src: "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/uploads/Casa%20Turul/Amenities/671d365de0a74.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1761503710&Signature=WBCgNVqDLCtTqy8c2bmvwBk0enVcOrZ9T26rXVIFygfwkhN6ns7dR1MSWhO8CQAt6mx8dscbJzxcest%2BMqY79tx6bPgYI9PaiVsY6FVxzXIpgr1drG2sQ6aQTs9nvMjnz%2FTkm2Kin3g4guLwEZU083E3%2FcpyiGyiEkMZ0dQiwQs74XPedcCyOp0eUgiCjSb7zLtQ8Fk9h%2B4bnnXiqtEskP%2BG5EjHqyNgsqDctkm%2BV9sSLN3G8N%2FCKVGNuz2IZluSjYy3HmLKjBlomWmArNUPwz6l5cUv0WbeZIsXq7QL5SDuZBmEvcSmJjR4lzxl7z1ipTtZ6%2BS9r4%2FUDocG2g6v4w%3D%3D",
-        alt: "Luxurious bedroom with large windows and mountain view"
+        "id": "238",
+        "src": "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/67427939a4a98.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1763945658&Signature=CcP%2BM4xy%2F0tNAt5kEf6GeeDSomnUGpMwO5Xv5vkXmgWRTw4ZvxC4R0QDHFcfJAFK7TwNVsmkLFJm7VTsduKggWnQQg5lpWtfLZ5Jd7pZZj9HEQIeemMOcRZ9Q9q0CE5phphzV83Dsld04qTQMV2PmDud2h3BsCgpr7Yz4phMYW9rpAt0aAKZgAMrAQWs2woGgiMMnmxnMjuIfChktK81yVt22WGKDg%2Br1oN2Mr6ioiUk%2BsRHjBcnSCd0vWq3xGL7bhuKScpWHBKJr22oFpuDrwbMUGNYNeiqPmWppgVKgjm1z8rqhQ5jW9yMPbTr9tQd4Z0lFEvvogisXPVdVP3Tow%3D%3D",
+        "alt": "2.jpg"
     },
     {
-        id:'6',
-        src: "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/uploads/Casa%20Turul/Amenities/671d36589b00a.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1761503705&Signature=kLQet8MR5gEIjGUih37uSUg7w5%2B1gFhUxxegRwjizEoZ7AYzCpNqFx94AkwoRgmY8TcbS%2BeFBTaOWjO2iyBTL05bumIPnXFnyinHeD1Lp3MoiQu9M5s07f%2FASRElmmtFMU1f1RrZjmCw6ZJsmoR6eBch8jrWUyG%2BTVpQOoicInhcO%2B1zh9C%2B6FfYvgw%2BSkCjNMcGDuj5%2BcDQnPSrs50VhGJRWO%2FDiP3sfy7zMxIo46RJu59W3mopFXsnyEgcb7sRoTRdzH04sGMf3b5w35iYx6DhpOh%2Fk22%2FhaGLE74JBa15E9rDF0jvXyZDKGpwXzapkY9i8YnEaIb91Bxd27hQtQ%3D%3D",
-        alt: "Modern bathroom with glass shower and elegant fixtures"
+        "id": "239",
+        "src": "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/67427941c0d43.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1763945666&Signature=pDqBH3ssGRjVqOF%2BMGvyuB1kcCSucI2ADoAB8dLZKU2%2BXCHg%2FC81GE%2F24%2BeloJMbKZUHgIoN8bSheSk%2FaJqFeR%2FlNL8SJ8PbtF5baOUrZYlgVMo%2B6Iu0cJ9%2BGsEo8qxDFzGhfOESRsvCr%2BDsOS6jBVjMbRUj7hl4qzhrnUkpBRUcfkVAjUrH6iRaCMYqVHuTtvnsZ3W5%2BKDA%2BTunAqEVjyQZJSUh%2F7fYXB53n9ZeXaJgIUJhd6iJ3nFOrigfCrNxQXBtUBFurAjdSAYOBAlEN19yf7wFUabkDQdtf88zzB9%2FN7T07gI9nsNpRvJmUpWpNuVDqizcPHVUPnwcHdhCGA%3D%3D",
+        "alt": "4.jpg"
     },
     {
-        id:'7',
-        src: "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/uploads/Casa%20Turul/Amenities/671d36593abdf.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1761503705&Signature=fryVtnhZX1cRwZ6%2BQkm8XSEkALNSFFK9iIAE1Kc6us2je6IRGpzMX7s13UQSbQvdaIGOGDgkC7j9oiFmGO3kS68y0Gze57jv8sCU%2B3LOBIdVzSMrqagD1w%2F92%2FIAhzpt3rwrqzvObGrm1OF9cgExBYPxbFdpK6aodK%2BwJCX%2B6hphVyawYYlrpVovx6%2FVl2lt0zWRWq64ewC6XReFjwdA1AHeVcDm0S0SqE%2B4qz0Em4boO6vrt%2BdMPFGiqBQ6A3y6btYiY0NdUcJe0lsYZAyVPxLmUyLjRr8YOlyiMoA%2B8PLUW3tws%2FhfJu%2FXg3L7X6Us9ZUHLYFJBp0ZRug%2BBn%2F6jw%3D%3D",
-        alt: "Cozy living room with fireplace and comfortable seating"
+        "id": "240",
+        "src": "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/674279424d1d2.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1763945666&Signature=VITg4jF5pbrdReRYzTNFP4DsXG6C6o2fsZV2%2BLOxx%2BLU%2F%2B2%2FapQBeLJFOQ6Nukls1URHa8yHTyaDxae884i9tUOXVkCPxgpay%2BByphPE0ImXWsX5%2FNwU7IXhdIC%2B%2Fd1MS%2FAeZDld7%2Br0ceGiSqpRwEmaymEApSExrK0YGDF7nybAiyDUO8JQLI5j6ab%2FqyBSWS6AzRC6iiNE6Ij28RiVmVfGsRgiW30P2g1S7314rjCYvm%2FsjdWpJ34EcA3vH7Lrd9wjht7ju7WySNU%2BrLq3VwC%2BA05oeFzlLTDvQyrhRVk9EHS1Hnl0o1nQDlkwLfOoD0yMh4UgnpZXLC6s%2FNg1xA%3D%3D",
+        "alt": "5.jpg"
     },
     {
-        id:'8',
-        src: "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/uploads/Casa%20Turul/Amenities/671d36598483d.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1761503705&Signature=ELuTdKGtk%2FySh%2FhvlikmtzXDYNwS3fF5s6hsVE9gUSyZjPBqv8HOM3W4NtwsloGwPbFZy4skcVKENwaH7CRfFMLGwnrc9dCQQE4aRyyJt2NvZZL5ZdWEWzD53zns18UkGyy5MHCa15LNdApZXj2KVwdc1D6CKZ%2B1RqWf9CF%2F%2FpRw7L1XabXHe4g4P1j3Gqnnzf2j9RvZyomhtZlC0LnkhtDKkIVVaIaXFqVxGTqYPrqyr%2BttyP0o9qghEwzRvE%2FcVGwe8EyjcV0kJGKJe78gNSgqx5ANMqMxNAxZeUEJtRxcvrv2P%2BThqXbe8GwFuX6cBfpUy98hZw8a31ysj677Qw%3D%3D",
-        alt: "Outdoor pool area with lounge chairs and mountain backdrop"
+        "id": "241",
+        "src": "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/6742796760f38.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1763945703&Signature=B3vGPqCPOQefahqxWnFnx5HaMQrVP355UrpxYZO%2FjRCE2yoaXT2iQnKb3QFdXq95ksAvdq5wwJjtt1isdE7au%2F8ZyxuiSNNxVWc8JB3w9PXx2XVItV8Xu8ZSeVtxAGOnU9a1n8xTMyvXlKvg30fqnPD7ly9%2BKWQ%2BcHDI%2FS6CUrEidgv3sMr5uZPZJIlv%2Flj%2Bg6q%2BdrNE1KYIU7k5nzTG6KZMuraBleIQSKG4gS43fqE1Z2HZZwTOowFrV0NA3DCi1kwS65kxcIM23FOpg2Me2u1W5BEQxP2YHyfUqR%2FoY4SW2zEORHnGFQDNOX5j5z7OPiGRGERU6AqQT0nps9WNrQ%3D%3D",
+        "alt": "7.jpg"
     }
-
 ];
 
 export default function AmenitiesPage() {
@@ -83,7 +83,7 @@ export default function AmenitiesPage() {
             <AmenitiesSectionTopComponent />
             <AmenitiesSectionComponent amenities={amenities} />
             <AmenitiesGalleryLightbox galleryItems={galleryItems} />
-            <AmenitiesSectionComponent amenities={amenities2} />
+            <AmenitiesCardLogoSectionComponent amenities={amenities2} />
             <AmenitiesGalleryLightbox galleryItems={galleryItems2} />
             <FooterComponent />
         </div>

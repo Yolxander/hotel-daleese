@@ -5,14 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c7e99333-aede-4333-a5d5-366958e0f415" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/amenities/amenities-card-logo-section.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/amenities/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/amenities/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/suites/suite-2/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/suites/suite-2/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/amenities/amenities-gallery-lightbox.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/amenities/amenities-gallery-lightbox.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/amenities/amenities-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/amenities/amenities-section.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/gallery/features-gallery.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/gallery/features-gallery.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/our-story/our-story-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/our-story/our-story-section.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/suites/suites-gallery.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/suites/suites-gallery.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +97,7 @@
       <workItem from="1731107025672" duration="3792000" />
       <workItem from="1731139317659" duration="1235000" />
       <workItem from="1732238136687" duration="19042000" />
-      <workItem from="1732311894090" duration="6795000" />
+      <workItem from="1732311894090" duration="10182000" />
     </task>
     <servers />
   </component>

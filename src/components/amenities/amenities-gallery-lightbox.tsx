@@ -120,7 +120,7 @@ export const AmenitiesGalleryLightbox: React.FC<AmenitiesGalleryLightboxProps> =
     }
 
     return (
-        <section ref={ref} className="py-12 px-4 md:px-6 lg:px-8">
+        <section ref={ref} className="pt-6 pb-[100px] px-4 md:px-6 lg:px-8">
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
