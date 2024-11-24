@@ -78,13 +78,13 @@ export function FeatureCards() {
             title: "Accommodations",
             description: "Our suites are uniquely designed & sleep up to 4 guests.",
             learnMoreLink: "/suites",
-            imageSrc: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/36c31ceb-32d2-45e7-b29f-58fc567c27fb-YfVLPrRTFvmfCYgUhqdUhyxiEql4vB.jpeg",
+            imageSrc: "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/673de7f57a89b.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1763646325&Signature=Dwk204G1gSMjZpm2RQbBcpXdTi5zfOQ13Wm1y8D8evSsBiw1fxv87eNHwbfOjva%2FmiBinlAjz%2BAi6%2FnOzAKnVUqf1S9RlzUxZ01ZotxdbhJuHXJjwRz4usyjLzXsILiTyffrineL8b6vsMT8zIKba%2BL27gh7gKBeLXiK0Kpz9I6F%2BPIYz1ib6VlmQBLkEQsB0tLIg2PIEFOIJSszNuac%2F5lLo5Dj9cNg0%2Fzlv6qoApubGnusPEbS9UIHkv7Jgh7inCyPYPdpogDh%2BGFB%2BTrrpij8fACo0BPbKTTOq2PdW%2Fi0BHCtf%2FyOqWWNcur%2Be5DbGkA%2F1elSlEjbOTG6339XFg%3D%3D",
         },
         {
             title: "Amenities",
             description: "Guests can enjoy our gorgeous pool, on-site massages & more!",
             learnMoreLink: "/amenities",
-            imageSrc: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Image-oICsIJGcXDyT254WtnJzmQPKwRFJVr.jpeg",
+            imageSrc: "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/673eaf00ea361.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1763697281&Signature=f5syksWOQXM1%2F3IzT05LBkJHzg%2F%2BiMVgcihUJxGzkmmlklmmKKE6oJYTdyy8jxLBgCekiu%2BGvQsPfzFCJMgAdPMpGLnEm3pVooOUD1iIU7%2FaZB%2Fn%2BIp0LyVsFTPf69VOgj%2BZESSi14wfpZs9vnFoFhefUE2f6fCafni3D%2FXVMt6S92ijHU316oQy2d0k58%2BijtpYLikpUUrKmL18sr%2BpH9C2hNriWB6eBGUqyk57i%2F6naqBrbWzPHDnWoAV9TNQal26%2BQiDuC67s4nodJtdKkSClJHoYgj%2FUMxloEqUu93IAVuCGEFrdOFNEPvTQ89%2FqJeaK7ov9tQaF4q5BplXBfw%3D%3D",
         },
         {
             title: "Tours & Activities",
