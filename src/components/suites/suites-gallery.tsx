@@ -13,7 +13,7 @@ export function SuitesGalleryComponent() {
         },
         {
             id: 2,
-            image: 'https://storage.googleapis.com/sempre-studios-893c8.appspot.com/uploads/Casa%20Turul/Suite%202/672301ae6af1c.jpeg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1761883438&Signature=LFOa7ciZ%2F7OmNMkmq%2FE%2FCufWn%2FyFKG%2F75BGatA1Mn1vjvTeH2PkYzktMnYlhkD56Ezyoy6x03THviphQK29LxzwkEMnad73BRP4Yjf%2BkUz%2FuLQDQtS9c3GPQjyhlLYwmkKiVvLRMwEGTkgvJyPPtIXWQnjGDdV3t4Vf5Y3c0P%2BeSySyuYZiwcl61TUVHffNfEKsz6DKjZpoGo01DEsZpnMLxj29flhdwI7SnKTeJUscoP0zdVx9Scs0OHNdtuOVaQ8DAjpMAcOoqgsjxvX2bu9DxoK7hBO2mtBQGRRCfCa4P%2BlD9oACmH%2FQ5dLf6CB1cv%2B8ZeuP55vPg896Ejswg8w%3D%3D',
+            image: 'https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/673e436317fc5.jpeg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1763669732&Signature=LomMzgWe%2FQBlS5F8X8taYl4vU2tUVbrApV56H7rD6QYgsc7JhlGZRyLpoqufoISIMzUI08uOn5M1c4XMTqMcVWicI4JE2hTS8iJNqbjpK4hlWYtYXtWS1kaf%2BpftKZtJunDRC%2BudqpegmG7eA1RIqj%2FMuVh2ZVUh22RtQwm%2BGSCjHrAodlmHCkpev9cAJkJ4wQDN7shHU3pbW6gToLIHrHN%2BhxDbP%2FkUH6gflwCHGg9ntyqbeC87GFiHfn4jI0ku2ewOtUiGN9YbmmlYA3e529uEbhvxhMAUrybw7DQOlDqoyaFDpRTxwzV%2BGXfz4hj4JHtvFNtQmRG6va8Q8KO3oQ%3D%3D',
             alt: 'Interior view of Suite 2 kitchen with terrazzo countertop',
         },
         {

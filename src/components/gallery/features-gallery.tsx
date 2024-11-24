@@ -44,7 +44,7 @@ const galleryItems = [
   },
   {
     id: "223",
-    src: "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/6740e5fc43da0.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1763842428&Signature=a5B4RWXB4RXdcM7NA2afjGmXxN5CODy8qzwTtQCrbHDSPLdPJ%2BfDpq%2BnrUTaj9w8cZ%2FDhYL47G870O5huu%2BbN3vvCUP0tI7U3ECZa0pW5qsfx27laQi1%2Fznd2dck0hdHALMMwT7ovFzpTIHkwoq3S8AEJ3c9phVJO4oxe9JJLuKlkBi%2BUL4OvqZbTixKMTmuTp5BAm4GOWBouFGaTM2Cje9WzPGlLZtc2NBDOQLeKXpytJjFMJwaW4C1nexBFSMqOIPe%2F%2B3tf52GOYdwmkR%2BPhtlfXyBfTJ1jt%2F1Qo1KEq31hat%2F6t6auKMCFCXBw9qbIvHOSG9p5QiXlcplJ46r8g%3D%3D",
+    src: "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/6740eeff3860c.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1763844735&Signature=fCE1dnw%2FKP%2F2x6Xqc2nCcRAhFkFvJSGTQf4ZyySYpeemjBKmRK%2BbjGQ%2FYTNp7upFSO6qdd%2Bv%2B4bHQ01JMDWKop0ATjJ6HrYGP8QLz5UFCdtr2IJiJ6u7C%2FLi41WJc8uX5MaoBS1YZjttv0V7s6pMdbXXV2Y5KCrt8qWvWr2xj2Kq2Qf%2FcRMjwnmViHZNYLHqV7ymMi63yg8TWqUypPVHJq%2FVtjQiex0Xp0ndCSf5sJzqTqRALYsU%2BEYgk0rr11eAP7qGQV1GSwz5dOFtwmzDzULBnyhJ5A0QrZWi5BQCVenJ%2BBa3fhJUyzJf8I8vEi5zuXQN2vW3yOyPxnKq%2F9IdlQ%3D%3D",
     alt: "IMG_4145.jpg"
   },
   {
@@ -59,7 +59,7 @@ const galleryItems = [
   },
   {
     id: "230",
-    src: "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/6740e931487e3.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1763843249&Signature=PWfX8%2BgT3mi%2Fq%2ByNwT6GgWQuT0NMgp98BessEnygHscwBs8fJ3z7BI2gSu1E3lFXk1Hz26rmD9IEtVaL6i1JnEolC%2FVlhpl7CD3Poxc%2BiqKvxsOm%2FmGGpn6hU2yaMJ%2FdE0oGfgq6eT5X8ZYGQLkTZVAJkjVcNRtlGlhOcLSVPAoCLHMMq4TOdKBVImb9RYf9TiMwi9U2YmOIFVsV%2BOMmz%2Bte6nmDxJiZ1CH8Ln5NFIMOxZCy3UHxBdmlzBB%2F%2BFvIJY%2FRut6W%2Fa0TgBZsLkhHx9RcL6qrehe%2BbCiVz8ufViYkBgyomwGu5Nl4NcDMlcDexrgcmBkwtUvA6ZE1rRPz0A%3D%3D",
+    src: "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/6740ef3066d53.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1763844784&Signature=mgNXk5ZTFQGqQi441zhDQWcdAm8PhbH5E0ywUoPQE%2B2QymoMA7%2BGMG5CxmMCEiiKFUrHM9sG%2BZcG0Gwn%2BwCwOwTiAMLKmMmoLFPZZDfFcFBgL6aw3E8T73L0%2B8gRLlWovYL663%2FwLe8L%2Fmb19CGFFgln5KJwkpm9B5k6bDNq%2FbQ3fIzXDILV2dGLGREvHAQA3vdV9vGQT1j1%2BMHJz6Q7wGsw1A%2BeLZjSvZDONISNHBPP5gLHAlTAOCXw9u5wf3I53mtlzkNGP1XLWqnvMColjPTBGY%2FT6c7xoqRJyX57TQgfb6SV%2BN5wTwJcquQtqCkQdrxRm1qT%2Ffeu38J6VqceWQ%3D%3D",
     alt: "c.jpg"
   },
   {
@@ -264,7 +264,7 @@ export function FeaturesGalleryComponent() {
                 </motion.div>
             ))}
           </motion.div>
-          <motion.div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-4">
+          <motion.div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-4">
             {galleryItems.slice(12, 15).map((feature, index) => (
                 <motion.div
                     key={feature.id}

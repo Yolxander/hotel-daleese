@@ -79,7 +79,7 @@ export function OurStorySection() {
                 transition={{ duration: 0.6, delay: 0.8 }}
                 className="mb-6 text-[20px]"
             >
-              The name of the hotel, Hotel Dalcese, is derived from our children&#39;s names, David & Mehlcese.
+              The name of the hotel, Hotel Daleese, is derived from our children&#39;s names, David & Mehlcese.
             </motion.p>
             <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -105,7 +105,7 @@ export function OurStorySection() {
             />
             <Image
                 src="https://storage.googleapis.com/sempre-studios-893c8.appspot.com/uploads/Casa%20Turul/Our%20Story/671daa5b951f7.jpeg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1761533404&Signature=YwUIsRbcIAMFKSNyOIT769VrFI2XLixZNInT030xKPMW2oAt4GTiODrQNrNOQJU1zSuPXoBufHvsh4fIO1D%2B9VbptLIgNw%2BaU76o5nT4g8pQ0AfZzJoKM50Zl1oa9HRLtuS6MIczXuXckwfLT8c74Lhecvmu0KCjRqU8DsiUq9%2FNwGJzgp6SeCT8OgLx8Z4d6oMQwAkb%2FS6m2qYjGSgy9UpTofHnowiPsdZeHbFNOwySiMj4ykDNW257Yp2E6xb8ExVQ8oB8k8EQyrnfCbibIKxV3It5Az0KsS0wqW4pq50q1HNqVrRyMoPvIIc4Z6Wr%2BY2TVqDXkzj7p0qIjTBBLQ%3D%3D"
-                alt="Hotel Dalcese property"
+                alt="Hotel Daleese property"
                 width={600}
                 height={300}
                 className="w-full h-auto object-cover rounded-lg"

@@ -40,65 +40,43 @@ const AmenityCard: React.FC<AmenityCardProps> = ({ title, description, index, in
     </motion.div>
 )
 
-export function AmenitiesSectionComponent() {
+interface AmenitiesSectionProps {
+    amenities: {
+        title: string
+        description: string
+    }[]
+}
+
+export const AmenitiesSectionComponent: React.FC<AmenitiesSectionProps> = ({ amenities }) => {
     const ref = useRef(null)
     const isInView = useInView(ref, { once: true, margin: "-100px" })
 
-    const amenities = [
-        {
-            title: "Dine with Us",
-            description: (
-                <>
-                    Eat freshly prepared food from our garden and local farmers. We
-                    currently have a fixed dinner & in house restaurant with a unique course
-                    each day of the week. Prepared fresh by Chef Rosa & Dave a la carte.
-                </>
-            )
-        },
-        {
-            title: "Relax with Us",
-            description: "Our home is your home. Enjoy our beautifully maintained outdoor pool surrounded by a green oasis. Bring your favourite book, or cocktail."
-        },
-        {
-            title: "Ride with Us",
-            description: "We want our guests to have a stress-free experience when booking with us. We would be happy to assist booking your private airport shuttle to and from the hotel. Car rentals? We can also help with that."
-        },
-        {
-            title: "Focus on Yourself",
-            description: "We have a network of excellent massage therapists and other bodywork professionals and would be happy to arrange an in-room treatment during your stay."
-        }
-    ]
-
     return (
         <section ref={ref} className={`${cormorantGaramond.className} max-w-6xl mx-auto px-4 py-16`}>
-            <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                transition={{ duration: 0.9 }}
-                className="text-center mb-16"
-            >
-                <motion.p
-                    initial={{ opacity: 0 }}
-                    animate={isInView ? { opacity: 1 } : { opacity: 0 }}
-                    transition={{ duration: 0.9, delay: 0.2 }}
-                    className="text-gray-700 text-[24px] leading-relaxed font-medium max-w-2xl mx-auto"
-                >
-                    During your stay, we encourage you to take full advantage of our property amenities and
-                    services. We want our guests to feel at home. Our hotel offers free access to private parking
-                    & wifi.
-                </motion.p>
-            </motion.div>
 
-            <div className="grid md:grid-cols-2 gap-8">
-                {amenities.map((amenity, index) => (
-                    <AmenityCard
-                        key={amenity.title}
-                        title={amenity.title}
-                        description={amenity.description}
-                        index={index}
-                        inView={isInView}
-                    />
-                ))}
+            <div className="flex flex-wrap justify-center gap-8">
+                <div className="flex flex-col md:flex-row md:w-full gap-8">
+                    {amenities.slice(0, 2).map((amenity, index) => (
+                        <div key={amenity.title} className="flex-1">
+                            <AmenityCard
+                                title={amenity.title}
+                                description={amenity.description}
+                                index={index}
+                                inView={isInView}
+                            />
+                        </div>
+                    ))}
+                </div>
+                <div className="w-full flex justify-center">
+                    <div className="flex-1 md:max-w-[50%]">
+                        <AmenityCard
+                            title={amenities[2]?.title}
+                            description={amenities[2]?.description}
+                            index={2}
+                            inView={isInView}
+                        />
+                    </div>
+                </div>
             </div>
         </section>
     )
