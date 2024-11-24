@@ -8,7 +8,7 @@ export function SuitesGalleryComponent() {
     const suites = [
         {
             id: 1,
-            image: 'https://storage.googleapis.com/sempre-studios-893c8.appspot.com/uploads/Casa%20Turul/Suite%201/6722811bbc369.jpeg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1761850524&Signature=BySCk34Wg5xMdxbMU1r%2FUH3LhZayf%2FsF8seffcH63yoRvVrwEeoFoeEbNzFt7c%2BPYy4E%2FhyHWS6bduWyT4AagbmTBaPhXqa1YkJfYZHW%2BSPOA0cDF8OsNfIqJRlxRtE6tIFGIS0egfKa9CKrN%2BbAuH77QfVQ5o5kfuc8VggATVODybITrdnlfV7UERiWx%2Fr8JNeNpQo9Nf%2Bo36x3QcqCsqAACJpE5Uc7ZoYESMcDh9NytfKz27evYj9YKwGb%2B0t8eEr9eravw5wPf%2BcF%2BxYkh54ilo2bnLSQcpSC2yZq4QbbH%2BSgn1rlWO3AY6c3AnFzvdkxIs0eUKmyrX4rTK7GRQ%3D%3D',
+            image: 'https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/673de7f757eec.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1763646327&Signature=on52lKpeaCdsHvx7PLv%2BLPb8xuud%2BVeeDP6Yc2OgFwTgtxGcuV0GZt77t36%2FEvRbOFndDk0XxawBJAgoXYAYYVSjSBgJId%2Ff9s7ylJOmkmyJ7QvP5ERDs2y4d%2BWcT5wVXgQM8XrUHTW%2FGhWQE%2FIT83qbmDoF1RC6qQE0ssetbFNb3pvcFXnFMI3XCZ%2BqZvdtYTS3HffBbDyu2iOOdohY8L%2BUTUgzI9ns%2FITjYqc8MVUgvummw3126zPv5O%2BDFT57l1guvgRxjZE9ItROrL5NpPHsDP83L2HGHgER2LR16cmYkDOTqyJgXeQD%2Bjnba%2B5BLJGvL2YwwvXEPTlEOL7%2Fgg%3D%3D',
             alt: 'Exterior view of Suite 1 with pink walls and tropical plants',
         },
         {
