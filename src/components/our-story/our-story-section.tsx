@@ -63,7 +63,7 @@ export function OurStorySection() {
                 transition={{ duration: 0.6, delay: 0.6 }}
                 className="mb-6 text-[20px]"
             >
-              We have been transforming Hotel Dalseese shortly after we arrived in Costa Rica, constantly making changes and updates to suit the needs of our guests and industry standards. We have a huge passion for our business, as it is something we have always dreamt of doing. The boutique-style hotel is run by us, and we are the first people you see with a good morning and the last with a good evening.
+              We have been transforming Hotel Daleese shortly after we arrived in Costa Rica, constantly making changes and updates to suit the needs of our guests and industry standards. We have a huge passion for our business, as it is something we have always dreamt of doing. The boutique-style hotel is run by us, and we are the first people you see with a good morning and the last with a good evening.
             </motion.p>
             <motion.p
                 initial={{ opacity: 0, y: 20 }}
