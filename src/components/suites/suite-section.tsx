@@ -63,14 +63,14 @@ export function Suite_Section({ src, header }: SuiteSectionProps) {
             />
             <motion.div
                 variants={containerVariants}
-                className="absolute inset-0 bg-black/30 z-10"
+                className="absolute inset-0 bg-black/40 z-10"
             />
             <motion.div
                 variants={textVariants}
                 className="relative z-20 flex flex-col items-center justify-center h-full text-white text-center px-4"
             >
                 <h1 className={`${cormorantGaramond.className} text-6xl mb-4`}>{header.name}</h1>
-                <p className={`${cormorantGaramond.className} text-[25px] font-light max-w-md`}>
+                <p className={`${cormorantGaramond.className} text-[28px] font-semibold max-w-md`}>
                     {header.description}
                 </p>
             </motion.div>

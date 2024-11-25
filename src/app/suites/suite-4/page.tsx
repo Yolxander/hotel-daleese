@@ -29,7 +29,8 @@ const galleryItems: GalleryItem[] = imageUrls.map((url, index) => ({
     alt: `Image ${index + 1}`,
 }))
 
-const imageSrc = "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/673eab72b0240.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1763696371&Signature=WPgLYs%2F2uhb0uuulzbraWK9WyOIBfWl3KlUNqOYvnDkMKy9mRJU%2BVj1JHSL%2F6g3ZV1rd7nTHWzK3A1M9lshOKBk8aX3%2BCvoko9ldPwamtmDREBMgyNvqJhqT%2Bq9qh1hJAINDPubDfxLPJBMgyogdgdXoRin0UpJEZobLjcoz0cENSNcY6Y6sttrA0XyK9iLRc34LqiGf2LOOGrKFWW2NHct60Ns19Axsr78xIOF2f2TmWCy7YvMha7i0IUD%2BH3glJzSaLP%2BYj5ZiB7wyvjp08%2BYOZqoRQ%2BQKNmInUuUKoxbYpSXGtC0ID3H964PP6y3aVmY9q4%2B6d1WrSnvz8nt21A%3D%3D";
+const imageSrc = "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/673eab71dbb9c.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1763696370&Signature=Miui7%2BF4QJ8qX9KbL6iGC0DfbQDAUllY8hwJVmKZ%2FzEpRkDObULCUmHYMLGCiCm36%2BHgFtiLxc59TmnQHJ5HdClUyHMgTvD2b%2B%2FTZhgtHEPPrYyugE6qAu2Y6lGPbyPGyYdtUcF8eEitdiqaC0gpGo9eFqV53Wyp7cEfhbPAOAYpvPooBidPIuhKy%2FZLRVmJYL3COQPI7W6KDK0rdBBtAuX1UdCWsVyiPLkp2ZMBjuQXBQVPHtt0PDlz73OcFlTNa0DMhyq51BIcTXQ5B1ExfEFZCn5xfXiilfFroboCz2Wdpyg79giQoE2VWLKX%2Bu06%2FGpnhjoJOXWfl0HNOacM3Q%3D%3D"
+;
 
 const header = {
     name: 'Suite 4',
