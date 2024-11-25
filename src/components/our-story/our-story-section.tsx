@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import {Cormorant_Garamond} from 'next/font/google'
+import { Cormorant_Garamond } from 'next/font/google'
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
@@ -11,7 +11,6 @@ const cormorantGaramond = Cormorant_Garamond({ subsets: ['latin'], weight: ['400
 export function OurStorySection() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
-
 
   return (
       <section className="bg-gray-100 flex items-center justify-center border b-6">
@@ -31,7 +30,7 @@ export function OurStorySection() {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="mb-6 text-[22px]"
             >
-              It all begins with an idea.
+              Every dream starts with an idea.
             </motion.p>
             <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -39,7 +38,7 @@ export function OurStorySection() {
                 transition={{ duration: 0.6, delay: 0.3 }}
                 className="mb-6 font-semibold text-[22px] italic"
             >
-              Hi, we&#39;re Rosa and Dave and we are the owners of Hotel Daleese.
+              Hi, we’re Rosa and Dave, the proud owners of <strong>Hotel Daleese.</strong>
             </motion.p>
             <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -47,7 +46,7 @@ export function OurStorySection() {
                 transition={{ duration: 0.6, delay: 0.4 }}
                 className="mb-6 text-[20px]"
             >
-              Rosa has been in the commercial real estate industry for over 20 years, and Dave is a Plumber by trade who has worked in residential and commercial builds for over 20 years, both for high-profile companies with expanded portfolios throughout Canada.
+              Our journey began in Canada, where Rosa spent over 20 years in commercial real estate, while Dave worked as a skilled plumber on residential and commercial projects for high-profile companies. Despite our success, we shared a dream: to create a space where hospitality and connection thrive.
             </motion.p>
             <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -55,7 +54,7 @@ export function OurStorySection() {
                 transition={{ duration: 0.6, delay: 0.5 }}
                 className="mb-6 text-[20px]"
             >
-              With the same goals in mind, we sold our house, cottage, and all of our belongings in Canada and traveled with our two young children to buy a boutique hotel and live in beautiful Uvita, Costa Rica.
+              With this vision in mind, we sold our home, our cottage, and nearly all our belongings, packing up our lives to embark on a new adventure with our two children in beautiful Uvita, Costa Rica.
             </motion.p>
             <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -63,7 +62,7 @@ export function OurStorySection() {
                 transition={{ duration: 0.6, delay: 0.6 }}
                 className="mb-6 text-[20px]"
             >
-              We have been transforming Hotel Daleese shortly after we arrived in Costa Rica, constantly making changes and updates to suit the needs of our guests and industry standards. We have a huge passion for our business, as it is something we have always dreamt of doing. The boutique-style hotel is run by us, and we are the first people you see with a good morning and the last with a good evening.
+              Since arriving, we’ve poured our hearts into transforming Hotel Daleese into a welcoming haven. From thoughtful updates to creative changes, we’ve tailored every aspect of our boutique hotel to meet the evolving needs of our guests and the highest industry standards. We’re passionate about what we do, and we love being hands-on — greeting guests with a warm “good morning” and sending them off with a heartfelt “good evening.”
             </motion.p>
             <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -71,7 +70,7 @@ export function OurStorySection() {
                 transition={{ duration: 0.6, delay: 0.7 }}
                 className="mb-6 text-[20px]"
             >
-              Our favorite part of running the hotel is the opportunity to meet new guests from all over the world and hear their stories.
+              Our favorite part of this journey is meeting incredible guests from all around the world. Hearing your stories and sharing ours is what makes this life so fulfilling.
             </motion.p>
             <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -79,7 +78,7 @@ export function OurStorySection() {
                 transition={{ duration: 0.6, delay: 0.8 }}
                 className="mb-6 text-[20px]"
             >
-              The name of the hotel, Hotel Daleese, is derived from our children&#39;s names, David & Mehlcese.
+              The name <em>Hotel Daleese</em> holds special meaning, as it’s inspired by our children, David and Mehleese, who are a huge part of our lives and this adventure.
             </motion.p>
             <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -87,7 +86,7 @@ export function OurStorySection() {
                 transition={{ duration: 0.6, delay: 0.9 }}
                 className="mb-6 text-[20px]"
             >
-              We love living in Costa Rica. It has been an interesting experience learning a new culture and language in an entirely new country, but we have no regrets and absolutely love the new life we have built and continue to build today. Pura Vida.
+              Living in Costa Rica has been nothing short of extraordinary. Learning a new language, embracing a new culture, and building a life in this breathtaking country has been an unforgettable experience. We wouldn’t trade it for anything. <strong>Pura Vida.</strong>
             </motion.p>
           </div>
           <motion.div

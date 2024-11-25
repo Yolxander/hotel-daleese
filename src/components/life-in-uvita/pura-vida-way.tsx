@@ -14,7 +14,7 @@ export function PuraVidaWayComponent() {
 
   return (
       <section ref={ref} className={`bg-gray-100 flex items-center justify-center align-center ${cormorantGaramond.className} text-black`}>
-        <div className="container mx-auto px-4 py-16 md:py-24 flex flex-col md:flex-row items-center md:items-start gap-8 0">
+        <div className="container mx-auto px-4 py-16 md:py-24 flex flex-col md:flex-row items-center md:items-start gap-8">
           <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
@@ -28,7 +28,7 @@ export function PuraVidaWayComponent() {
                 className="w-full h-full"
             >
               <Image
-                  src="https://storage.googleapis.com/sempre-studios-893c8.appspot.com/uploads/Casa%20Turul/Live%20in%20Uvita/671ee2aed3819.jpeg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1761613359&Signature=aQc31XrgeDl%2FDu9blWKV6lvJhWz5Cap%2F1IXVfWfjeGLCGQo8eORC2C7ONpdQ10T09NSKm1mqrMGScXxvxjoU1o0MXwX770PsEjLjMeDpnfnMZaxDvCpomT7WhU9hLRXYIqdvrnpAwrPejzs0oXLz9IAUaSAdsgFDLLIFTEjOC5XaJ2tLJv7YBHaYscWNujUqUkATFW71lME%2F7YMxlNvqlilhp1APdgPWQCpkr5%2FGqmbtsc%2F0yG8wsf2uifsyn0FY1VRKuJ7FUNPq3ALfODjSGcSz1rskZe7vKNIeZ9VefKlhGLhbhJupXK5UK6492YZ4PDr%2FmGJexXJYX7bgw93i0g%3D%3D"
+                  src="https://storage.googleapis.com/sempre-studios-893c8.appspot.com/uploads/Casa%20Turul/Live%20in%20Uvita/671ee2aed3819.jpeg"
                   alt="Hand making shaka sign over ocean waves"
                   fill
                   style={{ objectFit: 'cover' }}
@@ -57,7 +57,7 @@ export function PuraVidaWayComponent() {
                 transition={{ duration: 0.8, delay: 0.3 }}
                 className="text-[22px] md:ml-[10px]"
             >
-              Pura Vida is a slogan of Costa Rica. It is a symbol of a relaxed lifestyle that anyone living in or moving to Costa Rica adopts sooner or later.
+              Pura Vida is more than just a slogan in Costa Rica — it’s a way of life. This beloved phrase embodies the relaxed, joyful spirit that defines the culture, embraced by locals and newcomers alike.
             </motion.p>
             <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -65,7 +65,7 @@ export function PuraVidaWayComponent() {
                 transition={{ duration: 0.8, delay: 0.4 }}
                 className="text-[22px] md:ml-[10px]"
             >
-              Living a <span className="italic">pura vida</span> means treasuring your physical and mental well-being above things that we are used to holding in high regard, like punctuality, for example, and getting things done fast.
+              Living Pura Vida means prioritizing your physical and mental well-being over the hustle and bustle of everyday life. It’s about savoring the moment, letting go of the rush, and finding happiness in simplicity.
             </motion.p>
             <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -73,7 +73,15 @@ export function PuraVidaWayComponent() {
                 transition={{ duration: 0.8, delay: 0.5 }}
                 className="text-[22px] md:ml-[10px]"
             >
-              Chances are that you&#39;ll hear <span className="italic">pura vida</span> from Ticos and expats all over Costa Rica. It&#39;s our way of saying hello, making you feel welcome or saying goodbye in a happy way.
+              You’ll hear <span className="italic">Pura Vida</span> everywhere in Costa Rica — from Ticos and expats alike. Whether it’s a friendly greeting, a warm farewell, or a way to make you feel at home, it’s the perfect expression of Costa Rica’s welcoming and carefree vibe.
+            </motion.p>
+            <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
+                className="text-[22px] md:ml-[10px]"
+            >
+              Come experience <span className="italic">Pura Vida</span> for yourself — it’s not just a phrase; it’s a lifestyle.
             </motion.p>
           </motion.div>
         </div>
