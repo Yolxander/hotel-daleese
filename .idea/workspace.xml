@@ -6,10 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="c7e99333-aede-4333-a5d5-366958e0f415" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/life-in-uvita/live-like-a-local.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/life-in-uvita/live-like-a-local.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/life-in-uvita/pura-vida-way.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/life-in-uvita/pura-vida-way.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/book-a-room/booking-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/book-a-room/booking-form.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/contact/contact-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/contact/contact-section.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/landing_page/hero-with-navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/landing_page/hero-with-navbar.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/our-story/our-story-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/our-story/our-story-section.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/suites/our-suites.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/suites/our-suites.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/suites/suite-facilities.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/suites/suite-facilities.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/suites/suite-navigation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/suites/suite-navigation.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/suites/suite-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/suites/suite-section.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/suites/suites-gallery.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/suites/suites-gallery.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +104,7 @@
       <workItem from="1731139317659" duration="1235000" />
       <workItem from="1732238136687" duration="19042000" />
       <workItem from="1732311894090" duration="12892000" />
-      <workItem from="1732470356213" duration="2493000" />
+      <workItem from="1732470356213" duration="7917000" />
     </task>
     <servers />
   </component>

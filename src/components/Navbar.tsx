@@ -6,9 +6,9 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Instagram, Facebook, X, ChevronRight, ChevronLeft } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Lora } from 'next/font/google'
+import { Cormorant_Garamond } from 'next/font/google';
 
-const lora = Lora({ subsets: ['latin'] })
+const cormorantGaramond = Cormorant_Garamond({ subsets: ['latin'], weight: ['400', '700'] });
 
 export function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
@@ -57,7 +57,7 @@ export function Navbar() {
 
   return (
       <motion.nav
-          className={`fixed top-0 left-0 right-0 z-[100] bg-white ${lora.className} shadow-md`}
+          className={`fixed top-0 left-0 right-0 z-[100] bg-white ${cormorantGaramond.className} shadow-md`}
           initial={{ y: 0 }}
           animate={{ y: isNavbarVisible ? 0 : '-100%' }}
           transition={{ duration: 0.3 }}
@@ -213,7 +213,7 @@ export function Navbar() {
           {/* Desktop Navbar */}
           <div className="hidden lg:block">
             <div className="flex items-center justify-between">
-              <div className="flex items-center space-x-4">
+              <div className="flex items-center space-x-4 ">
                 <Link href="https://instagram.com" className="text-gray-600 hover:text-gray-900">
                   <Instagram size={20} />
                 </Link>
@@ -249,7 +249,7 @@ export function Navbar() {
                         <>
                           <Link
                               href={item.path}
-                              className={`text-[20px] text-bold relative group ${
+                              className={`text-[25px] text-bold relative group ${
                                   isAboutPage ? 'text-gray-800' : 'text-gray-600 hover:text-gray-900'
                               }`}
                           >
@@ -286,7 +286,7 @@ export function Navbar() {
                     ) : item.name === 'Blog' ? (
                         <Link
                             href={item.path}
-                            className={`text-[20px] text-bold relative group ${
+                            className={`text-[25px] text-bold relative group ${
                                 isBlogPage ? 'text-gray-800' : 'text-gray-600 hover:text-gray-900'
                             }`}
                         >
@@ -300,7 +300,7 @@ export function Navbar() {
                     ) : (
                         <Link
                             href={item.path}
-                            className={`text-[20px] text-bold relative group ${
+                            className={`text-[25px] text-bold relative group ${
                                 (item.path === '/suites' && pathname.startsWith('/suites')) || pathname === item.path
                                     ? 'text-gray-800'
                                     : 'text-gray-600 hover:text-gray-900'

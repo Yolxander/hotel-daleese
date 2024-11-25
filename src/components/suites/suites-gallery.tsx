@@ -3,6 +3,9 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
+import { Cormorant_Garamond } from 'next/font/google'
+
+const cormorantGaramond = Cormorant_Garamond({ subsets: ['latin'], weight: ['400', '700'] })
 
 export function SuitesGalleryComponent() {
     const suites = [
@@ -32,7 +35,7 @@ export function SuitesGalleryComponent() {
         <section className="bg-white py-16">
             <div className="container mx-auto px-4">
                 <motion.div
-                    className="grid grid-cols-1 md:grid-cols-2 gap-8" // Changed to 2 columns
+                    className="grid grid-cols-1 md:grid-cols-2 gap-8"
                     initial="hidden"
                     animate="visible"
                     variants={{
@@ -48,7 +51,7 @@ export function SuitesGalleryComponent() {
                     {suites.map((suite) => (
                         <Link href={`/suites/suite-${suite.id}`} key={suite.id}>
                             <motion.div
-                                className="flex flex-col items-left cursor-pointer group"
+                                className={`flex flex-col items-left cursor-pointer group ${cormorantGaramond.className}`}
                                 variants={{
                                     hidden: { opacity: 0, y: 20 },
                                     visible: {
@@ -65,8 +68,8 @@ export function SuitesGalleryComponent() {
                                     <Image
                                         src={suite.image}
                                         alt={suite.alt}
-                                        width={600} // Increased width
-                                        height={600} // Increased height
+                                        width={600}
+                                        height={600}
                                         className="w-full h-[60vh] object-cover transition-transform duration-300 group-hover:scale-105"
                                     />
                                 </div>

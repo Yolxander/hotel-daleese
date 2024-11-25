@@ -1,28 +1,28 @@
-'use client'
+'use client';
 
-import { Lora } from 'next/font/google'
-import { motion } from 'framer-motion'
-import { ChevronLeft, ChevronRight } from 'lucide-react'
-import Link from 'next/link'
+import { Cormorant_Garamond } from 'next/font/google';
+import { motion } from 'framer-motion';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+import Link from 'next/link';
 
-const lora = Lora({ subsets: ['latin'] })
+const cormorantGaramond = Cormorant_Garamond({ subsets: ['latin'], weight: ['400', '700'] });
 
 // Define the props type
 type SuiteNavigationComponentProps = {
-    currentSuite: number
-}
+    currentSuite: number;
+};
 
 export function SuiteNavigationComponent({ currentSuite }: SuiteNavigationComponentProps) {
     // Update logic for previous and next suites
-    const previousSuite = currentSuite > 1 ? currentSuite - 1 : null
-    const nextSuite = currentSuite === 3 ? 4 : currentSuite < 3 ? currentSuite + 1 : null
+    const previousSuite = currentSuite > 1 ? currentSuite - 1 : null;
+    const nextSuite = currentSuite === 3 ? 4 : currentSuite < 3 ? currentSuite + 1 : null;
 
     return (
         <motion.section
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className={`w-full bg-white text-black py-8 flex flex-row justify-center ${lora.className}`}
+            className={`w-full bg-white text-black py-8 flex flex-row justify-center ${cormorantGaramond.className}`}
         >
             <div className="w-full px-6">
                 <div className="flex justify-between items-center">
@@ -32,7 +32,7 @@ export function SuiteNavigationComponent({ currentSuite }: SuiteNavigationCompon
                             href={`/suites/suite-${previousSuite}`}
                             className="group flex items-center space-x-2 hover:opacity-60 transition-opacity"
                         >
-                            <ChevronLeft className="w-12 h-12" />
+                            <ChevronLeft className="w-10 h-10" />
                             <motion.span
                                 initial={{ x: -10, opacity: 0 }}
                                 animate={{ x: 0, opacity: 1 }}
@@ -58,11 +58,11 @@ export function SuiteNavigationComponent({ currentSuite }: SuiteNavigationCompon
                             >
                                 Suite {nextSuite}
                             </motion.span>
-                            <ChevronRight className="w-12 h-12" />
+                            <ChevronRight className="w-10 h-10" />
                         </Link>
                     )}
                 </div>
             </div>
         </motion.section>
-    )
+    );
 }

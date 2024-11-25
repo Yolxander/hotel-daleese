@@ -1,10 +1,10 @@
 'use client'
 
-import { Lora } from 'next/font/google'
+import { Cormorant_Garamond } from 'next/font/google'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { useRef } from 'react'
 
-const lora = Lora({ subsets: ['latin'] })
+const cormorantGaramond = Cormorant_Garamond({ subsets: ['latin'], weight: ['400', '700'] })
 
 export function OurSuitesComponent() {
   const sectionRef = useRef<HTMLElement>(null)
@@ -29,7 +29,7 @@ export function OurSuitesComponent() {
             style={{ opacity, y }}
         >
           <motion.h2
-              className={`${lora.className} text-5xl md:text-6xl text-center mb-8`}
+              className={`${cormorantGaramond.className} text-5xl md:text-6xl text-center mb-8`}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.8 }}
@@ -37,7 +37,7 @@ export function OurSuitesComponent() {
             Our Suites
           </motion.h2>
           <motion.p
-              className={`${lora.className} text-[20px] text-center text-gray-700 mx-auto8`}
+              className={`${cormorantGaramond.className} text-[25px] text-center text-gray-700 mx-auto`}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.8 }}

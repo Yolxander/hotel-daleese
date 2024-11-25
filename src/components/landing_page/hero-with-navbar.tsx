@@ -1,10 +1,9 @@
 'use client'
 
-import { Lora, Cormorant_Garamond } from 'next/font/google'
+import { Cormorant_Garamond } from 'next/font/google'
 import { motion } from 'framer-motion'
 
-const lora = Lora({ subsets: ['latin'] })
-const cormorantGaramond = Cormorant_Garamond({ subsets: ['latin'], weight: ['400'] })
+const cormorantGaramond = Cormorant_Garamond({ subsets: ['latin'], weight: ['400', '700'] })
 
 export function HeroWithNavbarComponent() {
     return (
@@ -26,7 +25,7 @@ export function HeroWithNavbarComponent() {
 
             <div className="absolute inset-0 flex flex-col items-center justify-center text-white px-4 md:px-8 pt-12">
                 <motion.h1
-                    className={`${lora.className} mb-4 text-4xl font-light md:text-[42px] text-center`}
+                    className={`${cormorantGaramond.className} mb-4 text-4xl font-light md:text-[42px] text-center`}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
@@ -40,7 +39,7 @@ export function HeroWithNavbarComponent() {
                     transition={{ duration: 0.8, delay: 0.6 }}
                 />
                 <motion.p
-                    className={`${lora.className} text-lg font-light italic md:text-2xl text-center`}
+                    className={`${cormorantGaramond.className} text-lg font-light italic md:text-2xl text-center`}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 1 }}

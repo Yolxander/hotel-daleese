@@ -1,11 +1,11 @@
 'use client'
 
 import Image from 'next/image'
-import { Lora } from 'next/font/google'
+import { Cormorant_Garamond } from 'next/font/google'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 
-const lora = Lora({ subsets: ['latin'] })
+const cormorantGaramond = Cormorant_Garamond({ subsets: ['latin'], weight: ['400', '700'] })
 
 interface SuiteSectionProps {
     src: string;
@@ -69,8 +69,8 @@ export function Suite_Section({ src, header }: SuiteSectionProps) {
                 variants={textVariants}
                 className="relative z-20 flex flex-col items-center justify-center h-full text-white text-center px-4"
             >
-                <h1 className={`${lora.className} text-6xl mb-4`}>{header.name}</h1>
-                <p className={`${lora.className} text-[25px] font-light max-w-md`}>
+                <h1 className={`${cormorantGaramond.className} text-6xl mb-4`}>{header.name}</h1>
+                <p className={`${cormorantGaramond.className} text-[25px] font-light max-w-md`}>
                     {header.description}
                 </p>
             </motion.div>

@@ -1,16 +1,16 @@
-'use client'
+'use client';
 
-import { useState, useEffect } from 'react'
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Lora } from 'next/font/google'
-import { motion } from 'framer-motion'
-import { useInView } from 'react-intersection-observer'
-import Link from "next/link"
-import emailjs from 'emailjs-com'
+import { useState, useEffect } from 'react';
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Cormorant_Garamond } from 'next/font/google';
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
+import Link from "next/link";
+import emailjs from 'emailjs-com';
 
-const lora = Lora({ subsets: ['latin'] })
+const cormorantGaramond = Cormorant_Garamond({ subsets: ['latin'], weight: ['400', '700'] });
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -20,48 +20,48 @@ export default function ContactSection() {
     subject: '',
     message: '',
     honeypot: '' // Anti-spam honeypot field
-  })
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
-  const [startTime, setStartTime] = useState<number>(0) // Track form render time for spam prevention
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [startTime, setStartTime] = useState<number>(0); // Track form render time for spam prevention
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
-  })
+  });
 
   useEffect(() => {
     // Record the time when the form renders
-    setStartTime(Date.now())
-  }, [])
+    setStartTime(Date.now());
+  }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target
-    setFormData(prevState => ({ ...prevState, [name]: value }))
-  }
+    const { name, value } = e.target;
+    setFormData(prevState => ({ ...prevState, [name]: value }));
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
+    e.preventDefault();
 
     // Anti-spam: Check honeypot field
     if (formData.honeypot) {
-      console.log('Bot detected due to honeypot field')
-      return // Exit if honeypot is filled
+      console.log('Bot detected due to honeypot field');
+      return; // Exit if honeypot is filled
     }
 
     // Anti-spam: Check time-based submission threshold
-    const submitTime = Date.now()
+    const submitTime = Date.now();
     if (submitTime - startTime < 3000) { // Less than 3 seconds
-      console.log('Bot detected due to fast submission')
-      return // Exit if submitted too quickly
+      console.log('Bot detected due to fast submission');
+      return; // Exit if submitted too quickly
     }
 
-    setIsSubmitting(true)
-    setSubmitStatus('idle')
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
 
     try {
       await emailjs.send(
-          'service_v98lvdp', // replace with your Email.js service ID
-          'template_wjdk3cr', // replace with your Email.js template ID
+          'service_v98lvdp', // Replace with your Email.js service ID
+          'template_wjdk3cr', // Replace with your Email.js template ID
           {
             firstName: formData.firstName,
             lastName: formData.lastName,
@@ -69,9 +69,9 @@ export default function ContactSection() {
             subject: formData.subject,
             message: formData.message,
           },
-          'NxLLnhlEW3KDj2zPO' // replace with your Email.js public key
-      )
-      setSubmitStatus('success')
+          'NxLLnhlEW3KDj2zPO' // Replace with your Email.js public key
+      );
+      setSubmitStatus('success');
       setFormData({
         firstName: '',
         lastName: '',
@@ -79,14 +79,14 @@ export default function ContactSection() {
         subject: '',
         message: '',
         honeypot: '' // Reset honeypot
-      })
+      });
     } catch (error) {
-      console.error('Email sending error:', error)
-      setSubmitStatus('error')
+      console.error('Email sending error:', error);
+      setSubmitStatus('error');
     } finally {
-      setIsSubmitting(false)
+      setIsSubmitting(false);
     }
-  }
+  };
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -96,7 +96,7 @@ export default function ContactSection() {
         staggerChildren: 0.2,
       },
     },
-  }
+  };
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -108,7 +108,7 @@ export default function ContactSection() {
         ease: "easeOut",
       },
     },
-  }
+  };
 
   return (
       <motion.section
@@ -116,24 +116,24 @@ export default function ContactSection() {
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
           variants={containerVariants}
-          className={`h-fit md:pt-[300px] pt-[200px] pb-[100px] relative py-16 px-4 md:px-8 ${lora.className}`}
-          style={{backgroundImage: "url('/placeholder.svg?height=800&width=1200')", backgroundSize: 'cover', backgroundPosition: 'center'}}
+          className={`h-fit md:pt-[300px] pt-[200px] pb-[100px] relative py-16 px-4 md:px-8 ${cormorantGaramond.className}`}
+          style={{ backgroundImage: "url('/placeholder.svg?height=800&width=1200')", backgroundSize: 'cover', backgroundPosition: 'center' }}
       >
         <div className="relative z-9 max-w-7xl mx-auto flex flex-col md:flex-row gap-[100px]">
           <motion.div variants={itemVariants} className="md:w-1/2 text-white">
             <h2 className="text-4xl mb-2">Contact Us</h2>
             <div className="w-full h-px bg-white mb-6"></div>
-            <p className="mb-6 text-[20px]">
+            <p className="mb-6 text-[22px]">
               We always look forward to speaking with our guests. If you have any
               questions, do not hesitate to reach out. We do our best to reply as quickly as
-              possible, answering all inquires. Your hosts Rosa and Dave will be there to
-              greet you during the check in and check out process.
+              possible, answering all inquiries. Your hosts Rosa and Dave will be there to
+              greet you during the check-in and check-out process.
             </p>
-            <p className="mb-6 text-[20px]">
+            <p className="mb-6 text-[22px]">
               If you need directions, contact us directly. Please be sure to read our policies
               prior to booking.
             </p>
-            <div className="mb-6 text-[20px]">
+            <div className="mb-6 text-[22px]">
               <h3 className="text-xl font-bold mb-2">Address & Location</h3>
               <p>East of BCR, 500 Meters, Provincia de</p>
               <p>Puntarenas, Uvita, 60504, Costa Rica</p>
@@ -143,7 +143,7 @@ export default function ContactSection() {
               <p>+1 (905) 598-0504</p>
             </div>
             <Link href={'https://wa.me/+1(905)598-0504'}>
-              <Button variant="default" className="bg-primary text-primary-foreground hover:bg-primary/90 text-[20px]">
+              <Button variant="default" className="bg-primary text-primary-foreground hover:bg-primary/90 text-[22px]">
                 Send a Message
               </Button>
             </Link>
@@ -173,7 +173,7 @@ export default function ContactSection() {
               </div>
               <div className="mb-4 flex gap-4">
                 <div className="flex-1">
-                  <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-1">First Name</label>
+                  <label htmlFor="firstName" className="block text-[20px] font-medium text-gray-700 mb-1">First Name</label>
                   <Input
                       type="text"
                       id="firstName"
@@ -184,7 +184,7 @@ export default function ContactSection() {
                   />
                 </div>
                 <div className="flex-1">
-                  <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-1">Last Name</label>
+                  <label htmlFor="lastName" className="block text-[20px] font-medium text-gray-700 mb-1">Last Name</label>
                   <Input
                       type="text"
                       id="lastName"
@@ -196,7 +196,7 @@ export default function ContactSection() {
                 </div>
               </div>
               <div className="mb-4">
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                <label htmlFor="email" className="block text-[20px] font-medium text-gray-700 mb-1">Email</label>
                 <Input
                     type="email"
                     id="email"
@@ -207,7 +207,7 @@ export default function ContactSection() {
                 />
               </div>
               <div className="mb-4">
-                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">Subject</label>
+                <label htmlFor="subject" className="block text-[20px] font-medium text-gray-700 mb-1">Subject</label>
                 <Input
                     type="text"
                     id="subject"
@@ -218,7 +218,7 @@ export default function ContactSection() {
                 />
               </div>
               <div className="mb-4">
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                <label htmlFor="message" className="block text-[20px] font-medium text-gray-700 mb-1">Message</label>
                 <Textarea
                     id="message"
                     name="message"
@@ -235,5 +235,5 @@ export default function ContactSection() {
           </motion.div>
         </div>
       </motion.section>
-  )
+  );
 }

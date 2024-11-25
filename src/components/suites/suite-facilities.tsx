@@ -1,11 +1,11 @@
 'use client';
 
 import { FC, useEffect } from 'react';
-import { Lora } from 'next/font/google';
+import { Cormorant_Garamond } from 'next/font/google';
 import { motion, useAnimation, Variants } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
-const lora = Lora({ subsets: ['latin'] });
+const cormorantGaramond = Cormorant_Garamond({ subsets: ['latin'], weight: ['400', '700'] });
 
 interface Facility {
   id: number;
@@ -36,7 +36,7 @@ const listVariants: Variants = {
 
 const ListItem: FC<{ item: Facility; index: number }> = ({ item, index }) => (
     <motion.li
-        className="pl-5 text-[20px] font-light relative before:content-['•'] before:absolute before:left-0 before:text-gray-400"
+        className="pl-5 text-[25px] font-light relative before:content-['•'] before:absolute before:left-0 before:text-gray-400"
         variants={listVariants}
         custom={index}
     >
@@ -65,7 +65,7 @@ const SuiteFacilities: FC<SuiteFacilitiesProps> = ({ suiteInfo }) => {
   }
 
   return (
-      <section className={`bg-gray-100 py-16 ${lora.className}`}>
+      <section className={`bg-gray-100 py-16 ${cormorantGaramond.className}`}>
         <div className="container mx-auto px-4 flex justify-center items-center min-h-screen">
           <motion.div
               ref={ref}
