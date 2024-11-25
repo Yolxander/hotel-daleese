@@ -8,23 +8,28 @@ import {AmenitiesCardLogoSectionComponent} from "@/components/amenities/amenitie
 
 const amenities = [
     {
-        title: "Relax with Us",
-        description: "Our home is your home. Enjoy our beautifully maintained outdoor pool surrounded by a green oasis. Bring your favourite book, or cocktail."
+        title: "Experience the Best of Our Boutique Hotel",
+        description: "We invite you to immerse yourself in the tranquility of our property and make the most of our thoughtfully curated amenities and services. Enjoy complimentary private parking and high-speed Wi-Fi as part of your stay."
     },
     {
-        title: "Ride with Us",
-        description: "We want our guests to have a stress-free experience when booking with us. We would be happy to assist booking your private airport shuttle to and from the hotel. Car rentals? We can also help with that."
+        title: "Unwind in Paradise",
+        description: "Bask in the serenity of our lush outdoor pool area, surrounded by a vibrant green oasis. Whether you’re enjoying a good book, sipping a refreshing cocktail, or simply soaking up the atmosphere, relaxation comes naturally here."
     },
     {
-        title: "Focus on Yourself",
-        description: "We have a network of excellent massage therapists and other bodywork professionals and would be happy to arrange an in-room treatment during your stay."
+        title: "Seamless Travel",
+        description: "Leave the logistics to us! We’re happy to assist with booking private airport shuttles to and from the hotel or arranging a car rental for your adventures. Your stress-free getaway starts here."
+    },
+    {
+        title: "Prioritize Self-Care",
+        description: "Rejuvenate your mind and body with our network of skilled massage therapists and wellness professionals. Let us arrange an in-room treatment tailored to your needs, so you can fully embrace the peaceful energy of your stay."
     }
-]
+];
+
 
 const amenities2 = [
     {
-        title: "Dine with Us",
-        description:" Eat freshly prepared food from our garden and local farmers. We currently have a fixed dinner & in house restaurant with a unique courseeach day of the week. Prepared fresh by Chef Rosa & Dave a la carte."
+        title: "Savor Every Bite",
+        description: "Indulge in a dining experience like no other. Our talented chefs craft exquisite meals using fresh ingredients from our garden and local farmers. With unique breakfast and dinner courses prepared à la carte, every meal is a delight for your taste buds."
     },
 ]
 
