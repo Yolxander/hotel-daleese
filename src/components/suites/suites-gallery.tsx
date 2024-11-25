@@ -64,14 +64,14 @@ export function SuitesGalleryComponent() {
                                     },
                                 }}
                             >
-                                {/* Centering Adjustments */}
+                                {/* Centering and Scaling Adjustments */}
                                 <div className="relative overflow-hidden flex justify-center items-center h-[60vh] bg-gray-100">
                                     <Image
                                         src={suite.image}
                                         alt={suite.alt}
                                         width={600}
                                         height={600}
-                                        className="object-contain transition-transform duration-300 group-hover:scale-105"
+                                        className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
                                     />
                                 </div>
                                 <motion.p
