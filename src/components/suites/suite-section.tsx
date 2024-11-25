@@ -70,7 +70,7 @@ export function Suite_Section({ src, header }: SuiteSectionProps) {
                 className="relative z-20 flex flex-col items-center justify-center h-full text-white text-center px-4"
             >
                 <h1 className={`${cormorantGaramond.className} text-6xl mb-4`}>{header.name}</h1>
-                <p className={`${cormorantGaramond.className} text-[28px] font-semibold max-w-md`}>
+                <p className={`${cormorantGaramond.className} text-[28px] max-w-md`}>
                     {header.description}
                 </p>
             </motion.div>
