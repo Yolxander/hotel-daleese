@@ -103,8 +103,8 @@ export function OurStorySection() {
                 className="w-full h-auto object-cover rounded-lg"
             />
             <Image
-                src="https://storage.googleapis.com/sempre-studios-893c8.appspot.com/uploads/Casa%20Turul/Our%20Story/671daa5b951f7.jpeg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1761533404&Signature=YwUIsRbcIAMFKSNyOIT769VrFI2XLixZNInT030xKPMW2oAt4GTiODrQNrNOQJU1zSuPXoBufHvsh4fIO1D%2B9VbptLIgNw%2BaU76o5nT4g8pQ0AfZzJoKM50Zl1oa9HRLtuS6MIczXuXckwfLT8c74Lhecvmu0KCjRqU8DsiUq9%2FNwGJzgp6SeCT8OgLx8Z4d6oMQwAkb%2FS6m2qYjGSgy9UpTofHnowiPsdZeHbFNOwySiMj4ykDNW257Yp2E6xb8ExVQ8oB8k8EQyrnfCbibIKxV3It5Az0KsS0wqW4pq50q1HNqVrRyMoPvIIc4Z6Wr%2BY2TVqDXkzj7p0qIjTBBLQ%3D%3D"
-                alt="Hotel Daleese property"
+                src="https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/67401e51161d4.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1763791313&Signature=Ichn241uGd%2BzuPclsXjt8lBxlRTsqk7D2qMul3J%2BUEUOL3kvKPAjQ8pWZZQb24FWAmZzlB8%2Bx8abT2OhM5CG6fPBWLB%2FLNdWRoWgtH6pY4GGpY2BBwA%2BLjoV63cYVJwzUjCkv%2Bv3%2BDeKmTT3h8f%2BP8NCyFfigx3MuWfIWSRB%2FZMO2gQeU2saQxY4qFH477w99rmpkrU1062Tha7uXRtSJcxOBWqnXsgPT1Wd6%2F1AFo50J7iEy%2BzcevB0YQ8eevJ23iZ93d3mPD9QJqm0C0xRMevx1pxDqkXI2T6iiZRj5JG4TToJf1uf0kLZaCSi4SAbnJKfy5iVDpZlHxErdd3%2BNQ%3D%3D"
+            alt="Hotel Daleese property"
                 width={600}
                 height={300}
                 className="w-full h-auto object-cover rounded-lg"
