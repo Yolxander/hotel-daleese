@@ -76,7 +76,7 @@ export function FeatureCards() {
     const features = [
         {
             title: "Accommodations",
-            description: "Our suites are uniquely designed & sleep up to 4 guests.",
+            description: "Our suites are uniquely designed & sleep up to 2 guests.",
             learnMoreLink: "/suites",
             imageSrc: "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/673de7f57a89b.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1763646325&Signature=Dwk204G1gSMjZpm2RQbBcpXdTi5zfOQ13Wm1y8D8evSsBiw1fxv87eNHwbfOjva%2FmiBinlAjz%2BAi6%2FnOzAKnVUqf1S9RlzUxZ01ZotxdbhJuHXJjwRz4usyjLzXsILiTyffrineL8b6vsMT8zIKba%2BL27gh7gKBeLXiK0Kpz9I6F%2BPIYz1ib6VlmQBLkEQsB0tLIg2PIEFOIJSszNuac%2F5lLo5Dj9cNg0%2Fzlv6qoApubGnusPEbS9UIHkv7Jgh7inCyPYPdpogDh%2BGFB%2BTrrpij8fACo0BPbKTTOq2PdW%2Fi0BHCtf%2FyOqWWNcur%2Be5DbGkA%2F1elSlEjbOTG6339XFg%3D%3D",
         },
