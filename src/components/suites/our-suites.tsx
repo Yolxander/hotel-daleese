@@ -42,7 +42,7 @@ export function OurSuitesComponent() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.8 }}
           >
-            There are three (3) unique studio suites located on our well-maintained manicured property. Contact us for group rates.
+            There are three (4) unique studio suites located on our well-maintained manicured property. Contact us for group rates.
           </motion.p>
         </motion.div>
       </motion.section>
