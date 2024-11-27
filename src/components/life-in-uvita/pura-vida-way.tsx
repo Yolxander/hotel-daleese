@@ -28,7 +28,7 @@ export function PuraVidaWayComponent() {
                 className="w-full h-full"
             >
               <Image
-                  src="https://storage.googleapis.com/sempre-studios-893c8.appspot.com/uploads/Casa%20Turul/Live%20in%20Uvita/671ee2aed3819.jpeg"
+                  src="https://storage.googleapis.com/sempre-studios-893c8.appspot.com/uploads/Casa%20Turul/Live%20in%20Uvita/671ee2aed3819.jpeg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1761613359&Signature=aQc31XrgeDl%2FDu9blWKV6lvJhWz5Cap%2F1IXVfWfjeGLCGQo8eORC2C7ONpdQ10T09NSKm1mqrMGScXxvxjoU1o0MXwX770PsEjLjMeDpnfnMZaxDvCpomT7WhU9hLRXYIqdvrnpAwrPejzs0oXLz9IAUaSAdsgFDLLIFTEjOC5XaJ2tLJv7YBHaYscWNujUqUkATFW71lME%2F7YMxlNvqlilhp1APdgPWQCpkr5%2FGqmbtsc%2F0yG8wsf2uifsyn0FY1VRKuJ7FUNPq3ALfODjSGcSz1rskZe7vKNIeZ9VefKlhGLhbhJupXK5UK6492YZ4PDr%2FmGJexXJYX7bgw93i0g%3D%3D"
                   alt="Hand making shaka sign over ocean waves"
                   fill
                   style={{ objectFit: 'cover' }}
