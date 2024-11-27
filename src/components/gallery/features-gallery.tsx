@@ -1,10 +1,16 @@
 'use client'
 
-import { useState } from "react"
-import Image from 'next/image'
-import { motion, AnimatePresence } from 'framer-motion'
-import { useInView } from 'react-intersection-observer'
-import { ChevronLeft, ChevronRight, X } from "lucide-react"
+import { useState, useEffect } from "react";
+import NextImage from 'next/image'; // Renamed to avoid conflict with browser's Image constructor
+import { motion, AnimatePresence } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
+import { ChevronLeft, ChevronRight, X } from "lucide-react";
+
+// Preload image function
+const preloadImage = (src: string) => {
+  const img = new window.Image(); // Using browser's built-in Image constructor
+  img.src = src;
+};
 
 const galleryItems = [
   {
@@ -84,100 +90,113 @@ const galleryItems = [
   },
 ];
 
+// Lightbox Component
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-expect-error
-const Lightbox = ({ currentIndex, onClose, onPrev, onNext }) => (
-    <AnimatePresence>
-      <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-[105]"
-      >
-        {/* Close Button */}
-        <button
-            onClick={onClose}
-            className="absolute top-4 right-4 bg-transparent bg-opacity-80 rounded-full p-3 hover:bg-opacity-100 transition-transform transform hover:scale-105"
-            style={{ height: '120px', width: '120px' }}
-        >
-          <X className="h-[60px] w-[60px] text-white" />
-          <span className="sr-only">Close</span>
-        </button>
+const Lightbox = ({ currentIndex, onClose, onPrev, onNext }) => {
+  // Preload adjacent images
+  useEffect(() => {
+    const nextIndex = (currentIndex + 1) % galleryItems.length;
+    const prevIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
 
-        {/* Previous Button */}
-        <button
-            onClick={onPrev}
-            className="absolute top-[95%] left-8 md:top-1/2  transform -translate-y-1/2 bg-transparent bg-opacity-80 rounded-full p-3 hover:bg-opacity-100 transition-transform transform hover:scale-105"
-            style={{ height: '120px', width: '120px' }}
-        >
-          <ChevronLeft className="h-[80px] w-[80px] text-white" />
-          <span className="sr-only">Previous image</span>
-        </button>
+    preloadImage(galleryItems[nextIndex].src);
+    preloadImage(galleryItems[prevIndex].src);
+  }, [currentIndex]);
 
-        {/* Lightbox Image */}
+
+  return (
+      <AnimatePresence>
         <motion.div
-            className="text-white text-center"
-            initial={{ scale: 0.9, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            exit={{ scale: 0.9, opacity: 0 }}
-            transition={{ duration: 0.3 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-[105]"
         >
-          <div className="p-4">
-            <motion.img
-                key={currentIndex}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.3 }}
-                src={galleryItems[currentIndex].src}
-                alt={galleryItems[currentIndex].alt}
-                className="max-h-[90vh] object-contain rounded-lg shadow-lg"
-            />
-          </div>
+          {/* Close Button */}
+          <button
+              onClick={onClose}
+              className="absolute top-4 right-4 bg-transparent bg-opacity-80 rounded-full p-3 hover:bg-opacity-100 transition-transform transform hover:scale-105"
+              style={{ height: '120px', width: '120px' }}
+          >
+            <X className="h-[60px] w-[60px] text-white" />
+            <span className="sr-only">Close</span>
+          </button>
+
+          {/* Previous Button */}
+          <button
+              onClick={onPrev}
+              className="absolute top-[95%] left-8 md:top-1/2 transform -translate-y-1/2 bg-transparent bg-opacity-80 rounded-full p-3 hover:bg-opacity-100 transition-transform hover:scale-105"
+              style={{ height: '120px', width: '120px' }}
+          >
+            <ChevronLeft className="h-[80px] w-[80px] text-white" />
+            <span className="sr-only">Previous image</span>
+          </button>
+
+          {/* Lightbox Image */}
+          <motion.div
+              className="text-white text-center"
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              transition={{ duration: 0.3 }}
+          >
+            <div className="p-4">
+              <motion.img
+                  key={currentIndex}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                  src={galleryItems[currentIndex].src}
+                  alt={galleryItems[currentIndex].alt}
+                  className="max-h-[90vh] object-contain rounded-lg shadow-lg"
+                  loading="eager"
+              />
+            </div>
+          </motion.div>
+
+          {/* Next Button */}
+          <button
+              onClick={onNext}
+              className="absolute top-[95%] right-8 md:top-1/2 transform -translate-y-1/2 bg-transparent bg-opacity-80 rounded-full p-3 hover:bg-opacity-100 transition-transform hover:scale-105"
+              style={{ height: '120px', width: '120px' }}
+          >
+            <ChevronRight className="h-[80px] w-[80px] text-white" />
+            <span className="sr-only">Next image</span>
+          </button>
         </motion.div>
-
-        {/* Next Button */}
-        <button
-            onClick={onNext}
-            className="absolute top-[95%] right-8 md:top-1/2 transform -translate-y-1/2 bg-transparent bg-opacity-80 rounded-full p-3 hover:bg-opacity-100 transition-transform transform hover:scale-105"
-            style={{ height: '120px', width: '120px' }}
-        >
-          <ChevronRight className="h-[80px] w-[80px] text-white" />
-          <span className="sr-only">Next image</span>
-        </button>
-      </motion.div>
-    </AnimatePresence>
-)
-
+      </AnimatePresence>
+  );
+};
 
 export function FeaturesGalleryComponent() {
-  const [lightboxOpen, setLightboxOpen] = useState(false)
-  const [currentImageIndex, setCurrentImageIndex] = useState(0)
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
-  })
+  });
 
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-expect-error
   const openLightbox = (index) => {
-    setCurrentImageIndex(index)
-    setLightboxOpen(true)
-  }
+    setCurrentImageIndex(index);
+    setLightboxOpen(true);
+  };
 
-  const closeLightbox = () => setLightboxOpen(false)
+  const closeLightbox = () => setLightboxOpen(false);
 
   const goToPrevious = () => {
     setCurrentImageIndex((prevIndex) =>
         prevIndex === 0 ? galleryItems.length - 1 : prevIndex - 1
-    )
-  }
+    );
+  };
 
   const goToNext = () => {
     setCurrentImageIndex((prevIndex) =>
         prevIndex === galleryItems.length - 1 ? 0 : prevIndex + 1
-    )
-  }
+    );
+  };
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -187,7 +206,7 @@ export function FeaturesGalleryComponent() {
         staggerChildren: 0.1,
       },
     },
-  }
+  };
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -199,7 +218,11 @@ export function FeaturesGalleryComponent() {
         ease: "easeOut",
       },
     },
-  }
+  };
+
+  useEffect(() => {
+    galleryItems.forEach((item) => preloadImage(item.src));
+  }, []);
 
   return (
       <motion.section
@@ -218,7 +241,7 @@ export function FeaturesGalleryComponent() {
                     variants={itemVariants}
                     onClick={() => openLightbox(index + 4)}
                 >
-                  <Image
+                  <NextImage
                       src={feature.src}
                       alt={feature.alt}
                       width={300}
@@ -236,7 +259,7 @@ export function FeaturesGalleryComponent() {
                     variants={itemVariants}
                     onClick={() => openLightbox(index + 7)}
                 >
-                  <Image
+                  <NextImage
                       src={feature.src}
                       alt={feature.alt}
                       width={300}
@@ -254,7 +277,7 @@ export function FeaturesGalleryComponent() {
                     variants={itemVariants}
                     onClick={() => openLightbox(index + 10)}
                 >
-                  <Image
+                  <NextImage
                       src={feature.src}
                       alt={feature.alt}
                       width={300}
@@ -272,7 +295,7 @@ export function FeaturesGalleryComponent() {
                     variants={itemVariants}
                     onClick={() => openLightbox(index + 7)}
                 >
-                  <Image
+                  <NextImage
                       src={feature.src}
                       alt={feature.alt}
                       width={300}
@@ -290,12 +313,13 @@ export function FeaturesGalleryComponent() {
                     variants={itemVariants}
                     onClick={() => openLightbox(index + 4)}
                 >
-                  <Image
+                  <NextImage
                       src={feature.src}
                       alt={feature.alt}
                       width={300}
                       height={400}
                       className="w-full h-full object-cover rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+                      loading="lazy"
                   />
                 </motion.div>
             ))}
