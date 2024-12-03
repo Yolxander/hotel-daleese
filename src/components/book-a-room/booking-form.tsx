@@ -43,29 +43,31 @@ export function BookingFormComponent() {
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
 
+        // Honeypot check
         if (formData.honeypot) {
             console.log('Bot detected via honeypot.');
-            return;
+            return; // Early exit if honeypot field is filled
         }
 
         // Time-based check: minimum 3 seconds
         const submissionTime = Date.now() - (startTime || 0);
         if (submissionTime < 3000) {
             console.log('Bot detected via quick submission.');
-            return;
+            return; // Early exit if submitted too quickly
         }
 
+        // Turnstile token check
         if (!turnstileToken) {
             console.log('Turnstile token not available.');
-            return;
+            return; // Early exit if Turnstile token is missing
         }
 
         setSubmitStatus('idle');
 
         try {
             await emailjs.send(
-                'service_v98lvdp',
-                'template_dth6utm',
+                'service_v98lvdp', // replace with your Email.js service ID
+                'template_dth6utm', // replace with your Email.js template ID
                 {
                     firstName: formData.firstName,
                     lastName: formData.lastName,
@@ -78,9 +80,9 @@ export function BookingFormComponent() {
                     kids: formData.kids,
                     hasPet: formData.hasPet,
                     oneMoreThing: formData.oneMoreThing,
-                    turnstileToken, // Pass Turnstile token for verification
+                    turnstileToken: turnstileToken, // Include the Turnstile token
                 },
-                'NxLLnhlEW3KDj2zPO'
+                'NxLLnhlEW3KDj2zPO' // replace with your Email.js public key
             );
             setSubmitStatus('success');
             setFormData({
@@ -95,10 +97,10 @@ export function BookingFormComponent() {
                 kids: '',
                 hasPet: '',
                 oneMoreThing: '',
-                honeypot: '',
+                honeypot: '', // Reset honeypot field
             });
             setIsSubmitted(true);
-            setTurnstileToken('');
+            setTurnstileToken(''); // Reset Turnstile token
         } catch (error) {
             console.error('Email sending error:', error);
             setSubmitStatus('error');
@@ -156,27 +158,21 @@ export function BookingFormComponent() {
 
     return (
         <>
-                <Script
-                    src="https://challenges.cloudflare.com/turnstile/v0/api.js"
-                    async
-                    onLoad={() => {
-                        if (turnstileRef.current) {
-                            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-                            // @ts-expect-error
-                            window.turnstile.render(turnstileRef.current, {
-                                sitekey: '0x4AAAAAAA1X9H8HQi0FXSZH',
-                                action: 'booking_form',
-                                cData: JSON.stringify({
-                                    formPurpose: 'Booking Form Submission',
-                                    timestamp: Date.now(),
-                                }),
-                                callback: (token: string) => {
-                                    setTurnstileToken(token);
-                                },
-                            });
-                        }
-                    }}
-                />
+            {/* Load the Turnstile script */}
+            <Script
+                src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+                async
+                onLoad={() => {
+                    if (turnstileRef.current) {
+                        window.turnstile.render(turnstileRef.current, {
+                            sitekey: '0x4AAAAAAA1X9H8HQi0FXSZH', // Replace with your actual site key
+                            callback: (token: string) => {
+                                setTurnstileToken(token);
+                            },
+                        });
+                    }
+                }}
+            />
             <section
                 className={`relative min-h-screen flex items-center justify-center py-16 md:pt-[250px] pt-[180px] bg-transparent ${cormorantGaramond.className}`}
             >
@@ -237,6 +233,7 @@ export function BookingFormComponent() {
                                 animate={{ opacity: 1 }}
                                 transition={{ delay: 0.4, duration: 0.5 }}
                             >
+                                {/* Honeypot Field */}
                                 <input
                                     type="text"
                                     name="honeypot"
@@ -246,6 +243,7 @@ export function BookingFormComponent() {
                                     tabIndex={-1}
                                     autoComplete="off"
                                 />
+
                                 {formFields.map((field, index) => (
                                     <motion.div
                                         key={field.name}
@@ -254,9 +252,7 @@ export function BookingFormComponent() {
                                         animate={{ opacity: 1, x: 0 }}
                                         transition={{ delay: 0.5 + index * 0.1, duration: 0.5 }}
                                     >
-                                        <label className="block mb-2 text-gray-700">
-                                            {field.label || field.name}
-                                        </label>
+                                        <label className="block mb-2 text-gray-700">{field.label || field.name}</label>
                                         {field.type === 'group' ? (
                                             <div className="flex gap-4">
                                                 {field.fields?.map((subField) =>
@@ -336,9 +332,11 @@ export function BookingFormComponent() {
                                         )}
                                     </motion.div>
                                 ))}
+                                {/* Turnstile Widget */}
                                 <div className="mb-6">
                                     <div ref={turnstileRef}></div>
                                 </div>
+
                                 <motion.button
                                     type="submit"
                                     className="bg-black text-white px-6 py-2 rounded hover:bg-gray-800 transition-colors duration-300"
