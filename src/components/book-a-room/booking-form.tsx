@@ -23,7 +23,6 @@ export function BookingFormComponent() {
         oneMoreThing: '',
         honeypot: '', // Honeypot field for spam prevention
     });
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
     const [startTime, setStartTime] = useState<number | null>(null);
@@ -107,55 +106,6 @@ export function BookingFormComponent() {
         }
     };
 
-    // Form fields configuration
-    const formFields = [
-        {
-            name: 'Name',
-            type: 'group',
-            fields: [
-                { name: 'firstName', placeholder: 'First Name', type: 'text' },
-                { name: 'lastName', placeholder: 'Last Name', type: 'text' },
-            ],
-        },
-        { name: 'email', type: 'email', placeholder: 'Email' },
-        {
-            name: 'Phone',
-            type: 'group',
-            fields: [
-                { name: 'phoneCountry', type: 'select', options: ['Canada', 'USA'] },
-                { name: 'phoneNumber', type: 'tel', placeholder: 'Phone Number' },
-            ],
-        },
-        {
-            name: 'Dates',
-            type: 'group',
-            fields: [
-                { name: 'arrivalDate', type: 'date', placeholder: 'Date of Arrival' },
-                { name: 'departureDate', type: 'date', placeholder: 'Date of Departure' },
-            ],
-        },
-        {
-            name: 'adults',
-            type: 'select',
-            label: 'Number of Adults',
-            placeholder: 'Number of Adults',
-            options: ['', '1', '2', '3', '4'],
-        },
-        {
-            name: 'kids',
-            type: 'select',
-            label: 'Number of Kids',
-            placeholder: 'Number of Kids',
-            options: ['', '0', '1', '2', '3', '4'],
-        },
-        {
-            name: 'hasPet',
-            type: 'radio',
-            label: 'Do you have a pet?',
-            options: ['Yes', 'No'],
-        },
-    ];
-
     return (
         <>
             {/* Load the Turnstile script */}
@@ -168,6 +118,11 @@ export function BookingFormComponent() {
                         // @ts-expect-error
                         window.turnstile.render(turnstileRef.current, {
                             sitekey: '0x4AAAAAAA1X9H8HQi0FXSZH', // Replace with your actual site key
+                            action: 'booking_form', // Action to track this form submission purpose
+                            cData: JSON.stringify({
+                                formPurpose: 'Booking Form Submission',
+                                timestamp: Date.now(),
+                            }), // Context data to help detect spam or bots
                             callback: (token: string) => {
                                 setTurnstileToken(token);
                             },
@@ -245,100 +200,10 @@ export function BookingFormComponent() {
                                     tabIndex={-1}
                                     autoComplete="off"
                                 />
-
-                                {formFields.map((field, index) => (
-                                    <motion.div
-                                        key={field.name}
-                                        className="mb-6"
-                                        initial={{ opacity: 0, x: -20 }}
-                                        animate={{ opacity: 1, x: 0 }}
-                                        transition={{ delay: 0.5 + index * 0.1, duration: 0.5 }}
-                                    >
-                                        <label className="block mb-2 text-gray-700">{field.label || field.name}</label>
-                                        {field.type === 'group' ? (
-                                            <div className="flex gap-4">
-                                                {field.fields?.map((subField) =>
-                                                    subField.type === 'select' ? (
-                                                        <select
-                                                            key={subField.name}
-                                                            name={subField.name}
-                                                            value={formData[subField.name as keyof typeof formData]}
-                                                            onChange={handleChange}
-                                                            className="w-1/3 p-2 border border-gray-300 rounded bg-white focus:outline-none focus:ring-2 focus:ring-black focus:border-black"
-                                                            required
-                                                        >
-                                                            {subField.options?.map((option) => (
-                                                                <option key={option} value={option}>
-                                                                    {option}
-                                                                </option>
-                                                            ))}
-                                                        </select>
-                                                    ) : (
-                                                        <input
-                                                            key={subField.name}
-                                                            type={subField.type}
-                                                            name={subField.name}
-                                                            placeholder={subField.placeholder}
-                                                            value={formData[subField.name as keyof typeof formData]}
-                                                            onChange={handleChange}
-                                                            className="w-1/2 p-2 border border-gray-300 rounded bg-white focus:outline-none focus:ring-2 focus:ring-black focus:border-black"
-                                                            required
-                                                        />
-                                                    )
-                                                )}
-                                            </div>
-                                        ) : field.type === 'select' ? (
-                                            <select
-                                                name={field.name}
-                                                value={formData[field.name as keyof typeof formData]}
-                                                onChange={handleChange}
-                                                className="w-full p-2 border border-gray-300 rounded bg-white focus:outline-none focus:ring-2 focus:ring-black focus:border-black"
-                                                required
-                                            >
-                                                <option value="">{field.placeholder}</option>
-                                                {field.options?.map((option) => (
-                                                    <option key={option} value={option}>
-                                                        {option}
-                                                    </option>
-                                                ))}
-                                            </select>
-                                        ) : field.type === 'radio' ? (
-                                            <div className="flex gap-4">
-                                                {field.options?.map((option) => (
-                                                    <label key={option} className="flex items-center">
-                                                        <input
-                                                            type="radio"
-                                                            name={field.name}
-                                                            value={option}
-                                                            checked={
-                                                                formData[field.name as keyof typeof formData] === option
-                                                            }
-                                                            onChange={handleChange}
-                                                            className="mr-2 focus:ring-2 focus:ring-black"
-                                                            required
-                                                        />
-                                                        {option}
-                                                    </label>
-                                                ))}
-                                            </div>
-                                        ) : (
-                                            <input
-                                                type={field.type}
-                                                name={field.name}
-                                                placeholder={field.placeholder}
-                                                value={formData[field.name as keyof typeof formData]}
-                                                onChange={handleChange}
-                                                className="w-full p-2 border border-gray-300 rounded bg-white focus:outline-none focus:ring-2 focus:ring-black focus:border-black"
-                                                required
-                                            />
-                                        )}
-                                    </motion.div>
-                                ))}
-                                {/* Turnstile Widget */}
+                                {/* Render Turnstile Widget */}
                                 <div className="mb-6">
                                     <div ref={turnstileRef}></div>
                                 </div>
-
                                 <motion.button
                                     type="submit"
                                     className="bg-black text-white px-6 py-2 rounded hover:bg-gray-800 transition-colors duration-300"
