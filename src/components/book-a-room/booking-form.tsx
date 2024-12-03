@@ -23,6 +23,7 @@ export function BookingFormComponent() {
         oneMoreThing: '',
         honeypot: '', // Honeypot field for spam prevention
     });
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
     const [startTime, setStartTime] = useState<number | null>(null);
@@ -42,31 +43,29 @@ export function BookingFormComponent() {
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
 
-        // Honeypot check
         if (formData.honeypot) {
             console.log('Bot detected via honeypot.');
-            return; // Early exit if honeypot field is filled
+            return;
         }
 
         // Time-based check: minimum 3 seconds
         const submissionTime = Date.now() - (startTime || 0);
         if (submissionTime < 3000) {
             console.log('Bot detected via quick submission.');
-            return; // Early exit if submitted too quickly
+            return;
         }
 
-        // Turnstile token check
         if (!turnstileToken) {
             console.log('Turnstile token not available.');
-            return; // Early exit if Turnstile token is missing
+            return;
         }
 
         setSubmitStatus('idle');
 
         try {
             await emailjs.send(
-                'service_v98lvdp', // replace with your Email.js service ID
-                'template_dth6utm', // replace with your Email.js template ID
+                'service_v98lvdp',
+                'template_dth6utm',
                 {
                     firstName: formData.firstName,
                     lastName: formData.lastName,
@@ -79,9 +78,9 @@ export function BookingFormComponent() {
                     kids: formData.kids,
                     hasPet: formData.hasPet,
                     oneMoreThing: formData.oneMoreThing,
-                    turnstileToken: turnstileToken, // Include the Turnstile token
+                    turnstileToken, // Pass Turnstile token for verification
                 },
-                'NxLLnhlEW3KDj2zPO' // replace with your Email.js public key
+                'NxLLnhlEW3KDj2zPO'
             );
             setSubmitStatus('success');
             setFormData({
@@ -96,19 +95,67 @@ export function BookingFormComponent() {
                 kids: '',
                 hasPet: '',
                 oneMoreThing: '',
-                honeypot: '', // Reset honeypot field
+                honeypot: '',
             });
             setIsSubmitted(true);
-            setTurnstileToken(''); // Reset Turnstile token
+            setTurnstileToken('');
         } catch (error) {
             console.error('Email sending error:', error);
             setSubmitStatus('error');
         }
     };
 
+    // Form fields configuration
+    const formFields = [
+        {
+            name: 'Name',
+            type: 'group',
+            fields: [
+                { name: 'firstName', placeholder: 'First Name', type: 'text' },
+                { name: 'lastName', placeholder: 'Last Name', type: 'text' },
+            ],
+        },
+        { name: 'email', type: 'email', placeholder: 'Email' },
+        {
+            name: 'Phone',
+            type: 'group',
+            fields: [
+                { name: 'phoneCountry', type: 'select', options: ['Canada', 'USA'] },
+                { name: 'phoneNumber', type: 'tel', placeholder: 'Phone Number' },
+            ],
+        },
+        {
+            name: 'Dates',
+            type: 'group',
+            fields: [
+                { name: 'arrivalDate', type: 'date', placeholder: 'Date of Arrival' },
+                { name: 'departureDate', type: 'date', placeholder: 'Date of Departure' },
+            ],
+        },
+        {
+            name: 'adults',
+            type: 'select',
+            label: 'Number of Adults',
+            placeholder: 'Number of Adults',
+            options: ['', '1', '2', '3', '4'],
+        },
+        {
+            name: 'kids',
+            type: 'select',
+            label: 'Number of Kids',
+            placeholder: 'Number of Kids',
+            options: ['', '0', '1', '2', '3', '4'],
+        },
+        {
+            name: 'hasPet',
+            type: 'radio',
+            label: 'Do you have a pet?',
+            options: ['Yes', 'No'],
+        },
+    ];
+
     return (
         <>
-            {/* Load the Turnstile script */}
             <Script
                 src="https://challenges.cloudflare.com/turnstile/v0/api.js"
                 async
@@ -117,12 +164,12 @@ export function BookingFormComponent() {
                         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
                         // @ts-expect-error
                         window.turnstile.render(turnstileRef.current, {
-                            sitekey: '0x4AAAAAAA1X9H8HQi0FXSZH', // Replace with your actual site key
-                            action: 'booking_form', // Action to track this form submission purpose
+                            sitekey: '0x4AAAAAAA1X9H8HQi0FXSZH',
+                            action: 'booking_form',
                             cData: JSON.stringify({
                                 formPurpose: 'Booking Form Submission',
                                 timestamp: Date.now(),
-                            }), // Context data to help detect spam or bots
+                            }),
                             callback: (token: string) => {
                                 setTurnstileToken(token);
                             },
@@ -190,7 +237,6 @@ export function BookingFormComponent() {
                                 animate={{ opacity: 1 }}
                                 transition={{ delay: 0.4, duration: 0.5 }}
                             >
-                                {/* Honeypot Field */}
                                 <input
                                     type="text"
                                     name="honeypot"
@@ -200,7 +246,96 @@ export function BookingFormComponent() {
                                     tabIndex={-1}
                                     autoComplete="off"
                                 />
-                                {/* Render Turnstile Widget */}
+                                {formFields.map((field, index) => (
+                                    <motion.div
+                                        key={field.name}
+                                        className="mb-6"
+                                        initial={{ opacity: 0, x: -20 }}
+                                        animate={{ opacity: 1, x: 0 }}
+                                        transition={{ delay: 0.5 + index * 0.1, duration: 0.5 }}
+                                    >
+                                        <label className="block mb-2 text-gray-700">
+                                            {field.label || field.name}
+                                        </label>
+                                        {field.type === 'group' ? (
+                                            <div className="flex gap-4">
+                                                {field.fields?.map((subField) =>
+                                                    subField.type === 'select' ? (
+                                                        <select
+                                                            key={subField.name}
+                                                            name={subField.name}
+                                                            value={formData[subField.name as keyof typeof formData]}
+                                                            onChange={handleChange}
+                                                            className="w-1/3 p-2 border border-gray-300 rounded bg-white focus:outline-none focus:ring-2 focus:ring-black focus:border-black"
+                                                            required
+                                                        >
+                                                            {subField.options?.map((option) => (
+                                                                <option key={option} value={option}>
+                                                                    {option}
+                                                                </option>
+                                                            ))}
+                                                        </select>
+                                                    ) : (
+                                                        <input
+                                                            key={subField.name}
+                                                            type={subField.type}
+                                                            name={subField.name}
+                                                            placeholder={subField.placeholder}
+                                                            value={formData[subField.name as keyof typeof formData]}
+                                                            onChange={handleChange}
+                                                            className="w-1/2 p-2 border border-gray-300 rounded bg-white focus:outline-none focus:ring-2 focus:ring-black focus:border-black"
+                                                            required
+                                                        />
+                                                    )
+                                                )}
+                                            </div>
+                                        ) : field.type === 'select' ? (
+                                            <select
+                                                name={field.name}
+                                                value={formData[field.name as keyof typeof formData]}
+                                                onChange={handleChange}
+                                                className="w-full p-2 border border-gray-300 rounded bg-white focus:outline-none focus:ring-2 focus:ring-black focus:border-black"
+                                                required
+                                            >
+                                                <option value="">{field.placeholder}</option>
+                                                {field.options?.map((option) => (
+                                                    <option key={option} value={option}>
+                                                        {option}
+                                                    </option>
+                                                ))}
+                                            </select>
+                                        ) : field.type === 'radio' ? (
+                                            <div className="flex gap-4">
+                                                {field.options?.map((option) => (
+                                                    <label key={option} className="flex items-center">
+                                                        <input
+                                                            type="radio"
+                                                            name={field.name}
+                                                            value={option}
+                                                            checked={
+                                                                formData[field.name as keyof typeof formData] === option
+                                                            }
+                                                            onChange={handleChange}
+                                                            className="mr-2 focus:ring-2 focus:ring-black"
+                                                            required
+                                                        />
+                                                        {option}
+                                                    </label>
+                                                ))}
+                                            </div>
+                                        ) : (
+                                            <input
+                                                type={field.type}
+                                                name={field.name}
+                                                placeholder={field.placeholder}
+                                                value={formData[field.name as keyof typeof formData]}
+                                                onChange={handleChange}
+                                                className="w-full p-2 border border-gray-300 rounded bg-white focus:outline-none focus:ring-2 focus:ring-black focus:border-black"
+                                                required
+                                            />
+                                        )}
+                                    </motion.div>
+                                ))}
                                 <div className="mb-6">
                                     <div ref={turnstileRef}></div>
                                 </div>

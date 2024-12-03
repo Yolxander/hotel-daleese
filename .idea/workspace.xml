@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c7e99333-aede-4333-a5d5-366958e0f415" name="Changes" comment="" />
+    <list default="true" id="c7e99333-aede-4333-a5d5-366958e0f415" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/components/book-a-room/booking-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/book-a-room/booking-form.tsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
