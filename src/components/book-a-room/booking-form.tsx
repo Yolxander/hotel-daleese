@@ -164,6 +164,8 @@ export function BookingFormComponent() {
                 async
                 onLoad={() => {
                     if (turnstileRef.current) {
+                        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                        // @ts-expect-error
                         window.turnstile.render(turnstileRef.current, {
                             sitekey: '0x4AAAAAAA1X9H8HQi0FXSZH', // Replace with your actual site key
                             callback: (token: string) => {
