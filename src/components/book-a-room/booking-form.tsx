@@ -156,27 +156,27 @@ export function BookingFormComponent() {
 
     return (
         <>
-            <Script
-                src="https://challenges.cloudflare.com/turnstile/v0/api.js"
-                async
-                onLoad={() => {
-                    if (turnstileRef.current) {
-                        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-                        // @ts-expect-error
-                        window.turnstile.render(turnstileRef.current, {
-                            sitekey: '0x4AAAAAAA1X9H8HQi0FXSZH',
-                            action: 'booking_form',
-                            cData: JSON.stringify({
-                                formPurpose: 'Booking Form Submission',
-                                timestamp: Date.now(),
-                            }),
-                            callback: (token: string) => {
-                                setTurnstileToken(token);
-                            },
-                        });
-                    }
-                }}
-            />
+                <Script
+                    src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+                    async
+                    onLoad={() => {
+                        if (turnstileRef.current) {
+                            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                            // @ts-expect-error
+                            window.turnstile.render(turnstileRef.current, {
+                                sitekey: '0x4AAAAAAA1X9H8HQi0FXSZH',
+                                action: 'booking_form',
+                                cData: JSON.stringify({
+                                    formPurpose: 'Booking Form Submission',
+                                    timestamp: Date.now(),
+                                }),
+                                callback: (token: string) => {
+                                    setTurnstileToken(token);
+                                },
+                            });
+                        }
+                    }}
+                />
             <section
                 className={`relative min-h-screen flex items-center justify-center py-16 md:pt-[250px] pt-[180px] bg-transparent ${cormorantGaramond.className}`}
             >
