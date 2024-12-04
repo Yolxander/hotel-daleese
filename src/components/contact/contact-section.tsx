@@ -23,6 +23,7 @@ export default function ContactSection() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [emailError, setEmailError] = useState('');
   const [startTime, setStartTime] = useState<number>(0); // Track form render time for spam prevention
   const [ref, inView] = useInView({
     triggerOnce: true,
@@ -34,9 +35,22 @@ export default function ContactSection() {
     setStartTime(Date.now());
   }, []);
 
+  const validateEmail = (email: string) => {
+    const regex = /^[a-zA-Z]+(\.[a-zA-Z]+)?@gmail\.com$/;
+    return regex.test(email);
+  };
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
-    setFormData(prevState => ({ ...prevState, [name]: value }));
+    setFormData((prevState) => ({ ...prevState, [name]: value }));
+
+    if (name === 'email') {
+      if (validateEmail(value)) {
+        setEmailError('');
+      } else {
+        setEmailError('');
+      }
+    }
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -46,6 +60,12 @@ export default function ContactSection() {
     if (formData.honeypot) {
       console.log('Bot detected due to honeypot field');
       return; // Exit if honeypot is filled
+    }
+
+    // Email validation
+    if (!validateEmail(formData.email)) {
+      setEmailError('Please provide a valid Gmail address.');
+      return;
     }
 
     // Anti-spam: Check time-based submission threshold
@@ -204,7 +224,9 @@ export default function ContactSection() {
                     required
                     value={formData.email}
                     onChange={handleChange}
+                    className={emailError ? 'border-red-500' : ''}
                 />
+                {emailError && <p className="text-red-500 text-sm mt-1">{emailError}</p>}
               </div>
               <div className="mb-4">
                 <label htmlFor="subject" className="block text-[20px] font-medium text-gray-700 mb-1">Subject</label>
@@ -217,6 +239,7 @@ export default function ContactSection() {
                     onChange={handleChange}
                 />
               </div>
+
               <div className="mb-4">
                 <label htmlFor="message" className="block text-[20px] font-medium text-gray-700 mb-1">Message</label>
                 <Textarea
@@ -228,6 +251,7 @@ export default function ContactSection() {
                     onChange={handleChange}
                 />
               </div>
+
               <Button type="submit" className="w-full" disabled={isSubmitting}>
                 {isSubmitting ? 'Submitting...' : 'Submit'}
               </Button>
