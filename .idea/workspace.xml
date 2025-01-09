@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c7e99333-aede-4333-a5d5-366958e0f415" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/book-a-room/booking-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/book-a-room/booking-form.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,12 +21,27 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Megachungatron"
+  }
+}]]></component>
   <component name="GithubDefaultAccount">
     <option name="defaultAccountId" value="f765edb8-f30b-49ed-b3a6-f231974ff4fd" />
   </component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Yolxander/hotel-daleese.git",
+    "accountId": "3d0454f0-76d6-45ca-b3b8-a47350d0a190"
+  }
+}]]></component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 3
+}]]></component>
   <component name="ProjectId" id="2nieoQ7sANwPOhr2sKXOFqjheeI" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -69,6 +83,13 @@
       <recent name="$PROJECT_DIR$/src/app/blog" />
     </key>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-WS-243.22562.112" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -97,6 +118,12 @@
       <workItem from="1732238136687" duration="19042000" />
       <workItem from="1732311894090" duration="12892000" />
       <workItem from="1732470356213" duration="7964000" />
+      <workItem from="1733324945934" duration="763000" />
+      <workItem from="1733893928315" duration="634000" />
+      <workItem from="1734019450196" duration="91000" />
+      <workItem from="1734019568905" duration="59000" />
+      <workItem from="1734019709202" duration="55000" />
+      <workItem from="1734024323558" duration="52000" />
     </task>
     <servers />
   </component>

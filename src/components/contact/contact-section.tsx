@@ -36,9 +36,9 @@ export default function ContactSection() {
   }, []);
 
   const validateEmail = (email: string) => {
-    const regex = /^[a-zA-Z]+(\.[a-zA-Z]+)?@gmail\.com$/;
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Generic email validation regex
     return regex.test(email);
-  };
+  }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
