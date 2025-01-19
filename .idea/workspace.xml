@@ -21,27 +21,24 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Megachungatron"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Megachungatron&quot;
   }
-}]]></component>
-  <component name="GithubDefaultAccount">
-    <option name="defaultAccountId" value="f765edb8-f30b-49ed-b3a6-f231974ff4fd" />
-  </component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Yolxander/hotel-daleese.git",
-    "accountId": "3d0454f0-76d6-45ca-b3b8-a47350d0a190"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Yolxander/hotel-daleese.git&quot;,
+    &quot;accountId&quot;: &quot;3d0454f0-76d6-45ca-b3b8-a47350d0a190&quot;
   }
-}]]></component>
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2nieoQ7sANwPOhr2sKXOFqjheeI" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -50,6 +47,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;22.2.0&quot;,
@@ -124,6 +122,10 @@
       <workItem from="1734019568905" duration="59000" />
       <workItem from="1734019709202" duration="55000" />
       <workItem from="1734024323558" duration="52000" />
+      <workItem from="1736404486351" duration="8360000" />
+      <workItem from="1736572196409" duration="1723000" />
+      <workItem from="1736912733571" duration="16000" />
+      <workItem from="1737131729592" duration="602000" />
     </task>
     <servers />
   </component>
