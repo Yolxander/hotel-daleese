@@ -27,6 +27,9 @@
     &quot;assignee&quot;: &quot;Megachungatron&quot;
   }
 }</component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="ae0b160e-04a7-47a0-a8df-df48008eeeca" />
+  </component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/Yolxander/hotel-daleese.git&quot;,
@@ -126,6 +129,10 @@
       <workItem from="1736572196409" duration="1723000" />
       <workItem from="1736912733571" duration="16000" />
       <workItem from="1737131729592" duration="602000" />
+      <workItem from="1737245657925" duration="1008000" />
+      <workItem from="1737494511863" duration="770000" />
+      <workItem from="1737764731871" duration="26000" />
+      <workItem from="1738051799268" duration="513000" />
     </task>
     <servers />
   </component>
