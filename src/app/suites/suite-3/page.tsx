@@ -39,7 +39,7 @@ const suiteInfo = {
         { id: 3, description: "Full kitchen with 2-burner induction stovetop, coffee machine, mini fridge, microwave, toaster & electric kettle" },
         { id: 4, description: "Iron*" },
         { id: 5, description: "Smart TV with Netflix subscription included" },
-        { id: 6, description: "Sofa bed (sleeps 2 small children or 1 adult)" },
+        { id: 6, description: "Couch" },
         { id: 7, description: "Drying rack for clothing" },
         { id: 8, description: "Bath towels, pool towels, bed linens" },
         { id: 9, description: "Access to hotel pool & lounge area" },
