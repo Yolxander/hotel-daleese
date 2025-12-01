@@ -38,4 +38,5 @@ next-env.d.ts
 # Firebase service account (IMPORTANT: Keep this secret!)
 firebase-service-account.json
 firebase-adminsdk-*.json
+sempre-studios-*-firebase-adminsdk-*.json
 *.json.key
