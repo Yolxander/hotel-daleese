@@ -6,6 +6,7 @@
 import { Storage } from '@google-cloud/storage';
 import { initializeApp, getApps, cert } from 'firebase-admin/app';
 import { getStorage } from 'firebase-admin/storage';
+import fs from 'fs';
 
 // Initialize Google Cloud Storage
 // Supports both local file and environment variable approaches
@@ -41,14 +42,13 @@ const getStorageConfig = () => {
   
   for (const keyPath of possiblePaths) {
     try {
-      const fs = require('fs');
       if (fs.existsSync(keyPath)) {
         return {
           projectId,
           keyFilename: keyPath,
         };
       }
-    } catch (e) {
+    } catch {
       // Continue to next path
     }
   }
@@ -144,13 +144,15 @@ export async function getDownloadUrl(filePath: string): Promise<string> {
  * Generate a signed URL for a file in Firebase Storage (legacy method)
  * @deprecated Use getDownloadUrl() instead for better Next.js Image compatibility
  * @param filePath - Path to the file in the bucket (e.g., 'default/uploads/image.jpg')
- * @param expiresIn - Expiration time in seconds (default: 1 year)
+ * @param expiresIn - Expiration time in seconds (default: 1 year) - unused, kept for API compatibility
  * @returns Signed URL that can be used to access the file
  */
 export async function getSignedUrl(
   filePath: string,
   expiresIn: number = 31536000 // 1 year in seconds
 ): Promise<string> {
+  // Parameter kept for API compatibility but not used
+  void expiresIn;
   return getDownloadUrl(filePath);
 }
 

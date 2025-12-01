@@ -101,7 +101,7 @@ async function generateNewUrls(imageUrls: ImageUrl[]): Promise<void> {
   let successCount = 0;
   let errorCount = 0;
   
-  for (const [filePath, items] of uniquePaths.entries()) {
+  for (const [filePath, items] of Array.from(uniquePaths.entries())) {
     try {
       console.log(`Generating URL for: ${filePath}`);
       const newUrl = await getDownloadUrl(filePath);
@@ -142,7 +142,7 @@ async function updateFiles(imageUrls: ImageUrl[]): Promise<void> {
   
   console.log(`Updating ${filesToUpdate.size} files...\n`);
   
-  for (const [filePath, items] of filesToUpdate.entries()) {
+  for (const [filePath, items] of Array.from(filesToUpdate.entries())) {
     let content = fs.readFileSync(filePath, 'utf-8');
     let updated = false;
     
