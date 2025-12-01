@@ -15,77 +15,77 @@ const preloadImage = (src: string) => {
 const galleryItems = [
   {
     id: "215",
-    src: "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/67401da32d86a.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1763791139&Signature=iVaWSOQ6%2BY%2FLnHKXJPgjcymRBETYPFwQbVc4p%2FfAvdBjYH5hWw%2FSs63fGSKRqmMQDoXRwRr0%2Bfr2XhOgpq3frgkNixO57aI6Y8Vl8ilLYstdphTWh6gC0wR4%2BHyyDK0o39MHyq77qRtZuw6UFzIgojiaPh4%2BQsSTi2PaRKibMOCZnOvF6yeGfHpQaCH3JIFh%2FQ%2F4kXWBjNpkPywT0Y9b7FoNVaW045pKgODJIMGYXlU10%2B9vmhPfKwNMp6uWF%2FBT7cUwI%2FCNwZE6j36ue66CAPA6dM9iu7dSc8uA%2BA0xBfgR0o3Fg1EUE%2Bk%2B4L5D5PtK4LRYUkvO7RAyREMhLBM6KA%3D%3D",
+    src: "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/67401da32d86a.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=16447035600&Signature=vRII2ih7H%2FNDIrSgK%2FfuINAWvMzVOrBiQvETNP7SmCwjW3Y%2F14oBn2H0XPpuyyc8jj5tEDJBfASNK6jrSWotzyXOL6DbpeQCwUhuvowJ5ch2%2BUZ8b6sKZGUHiiZptw%2F2cPQguH834qIb3uXVEww62n6emXnkz%2FBWAyoBbwkcGdjUGm7KmRzKr9pV6VatcLxhH12XksNrOZrKjH42IMC9%2FI1xAUA8JC6Yt39g%2F3mwXXmCIkIo6x5gYym4R0%2BToh%2BGFHTQmI0NB%2Byx7O7HWEI6T0tZbUpvxezHbS55vPB8EFlPrAjej332YNSgy0vM55V3JCC1nu5zmVgSUOSzB1DKGw%3D%3D",
     alt: "IMG_4145.jpg"
   },
   {
     id: "216",
-    src: "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/67401da3cfbfd.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1763791140&Signature=iQslxduUQVDM4gZdzJBy%2F11qpgNPTTDr%2B%2FbCDH%2Fmzhe1RUOGqnR6B6XFrLlrbg4%2BHosYOWdtXBOj8ViVTD606MfhNcno%2FvdX5%2Bb9jhoIW0rNXwfADv7LreB8JbPCSNCEBfJJekNvdLdv6nMKLQPbxwCCbSSWY2SLQufJZngTAje7mI6VFfON0trek%2Bn2eKxNelL79v66nnjGF106Pb5159kAtItSX4jUKTCe9o%2BU29JdwgliE%2FF%2BcRCH5S%2BTPtlSJc32KzsYgbzkwaPq4L4vOdWR0d9uMpi3fflgqFpl9pgIN0d6ND4b9oeLl%2BqwiX7n%2B9P1NzdzypNnxYfg0Njhpg%3D%3D",
+    src: "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/67401da3cfbfd.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=16447035600&Signature=HgW4Al%2Bdw5rUqY%2FdwZTz7nrvGmSL1Lxc%2BoJTF7EioD%2Bqo1Cjr3T3xz%2BET7PIxKUUbqL1erzpqEQYoXebODwVLu1b57rcFFYc38czLZJK86y%2BCRy3GsEK86Q075Hc45kST3Hqn9KZXCqhgd6yv3GMaFDixRAbDwA0mssVG%2FqM48ZcrbBv3SyiZDpcKOUh8KNEkz%2FFymABoVxzfVQIeye8hM%2BjqOgDIU7mMHD%2FVLyspPwCE9FzaQOscPaq02PETGXeK688kK8CbvWKMPcWJiAvDLrg%2FyiYGubyQIgFjCydJlRBxN5AKF4VTFKkR9%2FAtGXgjVv8b%2FOKtrNn0NQ1i087uA%3D%3D",
     alt: "IMG_4150.jpg"
   },
   {
     id: "217",
-    src: "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/67401dce55738.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1763791182&Signature=WXQ4saG1bVPo%2Bwqaf5RyN9P1Mo9WH8972XkS6fUQjn8T5GEcxVTpfuRCUUiuyueiUvhY8DpbUjn73pKLBFKZnkONjMEjoqpOtXdh5Fd9TOqxof%2BFrLlAgPVDsvA3z18zQ8n7IYuCyUN56YovxbA%2Fy%2FshHkYq7qKFOk2BH2rhPS3P9v56IiDlCJ1f1fC5n7AwFJvQVc01Oq%2Fo0ULMltxWXAEVvEdaEs0Erm6shjfwPzb%2BGiRA4DWPI1OoJgstNWe22MT%2Fy%2B9MjN733OZ0KiRM9xh41x2fcfxwrIjZyf8Fpz05DKyvQFVhU9K7Lgg0EaQfahEi1m10qW%2Bbjz0iiyWJUw%3D%3D",
+    src: "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/67401dce55738.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=16447035600&Signature=NZgHI2Hc5EkWJNCjLZxHfawHyPo%2F1Y1dGXrbdcQ5Ob2XgQgQ%2F5GwW4AY1vcpipdkaZh3E8DkxnoKjIBGae7CDc%2F%2FFoj0XxjWXUm%2F%2FKYJrjMzjoEnDwBQQb8k3Q5MT99Hc5nb%2BEHCiYN8GyYHxOLUa97HtlvIZg%2FBwiJ7fo2F0Rnq%2BYAl13bOyWdUCQjv7iJdccqTkQGH5y6ZAtmM%2FNUioGDzikSonBg%2BE72tsidxk43c6FH%2Ffd9c3Y6swpc5zueN3e1xCcBxLIJVl1F7CQQZL5dO59q6dJETZ3kILrzjqRVLrxALnnmRhOie83bSWQl8DNPafeOfbADJJwtdhJuPIA%3D%3D",
     alt: "2.jpg"
   },
   {
     id: "218",
-    src: "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/67401dcede7b0.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1763791183&Signature=lraHDde0YENNY%2F5WtHNRD2%2FDkSFGqseBO6n%2B3wJHfKlcbIqMZ%2BV8VnQleYIX0EAHUdWECqM7Xt%2Fh%2FG0TJN20aNCoEycAPiP42sykBj0G4mmapRod25LIGKg6fgQca7larTi5cWbn8bBDqinAo4ZcemLfUM5l8YoANdzpegSiEgwkARr%2FWr8b9eoJ7TFShWKykr3A0b%2FYGqmXH27AsvxinJgR0HprcYYs9ME4iJr4CvnijjQbAQacrZ9tkCn5kgxHpHxD5sU6zWZ8%2B2WSXrYXlj%2BujgXrLiL4QqKRiZMs%2FAJtOz1VxTNkJdDmDnyiF9SnKTgKmz1D9rhWYeIHiqQe3Q%3D%3D",
+    src: "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/67401dcede7b0.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=16447035600&Signature=fWGIZPDiJqtlg66vvW3dRfp3U3%2F%2F6UtqYgYpC9c%2FEIeQZ969bwEkQKqc2iE7X9Fp36cWgJPmn7%2FSnc2w2LIgv0TOK2RgUBbo0xcE34bG1ews3CNtjIhypcQZnKR9klZgAKGc238DSMphC0RO15DU7sJUoFwwdRxyVnrJY6OijeDNi2WACJBUSDtM2%2Bbhah4WkxkIRAXlBGP211A%2BurwECy2VR18hwEUEmbs7JUYGmx1jQgo0pIu%2B19IpNs1c%2FHyniNvJehxgZa57%2F9kakwtlZZAuLv8bdLCJOX3ykWZcQlXA8F3MpMi%2BcC6xOT%2FI1sK6xLnDz1r83X5LXT3pX%2B6MKw%3D%3D",
     alt: "3.jpg"
   },
   {
     id: "219",
-    src: "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/67401dcf662dd.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1763791183&Signature=WuL2QGgbjU2kfkjHUDYEKPspG2C1VaDf9j1tvx5JWkIRi1F6SsrIvZjn4dQrjoI7xzYbgZUNaRVPRNgKegkrVQYwRmBCk1xnhyZVMN5XNivmY3sIqAnqAWkTfvy476EiWAmWn%2BYrouGh3TGKpt%2FvGlMQRu%2FyXUCrkR7bCqCu4YlSvIEiSaf%2BDrzC%2FkmPYIPLwZ84eWzDM%2BM5ejiDc0sqrNHEkocLccMIqWWIwTliaIptJPVLSphbxJ88ofyaAfdKFrV64snpbhUVkkA6SZSWkjqwWscYHTZ7nzH%2BeG7J%2Ff9zpbNnsDp49i0fQ2K0jrrw%2FigsyBq5RTYtdgKiIbHMQQ%3D%3D",
+    src: "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/67401dcf662dd.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=16447035600&Signature=lqWnen3mnzlHPVbGIrfAX18X7ZRF9q4JIlK1FGEUkbTJy4lGq2%2Fd4I8OE3efyY%2FoBEwqEy134Rlk50McQ9DLLlse4HFUcl5mZcfAHzIloNWHheICnioCCKLnsDlCBZ0PPJot7Ig6U7ZORxSQ9ChAlEmr7hW7Zx%2FaqZ6CVZ0IxXuEe08HAA%2BvlHkMRdd9LgxAD%2BIsLvIKsKlMrrubOZ4ae5%2FWWs2kcUOVl%2Bl5CoBv3haUqIhx%2F4va6nMbvKe0kzBNm2odc1vA8wqbY9L3GHoaMaSwTX4SMBOPtFaDqZOOL1AQQ1NIw3Ykl14m5uurBZYIcw2lT1RSBg%2BokAAOcCAQcg%3D%3D",
     alt: "4.jpg"
   },
   {
     id: "221",
-    src: "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/67401e51161d4.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1763791313&Signature=Ichn241uGd%2BzuPclsXjt8lBxlRTsqk7D2qMul3J%2BUEUOL3kvKPAjQ8pWZZQb24FWAmZzlB8%2Bx8abT2OhM5CG6fPBWLB%2FLNdWRoWgtH6pY4GGpY2BBwA%2BLjoV63cYVJwzUjCkv%2Bv3%2BDeKmTT3h8f%2BP8NCyFfigx3MuWfIWSRB%2FZMO2gQeU2saQxY4qFH477w99rmpkrU1062Tha7uXRtSJcxOBWqnXsgPT1Wd6%2F1AFo50J7iEy%2BzcevB0YQ8eevJ23iZ93d3mPD9QJqm0C0xRMevx1pxDqkXI2T6iiZRj5JG4TToJf1uf0kLZaCSi4SAbnJKfy5iVDpZlHxErdd3%2BNQ%3D%3D",
+    src: "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/67401e51161d4.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=16447035600&Signature=ix8E%2BklOLvKvTpbbVjqt8kPLb3vf%2FwrNGrxizXGFERdxJEsdBXh7jbtj0jyaLEGrrfaCjrcE0WRiVFEzokfGzkjSfx8g6Kf8Xov7smqH4Kzi9%2F8pq8kRhP8NyV0AiOe2A5izAQULBcTW0AD5LOyCsT3stFHBUAj4ml%2BmNjiubhOGyj%2FmY2OJVWQKqNZHiKEbLY26RurZ1i2iJvKZtU80TYeX9PCiojucqsSp15N8R2fk36eY75FeOYuf1YnWLZWuMGD51zuzdFDFphlDOHKouRd3MDBzBkEws%2Fw%2BltgF8e%2FRuweIXhVafdHYPFb0o%2BqKjGJsr5uuvW5sSqFZTuA8VQ%3D%3D",
     alt: "IMG_4730.jpg"
   },
   {
     id: "222",
-    src: "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/6740e5fb6e5b4.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1763842428&Signature=E5DQ0IW3eaYsVI8VL3%2BeZGBHcJHUMwp%2BNEzO7DViMU1LDS1rz5WdWqtVq3zBnmSGmMckp3%2FK%2B5YihSpnrkouSV%2FyNKXCoqCf1w6p%2FpJd%2BDimKPnj3jcZGxOSwEiinzCaWivVCHuin9nLpL%2BRtr%2Btlx0FsLlyJvMkRtQBRHAb4y6auKzNxvoFw0Cp30DBBht1jWLyN6Cd33ZgQTuXbWmEAfoQEkLAsU8Jph9pCvRrnvHiI50DIMcyYMFXhJABiVkARedAUXqR7xCtLgGde4QZ2DzyR5ZI9Zi%2FldKWdd19iNQzip0177OQ4Jh%2FjMJybTxspB2h2ds8w4t7wFXvEfGx%2Bw%3D%3D",
+    src: "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/6740e5fb6e5b4.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=16447035600&Signature=TPGeAYCzyeQ13Nd%2BIypE9E9AqwITt1eUZ%2BlobLAH63m9ezkT8T29AmUTQL4YwXSDUBj3mgPHU4tfwAfAXzQfels%2BpEWdT8aTFCeeYWUcZO8FqUMwiro9662y%2BcLJKCoFGL0VwUQ%2FC2rKBqAYURpN9XixjGth%2BBzI%2BvUJnMOfBsQoK3Mh3wOjxTcLv6ywZmEsFRjlstWQLpxn4sQcdWDH9m4lzMab%2FwiAIV2VDemrJULObX3AV1aNl%2F%2FdpKlY1N1w2VNVlV87pt0UOkGi0ZnxV5Lw0nnYVarQWRMKPMTjK227JqZfAMBA1t5uMOu64GNzafjj1h3tULs1OOK8bYWMkQ%3D%3D",
     alt: "IMG_3946.jpg"
   },
   {
     id: "223",
-    src: "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/6740eeff3860c.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1763844735&Signature=fCE1dnw%2FKP%2F2x6Xqc2nCcRAhFkFvJSGTQf4ZyySYpeemjBKmRK%2BbjGQ%2FYTNp7upFSO6qdd%2Bv%2B4bHQ01JMDWKop0ATjJ6HrYGP8QLz5UFCdtr2IJiJ6u7C%2FLi41WJc8uX5MaoBS1YZjttv0V7s6pMdbXXV2Y5KCrt8qWvWr2xj2Kq2Qf%2FcRMjwnmViHZNYLHqV7ymMi63yg8TWqUypPVHJq%2FVtjQiex0Xp0ndCSf5sJzqTqRALYsU%2BEYgk0rr11eAP7qGQV1GSwz5dOFtwmzDzULBnyhJ5A0QrZWi5BQCVenJ%2BBa3fhJUyzJf8I8vEi5zuXQN2vW3yOyPxnKq%2F9IdlQ%3D%3D",
+    src: "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/6740eeff3860c.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=16447035600&Signature=UKsmTPdirE%2BaRD3yXATrsxfj1Sb97f6lozFGUMYX29LstOVp6iEKXHmA5fddpp0lOXqcOIBSkO2Yp%2FXr27MKXz5xf%2BEF6ve9KSpInmLHBgUkGefNfGuuzuVCO6WWAQW23hdQiRcxx%2FiDgBfeXGq%2BA7c7WM4u15owcPX%2F7pX3cBd%2F5P0bIPXqfUVeLaTZoa7wqxG5a0zQVvnzHRi5c9klUZObinCWrJELAiXILXvgD5mY9GWwFQSv6nc2whH68Yo0ULgfzecBQMc56TMbh%2BCVPE1SY1HiuGkNcfe4ro%2Fv5nlxFLsnk26EYDSVjBqe0c9wf%2FUoYEtJPiHyRSNW9xaKDw%3D%3D",
     alt: "IMG_4145.jpg"
   },
   {
     id: "228",
-    src: "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/6740e80de5967.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1763842958&Signature=PYQ%2BB3F6y%2FkOZTqj0DLgtWHp%2B2seXDNIBKLYoHZ1gDeAEfji9NjqLtRyxA2QHyTXcxliErU3pzpyiVwrKuD5nwbwS0FZYzs8sjMQFvy4I8S4gNtawRQt40HLxix5LYvuY1yQLEety8YPGjRbzj6EjPIzkOAT4ExNolOlo%2FhSI2aPrX2MD%2BDzdnRSgpF6OedinvdJj%2BzW1yjs4Z2cughjBByQl3l2o%2Fvyv3o1MmSSxKbLj3EbAiG8Pg9Vgc5hFFO9u%2BFnbi0q9Z%2BiAxYisvbHsjNNnXaKFMqPO7vA1M930tW4E4FkF5LCJcUzwJWK0DitHc0WbhcJuUhhJzrkty%2Bhxw%3D%3D",
+    src: "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/6740e80de5967.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=16447035600&Signature=jvDYmsEkbva4mqNpVhggjwwIu%2FJQzrFH%2F5F%2Fy84qKBiOudibYXZZk1Obtre5%2FA3IdwJ9LtD%2Bokz9Z88pqwjvlfYyUFVvUTY3%2Fmke0Mf5rW2%2Bmk91YvK8tvcu9OMhNDFDiTruZ7XTsokHpk%2BdsCjCzYhJNSUGklzVB5GLNdK%2FqFI6wbeafdsOFsoOJt4t%2FKLZkmVON9c58I35HD5DXZEDU%2BiXuYB9VXzI5YHdR9%2Bz93AmQheeP50%2FFEMYz4Aw%2B0mQd6caEI1pdkwJhQ4FOaNoJRkobESAfPe8I04Lj7rsbA7VMOBZSGLk6d7tjcy7E0erQQ3lp97088FP5eS6h3%2FNDw%3D%3D",
     alt: "g.jpg"
   },
   {
     id: "229",
-    src: "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/6740e90926e16.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1763843209&Signature=eHYvsjXWVZJA6k5pA6uYkqkTTSP0kkrESvKXDeFwd92Hur7lrAD1iBBcjNHCBuIvUe0ikq5cvcaV2iJdEyTkOgX2t5fOOsBWj%2BSOjeNde1pVdinAoFxfIzBwb3S7Phx1%2FG6ziOK6OunxiX%2BfbVFlx13wSwuhVNUs%2B5gV8EQ3fk0zSUjg7a%2FvJ44oDUx%2Fri2T7atupNruqqrLmID8bZaCoCYlqLbjThxOhHvqZyqHuhgtBkeMyDradcDT00dWJN8Oum8f6E56YO%2B3GKwupydBZGxRtvEraxHdbaXrKoJ%2BwHZO2FnWT0UTYSgZF%2BsTGd%2FT2weou%2BRaidU3HofJeAZc8Q%3D%3D",
+    src: "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/6740e90926e16.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=16447035600&Signature=SRx%2BWrdDhfMmONuBoy0uYPHqEfg8TSXV6KKJWpQ6XjYtETzuhmOs8NPCaUNbLkxcLwIcc3uUDR%2BSsI8%2BTQetFzqqsRrKRPaeitEICsrkC4iBaiWk18xZ4GoPwqRyzbUWGLsF4e111XW%2BBSdJLWgjNCkvFuer%2BxPDcF%2F0NmAi%2Fb4Wz0TIVH7kr8XkqJs6SccTldX7wsa8Wl%2BGD%2BUrxREkY6%2FTxgFH9J0ewIJ%2BovgznHzgoJY%2F1ev6aWADhD%2F%2F2KbuuC2ru2hntLVGrgGYQROojEbxWAJ0iHOZj8KX17YO9r2zPQknAaGgAPFZya072zFqgrKkTD1Omn63aOGZ5a5YCQ%3D%3D",
     alt: "IMG_4361.jpg"
   },
   {
     id: "230",
-    src: "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/6740ef3066d53.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1763844784&Signature=mgNXk5ZTFQGqQi441zhDQWcdAm8PhbH5E0ywUoPQE%2B2QymoMA7%2BGMG5CxmMCEiiKFUrHM9sG%2BZcG0Gwn%2BwCwOwTiAMLKmMmoLFPZZDfFcFBgL6aw3E8T73L0%2B8gRLlWovYL663%2FwLe8L%2Fmb19CGFFgln5KJwkpm9B5k6bDNq%2FbQ3fIzXDILV2dGLGREvHAQA3vdV9vGQT1j1%2BMHJz6Q7wGsw1A%2BeLZjSvZDONISNHBPP5gLHAlTAOCXw9u5wf3I53mtlzkNGP1XLWqnvMColjPTBGY%2FT6c7xoqRJyX57TQgfb6SV%2BN5wTwJcquQtqCkQdrxRm1qT%2Ffeu38J6VqceWQ%3D%3D",
+    src: "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/6740ef3066d53.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=16447035600&Signature=TM0razQPhQj%2Fs7J4n21eJHPj9nBQtZGjP2DQOEuzL33NrR5sxjLQAH4tVKaEE1qyfrk9JazF1JVvCxWOhc%2FLfks5lJLg9NBEDpEBw6HYNZkonokgUrb%2BrEVTcwjtsloh%2Bw3wvLEbjMm051e0BsmOUT7x%2BZDMnD7myIszZB%2FeyyhKyIvrD59CHxDvsqTO7zZLG9XH5gOA7MzBJoY3A%2BGIVFmMskmolr%2Bpwdcbsu1z6lE3eTEyFlBFUXNpbDGYmJJJM2Ly7WYxdUQTq0de5Ab%2FnhPa7anPehrYW2BssCRYVIgAToZ6khRntWyzczYN%2BgNWDdQmH0P8T0nuvb1gsoAweg%3D%3D",
     alt: "c.jpg"
   },
   {
     id: "224",
-    src: "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/6740e60a653fa.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1763842443&Signature=eyQCRwOSk5gfJ7f3i7vhMCIcbjs9uPHKu38MC%2Fy%2BZMIJJ05Ut2fGwHyW0Ne3p9VZ4FX30pGJyAltPw3NCa%2F9XMqsxPY3kOoaDVqAnamM7m3N7bX5xgszTKeubeXwc1QxVi2z8aGDSjXBz1LzptFSgyBsid6tnexdhpBiPMF9TEAXV2l2vPXqgEX3qd6XllOF19gbkWNIKM7WNRhIgvYbEKwiEmR%2BgrRyI6EhN3QC7%2F3ii2dq%2BqFYDBVVF6WROovqLkbZfGDJJSZUJJID4mzFSZRhn4%2BNx7zRDpiwgIurkCQfndLDNuO90%2Ff%2FPt190V4R4h6sxCxDGPNivk3OeLYTLQ%3D%3D",
+    src: "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/6740e60a653fa.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=16447035600&Signature=DCmKZ99e4EZv8Dvkc1wUqx3bjZGdXmnaaWzD4K2irTet5qpgATTY602y9Zr%2B607FOOgRzvLaQVJJcdoU1%2BKaRfi1C5quLYDcdX%2BOolWV8zA0FJ8FkBP23lIVDktiEcKX%2FAf3rMHqrI0sAd1Ra9Mam1AeadMbFzVmX3ApcOxXxPDUz7iERz%2FrmCDSTpQSgYtzPHyvkTIrtDzpBEgEt2P25UOg%2B9qqR2f8ZGt2ROcujaw0DupYLuDy0KJPwP8vIx6JIQtfY9zH8setvD2gtVg9K17VOsZSVudt6yaKUMu57N%2Bu30xEWTbi6evyQH15ax%2BjO%2BChj90V5%2BiDnax8xP12hw%3D%3D",
     alt: "IMG_3921.jpg"
   },
   {
     id: "225",
-    src: "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/6740e645b4bb7.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1763842502&Signature=CnPMk7zXqJdCNSgbOw7f2%2FTROVHy2Frfh0odjXkbGRbOkI652be09Nw2oYGFuVUydEf4hXrCJL6KL%2Fm8a5Sy33uC8QniR3F65AOcujQKm7nFkV604AL82kLlue4apoD7x0PqJNqfWab1fCCczE8L5Smte%2BAScxzReisGForJJLiTGpO0T4yxMBFJh5JPYou3kq6Up8fleFTZedEXRPlTtRLrocNjU73%2B%2BtAZtYnXWjpKvw%2F4VMzSYMZLhSq59nlY5ablAiz6uhVm72VdoM3Mfxqb4JKNpxtQJzxCYpywOvr5o02%2FMcBCoydSXMnuNd6FG9JqT43boAMCyah%2F1hYWFw%3D%3D",
+    src: "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/6740e645b4bb7.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=16447035600&Signature=ItahwRfEP8ob5lgjjNmtjP9cC9w4a4ll2fFdHkP0OVOQviYP51QnQS7%2F7CE%2BKtto7SimJcjgHK7cXTnqmvV7VAL1NE1PsYZCrC2w5Uwr4Q4AC9jMZaUX0YzEkYjXrgIqgkCbu%2F198heNR03tkSQxdBGX4gEs0VwXM4pyGlzO259ITJesTlQGkm9oeUKFY4QKg5PmgY13Hvmc60%2BDIjGsao56nQLXtgi6h25Q0KLkqx2bjYRxchnMExs1hD83UZLGA8Q%2F0PngsIg2zdnFQUGFK4V1ptWabL54SPCU3EwCp2j7rM2bvvhOpQzUicdq%2Fqnlc4KigDbX%2BOMUFQnYPlKJ7g%3D%3D",
     alt: "IMG_4172.jpg"
   },
   {
     id: "226",
-    src: "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/6740e6464b792.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1763842502&Signature=Wsu%2F49ZII0xoaw6I54W0FeTqFSS4DKzp7wQnR97j10kL8JiLuvwyg%2FCIaq5rUuvHVxImn9eKxd5o2sTsA8YEtXdjv0IzQ80tgxIk2Vmivwm3Y1rLUjoEc73tGgPLiFHg9YTmRNg%2FPMk1le6u1CZoZNuYJwW9Yu5pU%2FYxPQL%2B7QZc4x%2Ft506iKuTQSDNzGgD3Vbiya0q1L6Ko45WIq87Ad4UBtdbFedvltdIK2KQNhaAbFL1f4MTmN1undJpODIdzKRzF0NW4JUVhjqxnHVCHHZN%2FjgrNvBYG0Y4Z7irnjrs5z1cIgU68jL9scL%2BVN1XD7YD3%2FmfxLVvORCeedvyBPQ%3D%3D",
+    src: "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/6740e6464b792.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=16447035600&Signature=yuEUlxjdYjvHHDSHoAXI9fE%2FSWHIngS49thIHU3N9Wq%2Fxq0%2FqnIiR4jvuXScfKEZzcnlOFLgLdSpUc1rrN4zbitEKsQ5pM5xpxf%2FZM8kJvjaSQgKEig4GMpjZmFitCe0506KJu0ABwkjMlNf4pQRuVYau9Mbax52Zm6Op8%2BqWK7YmysReOAupiG%2BEo4meuoLE8xPYI6b4cdf1rPf9Q%2FgYj6pOeuC2pB01CqsoAkNKfWEt8ahGb22OfXOfQNcyxcQcFngGK9Q9JMRt8O%2FrOm9rUMHmMluQ%2FlpU7xCdgzeYSEdpHUIfAFmItIXfYxmO35KzlDNw8uTZ0%2BIOeIrrx%2BvIA%3D%3D",
     alt: "IMG_4255.jpg"
   },
   {
     id: "227",
-    src: "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/6740e66acde62.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1763842539&Signature=WbIZUiYEPzRt%2F81x%2Fk5dTTW09AhnRgc6mC0z%2BtpEKTQlo2%2Fz42jyJAWXlRFWDfthXxrAiMcb%2F7ylVevTCVM1gkHlhTjH6EhrmJw8c%2BfkWLPV04%2BYnH4gb3eUO1l735LxZ1pOhExn3T1PXfXlUBPDAVoPd9JuFoqlCV%2BgR6xcRrkqJ0UMoMVcNbE5c5vXHRriWnFzMWIF5S0dMxzcoebVYcMMN%2BC8Es14sow7b7Ta%2F3Vmk0hhHlCwi3j5tg6wX33qpfYSZvnVT4VumeKzjF7QSPVRAbdi2%2FMd1JNnz6ncIIQ1CNv9CkVhEJihGWUr3FZZhErQCSOIh2pHQ0%2BhDqXKsw%3D%3D",
+    src: "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/6740e66acde62.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=16447035600&Signature=GvEwrlgq8DvHmQpQwSu%2B9zQr8zUIf9Ee%2BEQO%2Bj%2Fp%2FlUahq%2FXXFbP9ZNWNV4%2F9Pri60n40R9FT2Ic3lInkf29ailMzMXXreIuurxXID12%2FkiTZkBGWszFO7bDTUap9w1VE%2FDGpHhB2Dh%2F9Y1PBgWPX9ozOWF%2FLrG%2FIzkasXd4JplusnduTvBRUak5LYfVK1ZxCQuIIX8UbePWexmDvyzzql8CQveOHDK2V0TWDV24iJoIHwE47TdcQeSKyRi2hclep9I8oZabVyKpqGdZYCZM72c8MFBsG6ka7H0vOP6cSWp9y7cpUHPcGfmBnKDoE4PShsfHLTq9tGfVgq0n89n8yw%3D%3D",
     alt: "IMG_4880.jpg"
   },
 ];
@@ -247,6 +247,7 @@ export function FeaturesGalleryComponent() {
                       width={300}
                       height={400}
                       className="w-full h-full object-cover rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+                      unoptimized={true}
                   />
                 </motion.div>
             ))}
@@ -265,6 +266,7 @@ export function FeaturesGalleryComponent() {
                       width={300}
                       height={400}
                       className="w-full h-full object-cover rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+                      unoptimized={true}
                   />
                 </motion.div>
             ))}
@@ -283,6 +285,7 @@ export function FeaturesGalleryComponent() {
                       width={300}
                       height={400}
                       className="w-full h-full object-cover rounded-lg"
+                      unoptimized={true}
                   />
                 </motion.div>
             ))}
@@ -301,6 +304,7 @@ export function FeaturesGalleryComponent() {
                       width={300}
                       height={400}
                       className="w-full h-full object-cover rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+                      unoptimized={true}
                   />
                 </motion.div>
             ))}
@@ -320,6 +324,7 @@ export function FeaturesGalleryComponent() {
                       height={400}
                       className="w-full h-full object-cover rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
                       loading="lazy"
+                      unoptimized={true}
                   />
                 </motion.div>
             ))}

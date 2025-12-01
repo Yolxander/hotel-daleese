@@ -96,18 +96,20 @@ export function OurStorySection() {
               className="w-full md:w-1/2 space-y-4 mb-6 md:pt-[220px] pt-[50px]"
           >
             <Image
-                src="https://storage.googleapis.com/sempre-studios-893c8.appspot.com/uploads/Casa%20Turul/Our%20Story/671daa5c98cab.jpeg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1761533405&Signature=lLHACj%2FoK%2BSaquuNm%2BnkY2REJWuPtOh%2BmK98cjYeBrbMKwjXPMcnO8nTMY%2BfyrQ1iEktJ8UsDp0ZlozAfuGVQHxz0gBjdxuNeqUJfq4oMpwZ196KjNSXFxwlmyzl1GrF4LJZsG%2BdYnGyHIFoBOSHwVp%2Fwau%2BNBZvALNWUlAGD2i2fJ4KKEYROMPzrZ9ajE5Ji5382wfCYB2L4chg4QAcvrHM2FuH%2FWRSpjhNrEhuAkwND6e15bkhyxwMXqm%2Fem6Z4RanBXw%2F%2FBIzL96zYFtEPGcz5rWjFDvxuHFt3GOHCuR%2FzkCQ%2FfFJlwojRb5rsRN8jz8CFhLvn26n%2F8sVwEDkPw%3D%3D"
+                src="https://storage.googleapis.com/sempre-studios-893c8.appspot.com/uploads/Casa%20Turul/Our%20Story/671daa5c98cab.jpeg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=16447035600&Signature=zYDgqxB9rtmK9nUec4SptyKDEP9yWLkadtmgHSJoI7l7Lt%2F9OgjUvPorlI7tq2w5brgK05J0kVpGXw0i3Zl2mVt%2F8EBt3R0pHzcFiXcWL6YlGX44ADgsShLTK4nv2%2FjdwTNgShLpBG%2BHURP45wh9O6vfGChiU0phyfnZJVonkdNr6c1zvwFKUF3JQ0vx0S2%2BXxOMkOTfeoAWKPx0qp%2BzJpaVhqttYLTfSyb0vz457ROMfMlM8ZY7CSSLoND3ugLzHokQoguVeEKnZfTv3w%2F5ixKUmrdAaH8GFLk2FfrUUWlonxu7G1zEzsHqD4gnoM2yQ3f2g08jPiNq9Dp6WVdUvg%3D%3D"
                 alt="Rosa and Dave sitting in beach chairs"
                 width={600}
                 height={400}
                 className="w-full h-auto object-cover rounded-lg"
+                unoptimized={true}
             />
             <Image
-                src="https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/67401e51161d4.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1763791313&Signature=Ichn241uGd%2BzuPclsXjt8lBxlRTsqk7D2qMul3J%2BUEUOL3kvKPAjQ8pWZZQb24FWAmZzlB8%2Bx8abT2OhM5CG6fPBWLB%2FLNdWRoWgtH6pY4GGpY2BBwA%2BLjoV63cYVJwzUjCkv%2Bv3%2BDeKmTT3h8f%2BP8NCyFfigx3MuWfIWSRB%2FZMO2gQeU2saQxY4qFH477w99rmpkrU1062Tha7uXRtSJcxOBWqnXsgPT1Wd6%2F1AFo50J7iEy%2BzcevB0YQ8eevJ23iZ93d3mPD9QJqm0C0xRMevx1pxDqkXI2T6iiZRj5JG4TToJf1uf0kLZaCSi4SAbnJKfy5iVDpZlHxErdd3%2BNQ%3D%3D"
+                src="https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/67401e51161d4.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=16447035600&Signature=ix8E%2BklOLvKvTpbbVjqt8kPLb3vf%2FwrNGrxizXGFERdxJEsdBXh7jbtj0jyaLEGrrfaCjrcE0WRiVFEzokfGzkjSfx8g6Kf8Xov7smqH4Kzi9%2F8pq8kRhP8NyV0AiOe2A5izAQULBcTW0AD5LOyCsT3stFHBUAj4ml%2BmNjiubhOGyj%2FmY2OJVWQKqNZHiKEbLY26RurZ1i2iJvKZtU80TYeX9PCiojucqsSp15N8R2fk36eY75FeOYuf1YnWLZWuMGD51zuzdFDFphlDOHKouRd3MDBzBkEws%2Fw%2BltgF8e%2FRuweIXhVafdHYPFb0o%2BqKjGJsr5uuvW5sSqFZTuA8VQ%3D%3D"
             alt="Hotel Daleese property"
                 width={600}
                 height={300}
                 className="w-full h-auto object-cover rounded-lg"
+                unoptimized={true}
             />
           </motion.div>
         </div>

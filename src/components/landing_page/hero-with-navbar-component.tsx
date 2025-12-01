@@ -9,12 +9,12 @@ export function HeroWithNavbarComponent() {
   return (
       <div className="relative h-screen w-full overflow-hidden">
         <Image
-            src="https://storage.googleapis.com/sempre-studios-893c8.appspot.com/uploads/Casa%20Turul/Home/671c830dbadbf.png?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1761457806&Signature=WtvwGdlyKbrY6sLqcis7P8iLk7VewMY%2FXH3o9FLzsgFJ8zq0MGx10234OactoBXIQfF127cx1BJvikqM9BwlMZZWYp1crN8nlUCW6LUlxRCwJa0hRTDlXCMbdFwSv1tJ%2BPsvCcj%2BAhP999PnuD9VRJpmrojvlqOWGpGntVnaL%2BeMuhYT0HuO0pMu1KE%2F2d%2BT4hY66FE7M%2F8AEBYUdlNMQ0kWIaSs3V%2BF2S31iduU%2BWdJQih8kUPXbbQE9o9qO2kPxrZxYcx1GDzyWyKRWZNNqAgJe9o83EWpqY%2FSgqM7LrhUYsFWpjI57LIUEx05ohjxqODHNINaHXfvodZ20U2jSQ%3D%3D"
+            src="https://storage.googleapis.com/sempre-studios-893c8.appspot.com/uploads/Casa%20Turul/Home/671c830dbadbf.png?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=16447035600&Signature=uxoZOK9EisZeAMHGe33C0o6PVfBz%2FKdQmjjdJYBFprMKFEP8Wz1exhWhTb9%2BRCH97iB4MBUmBwtzqcpJ8O1evYPvjVtNDZFZrregkXjvuYUi%2FxbIIpOShRBd92wBXRRuyLn4Qu7UnqYyCOLmVtSU96gCl7Yb5gusaJjXrrK1elfLjWA7T5s1l0aJwWLshVmW1kjUqudi8XVIBI6mcPc1SCg8LZHpTGTgm6j7VIWwPmDb%2B9ZgOaN424stWzCCeNjevwuSBQBTQD7EViQYjv%2F4L8NBhM9jWDiEYgVv%2Bm2Z4%2BjC1nlsiL%2Bxqw3Dn0NzGOIwQqPADoKbliM7epQioS5uFA%3D%3D"
             alt="Boutique hotel room with wooden slatted headboard and wicker lamps"
-            layout="fill"
-            objectFit="cover"
-            objectPosition="center"
+            fill
+            style={{ objectFit: 'cover', objectPosition: 'center' }}
             priority
+            unoptimized={true}
         />
         <div className="absolute inset-0 bg-black bg-opacity-30" />
 

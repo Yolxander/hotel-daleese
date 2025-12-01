@@ -16,7 +16,7 @@ export function AmenitiesHeroComponent() {
                 className="relative h-full w-full"
             >
                 <Image
-                    src="https://storage.googleapis.com/sempre-studios-893c8.appspot.com/uploads/Casa%20Turul/About/671d219ef18e7.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1761498399&Signature=hm0lHR2DylZ7ztLnpHqdk%2FbOa3mHKZrsyNkwvCePdh0hJmKXr7vPBaL8ISWkFzBC234njh9Zo8YB0k%2BF4Ik9oRAPhaCqKUGJ%2Bm%2BUvZPgHDPTIa2N1yx5qyi9ZFqDy9b5aXL%2F6ni%2BlIHP%2B50wwh1s6Wiucj4eWr8tI2VzH6gATluj9bdrlPv%2FrzRrd3EzMSDPQne1B8rhAA3cf7FkIaFmYDJ6Ojp%2BTTPm3qyv%2Fy%2FH47mOp3Co1oDEUm%2FSYAMpKApO0pkp9MMOnoTEbvi%2BvioWWGsWqRquGbBHJBVfJ%2BsrPzioLZXqrFNe2QyAmNutHa0YFVf3XTkuLWOQsBfDY0NFTQ%3D%3D"
+                    src="https://storage.googleapis.com/sempre-studios-893c8.appspot.com/uploads/Casa%20Turul/About/671d219ef18e7.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=16447035600&Signature=IiXm9jOgAAiF229TrRT3TuWX7J7LHGaH3wPEI8cgDE9kaETEUY752fVh%2BuQTlaWrV4guDvSw64kXSZtLzUS%2Bxl4uDj8CM701RPQdSKktyEVrsuVe8X9YUJ9nO6c9SIFTuOr3%2FbsOq2nBz3fqGaM1GGOh430mzP3H%2FdKP%2B%2FAqx7OvG44c%2BPPrKZZyjbmu7PREz%2Bz%2FOC69RUhpRYWvXok1X6xBI8fKU1lWUvz23G5ivJ9JAa3xz6p8ou2rNiqm0355P%2B85jNjbcgapFB7E38A6fd8pjPd973X9VxJ%2B3Q0%2BFby4YT9%2FVcPjENMAwYjkgqIkhgBp4pmL8NgeUF20bqZYKQ%3D%3D"
                     alt="Luxurious pool area with tropical surroundings"
                     fill
                     style={{ objectFit: 'cover', objectPosition: 'center' }}

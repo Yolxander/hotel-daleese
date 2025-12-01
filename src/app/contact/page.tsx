@@ -8,7 +8,7 @@ export default function HomePage() {
         <main className="min-h-screen relative">
             <div
                 className="absolute inset-0 bg-cover bg-center"
-                style={{backgroundImage: "url('https://storage.googleapis.com/sempre-studios-893c8.appspot.com/uploads/Casa%20Turul/Contact/6720311d840cc.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1761698974&Signature=ANvpIn6rfoMcC7mtzNCU4Oi%2FLn8TafM47j6eL%2Bv0v9HYFqgCpoPzCV3wVakNdoE%2FOq2R%2FLhYtmNJZU%2B6rNPh7CJCSfnR45sSrH3scdEjYCs8BYkaddrr79VJD2aLzO15VIWGtr%2B4i4muNuzxU5bL1awNB2b8jmVZEjc1XrMLQlzGBi%2BhOzbHUswlPeISghzSI%2F1Gyr%2B3%2FnlZNXuf%2FI7xsz%2FmxfgB7562k0W8e%2BMqs7bcjDDyvtBjW2C7EULBajs1YmysjbbUWj0zcp2pKCU5CiMgnj7VNXxp95JmUoXG2k%2FwXWGgrn8TSFm3yrmJglTovW3vX6iGo1U%2Bj3tBCi19hQ%3D%3D')"}}
+                style={{backgroundImage: "url('https://storage.googleapis.com/sempre-studios-893c8.appspot.com/uploads/Casa%20Turul/Contact/6720311d840cc.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=16447035600&Signature=HeuNk82mIgXZa6fxelagvKETaQHoUV7LggkrxSZGl2j6mggWGdYyoFilfS6xkl02AA0b%2BtXBu%2F0U1%2BZjRAcnLLqB2ehZpkPK09H68GBppzncqfL3bZ8YaQgXtuX%2FkS46YmH5zDtf1QJX7X7Q%2FKdrkT5WohBET%2FfzFFknojoOUYvYicesM0D14hyXl49ZRbc7o1EMOGkwszwlYztKMy8MRQWCpwyaDzvuJGw3qkaohHXSSTTvRCHzk8W7%2Bne%2BvGMwahNOVnzAnh4oGvDL%2FtmoHb9G9cY%2B7qd04AVImm%2BQMWeXUNUKqYgtnKqu83R4yykWlZLlxAbuH1RtNLFiA4ptAw%3D%3D')"}}
             ></div>
             <div className="absolute inset-0 bg-black opacity-80"></div>
             <div className="relative z-10">

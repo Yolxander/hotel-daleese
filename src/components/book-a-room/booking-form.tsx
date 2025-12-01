@@ -182,7 +182,7 @@ export function BookingFormComponent() {
                     className="absolute inset-0"
                     style={{
                         backgroundImage:
-                            'url("https://storage.googleapis.com/sempre-studios-893c8.appspot.com/uploads/Casa%20Turul/Gallery/6720646ee2450.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1761712111&Signature=ggKZ0Hnz9TZrYfnJubUlMX%2FSEmtVY%2F5fbKWE%2FwVNkL%2FOmaAYQ%2BLFXcz8aiCOkL60ll%2FAIhV41SuC5lBwHIZkE2Mgwg8At%2BSlMOYjye3pNyU6z3fre6B%2F8AcSfkJ4vWw0FgWbHHdexvHrPlLWRN%2FqvJn5KX8p4CngiKgX9bbBHZa4Nge8MRpV3EEh45XoMRjDJ30oaGNEVrV0sezEgraoohSQ8nr%2F0UqvUQzRoXu6MZRnvcak%2BOJ3Q%2BBhOGv1Jq0a8OhIQ%2Fnx2iy68vkenZ%2BYIvfSwwz3Tce7Aj1nDxV238zVbmCB5jxOmcL5wo20Sr%2FNS2oCCFo4nOSG%2FStaleR2Qw%3D%3D")',
+                            'url("https://storage.googleapis.com/sempre-studios-893c8.appspot.com/uploads/Casa%20Turul/Gallery/6720646ee2450.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=16447035600&Signature=fKq7MvlI0R%2Ftao1JGBQcuc2eWqvpFKf8avl85GJeuCVGvEVTJ2pNguK5AsgblLqobX3P%2BXiZ7WOZYFfK4I%2BKSl8S86zh0mlp%2F66Kh9y%2Bv5HSD8nQS9obp%2BCILnbWXpv%2B9al2fA34cgP84zkMFDHfIeTPHje9WfbtP2NdioS%2FHYldeFS7M03yHgiMu6ahI%2FLBW7kqncBFftZP2xeSdlVikZOTuzrlS6BpltNz6QmqHTLNiwFJyeYawvsumYkjvxO2EXQYOhChnwYK3YISyivW6thXRa4gq%2BV5OGaf%2F7fUVYEfkzL1HS5loSeCubux1ysI2y4CZPP3okHcMMdqCdjA8Q%3D%3D")',
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
                         minHeight: '100%',

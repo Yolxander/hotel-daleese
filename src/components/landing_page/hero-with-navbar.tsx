@@ -8,7 +8,7 @@ const cormorantGaramond = Cormorant_Garamond({ subsets: ['latin'], weight: ['400
 export function HeroWithNavbarComponent() {
     return (
         <div className="relative h-screen w-full overflow-hidden" style={{
-            backgroundImage: 'url("https://storage.googleapis.com/sempre-studios-893c8.appspot.com/uploads/67322841779f6.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1762876354&Signature=mhPpLz8xVY7o1kR7kjmypvLScdCF0aA2oGQY1eLGl3Qkr68arHVBtZ9qUDAXndVSaf53IHqdvnJFZ8BITkZ71giidOltyC84ojOtPge9HD7WTD8iD6RWdgLI%2BMAVqKFVIXv7T%2FlouRT8W5d%2B6bdt5YnOOpaXfjfIv5rP17YhePJ7onUEbr05IncLROPLrAxB%2FPEHXVgoI2wrXFMUQwGBDP9xIayj9w%2BGY9qAoE891EhJ69O4PkZCAXzLjo1Mf%2FOvla6Ae55JkZ3s366ChNXYqN37I6cfvldJdmxMDZ7rB8xuHeRBLRpLzD%2FKncRAPwGX4Ait4KxiqM9ZluW5opRRRw%3D%3D")',
+            backgroundImage: 'url("https://storage.googleapis.com/sempre-studios-893c8.appspot.com/uploads/67322841779f6.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=16447035600&Signature=CnhBLyfDhpmSF2pbAxIqLq8wc17KqAxoumZN4Po3QTZjwr9rcFx2Qpgc2PKSv4Ti2NiQCO6MFCni%2Bz2jTS6al%2F7nRcY83WF%2FxEOLNkIb2py6CfblBWNWjUCIpt%2FNoG68%2BtT8un9M%2FuBnCTSb9sYCr13RFXo3Y0dXDhpqzW7JEDE6PDQoc1v%2FNZWLP3AjkUZ59Bj3U2ObZ2E0F9DTdFky74a2BXyUnxJYShoBe22xGDK0yTL8wuDtNOgFu%2FPpyEsm2lGhVRgOerlaE%2BIyVFPHCIEsGX04Is3%2BNqqNvCzMeCP3eN6YG8u1n95Ati0jWg5vxQL9J1YZMj0EaPMvpULWtA%3D%3D")',
             backgroundSize: "cover",
             backgroundPosition: "center",
             minHeight: "100%",

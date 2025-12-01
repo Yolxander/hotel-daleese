@@ -90,7 +90,7 @@ export function RestaurantRecommendationsComponent() {
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/0bb727_6c526323cba142119c3ed48c417ab1e5~mv2-RQuD2d9gUJbbaqbZU4hBA04ebfikdl.jpeg"
               alt="Tropical restaurant interior with ocean view"
               fill
-              className="object-cover"
+              style={{ objectFit: 'cover' }}
               priority
           />
           <div className="absolute inset-0 bg-black opacity-50" />

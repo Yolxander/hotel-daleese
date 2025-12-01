@@ -106,7 +106,7 @@ export function FaqSection() {
               className="w-full md:w-1/2 relative aspect-square"
           >
             <Image
-                src="https://storage.googleapis.com/sempre-studios-893c8.appspot.com/uploads/Casa%20Turul/Live%20in%20Uvita/671efba46ef0a.jpeg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1761619749&Signature=Md%2Fflm%2Bih9coqFN%2FHsJ%2Fh%2BEVTfVDhJGEHgzS7rg3Bep%2FuIaWWV9knm7RPV%2BVNfdUzKqeUStmQQPROq0qGeep2Xg4CSZb4P0UArecoARHlursgUPaKBLGXojpkfjzWYH6FF0OK4pNtiLg41gDTinuzQGWbOrDgPJXBu1s9gExRL0%2B%2F9z75ZBMGgv6eLj9tfKh3560N1LqghduKXl%2FlAE3bml4cbUZ8SC5dOpbcrLXYiD1QlZ99Opr24FVFdkrc5E9zMUlsDLw%2BadcI58LCzyCmocNFACHmoiIoKvqKtV7XkcgYwCqBdBJu%2B4XIjfME5H%2BjsQqBspoR2vujyuu0il1KA%3D%3D"
+                src="https://storage.googleapis.com/sempre-studios-893c8.appspot.com/uploads/Casa%20Turul/Live%20in%20Uvita/671efba46ef0a.jpeg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=16447035600&Signature=US%2FIvIUnbSXWhqlvGtKltUXDyfzlc3slMvO8iBzwjpcHfTt%2F11fAEwcFNnzf7DhUAUYL%2FIg6ORNvN5hmxBX%2BmYm%2FWHmMXtaJ3%2BYXTCGDQOiKmo55KO32YLIJ20VYYNx7cgPpFKMCPWyQSUwKzh3svKzGwqfkcfQNUZKTqthhWL6qlqInfprF7BfVcyAa3JF5Z2X%2Fpoef5Nruk%2B01PQ4AruqOSKnCNgqUFrLgQgPHp04zm7GOcSrrRJKf%2FqJuLMlg4wCQIjUH3uYwMuTvkQ9fK%2FaReqxDAlzpEFg0vmYs4a5CYvJ2hLTNpTKPZPMEVUc%2FdsvxJ922EgSEJzyBySWZow%3D%3D"
                 alt="Colorful toucan perched on a branch"
                 fill
                 style={{ objectFit: 'cover' }}

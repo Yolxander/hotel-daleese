@@ -144,8 +144,9 @@ export default function ImageGallery({ galleryItems }: { galleryItems: GalleryIt
                                     <Image
                                         src={item.src}
                                         alt={item.alt}
-                                        layout="fill"
-                                        objectFit="cover"
+                                        fill
+                                        style={{ objectFit: 'cover' }}
+                                        unoptimized={item.src.includes('storage.googleapis.com') && item.src.includes('Signature=')}
                                     />
                                 </div>
                             </CardContent>

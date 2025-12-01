@@ -33,14 +33,16 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ title, description, learnMore
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
                 transition={{ duration: 0.5, delay: index * 0.2 + 0.2 }}
-                className="relative h-48 sm:h-64 w-full mb-4 overflow-hidden rounded-lg"
+                className="relative h-48 sm:h-64 w-full mb-4 overflow-hidden rounded-lg bg-gray-200"
             >
                 <Image
                     src={imageSrc}
                     alt={title}
                     fill
+                    style={{ objectFit: 'cover' }}
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    className="object-cover transition-transform duration-300 hover:scale-105"
+                    className="transition-transform duration-300 hover:scale-105"
+                    unoptimized={imageSrc.includes('storage.googleapis.com') && (imageSrc.includes('Signature=') || imageSrc.includes('GoogleAccessId='))}
                 />
             </motion.div>
             <motion.h3
@@ -78,13 +80,13 @@ export function FeatureCards() {
             title: "Accommodations",
             description: "Our suites are uniquely designed & sleep up to 2 guests.",
             learnMoreLink: "/suites",
-            imageSrc: "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/673de7f57a89b.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1763646325&Signature=Dwk204G1gSMjZpm2RQbBcpXdTi5zfOQ13Wm1y8D8evSsBiw1fxv87eNHwbfOjva%2FmiBinlAjz%2BAi6%2FnOzAKnVUqf1S9RlzUxZ01ZotxdbhJuHXJjwRz4usyjLzXsILiTyffrineL8b6vsMT8zIKba%2BL27gh7gKBeLXiK0Kpz9I6F%2BPIYz1ib6VlmQBLkEQsB0tLIg2PIEFOIJSszNuac%2F5lLo5Dj9cNg0%2Fzlv6qoApubGnusPEbS9UIHkv7Jgh7inCyPYPdpogDh%2BGFB%2BTrrpij8fACo0BPbKTTOq2PdW%2Fi0BHCtf%2FyOqWWNcur%2Be5DbGkA%2F1elSlEjbOTG6339XFg%3D%3D",
+            imageSrc: "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/673de7f57a89b.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=16447035600&Signature=LHOVO1DhDwsZ5YPT0YDY3ghEWuvAGSv0WMNx9g4LD7iUU6t%2FG7aj990xnC%2FYHhf%2F7MHNfFkmCWqfcDHYGM0jABHXtVj66h6PJ1UOKto4PdQcSyMnYkFqB4UdlIWExrSNPGPvLk%2FD56zNUwETEePbKeLSipZviuwQnIuG8lXaei8istLdQ%2BHT8NxjOaAsk%2FHYrfSLx3imjCHcwWFWhry%2FMVK%2BzLLMon40CT%2BIul64kW2d1pxRbSaC30vCM2mvcS0gWJA%2F7btm4AbpDhPv0aMMThvebzMkGhvH4QVa0vorINuTXAwc0fn9DG9vSgshNtj0WeyYJIsoI%2BZL%2BTa%2BR2wPxw%3D%3D",
         },
         {
             title: "Amenities",
             description: "Guests can enjoy our gorgeous pool, on-site massages & more!",
             learnMoreLink: "/amenities",
-            imageSrc: "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/673eaf00ea361.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1763697281&Signature=f5syksWOQXM1%2F3IzT05LBkJHzg%2F%2BiMVgcihUJxGzkmmlklmmKKE6oJYTdyy8jxLBgCekiu%2BGvQsPfzFCJMgAdPMpGLnEm3pVooOUD1iIU7%2FaZB%2Fn%2BIp0LyVsFTPf69VOgj%2BZESSi14wfpZs9vnFoFhefUE2f6fCafni3D%2FXVMt6S92ijHU316oQy2d0k58%2BijtpYLikpUUrKmL18sr%2BpH9C2hNriWB6eBGUqyk57i%2F6naqBrbWzPHDnWoAV9TNQal26%2BQiDuC67s4nodJtdKkSClJHoYgj%2FUMxloEqUu93IAVuCGEFrdOFNEPvTQ89%2FqJeaK7ov9tQaF4q5BplXBfw%3D%3D",
+            imageSrc: "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/673eaf00ea361.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=16447035600&Signature=aAIY7cvpZ0wdhMpvhphB0xs7RW1CCTknG7ng2HGdbqyFLvsHFTfLLozeuBiuCo7iKUXbMtGx3eiDX9cwelJ%2BWrr3Ddb6%2FO6TwlH8dmiXMO8K485RSrXOzvcCbUDnhMldm37s%2FFVRV68GebTsRATdN64og9TgyDdkH6vGEkTf%2Fqm1o%2FBcZO%2FYSNRBBEEHfq8Es%2BmnmOWyNstVEHuXaPbrCXLeVSp6XXe8JAuXnUd3bpf9JCQx480WsUV1DqFn%2Bwt%2FZK6U%2BnmMILIggRysIMI%2BZAac4O6txqd1V0RqQ%2BfjUE1iPJ5R5AXAv5OPMohbKHJBxFu52NL3jdZIUoXem1Qc0g%3D%3D",
         },
         {
             title: "Tours & Activities",

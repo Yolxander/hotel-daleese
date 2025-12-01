@@ -2,12 +2,34 @@
 const nextConfig = {
     reactStrictMode: true,
     images: {
-        domains: [
-            'hebbkx1anhila5yf.public.blob.vercel-storage.com',
-            'storage.googleapis.com', // Add this line for Google Cloud Storage images
-            'maps.googleapis.com',
-            'images.unsplash.com'
+        // Use remotePatterns instead of deprecated domains
+        remotePatterns: [
+            {
+                protocol: 'https',
+                hostname: 'hebbkx1anhila5yf.public.blob.vercel-storage.com',
+            },
+            {
+                protocol: 'https',
+                hostname: 'storage.googleapis.com',
+                // Allow all paths for signed URLs
+                pathname: '/**',
+            },
+            {
+                protocol: 'https',
+                hostname: 'firebasestorage.googleapis.com',
+                pathname: '/**',
+            },
+            {
+                protocol: 'https',
+                hostname: 'maps.googleapis.com',
+            },
+            {
+                protocol: 'https',
+                hostname: 'images.unsplash.com',
+            },
         ],
+        // Disable image optimization for signed URLs (they have authentication in query params)
+        unoptimized: false, // Keep false, we'll use unoptimized prop per image
     },
 };
 

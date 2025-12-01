@@ -56,10 +56,11 @@ export function Suite_Section({ src, header }: SuiteSectionProps) {
             <Image
                 src={src}
                 alt={`${header.name} exterior view`}
-                layout="fill"
-                objectFit="cover"
+                fill
+                style={{ objectFit: 'cover' }}
                 className="z-0"
                 priority
+                unoptimized={src.includes('storage.googleapis.com') && src.includes('Signature=')}
             />
             <motion.div
                 variants={containerVariants}

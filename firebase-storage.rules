@@ -1,0 +1,16 @@
+rules_version = '2';
+
+service firebase.storage {
+  match /b/{bucket}/o {
+    // Allow public read access - your images are accessed via signed URLs
+    // Signed URLs provide their own authentication, so public read is safe
+    match /{allPaths=**} {
+      allow read: if true;
+      
+      // Restrict write access to authenticated users only
+      // You can further restrict this based on your needs
+      allow write: if request.auth != null;
+    }
+  }
+}
+

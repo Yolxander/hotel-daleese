@@ -36,22 +36,22 @@ const amenities2 = [
 const galleryItems = [
     {
         id:'1',
-        src: "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/673eaedfed605.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1763697248&Signature=KAu6D6nv252TcOgvglA2oMYAgUsMEErGd9zYaiRwf6FM1TYXq5kZ8TUet5iBpw4Xd%2Bc%2FG1n3JmMtLnF5luvte5HgyahE5%2ByJJ229WFf5mOg1tZtsHjGpv9G7m6Y%2Fr0XME9RisKzDMciff91hE74K7jaCIjgenEHRqwlqukIQ%2F7Zs99h0eHMIM4Xb5MqKU8IA3dVeSTcRcWVT8rIXQFqtyY2BiTx2HGFRRvX7YGvCTr7RNAjDiyoZLZGz7xNS%2FnRHQKqBdb1m%2BYd930jXoy15tecl4ddIkdpIXBqYqvCTLS8c8%2BMbLgmon1YvrYDUbb2TzdePy3uYwlLp%2Bosti9wrFg%3D%3D",
+        src: "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/673eaedfed605.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=16447035600&Signature=T8I5YqpisRBEGX1cHB6KFOLE%2BNvbyxM8SZ%2FXBnt5%2FmSxaFub%2B0XoaC6FBbbNNQ32hjvEijYwjLlKx0%2BF1YAJZyKJ3S1tOzjlYB8u0BrALfx5AgDCKgFTzPjaMLzmvGg%2BWtCgbyzHq1mw%2F9Ulsb4e6hg8Lq7rMlIXcFe98tWFrxGD4Rn2nmCXOaIx0gJAgb2nhZ3sb88EAuyZy5vjNQqYndIHxUXFKY4fzRf8vwUvTbUIimdU7k4iNMcbpEMwbOt41sPRP2w98qm74XkLncfLIW7E3JvTqDbGSkZDc0XFgO6r8JvhnWyFMnoeskf%2BDwz49JVAZQGUhfkd9SzdOURQiA%3D%3D",
         alt: "Image 1 description"
     },
     {
         id:'2',
-        src: "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/673eaee10c75b.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1763697249&Signature=khj%2B2b7laMUFQsMZpXXCcdcNrNOiUjEEPoKy41OzI9ESUvQsDJ3AXxvT6sSC3ab49x4RAPEnJsJCz8ku%2BnQNws6IOkuk5MKOJBzW5tFu9SWROSTnIbgct51tW4VbTV2Iif0a7B0KJ7bHdwr1A4kBBhFPUFScma9yosAIZSEtCvZrc6VJB%2BgAcdl3RLV9LBgaltirwRQDpp12z1jHLSvWkYK%2F4D8j1wUj349BtK1P8pgP44l2ei6aeUq6Rir7rK61yxMIGnCTW%2FPSPYH8g51NmAGsDzUca7drog4%2BiZOLlQrkgs%2BukPiVcwM0puGoH0FnrSuWMXvml5ietoceQFOUhg%3D%3D",
+        src: "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/673eaee10c75b.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=16447035600&Signature=O%2FmVDkcJrSwLx4daZnys1W3S1xsFhRnexP7mc25%2FUDKNjhgz4Pt%2BcoD76tJ5gUGFfRThY0XXXesUohSQdGoZIJHcI6MhHZq3RVn2NLVZi%2B5tWpN5zct4iu76Q%2Fr0fgefKFxtvtPr9XIO4qTxw%2FnpuZ807nhb%2BnjDc6L0TFAB7qHMSYxx%2FGAAniC57ZmqxWL4NdpBu0Dc1oh2ukYHCNaEeaUhCqYdT6vNzHox9%2Bir%2BEt%2FowtGYI9utlyRyxMJq0t3y7fzgb%2FnjIeaNfjQY0SysdGVNNjkl%2B6VhveK7VlSP2xb15PKWKJLobyXmyvqSAQbq0yT4YKWLJSMhUeJ%2FhjTfg%3D%3D",
         alt: "Image 2 description"
     },
     {
         id:'3',
-        src: "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/673eaf00ea361.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1763697281&Signature=f5syksWOQXM1%2F3IzT05LBkJHzg%2F%2BiMVgcihUJxGzkmmlklmmKKE6oJYTdyy8jxLBgCekiu%2BGvQsPfzFCJMgAdPMpGLnEm3pVooOUD1iIU7%2FaZB%2Fn%2BIp0LyVsFTPf69VOgj%2BZESSi14wfpZs9vnFoFhefUE2f6fCafni3D%2FXVMt6S92ijHU316oQy2d0k58%2BijtpYLikpUUrKmL18sr%2BpH9C2hNriWB6eBGUqyk57i%2F6naqBrbWzPHDnWoAV9TNQal26%2BQiDuC67s4nodJtdKkSClJHoYgj%2FUMxloEqUu93IAVuCGEFrdOFNEPvTQ89%2FqJeaK7ov9tQaF4q5BplXBfw%3D%3D",
+        src: "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/673eaf00ea361.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=16447035600&Signature=aAIY7cvpZ0wdhMpvhphB0xs7RW1CCTknG7ng2HGdbqyFLvsHFTfLLozeuBiuCo7iKUXbMtGx3eiDX9cwelJ%2BWrr3Ddb6%2FO6TwlH8dmiXMO8K485RSrXOzvcCbUDnhMldm37s%2FFVRV68GebTsRATdN64og9TgyDdkH6vGEkTf%2Fqm1o%2FBcZO%2FYSNRBBEEHfq8Es%2BmnmOWyNstVEHuXaPbrCXLeVSp6XXe8JAuXnUd3bpf9JCQx480WsUV1DqFn%2Bwt%2FZK6U%2BnmMILIggRysIMI%2BZAac4O6txqd1V0RqQ%2BfjUE1iPJ5R5AXAv5OPMohbKHJBxFu52NL3jdZIUoXem1Qc0g%3D%3D",
         alt: "Image 3 description"
     },
     {
         id:'4',
-        src: "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/673eaf0163ab4.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1763697281&Signature=RbmHj8UKe7p%2F522EHeCebrxFBLkvYoqcyvj8ORLSUchp0Hq2XGlYSNfoRntfRR1kHQMv1TPO2BC1Rjn%2By4rAeagg3bswtQ%2FnXhX5qneFb%2B8JyMUqHHAcfmyn0UiEXYbbxbY8RgSqFBIpYEt%2Fa%2BPcw%2FvQsZh78ixxGHu2Cx1W4uOVAg7%2F2wIREkBKjisOC0zaCZW0ZPt2PKxPFOOhdk25IjMODwFHhEWGb3VM7CaIJ1LWgrPsj%2Bz%2F6esgUsNKm7Ppyj%2BJxaaIIbxkQkGzkEmKXU67E1W%2FLRAvjM9slzoGS4N7ZQbwWSlKlPULHSmTCX5ZBkXQFUDzUbn1XoVJ3pMwyw%3D%3D",
+        src: "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/673eaf0163ab4.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=16447035600&Signature=wIZCt04IJh67tTGy4ERlqbwAf2LfHc%2BXRT1C9xryu7EHkLkO8UUnPxMWgpRirMMFwowyusPNmuL8CU0SOojEeRE13Yoyoro8vAvTh8tBEulju21DDH2bSpfLFe8SpqWV6oJ4wQTPaVD1all9wQxe86xbw5MXEeo7%2FbRwrgDQ9LuDjROr8fZaf6hLwF8Pzqf7IDb7Tf9VkXVmRe%2FXaMs0umIN0gyKjitsxiW1Op8yiAXuH%2F%2FHZl1NhEfP0Ptl5RiD34iHEUcoGmxECyshC5tSVyvqdHi6D8cTmVaNpg8xBnDTtLeEBlLZG6NI911U17n8iRw7JM%2BOrBt08t%2FBxFfEeA%3D%3D",
         alt: "Image 4 description"
     },
 
@@ -60,22 +60,22 @@ const galleryItems = [
 const galleryItems2 = [
     {
         "id": "238",
-        "src": "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/67427939a4a98.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1763945658&Signature=CcP%2BM4xy%2F0tNAt5kEf6GeeDSomnUGpMwO5Xv5vkXmgWRTw4ZvxC4R0QDHFcfJAFK7TwNVsmkLFJm7VTsduKggWnQQg5lpWtfLZ5Jd7pZZj9HEQIeemMOcRZ9Q9q0CE5phphzV83Dsld04qTQMV2PmDud2h3BsCgpr7Yz4phMYW9rpAt0aAKZgAMrAQWs2woGgiMMnmxnMjuIfChktK81yVt22WGKDg%2Br1oN2Mr6ioiUk%2BsRHjBcnSCd0vWq3xGL7bhuKScpWHBKJr22oFpuDrwbMUGNYNeiqPmWppgVKgjm1z8rqhQ5jW9yMPbTr9tQd4Z0lFEvvogisXPVdVP3Tow%3D%3D",
+        "src": "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/67427939a4a98.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=16447035600&Signature=Wk0mXf0Ni9bbrEUonqGKAwWxIJug4R5bLudaSIz%2FgDDuQ6Tk5m2IwaMQ2qMovtd%2FgUHLnwijgXPbfd%2BrYAcdnIfnmDv1w8%2F%2FeilDJ08FAnCTxgc%2BSyL3scCuoJq2B6TndiYAtdW4%2BuBW%2BSmN7FL0Cg%2B99BQx6Ulajw%2BEfaD67jgQDotRk0oiYvPouj7sprypiRM%2BTOS5J601YXPPMt0ATyD7d1%2B7KqZXlS3J4nz%2Bri%2BVSHXs3qNKfn9%2Bm2%2BmsfFfwNi82rpZneCwotkUkN1hUosdxwEp9VeKOmBy3mjCwhyfJbsYUQIo5RZ698GXeAKEHqJHr52wmWrtbAdN%2BffaYg%3D%3D",
         "alt": "2.jpg"
     },
     {
         "id": "239",
-        "src": "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/67427941c0d43.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1763945666&Signature=pDqBH3ssGRjVqOF%2BMGvyuB1kcCSucI2ADoAB8dLZKU2%2BXCHg%2FC81GE%2F24%2BeloJMbKZUHgIoN8bSheSk%2FaJqFeR%2FlNL8SJ8PbtF5baOUrZYlgVMo%2B6Iu0cJ9%2BGsEo8qxDFzGhfOESRsvCr%2BDsOS6jBVjMbRUj7hl4qzhrnUkpBRUcfkVAjUrH6iRaCMYqVHuTtvnsZ3W5%2BKDA%2BTunAqEVjyQZJSUh%2F7fYXB53n9ZeXaJgIUJhd6iJ3nFOrigfCrNxQXBtUBFurAjdSAYOBAlEN19yf7wFUabkDQdtf88zzB9%2FN7T07gI9nsNpRvJmUpWpNuVDqizcPHVUPnwcHdhCGA%3D%3D",
+        "src": "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/67427941c0d43.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=16447035600&Signature=b0uFWr09CYFciJJbsdP2DYKvhtZYUv8QkG6HMxdP1jgHFai91DhB4hKNhjqLjn9KxAy3vtARk9Xz4xjRoomG79n6zx%2BpWUoAW8NUfaH5hsGthIE7zyLPGVLMLDIwcHh93GkqFvCYztCLqo0oQxLLecfnLuqREcjBVDqsnJzVJCungQS8eaD95%2F%2BuXBA1XVwZoV3DB33uLld2rA3mmsMd36U%2BiTUG%2B7SJrQQKl8PvyO4TR7IdlrxmjTEnEzQF3TbwjrvjnYAB2RXdAayFTgnPU9NzYwi8Y6VOmDVc%2BkMMj43PDUY%2FGx%2FpmVspR5NYPNt9MEOlbc6UhBbHc%2F7iKpra4A%3D%3D",
         "alt": "4.jpg"
     },
     {
         "id": "240",
-        "src": "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/674279424d1d2.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1763945666&Signature=VITg4jF5pbrdReRYzTNFP4DsXG6C6o2fsZV2%2BLOxx%2BLU%2F%2B2%2FapQBeLJFOQ6Nukls1URHa8yHTyaDxae884i9tUOXVkCPxgpay%2BByphPE0ImXWsX5%2FNwU7IXhdIC%2B%2Fd1MS%2FAeZDld7%2Br0ceGiSqpRwEmaymEApSExrK0YGDF7nybAiyDUO8JQLI5j6ab%2FqyBSWS6AzRC6iiNE6Ij28RiVmVfGsRgiW30P2g1S7314rjCYvm%2FsjdWpJ34EcA3vH7Lrd9wjht7ju7WySNU%2BrLq3VwC%2BA05oeFzlLTDvQyrhRVk9EHS1Hnl0o1nQDlkwLfOoD0yMh4UgnpZXLC6s%2FNg1xA%3D%3D",
+        "src": "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/674279424d1d2.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=16447035600&Signature=tSm3M1YJNUvpT%2BrQhD5bQDL9K4u2NLolZvUBEd7BO%2Bjb379t6Mq2N9EWm%2F8mBE6iWnIqLTTwwgb8CsdUTH8XD%2BTWPnSqIfb5efBESypHo4VPsel%2BMu1m3TU1xX3SxKpxkQ%2FOVh47zqIK7HxknXZ3jsVoIGczFUyMcyTOzAm1X990EHC0pTON5J%2FYucTC9hPeEXFBkErwj7YFe64T6ZxsTepHir4YjU5WlW1mbwT6Gi%2FCcP2nEzLEq5ekOFwQ7Zc5tPlzrKiCBx5f2kJHwZmumKQRS3ewWJ5Ddifo392HmCiR69wjErgaUY2NG%2B%2FSjp%2F7fEYeQrH2RXfLsmoE2IMAgQ%3D%3D",
         "alt": "5.jpg"
     },
     {
         "id": "241",
-        "src": "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/6742796760f38.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1763945703&Signature=B3vGPqCPOQefahqxWnFnx5HaMQrVP355UrpxYZO%2FjRCE2yoaXT2iQnKb3QFdXq95ksAvdq5wwJjtt1isdE7au%2F8ZyxuiSNNxVWc8JB3w9PXx2XVItV8Xu8ZSeVtxAGOnU9a1n8xTMyvXlKvg30fqnPD7ly9%2BKWQ%2BcHDI%2FS6CUrEidgv3sMr5uZPZJIlv%2Flj%2Bg6q%2BdrNE1KYIU7k5nzTG6KZMuraBleIQSKG4gS43fqE1Z2HZZwTOowFrV0NA3DCi1kwS65kxcIM23FOpg2Me2u1W5BEQxP2YHyfUqR%2FoY4SW2zEORHnGFQDNOX5j5z7OPiGRGERU6AqQT0nps9WNrQ%3D%3D",
+        "src": "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/6742796760f38.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=16447035600&Signature=TNrhDb%2B087cO2rvrZ8lxn7kRUpE25jlsAbG5dBbshgeljZGF5o8m4bYOT3zTQuZTnfAXm4cDHFvbA1URR%2F1Mnvze%2BGltQ7rBhbZKCp8gzFfBcHlAYUiELiYxt3IbzTBHRhUBKxo8UJSq8Q0cZmm77SJrY3g7dWLeBZm%2FQVX2rV2D5uLSkLC%2BmHRhkrXhG8FJtRBpuQZCKHyO5ZW6Jz6hPV0M2dlPKBLRMnMY2Owe5qVfX5VlJPwSBaTlCTsTw2faHBjF8TfCy9vKD6m1yUNEx9aUdu5rVugo%2BqgV7ms9K2Oo1wVaR7pBW6atQMmbskEIbwQA%2FIoSN%2B4jnNvF%2FWgeug%3D%3D",
         "alt": "7.jpg"
     }
 ];

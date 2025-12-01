@@ -32,8 +32,8 @@ export function HotelMapComponent() {
                     <Image
                         src="https://maps.googleapis.com/maps/api/staticmap?center=Hotel+Daleese,Uvita,Costa+Rica&zoom=16&size=1200x400&maptype=roadmap&markers=color:red%7CLabel:H%7CHotel+Daleese,Uvita,Costa+Rica&key=AIzaSyDdwQwsHi-_JmG1n62xVx2sonXav9oyfGU"
                         alt="Map to Hotel Daleese location"
-                        layout="fill"
-                        objectFit="cover"
+                        fill
+                        style={{ objectFit: 'cover' }}
                         className="rounded-lg"
                     />
                 </div>

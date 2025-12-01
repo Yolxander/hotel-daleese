@@ -27,7 +27,7 @@ export function ToursComponent() {
             <motion.div
                 className="absolute inset-0 w-full h-full"
                 style={{
-                    backgroundImage: "url('https://storage.googleapis.com/sempre-studios-893c8.appspot.com/uploads/Casa%20Turul/Live%20in%20Uvita/671f1a8937870.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=1761627657&Signature=HsWQKt6cE3KYzOWvo%2BAJmltAPLIIPIsPD%2FgPWEjP8%2FmNVSTh%2FW0sH5vutCnsaYNkFpqodzyH7NXlqtBsIXBO%2FWgJ%2FZsjsb9%2Bfi7Mzpf4SlAc4Kwdo1NMbboOO7uLGGpdhAIi6TMvbbMOjy0jUvBH2Q%2FurlQqEEZifl95Dz2%2B6NaaiQp9dau%2BJifUWDoTj%2Fe4UuYhcD6Rx245iDnsKMJVfl1FeJ9%2BWJorbQZTeU2PfRSN9cOjh9gCgN65G2F3ASZrbMui2Eh8XPSG6oFCsInanklcKAidwPLYw7NGT%2Bfm7FhMvFxA6eG5c8dBiJWb%2BVmN1XwYRTu5IL9HO0HYqE5o9g%3D%3D')",
+                    backgroundImage: "url('https://storage.googleapis.com/sempre-studios-893c8.appspot.com/uploads/Casa%20Turul/Live%20in%20Uvita/671f1a8937870.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=16447035600&Signature=Jy8AOhSgK2rDmfg6nFQdIsXnv15XYqAaGl%2Fz0QbHRxAlqnEaGA9Shq3t2htES1pbi8%2FHLwjmdNmvm7BkVMkWDoe%2FEGswEA8TgOf9UN9P%2FX2gO7z21OLMf53s%2BN%2B4hOP1w0%2FEJs7eW1srop5CSStkZ3VtwTTmdpAczhSYY0RdOuDSQ3vBkmlS5eCa2mZua9x%2BmO7cajN35Pk6Dz9kCcUijZrgI5NrJRXJOywMp4oC4HHek1dYLzeIsGgRSTZgXQ0m8TAPbdZPoproH9ueIF4IZYfX0QjN4bhXbfb5gurAOxnkfRZ3E6kmXILO7j%2FjDGm%2FvRF6Hsu7WTkTalmjMT7%2F8Q%3D%3D')",
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                     y: backgroundY,

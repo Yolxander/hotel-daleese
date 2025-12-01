@@ -90,8 +90,8 @@ export function LifeInUvitaComponent() {
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-asset-3JLZYcfflSE6dkaP6szN8iKpvF3517.jpeg"
                   alt="Aerial view of beautiful coastline in Uvita, Costa Rica"
                   fill
+                  style={{ objectFit: 'cover' }}
                   sizes="(max-width: 640px) 128px, (max-width: 768px) 192px, 256px"
-                  className="object-cover"
               />
             </motion.div>
           </motion.div>
