@@ -4,25 +4,12 @@ import { Suite_Section } from '@/components/suites/suite-section'
 import SuiteFacilities from '@/components/suites/suite-facilities'
 import ImageGallery from "@/components/suites/gallery"
 import {SuiteNavigationComponent} from "@/components/suites/suite-navigation";
+import { getCasaDaleeseImageUrls, STATIC_CASA_DALEESE_IMAGE_URLS } from '@/lib/get-casa-daleese-images';
 
 type GalleryItem = {
     src: string
     alt: string
 }
-
-// Array of image URLs - placeholder structure, user will provide actual URLs
-const imageUrls = [
-    // Placeholder - replace with actual Casa Daleese image URLs
-    "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/673de7f44f33a.jpeg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=16447035600&Signature=Q3NdxHjdLsmvcqL893JAIvr1gTYXe6qolHmIx1SDt9%2FN3cNMU1ngr4Aw5nKxX%2BEOotmQU6ZqZFTA3DXp4rYpY1n%2B7%2B4Z%2BPaBE8x%2FVI12jLr3KG%2BmECKOaauGpRmvvd2Y5X7z0gAVBkxgvYnmXoBMrsioAU2xeXyAfO449BPJDdwgqJwYgNLbCI36J3SLoA5SplrdG2bSxfZ1EjRMmkK%2FxN5VCrzIHFLj2ekk2FOAXDGvkaSlNPC5HDTe29xeXH3mpvztCfaYoARLx4cYMhEeJOXGdFHVl1yRBO2CoeRuf3pf3anTkSyUiHEZDKOH05IA56Mzp%2ByCX7nLYOQvUkHafw%3D%3D",
-];
-
-// Map URLs to GalleryItem structure
-const galleryItems: GalleryItem[] = imageUrls.map((url, index) => ({
-    src: url,
-    alt: `Casa Daleese Image ${index + 1}`,
-}))
-
-const imageSrc = imageUrls[0] || "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/673de7f44f33a.jpeg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=16447035600&Signature=Q3NdxHjdLsmvcqL893JAIvr1gTYXe6qolHmIx1SDt9%2FN3cNMU1ngr4Aw5nKxX%2BEOotmQU6ZqZFTA3DXp4rYpY1n%2B7%2B4Z%2BPaBE8x%2FVI12jLr3KG%2BmECKOaauGpRmvvd2Y5X7z0gAVBkxgvYnmXoBMrsioAU2xeXyAfO449BPJDdwgqJwYgNLbCI36J3SLoA5SplrdG2bSxfZ1EjRMmkK%2FxN5VCrzIHFLj2ekk2FOAXDGvkaSlNPC5HDTe29xeXH3mpvztCfaYoARLx4cYMhEeJOXGdFHVl1yRBO2CoeRuf3pf3anTkSyUiHEZDKOH05IA56Mzp%2ByCX7nLYOQvUkHafw%3D%3D"
 
 const header = { name: 'Casa Daleese', description: "2 Bedroom House with Private Office, Sleeps 4 Adults" }
 
@@ -56,7 +43,30 @@ const suiteInfo = {
     ],
 };
 
-export default function Page() {
+export default async function Page() {
+    // Fetch image URLs from Supabase Storage
+    let imageUrls: string[] = [];
+    try {
+        imageUrls = await getCasaDaleeseImageUrls();
+        // If no URLs from Supabase, use static fallback
+        if (imageUrls.length === 0) {
+            imageUrls = STATIC_CASA_DALEESE_IMAGE_URLS;
+        }
+    } catch (error) {
+        console.error('Error fetching Casa Daleese images:', error);
+        // Fall back to static URLs
+        imageUrls = STATIC_CASA_DALEESE_IMAGE_URLS;
+    }
+
+    // Map URLs to GalleryItem structure
+    const galleryItems: GalleryItem[] = imageUrls.map((url, index) => ({
+        src: url,
+        alt: `Casa Daleese Image ${index + 1}`,
+    }));
+
+    // Use first image as hero image, or fallback
+    const imageSrc = imageUrls[0] || '/placeholder-image.jpg';
+
     return (
         <div>
             <Navbar />

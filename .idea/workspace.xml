@@ -4,7 +4,44 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c7e99333-aede-4333-a5d5-366958e0f415" name="Changes" comment="" />
+    <list default="true" id="c7e99333-aede-4333-a5d5-366958e0f415" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-daleese/IMG_0508.heic" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-daleese/IMG_0632.heic" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-daleese/IMG_0635.heic" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-daleese/IMG_0638.heic" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-daleese/IMG_0644.heic" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-daleese/IMG_0646.heic" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-daleese/IMG_0842.heic" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-daleese/IMG_0843.heic" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-daleese/IMG_1162.heic" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-daleese/IMG_1609.heic" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-daleese/IMG_1610.heic" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-daleese/IMG_1611.heic" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-daleese/IMG_1625.HEIC" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-daleese/IMG_1627.HEIC" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-daleese/IMG_1628.HEIC" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-daleese/IMG_1630.HEIC" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-daleese/IMG_1631.HEIC" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-daleese/IMG_1632.HEIC" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-daleese/IMG_6339.heic" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-daleese/IMG_6343.heic" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-daleese/IMG_6558.heic" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-daleese/IMG_6559.heic" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-daleese/IMG_7629.heic" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-daleese/IMG_7638.HEIC" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-daleese/IMG_8791.heic" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-daleese/IMG_9580.heic" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-daleese/IMG_9613.heic" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-daleese/IMG_9617.heic" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-daleese/IMG_9618.heic" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-daleese/IMG_9621.heic" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-daleese/IMG_9625.heic" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/suites/casa-daleese/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/suites/casa-daleese/page.tsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -68,11 +105,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/components/amenities" />
       <recent name="$PROJECT_DIR$/src/app/suites" />
       <recent name="$PROJECT_DIR$/src/app/suites/suite-1" />
       <recent name="$PROJECT_DIR$/src/app/contact" />
-      <recent name="$PROJECT_DIR$/src/app/blog" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/components/landing_page" />
@@ -135,6 +172,7 @@
       <workItem from="1738518856853" duration="612000" />
       <workItem from="1738770119898" duration="4000" />
       <workItem from="1764625682342" duration="2782000" />
+      <workItem from="1768953894024" duration="5422000" />
     </task>
     <servers />
   </component>

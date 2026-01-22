@@ -27,6 +27,11 @@ const nextConfig = {
                 protocol: 'https',
                 hostname: 'images.unsplash.com',
             },
+            {
+                protocol: 'https',
+                hostname: 'kvirwlcodrpwnwzvfcqr.supabase.co',
+                pathname: '/**',
+            },
         ],
         // Disable image optimization for signed URLs (they have authentication in query params)
         unoptimized: false, // Keep false, we'll use unoptimized prop per image
