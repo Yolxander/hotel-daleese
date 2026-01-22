@@ -34,17 +34,17 @@ const imageSrc = "https://storage.googleapis.com/sempre-studios-893c8.appspot.co
 
 const header = {
     name: 'Suite 4',
-    description: "Elegant Studio Suite with Terrazzo Shower, Modern Wooden Accents, and Natural Lighting"
+    description: "Studio Suite with Garden & Mountain Views"
 };
 
 const suiteInfo = {
     facilities: [
         { id: 1, description: "Second level suite with private entrance and spacious balcony" },
-        { id: 2, description: "Queen bed with fresh linens and decorative pillows" },
+        { id: 2, description: "Queen bed with fresh cotton linens and decorative pillows" },
         { id: 5, description: "Smart TV with Netflix subscription included" },
         { id: 6, description: "Sofa bed accompanied by black accent pillows" },
         { id: 7, description: "Drying rack for clothing" },
-        { id: 8, description: "Bath towels, pool towels, bed linens" },
+        { id: 8, description: "Bath towels, pool towels, green striped beach towels, bed linens" },
         { id: 10, description: "Terrazzo tile floors in bathroom and living area" },
         { id: 11, description: "Single-room air conditioning unit and ceiling fan for guest accommodation" },
         { id: 12, description: "Washing machine ($)" },

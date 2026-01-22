@@ -37,13 +37,13 @@ const header = { name: 'Suite 2', description: "Studio Suite with Garden View" }
 const suiteInfo = {
     facilities: [
         { id: 1, description: "Entire detached ground floor unit with private entrance & garden terrace" },
-        { id: 2, description: "Queen bed with fresh linens" },
-        { id: 3, description: "Full kitchenette with coffee machine, mini fridge, microwave, toaster & electric kettle" },
+        { id: 2, description: "Queen bed with fresh cotton linens" },
+        { id: 3, description: "Full kitchenette with coffee machine, mini fridge, toaster & electric kettle" },
         { id: 4, description: "Iron*" },
         { id: 5, description: "Smart TV with Netflix subscription included" },
         { id: 6, description: "Couch" },
         { id: 7, description: "Drying rack for clothing" },
-        { id: 8, description: "Bath towels, pool towels, bed linens" },
+        { id: 8, description: "Bath towels, pool towels, green striped beach towels, bed linens" },
         { id: 9, description: "Access to hotel pool & lounge area" },
         { id: 10, description: "Tile floor" },
         { id: 11, description: "Single-room air conditioning for guest accommodation & fan" },
@@ -59,7 +59,7 @@ const suiteInfo = {
         { id: 3, description: "Hairdryer*" },
     ],
     views: [
-        { id: 1, description: "Garden view with outdoor patio/terrace" },
+        { id: 1, description: "Private garden with outdoor patio/terrace" },
         { id: 2, description: "Inner courtyard view" },
     ],
 };

@@ -78,13 +78,13 @@ export function FeatureCards() {
     const features = [
         {
             title: "Accommodations",
-            description: "Our suites are uniquely designed & sleep up to 2 guests.",
+            description: "Our suites are uniquely designed & sleep up to 2 guests. Casa Daleese, a dedicated house on the property that sleeps 4 adults.",
             learnMoreLink: "/suites",
             imageSrc: "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/673de7f57a89b.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=16447035600&Signature=LHOVO1DhDwsZ5YPT0YDY3ghEWuvAGSv0WMNx9g4LD7iUU6t%2FG7aj990xnC%2FYHhf%2F7MHNfFkmCWqfcDHYGM0jABHXtVj66h6PJ1UOKto4PdQcSyMnYkFqB4UdlIWExrSNPGPvLk%2FD56zNUwETEePbKeLSipZviuwQnIuG8lXaei8istLdQ%2BHT8NxjOaAsk%2FHYrfSLx3imjCHcwWFWhry%2FMVK%2BzLLMon40CT%2BIul64kW2d1pxRbSaC30vCM2mvcS0gWJA%2F7btm4AbpDhPv0aMMThvebzMkGhvH4QVa0vorINuTXAwc0fn9DG9vSgshNtj0WeyYJIsoI%2BZL%2BTa%2BR2wPxw%3D%3D",
         },
         {
             title: "Amenities",
-            description: "Guests can enjoy our gorgeous pool, on-site massages & more!",
+            description: "Guests can enjoy our gorgeous pool, Hotel Daleese spa room & more!",
             learnMoreLink: "/amenities",
             imageSrc: "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/673eaf00ea361.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=16447035600&Signature=aAIY7cvpZ0wdhMpvhphB0xs7RW1CCTknG7ng2HGdbqyFLvsHFTfLLozeuBiuCo7iKUXbMtGx3eiDX9cwelJ%2BWrr3Ddb6%2FO6TwlH8dmiXMO8K485RSrXOzvcCbUDnhMldm37s%2FFVRV68GebTsRATdN64og9TgyDdkH6vGEkTf%2Fqm1o%2FBcZO%2FYSNRBBEEHfq8Es%2BmnmOWyNstVEHuXaPbrCXLeVSp6XXe8JAuXnUd3bpf9JCQx480WsUV1DqFn%2Bwt%2FZK6U%2BnmMILIggRysIMI%2BZAac4O6txqd1V0RqQ%2BfjUE1iPJ5R5AXAv5OPMohbKHJBxFu52NL3jdZIUoXem1Qc0g%3D%3D",
         },

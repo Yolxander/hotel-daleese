@@ -38,13 +38,13 @@ const header = { name: 'Suite 1', description: "Wheelchair Accessible Studio Sui
 const suiteInfo = {
     facilities: [
         { id: 1, description: "Entire detached ground floor wheelchair accessible unit with private entrance" },
-        { id: 2, description: "Queen bed with fresh linens" },
-        { id: 3, description: "Full kitchenette with coffee machine, mini fridge, microwave, toaster & electric kettle" },
+        { id: 2, description: "Queen bed with fresh cotton linens" },
+        { id: 3, description: "Full kitchenette with coffee machine, mini fridge, toaster & electric kettle" },
         { id: 4, description: "Iron*" },
         { id: 5, description: "Smart TV with Netflix subscription included" },
         { id: 6, description: "Couch" },
         { id: 7, description: "Drying rack for clothing" },
-        { id: 8, description: "Bath towels, Pool towels, Bed linens" },
+        { id: 8, description: "Bath towels, Pool towels, green striped beach towels, Bed linens" },
         { id: 9, description: "Access to hotel pool & lounge area" },
         { id: 10, description: "Tile floor" },
         { id: 11, description: "Single-room air conditioning for guest accommodation & fan" },
@@ -62,7 +62,7 @@ const suiteInfo = {
         { id: 5, description: "Grab Bar for safety" },
     ],
     views: [
-        { id: 1, description: "Garden view with outdoor patio/terrace" },
+        { id: 1, description: "Private garden with outdoor patio/terrace" },
         { id: 2, description: "Inner courtyard view" },
     ],
 };

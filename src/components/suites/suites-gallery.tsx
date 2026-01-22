@@ -10,22 +10,32 @@ const cormorantGaramond = Cormorant_Garamond({ subsets: ['latin'], weight: ['400
 export function SuitesGalleryComponent() {
     const suites = [
         {
+            id: 'casa',
+            name: 'Casa Daleese',
+            image: 'https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/673de7f44f33a.jpeg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=16447035600&Signature=Q3NdxHjdLsmvcqL893JAIvr1gTYXe6qolHmIx1SDt9%2FN3cNMU1ngr4Aw5nKxX%2BEOotmQU6ZqZFTA3DXp4rYpY1n%2B7%2B4Z%2BPaBE8x%2FVI12jLr3KG%2BmECKOaauGpRmvvd2Y5X7z0gAVBkxgvYnmXoBMrsioAU2xeXyAfO449BPJDdwgqJwYgNLbCI36J3SLoA5SplrdG2bSxfZ1EjRMmkK%2FxN5VCrzIHFLj2ekk2FOAXDGvkaSlNPC5HDTe29xeXH3mpvztCfaYoARLx4cYMhEeJOXGdFHVl1yRBO2CoeRuf3pf3anTkSyUiHEZDKOH05IA56Mzp%2ByCX7nLYOQvUkHafw%3D%3D',
+            alt: 'Casa Daleese - 2 Bedroom House with Private Office',
+        },
+        {
             id: 1,
+            name: 'Suite 1',
             image: 'https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/673de7f757eec.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=16447035600&Signature=xmIq7hcYG10JPoGk1jeSnVzw7AoWbyNDxJZe1TYW0%2FVWyCwGag73BagvNVJy0ven6OxqP3V1S80k4oGCKavMTH9VYhr6eLQxNhB%2FsPHKbg71EhvcD5Zt1BfJUj1%2BEcJKbr%2FrwU1uu0i%2BDJzaaN0BQnevMPpKzglHJc%2FAThh5FW6cU61FBdUcn%2F4iorfRxzhQZRgqm0WaYxUfrWUDqmaGGBpUNh%2FnwbAWJenFy80ckTdk5SvbLTK7EBAODhRF14qY6oa4djGNCNVTtQPBAoS4ipGk4VBjk6xaLPLOQGbyTxUJOjvi0gyBBDK03HkY5S5YrH2H1fIhFYsfal9LkbueTg%3D%3D',
             alt: 'Exterior view of Suite 1 with pink walls and tropical plants',
         },
         {
             id: 2,
+            name: 'Suite 2',
             image: 'https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/673e436317fc5.jpeg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=16447035600&Signature=wPy%2B75nE0xgHnqX%2FXJLh9S4XG0419GSV79t3auEolT0aM1amX%2FcR%2BSuJutMp0bc%2FdDU3xnF7j27ldu8D4sODdobEBrG9MqLX7GRM9obtb%2FR0pWUkOneY2vZYQMdaNEcTi9yi%2B6YiGD%2BbTT53Va73iCPpcScYBAC9wwK778fUNqXpzypaUnh%2Ftjb67pT8PRoVOndDYNJ7UZjhLwGVG80LdzhtLOPWdquF7OiRNH0ywGXAEENzq7%2BMrt0ElnE2Lim04s9xzlwCz3hU02Q6NUMkBhWrsHL45TE1Br0lnN7xXZcDCgkl7M4obgnCdwlhsGQpE52bH6SW%2FZFzMPQbyzNFqQ%3D%3D',
             alt: 'Interior view of Suite 2 kitchen with terrazzo countertop',
         },
         {
             id: 3,
+            name: 'Suite 3',
             image: 'https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/673e4d0c2e3b8.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=16447035600&Signature=YbIbtugDw4BXjelgsOlUOQQrhjX1NqO58mP0l0Au85Bjk1DG5hvFu0sCn36JnPmmgheC22wNC02ryM5WFfKBoyIteoZA%2BMAo5i0oaUnY1fYwheodUG2Q0g04%2By0FTP4hFAIbOcNx5ASczTm%2B6Sa2AAA%2BtsG%2Fs3MGFXI6dZ7OswRLU7xnp7hcdxWjfWBhcpRKhL9%2FfnfRd20GIEX6mcpMHJ9%2FLzNgQnmmp4dTL03NrHREEnWANSO%2FH47cOIeourvZ16KCWapO0s4Uyp7mKxau00FGswJJc4ZVpPOSh%2Fuw8dUNcCGa0uAKkpC%2BuNWJuP2WlS8tQchciwlu3ZG1vXeCSw%3D%3D',
             alt: 'Interior view of Suite 3 bedroom with wooden slat wall',
         },
         {
             id: 4,
+            name: 'Suite 4',
             image: 'https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/673eab71dbb9c.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=16447035600&Signature=lbP%2FkVVtn6i3fYWjPhvlLpv%2BDmDpTLAB3V%2FnY6bIDl6jGUS14rsx1m0rn1ULT0UVVATnffShDsT8e4tVr3Oe6NVAYacLSRb2whJZM4Y5Vp71DbBiBGtPhLVZbJDrE7em4KJvRNOK6xdoOpotUJ5J9k8WSlMYzCu%2F1bNph9v2hC24juM28sO%2BZmna1j9fD%2FGu7arNcbZR4ybGTu7G7Vv5n70j5A3do2QsyETqbqKCgxxSf0buRRvxBIhEiYKpTvusCljdreqL3lwsdfoPlqsj9gRUMbjifgJ%2B6AHVP7s0%2FqHB20sAu9UGeR6XtntmSutTncAs7M6PoH0zHx%2FWxOJtcQ%3D%3D',
             alt: 'Interior view of Suite 4 bedroom with wooden slat wall',
         },
@@ -49,7 +59,7 @@ export function SuitesGalleryComponent() {
                     }}
                 >
                     {suites.map((suite) => (
-                        <Link href={`/suites/suite-${suite.id}`} key={suite.id}>
+                        <Link href={suite.id === 'casa' ? '/suites/casa-daleese' : `/suites/suite-${suite.id}`} key={suite.id}>
                             <motion.div
                                 className={`flex flex-col items-left cursor-pointer group ${cormorantGaramond.className}`}
                                 variants={{
@@ -88,7 +98,7 @@ export function SuitesGalleryComponent() {
                                         },
                                     }}
                                 >
-                                    Suite {suite.id}
+                                    {suite.name}
                                 </motion.p>
                             </motion.div>
                         </Link>

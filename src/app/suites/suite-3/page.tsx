@@ -30,18 +30,18 @@ const galleryItems: GalleryItem[] = imageUrls.map((url, index) => ({
 
 const imageSrc = "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/673e4d0c2e3b8.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=16447035600&Signature=YbIbtugDw4BXjelgsOlUOQQrhjX1NqO58mP0l0Au85Bjk1DG5hvFu0sCn36JnPmmgheC22wNC02ryM5WFfKBoyIteoZA%2BMAo5i0oaUnY1fYwheodUG2Q0g04%2By0FTP4hFAIbOcNx5ASczTm%2B6Sa2AAA%2BtsG%2Fs3MGFXI6dZ7OswRLU7xnp7hcdxWjfWBhcpRKhL9%2FfnfRd20GIEX6mcpMHJ9%2FLzNgQnmmp4dTL03NrHREEnWANSO%2FH47cOIeourvZ16KCWapO0s4Uyp7mKxau00FGswJJc4ZVpPOSh%2Fuw8dUNcCGa0uAKkpC%2BuNWJuP2WlS8tQchciwlu3ZG1vXeCSw%3D%3D";
 
-const header = { name: 'Suite 3', description: "Studio Suite with Pool, Garden & Mountain Views" };
+const header = { name: 'Suite 3', description: "Studio Suite with Garden & Mountain Views" };
 
 const suiteInfo = {
     facilities: [
         { id: 1, description: "Second level suite with private entrance and spacious balcony" },
-        { id: 2, description: "Queen bed with fresh linens" },
-        { id: 3, description: "Full kitchen with 2-burner induction stovetop, coffee machine, mini fridge, microwave, toaster & electric kettle" },
+        { id: 2, description: "Queen bed with fresh cotton linens" },
+        { id: 3, description: "Full kitchen with 2-burner induction stovetop, coffee machine, mini fridge, toaster & electric kettle" },
         { id: 4, description: "Iron*" },
         { id: 5, description: "Smart TV with Netflix subscription included" },
         { id: 6, description: "Couch" },
         { id: 7, description: "Drying rack for clothing" },
-        { id: 8, description: "Bath towels, pool towels, bed linens" },
+        { id: 8, description: "Bath towels, pool towels, green striped beach towels, bed linens" },
         { id: 9, description: "Access to hotel pool & lounge area" },
         { id: 10, description: "Tile floor" },
         { id: 11, description: "Single-room air conditioning for guest accommodation & fan" },
@@ -59,7 +59,7 @@ const suiteInfo = {
         { id: 4, description: "Hand soap" },
     ],
     views: [
-        { id: 1, description: "Private outdoor patio/terrace with pool, garden, and mountain views" },
+        { id: 1, description: "Private outdoor patio/terrace with garden and mountain views" },
     ],
 };
 

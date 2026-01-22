@@ -70,9 +70,9 @@ export function Navbar() {
                 <Image
                     src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/hotel-daleese-logo-6mo8tveOfXJbFGTSZW22j3RYWlVyS0.png"
                     alt="Hotel Daleese Logo"
-                    width={120}
-                    height={80}
-                    className="h-20 w-auto"
+                    width={150}
+                    height={100}
+                    className="h-28 w-auto"
                     priority
                 />
               </Link>
@@ -226,9 +226,9 @@ export function Navbar() {
                   <Image
                       src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/hotel-daleese-logo-6mo8tveOfXJbFGTSZW22j3RYWlVyS0.png"
                       alt="Hotel Daleese Logo"
-                      width={200}
-                      height={120}
-                      className="h-[150px] w-auto mb-2"
+                      width={250}
+                      height={150}
+                      className="h-[180px] w-auto mb-2"
                       priority
                   />
                 </Link>

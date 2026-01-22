@@ -42,7 +42,7 @@ export function OurSuitesComponent() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.8 }}
           >
-            There are four (4) unique studio suites located on our well-maintained manicured property. Contact us for group rates.
+            Casa Daleese, a dedicated house on the property that sleeps 4 adults, along with four (4) unique studio suites located on our well-maintained manicured property. Contact us for group rates.
           </motion.p>
         </motion.div>
       </motion.section>

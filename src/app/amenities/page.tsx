@@ -5,6 +5,7 @@ import { AmenitiesGalleryLightbox } from "@/components/amenities/amenities-galle
 import { FooterComponent } from "@/components/footer"
 import {AmenitiesSectionTopComponent} from "@/components/amenities/amenities-section-top";
 import {AmenitiesCardLogoSectionComponent} from "@/components/amenities/amenities-card-logo-section";
+import {BreakfastSpotsSection} from "@/components/amenities/breakfast-spots-section";
 
 const amenities = [
     {
@@ -30,6 +31,24 @@ const amenities2 = [
     {
         title: "Savor Every Bite",
         description: "Indulge in a dining experience like no other. Our talented chefs craft exquisite meals using fresh ingredients from our garden and local farmers. With unique breakfast and dinner courses prepared à la carte, every meal is a delight for your taste buds."
+    },
+]
+
+const breakfastSpots = [
+    {
+        name: "Breakfast Spot 1",
+        description: "A delightful breakfast spot offering fresh local ingredients and traditional Costa Rican flavors.",
+        // Optional: imageSrc, location, hours can be added here
+    },
+    {
+        name: "Breakfast Spot 2",
+        description: "Enjoy a relaxing morning meal with ocean views and tropical ambiance.",
+        // Optional: imageSrc, location, hours can be added here
+    },
+    {
+        name: "Breakfast Spot 3",
+        description: "Start your day with authentic local cuisine in a charming setting.",
+        // Optional: imageSrc, location, hours can be added here
     },
 ]
 
@@ -90,6 +109,7 @@ export default function AmenitiesPage() {
             <AmenitiesGalleryLightbox galleryItems={galleryItems} />
             <AmenitiesCardLogoSectionComponent amenities={amenities2} />
             <AmenitiesGalleryLightbox galleryItems={galleryItems2} />
+            <BreakfastSpotsSection spots={breakfastSpots} />
             <FooterComponent />
         </div>
     )

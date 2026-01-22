@@ -14,8 +14,25 @@ type SuiteNavigationComponentProps = {
 
 export function SuiteNavigationComponent({ currentSuite }: SuiteNavigationComponentProps) {
     // Update logic for previous and next suites
-    const previousSuite = currentSuite > 1 ? currentSuite - 1 : null;
-    const nextSuite = currentSuite === 3 ? 4 : currentSuite < 3 ? currentSuite + 1 : null;
+    // currentSuite: 0 = Casa Daleese, 1-4 = Suite 1-4
+    let previousSuite: number | 'casa' | null = null;
+    let nextSuite: number | 'casa' | null = null;
+    
+    if (currentSuite === 0) {
+        // Casa Daleese: next is Suite 1
+        nextSuite = 1;
+    } else if (currentSuite === 1) {
+        // Suite 1: previous is Casa Daleese, next is Suite 2
+        previousSuite = 'casa';
+        nextSuite = 2;
+    } else if (currentSuite > 1 && currentSuite < 4) {
+        // Suite 2-3: previous is previous suite, next is next suite
+        previousSuite = currentSuite - 1;
+        nextSuite = currentSuite + 1;
+    } else if (currentSuite === 4) {
+        // Suite 4: previous is Suite 3, no next
+        previousSuite = 3;
+    }
 
     return (
         <motion.section
@@ -29,7 +46,7 @@ export function SuiteNavigationComponent({ currentSuite }: SuiteNavigationCompon
                     {/* Show the previous suite link if it exists */}
                     {previousSuite && (
                         <Link
-                            href={`/suites/suite-${previousSuite}`}
+                            href={previousSuite === 'casa' ? '/suites/casa-daleese' : `/suites/suite-${previousSuite}`}
                             className="group flex items-center space-x-2 hover:opacity-60 transition-opacity"
                         >
                             <ChevronLeft className="w-10 h-10" />
@@ -39,7 +56,7 @@ export function SuiteNavigationComponent({ currentSuite }: SuiteNavigationCompon
                                 transition={{ delay: 0.2 }}
                                 className="text-3xl"
                             >
-                                Suite {previousSuite}
+                                {previousSuite === 'casa' ? 'Casa Daleese' : `Suite ${previousSuite}`}
                             </motion.span>
                         </Link>
                     )}
@@ -47,7 +64,7 @@ export function SuiteNavigationComponent({ currentSuite }: SuiteNavigationCompon
                     {/* Show the next suite link if it exists */}
                     {nextSuite && (
                         <Link
-                            href={`/suites/suite-${nextSuite}`}
+                            href={nextSuite === 'casa' ? '/suites/casa-daleese' : `/suites/suite-${nextSuite}`}
                             className="group flex items-center space-x-2 hover:opacity-60 transition-opacity"
                         >
                             <motion.span
@@ -56,7 +73,7 @@ export function SuiteNavigationComponent({ currentSuite }: SuiteNavigationCompon
                                 transition={{ delay: 0.2 }}
                                 className="text-3xl"
                             >
-                                Suite {nextSuite}
+                                {nextSuite === 'casa' ? 'Casa Daleese' : `Suite ${nextSuite}`}
                             </motion.span>
                             <ChevronRight className="w-10 h-10" />
                         </Link>
