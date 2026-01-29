@@ -37,16 +37,7 @@ function getSupabaseClient() {
   return supabaseClient;
 }
 
-// For backward compatibility, export a getter
-const supabase = new Proxy({} as any, {
-  get(target, prop) {
-    const client = getSupabaseClient();
-    if (!client) {
-      return undefined;
-    }
-    return (client as any)[prop];
-  }
-});
+// Removed unused proxy - using getSupabaseClient() directly instead
 
 /**
  * Get public URL for a file in Supabase Storage
@@ -106,7 +97,7 @@ export async function uploadFile(
   const contentType = options?.contentType || getContentType(fileName);
 
   // Upload file
-  const { data, error } = await supabase.storage
+  const { error } = await supabase.storage
     .from(bucketName)
     .upload(filePath, fileBuffer, {
       contentType,
@@ -146,7 +137,7 @@ export async function uploadBuffer(
   const fileName = filePath.split('/').pop() || filePath;
   const contentType = options?.contentType || getContentType(fileName);
 
-  const { data, error } = await supabase.storage
+  const { error } = await supabase.storage
     .from(bucketName)
     .upload(filePath, fileBuffer, {
       contentType,
@@ -201,7 +192,7 @@ export async function createBucketIfNotExists(
     return false;
   }
 
-  const { data, error } = await supabase.storage.createBucket(bucketName, {
+  const { error } = await supabase.storage.createBucket(bucketName, {
     public: isPublic,
   });
 
@@ -239,6 +230,70 @@ export async function listFiles(
   }
 
   return data?.map(file => prefix ? `${prefix}/${file.name}` : file.name) || [];
+}
+
+/**
+ * Delete a file from Supabase Storage
+ * @param bucketName - Name of the bucket
+ * @param filePath - Path to the file in the bucket
+ */
+export async function deleteFile(bucketName: string, filePath: string): Promise<void> {
+  const supabase = getSupabaseClient();
+  if (!supabase) {
+    throw new Error('Supabase client not initialized');
+  }
+
+  const { error } = await supabase.storage
+    .from(bucketName)
+    .remove([filePath]);
+
+  if (error) {
+    throw new Error(`Failed to delete file: ${error.message}`);
+  }
+}
+
+/**
+ * Delete all files in a bucket
+ * @param bucketName - Name of the bucket
+ * @param prefix - Optional prefix to filter files to delete
+ * @returns Number of files deleted
+ */
+export async function deleteAllFiles(
+  bucketName: string,
+  prefix?: string
+): Promise<number> {
+  const supabase = getSupabaseClient();
+  if (!supabase) {
+    throw new Error('Supabase client not initialized');
+  }
+
+  // List all files in the bucket
+  const files = await listFiles(bucketName, prefix);
+  
+  if (files.length === 0) {
+    return 0;
+  }
+
+  // Delete files in batches (Supabase may have limits)
+  const batchSize = 100;
+  let deletedCount = 0;
+
+  for (let i = 0; i < files.length; i += batchSize) {
+    const batch = files.slice(i, i + batchSize);
+    
+    const { error } = await supabase.storage
+      .from(bucketName)
+      .remove(batch);
+
+    if (error) {
+      console.warn(`Failed to delete batch starting at ${i}: ${error.message}`);
+      // Continue with next batch even if this one fails
+    } else {
+      deletedCount += batch.length;
+    }
+  }
+
+  return deletedCount;
 }
 
 /**

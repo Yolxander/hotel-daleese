@@ -2,10 +2,11 @@
  * Script to convert HEIC images to JPG and upload them to Supabase Storage
  * 
  * Usage:
- *   npx tsx scripts/upload-to-supabase.ts [input-dir] [bucket-name]
+ *   npx tsx scripts/upload-to-supabase.ts [input-dir] [bucket-name] [--replace]
  * 
- * Example:
+ * Examples:
  *   npx tsx scripts/upload-to-supabase.ts hotel-daleese casa-daleese
+ *   npx tsx scripts/upload-to-supabase.ts "casa-daleese/Casa Daleese " casa-daleese --replace
  */
 
 // Load environment variables from .env.local FIRST, before any other imports
@@ -36,6 +37,7 @@ import {
   uploadFile,
   getPublicUrl,
   listFiles,
+  deleteAllFiles,
 } from '../src/lib/supabase-storage';
 
 interface UploadResult {
@@ -50,7 +52,8 @@ interface UploadResult {
  */
 async function uploadImagesToSupabase(
   inputDir: string,
-  bucketName: string = 'casa-daleese'
+  bucketName: string = 'casa-daleese',
+  replaceMode: boolean = false
 ): Promise<UploadResult[]> {
   console.log('=== Starting Image Upload to Supabase ===\n');
 
@@ -60,7 +63,8 @@ async function uploadImagesToSupabase(
   }
 
   console.log(`Input directory: ${inputDir}`);
-  console.log(`Bucket name: ${bucketName}\n`);
+  console.log(`Bucket name: ${bucketName}`);
+  console.log(`Replace mode: ${replaceMode ? 'Yes (will delete existing files)' : 'No (will add to existing files)'}\n`);
 
   // Step 2: Check if bucket exists (skip creation if RLS policy prevents it)
   console.log('Checking bucket...');
@@ -90,6 +94,24 @@ async function uploadImagesToSupabase(
     // If we can't check, assume bucket exists and continue
     console.warn(`⚠ Could not verify bucket existence: ${error.message}`);
     console.log(`Continuing with assumption that bucket exists...`);
+  }
+
+  // Step 2.5: Delete existing files if in replace mode
+  if (replaceMode) {
+    console.log('\n=== Deleting Existing Files ===');
+    try {
+      const existingFiles = await listFiles(bucketName);
+      if (existingFiles.length > 0) {
+        console.log(`Found ${existingFiles.length} existing files to delete...`);
+        const deletedCount = await deleteAllFiles(bucketName);
+        console.log(`✓ Deleted ${deletedCount} existing files\n`);
+      } else {
+        console.log('No existing files to delete\n');
+      }
+    } catch (error: any) {
+      console.warn(`⚠ Could not delete existing files: ${error.message}`);
+      console.log('Continuing with upload...\n');
+    }
   }
 
   // Step 3: Convert HEIC files to JPG
@@ -206,15 +228,17 @@ async function uploadImagesToSupabase(
 
 // Run if called directly
 if (require.main === module) {
-  const inputDir = process.argv[2] || path.join(process.cwd(), 'hotel-daleese');
-  const bucketName = process.argv[3] || 'casa-daleese';
+  const args = process.argv.slice(2);
+  const inputDir = args[0] || path.join(process.cwd(), 'hotel-daleese');
+  const bucketName = args[1] || 'casa-daleese';
+  const replaceMode = args.includes('--replace') || args.includes('-r');
 
   // Resolve absolute path
   const absoluteInputDir = path.isAbsolute(inputDir)
     ? inputDir
     : path.join(process.cwd(), inputDir);
 
-  uploadImagesToSupabase(absoluteInputDir, bucketName)
+  uploadImagesToSupabase(absoluteInputDir, bucketName, replaceMode)
     .then((results) => {
       const failed = results.filter(r => !r.success);
       if (failed.length > 0) {

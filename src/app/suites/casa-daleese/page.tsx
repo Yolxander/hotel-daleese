@@ -44,17 +44,25 @@ const suiteInfo = {
 };
 
 export default async function Page() {
-    // Fetch image URLs from Supabase Storage
-    let imageUrls: string[] = [];
+    // Use static URLs first (they're always up to date)
+    // Then try to fetch from Supabase to get any additional images
+    let imageUrls: string[] = [...STATIC_CASA_DALEESE_IMAGE_URLS];
+    
     try {
-        imageUrls = await getCasaDaleeseImageUrls();
-        // If no URLs from Supabase, use static fallback
-        if (imageUrls.length === 0) {
-            imageUrls = STATIC_CASA_DALEESE_IMAGE_URLS;
+        const supabaseUrls = await getCasaDaleeseImageUrls();
+        // If we got URLs from Supabase and they're different, use them
+        // Otherwise keep using static URLs
+        if (supabaseUrls.length > 0) {
+            // Use Supabase URLs if they exist (they should match static URLs)
+            imageUrls = supabaseUrls;
         }
     } catch (error) {
-        console.error('Error fetching Casa Daleese images:', error);
-        // Fall back to static URLs
+        console.error('Error fetching Casa Daleese images from Supabase:', error);
+        // Continue using static URLs on error
+    }
+    
+    // Ensure we have at least the static URLs
+    if (imageUrls.length === 0) {
         imageUrls = STATIC_CASA_DALEESE_IMAGE_URLS;
     }
 

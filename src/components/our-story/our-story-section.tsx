@@ -39,7 +39,7 @@ export function OurStorySection() {
                 transition={{ duration: 0.6, delay: 0.3 }}
                 className="mb-6 text-[22px]"
             >
-              We're Rosa and Dave, the founders and owners of Hotel Daleese.
+              We&apos;re Rosa and Dave, the founders and owners of Hotel Daleese.
             </motion.p>
             <motion.p
                 initial={{ opacity: 0, y: 20 }}

@@ -132,11 +132,23 @@ async function convertHeicToJpg(
     fs.mkdirSync(finalOutputDir, { recursive: true });
   }
 
-  // Find all HEIC files (case-insensitive)
-  const heicFiles = await glob('**/*.{heic,HEIC}', {
+  // Find all HEIC files (case-insensitive, including nested directories)
+  const allHeicFiles = await glob('**/*.{heic,HEIC}', {
     cwd: inputDir,
     absolute: true,
   });
+
+  // Filter out duplicate files (those with "(1)" suffix)
+  const heicFiles = allHeicFiles.filter(file => {
+    const fileName = path.basename(file, path.extname(file));
+    // Skip files with "(1)" suffix - these are duplicates
+    return !fileName.includes('(1)');
+  });
+
+  const duplicatesSkipped = allHeicFiles.length - heicFiles.length;
+  if (duplicatesSkipped > 0) {
+    console.log(`Skipped ${duplicatesSkipped} duplicate files (with "(1)" suffix)`);
+  }
 
   console.log(`Found ${heicFiles.length} HEIC files to convert`);
 

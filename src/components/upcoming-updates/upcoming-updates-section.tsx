@@ -37,7 +37,7 @@ export function UpcomingUpdatesSection() {
                 transition={{ duration: 0.6, delay: 0.3 }}
                 className="mb-6 text-[22px]"
             >
-              Stay tuned for updates on our latest renovations, upcoming projects, and behind-the-scenes transformations. We're excited to share our journey of continuous improvement with you.
+              Stay tuned for updates on our latest renovations, upcoming projects, and behind-the-scenes transformations. We&apos;re excited to share our journey of continuous improvement with you.
             </motion.p>
             <motion.div
                 initial={{ opacity: 0, y: 20 }}

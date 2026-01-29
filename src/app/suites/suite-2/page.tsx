@@ -32,7 +32,7 @@ const galleryItems: GalleryItem[] = imageUrls.map((url, index) => ({
 
 const imageSrc = "https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/673e436317fc5.jpeg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=16447035600&Signature=wPy%2B75nE0xgHnqX%2FXJLh9S4XG0419GSV79t3auEolT0aM1amX%2FcR%2BSuJutMp0bc%2FdDU3xnF7j27ldu8D4sODdobEBrG9MqLX7GRM9obtb%2FR0pWUkOneY2vZYQMdaNEcTi9yi%2B6YiGD%2BbTT53Va73iCPpcScYBAC9wwK778fUNqXpzypaUnh%2Ftjb67pT8PRoVOndDYNJ7UZjhLwGVG80LdzhtLOPWdquF7OiRNH0ywGXAEENzq7%2BMrt0ElnE2Lim04s9xzlwCz3hU02Q6NUMkBhWrsHL45TE1Br0lnN7xXZcDCgkl7M4obgnCdwlhsGQpE52bH6SW%2FZFzMPQbyzNFqQ%3D%3D";
 
-const header = { name: 'Suite 2', description: "Studio Suite with Garden View" };
+const header = { name: 'Suite 2', description: "Studio Suite with private garden" };
 
 const suiteInfo = {
     facilities: [

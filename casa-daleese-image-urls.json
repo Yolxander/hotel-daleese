@@ -1,8 +1,205 @@
 {
   "bucket": "casa-daleese",
-  "uploadDate": "2026-01-22T00:27:40.556Z",
-  "totalFiles": 31,
-  "successful": 0,
-  "failed": 31,
-  "urls": []
+  "uploadDate": "2026-01-22T01:41:00.375Z",
+  "totalFiles": 49,
+  "successful": 49,
+  "failed": 0,
+  "urls": [
+    {
+      "fileName": "IMG_0891.jpg",
+      "url": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/casa-daleese/IMG_0891.jpg"
+    },
+    {
+      "fileName": "IMG_0888.jpg",
+      "url": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/casa-daleese/IMG_0888.jpg"
+    },
+    {
+      "fileName": "IMG_0887.jpg",
+      "url": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/casa-daleese/IMG_0887.jpg"
+    },
+    {
+      "fileName": "IMG_0885.jpg",
+      "url": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/casa-daleese/IMG_0885.jpg"
+    },
+    {
+      "fileName": "IMG_0884.jpg",
+      "url": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/casa-daleese/IMG_0884.jpg"
+    },
+    {
+      "fileName": "IMG_0882.jpg",
+      "url": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/casa-daleese/IMG_0882.jpg"
+    },
+    {
+      "fileName": "IMG_0880.jpg",
+      "url": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/casa-daleese/IMG_0880.jpg"
+    },
+    {
+      "fileName": "IMG_0879.jpg",
+      "url": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/casa-daleese/IMG_0879.jpg"
+    },
+    {
+      "fileName": "IMG_0878.jpg",
+      "url": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/casa-daleese/IMG_0878.jpg"
+    },
+    {
+      "fileName": "IMG_0876.jpg",
+      "url": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/casa-daleese/IMG_0876.jpg"
+    },
+    {
+      "fileName": "IMG_0875.jpg",
+      "url": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/casa-daleese/IMG_0875.jpg"
+    },
+    {
+      "fileName": "IMG_0874.jpg",
+      "url": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/casa-daleese/IMG_0874.jpg"
+    },
+    {
+      "fileName": "IMG_0870.jpg",
+      "url": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/casa-daleese/IMG_0870.jpg"
+    },
+    {
+      "fileName": "IMG_0868.jpg",
+      "url": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/casa-daleese/IMG_0868.jpg"
+    },
+    {
+      "fileName": "IMG_0867.jpg",
+      "url": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/casa-daleese/IMG_0867.jpg"
+    },
+    {
+      "fileName": "IMG_0866.jpg",
+      "url": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/casa-daleese/IMG_0866.jpg"
+    },
+    {
+      "fileName": "IMG_0865.jpg",
+      "url": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/casa-daleese/IMG_0865.jpg"
+    },
+    {
+      "fileName": "IMG_0864.jpg",
+      "url": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/casa-daleese/IMG_0864.jpg"
+    },
+    {
+      "fileName": "IMG_0863.jpg",
+      "url": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/casa-daleese/IMG_0863.jpg"
+    },
+    {
+      "fileName": "IMG_0862.jpg",
+      "url": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/casa-daleese/IMG_0862.jpg"
+    },
+    {
+      "fileName": "IMG_0861.jpg",
+      "url": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/casa-daleese/IMG_0861.jpg"
+    },
+    {
+      "fileName": "IMG_0860.jpg",
+      "url": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/casa-daleese/IMG_0860.jpg"
+    },
+    {
+      "fileName": "IMG_0858.jpg",
+      "url": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/casa-daleese/IMG_0858.jpg"
+    },
+    {
+      "fileName": "IMG_0857.jpg",
+      "url": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/casa-daleese/IMG_0857.jpg"
+    },
+    {
+      "fileName": "IMG_0856.jpg",
+      "url": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/casa-daleese/IMG_0856.jpg"
+    },
+    {
+      "fileName": "IMG_0855.jpg",
+      "url": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/casa-daleese/IMG_0855.jpg"
+    },
+    {
+      "fileName": "IMG_0854.jpg",
+      "url": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/casa-daleese/IMG_0854.jpg"
+    },
+    {
+      "fileName": "IMG_0853.jpg",
+      "url": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/casa-daleese/IMG_0853.jpg"
+    },
+    {
+      "fileName": "IMG_0851.jpg",
+      "url": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/casa-daleese/IMG_0851.jpg"
+    },
+    {
+      "fileName": "IMG_0850.jpg",
+      "url": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/casa-daleese/IMG_0850.jpg"
+    },
+    {
+      "fileName": "IMG_0849.jpg",
+      "url": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/casa-daleese/IMG_0849.jpg"
+    },
+    {
+      "fileName": "IMG_0848.jpg",
+      "url": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/casa-daleese/IMG_0848.jpg"
+    },
+    {
+      "fileName": "IMG_0847.jpg",
+      "url": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/casa-daleese/IMG_0847.jpg"
+    },
+    {
+      "fileName": "IMG_0845.jpg",
+      "url": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/casa-daleese/IMG_0845.jpg"
+    },
+    {
+      "fileName": "IMG_0844.jpg",
+      "url": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/casa-daleese/IMG_0844.jpg"
+    },
+    {
+      "fileName": "IMG_0843.jpg",
+      "url": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/casa-daleese/IMG_0843.jpg"
+    },
+    {
+      "fileName": "IMG_0842.jpg",
+      "url": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/casa-daleese/IMG_0842.jpg"
+    },
+    {
+      "fileName": "IMG_0841.jpg",
+      "url": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/casa-daleese/IMG_0841.jpg"
+    },
+    {
+      "fileName": "IMG_0838.jpg",
+      "url": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/casa-daleese/IMG_0838.jpg"
+    },
+    {
+      "fileName": "IMG_0835.jpg",
+      "url": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/casa-daleese/IMG_0835.jpg"
+    },
+    {
+      "fileName": "IMG_0834.jpg",
+      "url": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/casa-daleese/IMG_0834.jpg"
+    },
+    {
+      "fileName": "IMG_0833.jpg",
+      "url": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/casa-daleese/IMG_0833.jpg"
+    },
+    {
+      "fileName": "IMG_0832.jpg",
+      "url": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/casa-daleese/IMG_0832.jpg"
+    },
+    {
+      "fileName": "IMG_0814.jpg",
+      "url": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/casa-daleese/IMG_0814.jpg"
+    },
+    {
+      "fileName": "IMG_0812.jpg",
+      "url": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/casa-daleese/IMG_0812.jpg"
+    },
+    {
+      "fileName": "IMG_0811.jpg",
+      "url": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/casa-daleese/IMG_0811.jpg"
+    },
+    {
+      "fileName": "IMG_0789.jpg",
+      "url": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/casa-daleese/IMG_0789.jpg"
+    },
+    {
+      "fileName": "IMG_0788.jpg",
+      "url": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/casa-daleese/IMG_0788.jpg"
+    },
+    {
+      "fileName": "IMG_0787.jpg",
+      "url": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/casa-daleese/IMG_0787.jpg"
+    }
+  ]
 }

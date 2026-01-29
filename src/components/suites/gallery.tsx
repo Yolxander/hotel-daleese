@@ -3,6 +3,7 @@
 import React, { useState, useRef } from 'react'
 import Image from 'next/image'
 import { Card, CardContent } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
 import { ChevronLeft, ChevronRight, X } from "lucide-react"
 import { motion, useInView, AnimatePresence} from "framer-motion"
 
@@ -96,8 +97,13 @@ const Lightbox = ({
 export default function ImageGallery({ galleryItems }: { galleryItems: GalleryItem[] }) {
     const [lightboxOpen, setLightboxOpen] = useState(false)
     const [currentImageIndex, setCurrentImageIndex] = useState(0)
+    const [visibleCount, setVisibleCount] = useState(9) // Start with 9 images
     const ref = useRef(null)
     const isInView = useInView(ref, { once: true, margin: "-100px" })
+    
+    const IMAGES_PER_PAGE = 9
+    const visibleItems = galleryItems.slice(0, visibleCount)
+    const hasMore = visibleCount < galleryItems.length
 
     const openLightbox = (index: number) => {
         setCurrentImageIndex(index)
@@ -120,6 +126,10 @@ export default function ImageGallery({ galleryItems }: { galleryItems: GalleryIt
         )
     }
 
+    const loadMore = () => {
+        setVisibleCount((prev) => Math.min(prev + IMAGES_PER_PAGE, galleryItems.length))
+    }
+
     return (
         <section ref={ref} className="py-12 px-4 md:px-6 lg:px-8 bg-white">
             <motion.div
@@ -128,7 +138,7 @@ export default function ImageGallery({ galleryItems }: { galleryItems: GalleryIt
                 transition={{ duration: 0.6 }}
                 className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4"
             >
-                {galleryItems.map((item: GalleryItem, index: number) => (
+                {visibleItems.map((item: GalleryItem, index: number) => (
                     <motion.div
                         key={index}
                         initial={{ opacity: 0, y: 20 }}
@@ -147,6 +157,7 @@ export default function ImageGallery({ galleryItems }: { galleryItems: GalleryIt
                                         fill
                                         style={{ objectFit: 'cover' }}
                                         unoptimized={item.src.includes('storage.googleapis.com') && item.src.includes('Signature=')}
+                                        priority={index < 6}
                                     />
                                 </div>
                             </CardContent>
@@ -154,6 +165,26 @@ export default function ImageGallery({ galleryItems }: { galleryItems: GalleryIt
                     </motion.div>
                 ))}
             </motion.div>
+            
+            {/* Load More Button */}
+            {hasMore && (
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                    transition={{ duration: 0.6, delay: 0.3 }}
+                    className="flex justify-center mt-8"
+                >
+                    <Button
+                        onClick={loadMore}
+                        variant="outline"
+                        size="lg"
+                        className="px-8 py-6 text-lg"
+                    >
+                        Load More ({galleryItems.length - visibleCount} remaining)
+                    </Button>
+                </motion.div>
+            )}
+            
             <Lightbox
                 currentIndex={currentImageIndex}
                 onClose={closeLightbox}

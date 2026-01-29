@@ -46,7 +46,7 @@ export function SuiteNavigationComponent({ currentSuite }: SuiteNavigationCompon
                     {/* Show the previous suite link if it exists */}
                     {previousSuite && (
                         <Link
-                            href={previousSuite === 'casa' ? '/suites/casa-daleese' : `/suites/suite-${previousSuite}`}
+                            href={typeof previousSuite === 'string' ? '/suites/casa-daleese' : `/suites/suite-${previousSuite}`}
                             className="group flex items-center space-x-2 hover:opacity-60 transition-opacity"
                         >
                             <ChevronLeft className="w-10 h-10" />
@@ -56,7 +56,7 @@ export function SuiteNavigationComponent({ currentSuite }: SuiteNavigationCompon
                                 transition={{ delay: 0.2 }}
                                 className="text-3xl"
                             >
-                                {previousSuite === 'casa' ? 'Casa Daleese' : `Suite ${previousSuite}`}
+                                {typeof previousSuite === 'string' ? 'Casa Daleese' : `Suite ${previousSuite}`}
                             </motion.span>
                         </Link>
                     )}
@@ -64,7 +64,7 @@ export function SuiteNavigationComponent({ currentSuite }: SuiteNavigationCompon
                     {/* Show the next suite link if it exists */}
                     {nextSuite && (
                         <Link
-                            href={nextSuite === 'casa' ? '/suites/casa-daleese' : `/suites/suite-${nextSuite}`}
+                            href={typeof nextSuite === 'string' ? '/suites/casa-daleese' : `/suites/suite-${nextSuite}`}
                             className="group flex items-center space-x-2 hover:opacity-60 transition-opacity"
                         >
                             <motion.span
@@ -73,7 +73,7 @@ export function SuiteNavigationComponent({ currentSuite }: SuiteNavigationCompon
                                 transition={{ delay: 0.2 }}
                                 className="text-3xl"
                             >
-                                {nextSuite === 'casa' ? 'Casa Daleese' : `Suite ${nextSuite}`}
+                                {typeof nextSuite === 'string' ? 'Casa Daleese' : `Suite ${nextSuite}`}
                             </motion.span>
                             <ChevronRight className="w-10 h-10" />
                         </Link>

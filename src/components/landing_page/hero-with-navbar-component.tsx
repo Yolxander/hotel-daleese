@@ -24,7 +24,7 @@ export function HeroWithNavbarComponent() {
           </h1>
           <div className="mb-8 h-px w-1/4 bg-white" />
           <p className={`${lora.className} mb-8 text-xl font-light italic md:text-2xl text-center`}>
-            Eccentric • Privacy • Comfort
+            Tranquil • Privacy • Comfort
           </p>
         </div>
         <div className="absolute bottom-0 left-0 right-0 bg-white bg-opacity-90 p-6 text-center">
