@@ -1,0 +1,104 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"c7e99333-aede-4333-a5d5-366958e0f415\" name=\"Changes\" comment=\"\">\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\n      <map>\n        <entry key=\"$PROJECT_DIR$\" value=\"main\" />\n      </map>\n    </option>\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n    <option name=\"UPDATE_TYPE\" value=\"REBASE\" />\n  </component>\n  <component name=\"GitHubPullRequestSearchHistory\"><![CDATA[{\n  \"lastFilter\": {\n    \"state\": \"OPEN\",\n    \"assignee\": \"Megachungatron\"\n  }\n}]]></component>\n  <component name=\"GithubDefaultAccount\">\n    <option name=\"defaultAccountId\" value=\"f765edb8-f30b-49ed-b3a6-f231974ff4fd\" />\n  </component>\n  <component name=\"GithubPullRequestsUISettings\"><![CDATA[{\n  \"selectedUrlAndAccountId\": {\n    \"url\": \"https://github.com/Yolxander/hotel-daleese.git\",\n    \"accountId\": \"3d0454f0-76d6-45ca-b3b8-a47350d0a190\"\n  }\n}]]></component>\n  <component name=\"MarkdownSettingsMigration\">\n    <option name=\"stateVersion\" value=\"1\" />\n  </component>\n  <component name=\"ProjectColorInfo\"><![CDATA[{\n  \"associatedIndex\": 3\n}]]></component>\n  <component name=\"ProjectId\" id=\"2nieoQ7sANwPOhr2sKXOFqjheeI\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">{\n  &quot;keyToString&quot;: {\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\n    &quot;git-widget-placeholder&quot;: &quot;main&quot;,\n    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;22.2.0&quot;,\n    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;22.2.0&quot;,\n    &quot;last_opened_file_path&quot;: &quot;/Users/humancontact/Downloads/extra-learning/demos/casa-turul/src/components/amenities&quot;,\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\n    &quot;nodejs_interpreter_path&quot;: &quot;/Users/humancontact/.nvm/versions/node/v22.2.0/bin/node&quot;,\n    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,\n    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/humancontact/Downloads/extra-learning/demos/casa-turul/node_modules/prettier&quot;,\n    &quot;settings.editor.selected.configurable&quot;: &quot;settings.nodejs&quot;,\n    &quot;ts.external.directory.path&quot;: &quot;/Users/humancontact/Downloads/extra-learning/demos/casa-turul/node_modules/typescript/lib&quot;,\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\n  }\n}</component>\n  <component name=\"RecentsManager\">\n    <key name=\"CopyFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$/src/components/amenities\" />\n      <recent name=\"$PROJECT_DIR$/src/app/suites\" />\n      <recent name=\"$PROJECT_DIR$/src/app/suites/suite-1\" />\n      <recent name=\"$PROJECT_DIR$/src/app/contact\" />\n      <recent name=\"$PROJECT_DIR$/src/app/blog\" />\n    </key>\n    <key name=\"MoveFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$/src/components/landing_page\" />\n      <recent name=\"$PROJECT_DIR$/src/components\" />\n      <recent name=\"$PROJECT_DIR$/src/components/about\" />\n      <recent name=\"$PROJECT_DIR$/src/components/blog\" />\n      <recent name=\"$PROJECT_DIR$/src/app/blog\" />\n    </key>\n  </component>\n  <component name=\"SharedIndexes\">\n    <attachedChunks>\n      <set>\n        <option value=\"bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-WS-243.22562.112\" />\n      </set>\n    </attachedChunks>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"c7e99333-aede-4333-a5d5-366958e0f415\" name=\"Changes\" comment=\"\" />\n      <created>1729460497270</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1729460497270</updated>\n      <workItem from=\"1729460498363\" duration=\"3267000\" />\n      <workItem from=\"1729713654735\" duration=\"92000\" />\n      <workItem from=\"1729718299290\" duration=\"1389000\" />\n      <workItem from=\"1729720154140\" duration=\"1269000\" />\n      <workItem from=\"1729726589210\" duration=\"5344000\" />\n      <workItem from=\"1729775238556\" duration=\"144000\" />\n      <workItem from=\"1729787298665\" duration=\"1505000\" />\n      <workItem from=\"1729923531226\" duration=\"39290000\" />\n      <workItem from=\"1730407132455\" duration=\"220000\" />\n      <workItem from=\"1730431932742\" duration=\"32637000\" />\n      <workItem from=\"1730823008429\" duration=\"611000\" />\n      <workItem from=\"1730833908212\" duration=\"266000\" />\n      <workItem from=\"1730997826192\" duration=\"5933000\" />\n      <workItem from=\"1731011921310\" duration=\"604000\" />\n      <workItem from=\"1731028701162\" duration=\"630000\" />\n      <workItem from=\"1731107025672\" duration=\"3792000\" />\n      <workItem from=\"1731139317659\" duration=\"1235000\" />\n      <workItem from=\"1732238136687\" duration=\"19042000\" />\n      <workItem from=\"1732311894090\" duration=\"12892000\" />\n      <workItem from=\"1732470356213\" duration=\"7964000\" />\n      <workItem from=\"1733324945934\" duration=\"763000\" />\n      <workItem from=\"1733893928315\" duration=\"634000\" />\n      <workItem from=\"1734019450196\" duration=\"91000\" />\n      <workItem from=\"1734019568905\" duration=\"59000\" />\n      <workItem from=\"1734019709202\" duration=\"55000\" />\n      <workItem from=\"1734024323558\" duration=\"52000\" />\n    </task>\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 976bc559d6c50da21b64874919b7acba2c066604)
++++ b/.idea/workspace.xml	(date 1770042515036)
+@@ -21,52 +21,53 @@
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+     <option name="UPDATE_TYPE" value="REBASE" />
+   </component>
+-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+-  "lastFilter": {
+-    "state": "OPEN",
+-    "assignee": "Megachungatron"
++  <component name="GitHubPullRequestSearchHistory">{
++  &quot;lastFilter&quot;: {
++    &quot;state&quot;: &quot;OPEN&quot;,
++    &quot;assignee&quot;: &quot;Megachungatron&quot;
+   }
+-}]]></component>
++}</component>
+   <component name="GithubDefaultAccount">
+     <option name="defaultAccountId" value="f765edb8-f30b-49ed-b3a6-f231974ff4fd" />
+   </component>
+-  <component name="GithubPullRequestsUISettings"><![CDATA[{
+-  "selectedUrlAndAccountId": {
+-    "url": "https://github.com/Yolxander/hotel-daleese.git",
+-    "accountId": "3d0454f0-76d6-45ca-b3b8-a47350d0a190"
++  <component name="GithubPullRequestsUISettings">{
++  &quot;selectedUrlAndAccountId&quot;: {
++    &quot;url&quot;: &quot;https://github.com/Yolxander/hotel-daleese.git&quot;,
++    &quot;accountId&quot;: &quot;3d0454f0-76d6-45ca-b3b8-a47350d0a190&quot;
+   }
+-}]]></component>
++}</component>
+   <component name="MarkdownSettingsMigration">
+     <option name="stateVersion" value="1" />
+   </component>
+-  <component name="ProjectColorInfo"><![CDATA[{
+-  "associatedIndex": 3
+-}]]></component>
++  <component name="ProjectColorInfo">{
++  &quot;associatedIndex&quot;: 3
++}</component>
+   <component name="ProjectId" id="2nieoQ7sANwPOhr2sKXOFqjheeI" />
+   <component name="ProjectViewState">
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent">{
+-  &quot;keyToString&quot;: {
+-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+-    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;22.2.0&quot;,
+-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;22.2.0&quot;,
+-    &quot;last_opened_file_path&quot;: &quot;/Users/humancontact/Downloads/extra-learning/demos/casa-turul/src/components/amenities&quot;,
+-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+-    &quot;nodejs_interpreter_path&quot;: &quot;/Users/humancontact/.nvm/versions/node/v22.2.0/bin/node&quot;,
+-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/humancontact/Downloads/extra-learning/demos/casa-turul/node_modules/prettier&quot;,
+-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.nodejs&quot;,
+-    &quot;ts.external.directory.path&quot;: &quot;/Users/humancontact/Downloads/extra-learning/demos/casa-turul/node_modules/typescript/lib&quot;,
+-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "RunOnceActivity.git.unshallow": "true",
++    "WebServerToolWindowFactoryState": "false",
++    "git-widget-placeholder": "staging-changes",
++    "javascript.nodejs.core.library.configured.version": "22.2.0",
++    "javascript.nodejs.core.library.typings.version": "22.2.0",
++    "last_opened_file_path": "/Users/humancontact/Downloads/extra-learning/demos/casa-turul/src/components/amenities",
++    "node.js.detected.package.eslint": "true",
++    "node.js.detected.package.tslint": "true",
++    "node.js.selected.package.eslint": "(autodetect)",
++    "node.js.selected.package.tslint": "(autodetect)",
++    "nodejs_interpreter_path": "/Users/humancontact/.nvm/versions/node/v22.2.0/bin/node",
++    "nodejs_package_manager_path": "npm",
++    "prettierjs.PrettierConfiguration.Package": "/Users/humancontact/Downloads/extra-learning/demos/casa-turul/node_modules/prettier",
++    "settings.editor.selected.configurable": "settings.nodejs",
++    "ts.external.directory.path": "/Users/humancontact/Downloads/demos/nextjs/hotel-daleese/node_modules/typescript/lib",
++    "vue.rearranger.settings.migration": "true"
+   }
+-}</component>
++}]]></component>
+   <component name="RecentsManager">
+     <key name="CopyFile.RECENT_KEYS">
+       <recent name="$PROJECT_DIR$/src/components/amenities" />
+@@ -124,6 +125,7 @@
+       <workItem from="1734019568905" duration="59000" />
+       <workItem from="1734019709202" duration="55000" />
+       <workItem from="1734024323558" duration="52000" />
++      <workItem from="1770002094695" duration="462000" />
+     </task>
+     <servers />
+   </component>
