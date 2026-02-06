@@ -201,8 +201,11 @@ async function uploadImagesToSupabase(
     failed.forEach(r => console.log(`  - ${r.fileName}: ${r.error}`));
   }
 
-  // Step 7: Save URLs to JSON file
-  const urlsFile = path.join(process.cwd(), 'casa-daleese-image-urls.json');
+  // Step 7: Save URLs to JSON file (filename depends on bucket)
+  const urlsFile = path.join(
+    process.cwd(),
+    bucketName === 'hotel-daleese' ? 'hotel-daleese-image-urls.json' : 'casa-daleese-image-urls.json'
+  );
   const urlsData = {
     bucket: bucketName,
     uploadDate: new Date().toISOString(),

@@ -68,7 +68,7 @@ export function Navbar() {
             <div className="flex items-center">
               <Link href="/">
                 <Image
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/hotel-daleese-logo-6mo8tveOfXJbFGTSZW22j3RYWlVyS0.png"
+                    src="/hotel-daleese-logo.png"
                     alt="Hotel Daleese Logo"
                     width={150}
                     height={100}
@@ -118,7 +118,7 @@ export function Navbar() {
                   <div className="flex justify-between items-center p-4">
                     <Link href="/" onClick={() => setIsMobileMenuOpen(false)}>
                       <Image
-                          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/hotel-daleese-logo-6mo8tveOfXJbFGTSZW22j3RYWlVyS0.png"
+                          src="/hotel-daleese-logo.png"
                           alt="Hotel Daleese Logo"
                           width={120}
                           height={80}
@@ -224,7 +224,7 @@ export function Navbar() {
               <div className="flex flex-col items-center">
                 <Link href="/">
                   <Image
-                      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/hotel-daleese-logo-6mo8tveOfXJbFGTSZW22j3RYWlVyS0.png"
+                      src="/hotel-daleese-logo.png"
                       alt="Hotel Daleese Logo"
                       width={250}
                       height={150}
@@ -242,7 +242,7 @@ export function Navbar() {
                 </Link>
               </div>
             </div>
-            <div className="mt-4 flex justify-center space-x-6">
+            <div className="flex justify-center space-x-6">
               {menuItems.map((item) => (
                   <div key={item.name} className="relative group">
                     {item.name === 'About' ? (

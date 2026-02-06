@@ -21,6 +21,8 @@ export function AmenitiesHeroComponent() {
                     fill
                     style={{ objectFit: 'cover', objectPosition: 'center' }}
                     priority
+                    unoptimized
+                    referrerPolicy="no-referrer"
                 />
             </motion.div>
             <motion.div

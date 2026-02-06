@@ -55,7 +55,7 @@ export function HeroWithNavbarComponent() {
                 transition={{ duration: 0.8, delay: 1.4 }}
             >
                 <p className={`${cormorantGaramond.className} mx-auto max-w-4xl text-[20px] md:text-[22px] text-gray-800`}>
-                    Welcome to Hotel Daleese, an <strong>Adults Only</strong> boutique hotel. Located on the Southern Pacific Coast of Costa Rica, our family-owned boutique hotel is situated in Uvita, Puntarenas. We look forward to your visit!
+                    Welcome to Hotel Daleese, an Adults Only boutique hotel. Located on the Southern Pacific Coast of Costa Rica, our family-owned boutique hotel is situated in Uvita, Puntarenas. We look forward to your visit!
                 </p>
             </motion.div>
         </div>

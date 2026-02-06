@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useRef } from "react"
+import Image from "next/image"
 import { Card, CardContent } from "@/components/ui/card"
 import { ChevronLeft, ChevronRight, X } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
@@ -64,16 +65,16 @@ const Lightbox: React.FC<LightboxProps> = ({ galleryItems, currentIndex, onClose
                 exit={{ scale: 0.9, opacity: 0 }}
                 transition={{ duration: 0.3 }}
             >
-                <div className="p-4">
-                    <motion.img
+                <div className="relative p-4 w-full max-w-5xl h-[90vh]">
+                    <Image
                         key={galleryItems[currentIndex].id}
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        transition={{ duration: 0.3 }}
                         src={galleryItems[currentIndex].src}
                         alt={galleryItems[currentIndex].alt}
-                        className="max-h-[90vh] object-contain rounded-lg shadow-lg"
+                        fill
+                        className="rounded-lg shadow-lg object-contain"
+                        referrerPolicy="no-referrer"
+                        unoptimized
+                        sizes="(max-width: 1280px) 100vw, 1280px"
                     />
                 </div>
             </motion.div>
@@ -140,14 +141,18 @@ export const AmenitiesGalleryLightbox: React.FC<AmenitiesGalleryLightboxProps> =
                         >
                             <CardContent className="p-0">
                                 <motion.div
-                                    className="aspect-square bg-muted flex items-center justify-center text-muted-foreground"
+                                    className="relative aspect-square bg-muted flex items-center justify-center text-muted-foreground overflow-hidden"
                                     whileHover={{ scale: 1.05 }}
                                     transition={{ duration: 0.3 }}
                                 >
-                                    <img
+                                    <Image
                                         src={item.src}
                                         alt={item.alt}
-                                        className="object-cover w-full h-full"
+                                        fill
+                                        className="object-cover min-h-0"
+                                        referrerPolicy="no-referrer"
+                                        unoptimized
+                                        sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                                     />
                                 </motion.div>
                             </CardContent>

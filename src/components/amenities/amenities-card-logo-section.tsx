@@ -33,6 +33,7 @@ const AmenityCard: React.FC<AmenityCardProps> = ({ title, description, index, in
                 src="https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/6742797b4e785.png?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=16447035600&Signature=VRJv8mbXaFdWn8fdmt07FPVYu3MkFhaSysYQs6uISNAdUykrDQ0UW%2Bn%2BtieKiXTVprOW09PgoPP%2FzSkCGiOaXBqCMGfaoPSEc1uLfYr8x7gzDKe%2FJCUIlHUGgERh3IbU7cGrbgkMZVQmQrlGfL6ZKsOzs2MuIWj4PbiaxUEzUvUwOQYshhGTydnMQw7EjKH2sZHFVHczhJ%2BklU11k990sY3cFqasc6nMh1o%2FhrpZKTDrF3B9KJjTYx6vKvKz1DH19Z5XGSd4lo45C1esQbBibhyJyiR%2Fo9lF0nfs7BgIi7zddW4y95CchrHHHVdHK4%2Bhe1lpRBp7z71LW5PBIlV1%2BA%3D%3D"
                 alt="Restaurant Logo"
                 className="w-[150px] h-[150px] object-contain"
+                referrerPolicy="no-referrer"
             />
         </motion.div>
         <motion.h3

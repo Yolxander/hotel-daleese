@@ -1,0 +1,129 @@
+{
+  "bucket": "hotel-daleese",
+  "uploadDate": "2026-02-03T17:34:23.994Z",
+  "totalFiles": 30,
+  "successful": 30,
+  "failed": 0,
+  "urls": [
+    {
+      "fileName": "IMG_9625.jpg",
+      "url": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/IMG_9625.jpg"
+    },
+    {
+      "fileName": "IMG_9621.jpg",
+      "url": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/IMG_9621.jpg"
+    },
+    {
+      "fileName": "IMG_9618.jpg",
+      "url": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/IMG_9618.jpg"
+    },
+    {
+      "fileName": "IMG_9617.jpg",
+      "url": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/IMG_9617.jpg"
+    },
+    {
+      "fileName": "IMG_9613.jpg",
+      "url": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/IMG_9613.jpg"
+    },
+    {
+      "fileName": "IMG_9580.jpg",
+      "url": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/IMG_9580.jpg"
+    },
+    {
+      "fileName": "IMG_8791.jpg",
+      "url": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/IMG_8791.jpg"
+    },
+    {
+      "fileName": "IMG_7629.jpg",
+      "url": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/IMG_7629.jpg"
+    },
+    {
+      "fileName": "IMG_6559.jpg",
+      "url": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/IMG_6559.jpg"
+    },
+    {
+      "fileName": "IMG_6558.jpg",
+      "url": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/IMG_6558.jpg"
+    },
+    {
+      "fileName": "IMG_6343.jpg",
+      "url": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/IMG_6343.jpg"
+    },
+    {
+      "fileName": "IMG_6339.jpg",
+      "url": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/IMG_6339.jpg"
+    },
+    {
+      "fileName": "IMG_1632.jpg",
+      "url": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/IMG_1632.jpg"
+    },
+    {
+      "fileName": "IMG_1631.jpg",
+      "url": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/IMG_1631.jpg"
+    },
+    {
+      "fileName": "IMG_1630.jpg",
+      "url": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/IMG_1630.jpg"
+    },
+    {
+      "fileName": "IMG_1628.jpg",
+      "url": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/IMG_1628.jpg"
+    },
+    {
+      "fileName": "IMG_1627.jpg",
+      "url": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/IMG_1627.jpg"
+    },
+    {
+      "fileName": "IMG_1625.jpg",
+      "url": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/IMG_1625.jpg"
+    },
+    {
+      "fileName": "IMG_1611.jpg",
+      "url": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/IMG_1611.jpg"
+    },
+    {
+      "fileName": "IMG_1610.jpg",
+      "url": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/IMG_1610.jpg"
+    },
+    {
+      "fileName": "IMG_1609.jpg",
+      "url": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/IMG_1609.jpg"
+    },
+    {
+      "fileName": "IMG_1162.jpg",
+      "url": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/IMG_1162.jpg"
+    },
+    {
+      "fileName": "IMG_0843.jpg",
+      "url": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/IMG_0843.jpg"
+    },
+    {
+      "fileName": "IMG_0842.jpg",
+      "url": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/IMG_0842.jpg"
+    },
+    {
+      "fileName": "IMG_0646.jpg",
+      "url": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/IMG_0646.jpg"
+    },
+    {
+      "fileName": "IMG_0644.jpg",
+      "url": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/IMG_0644.jpg"
+    },
+    {
+      "fileName": "IMG_0638.jpg",
+      "url": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/IMG_0638.jpg"
+    },
+    {
+      "fileName": "IMG_0635.jpg",
+      "url": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/IMG_0635.jpg"
+    },
+    {
+      "fileName": "IMG_0632.jpg",
+      "url": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/IMG_0632.jpg"
+    },
+    {
+      "fileName": "IMG_0508.jpg",
+      "url": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/IMG_0508.jpg"
+    }
+  ]
+}
