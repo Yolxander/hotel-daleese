@@ -11,6 +11,21 @@ type GalleryItem = {
     alt: string
 }
 
+/** Deterministic shuffle so gallery order is fixed but different from source list order. */
+function shuffledForDisplay<T>(array: T[], seed: number): T[] {
+    const arr = [...array];
+    let s = seed;
+    const random = () => {
+        s = (s * 1103515245 + 12345) & 0x7fffffff;
+        return s / 0x7fffffff;
+    };
+    for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+}
+
 const header = { name: 'Casa Daleese', description: "2 Bedroom House with Private Office, Sleeps 4 Adults" }
 
 const suiteInfo = {
@@ -66,14 +81,17 @@ export default async function Page() {
         imageUrls = STATIC_CASA_DALEESE_IMAGE_URLS;
     }
 
+    // Fixed display order that differs from source list (deterministic shuffle)
+    const displayOrder = shuffledForDisplay(imageUrls, 0xcafe);
+
     // Map URLs to GalleryItem structure
-    const galleryItems: GalleryItem[] = imageUrls.map((url, index) => ({
+    const galleryItems: GalleryItem[] = displayOrder.map((url, index) => ({
         src: url,
         alt: `Casa Daleese Image ${index + 1}`,
     }));
 
     // Use first image as hero image, or fallback
-    const imageSrc = imageUrls[0] || '/placeholder-image.jpg';
+    const imageSrc = imageUrls[17] || '/placeholder-image.jpg';
 
     return (
         <div>

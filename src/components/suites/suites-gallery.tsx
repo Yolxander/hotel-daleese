@@ -12,7 +12,7 @@ export function SuitesGalleryComponent() {
         {
             id: 'casa',
             name: 'Casa Daleese',
-            image: 'https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/673de7f44f33a.jpeg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=16447035600&Signature=Q3NdxHjdLsmvcqL893JAIvr1gTYXe6qolHmIx1SDt9%2FN3cNMU1ngr4Aw5nKxX%2BEOotmQU6ZqZFTA3DXp4rYpY1n%2B7%2B4Z%2BPaBE8x%2FVI12jLr3KG%2BmECKOaauGpRmvvd2Y5X7z0gAVBkxgvYnmXoBMrsioAU2xeXyAfO449BPJDdwgqJwYgNLbCI36J3SLoA5SplrdG2bSxfZ1EjRMmkK%2FxN5VCrzIHFLj2ekk2FOAXDGvkaSlNPC5HDTe29xeXH3mpvztCfaYoARLx4cYMhEeJOXGdFHVl1yRBO2CoeRuf3pf3anTkSyUiHEZDKOH05IA56Mzp%2ByCX7nLYOQvUkHafw%3D%3D',
+            image: 'https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/casa-daleese/IMG_0857.jpg',
             alt: 'Casa Daleese - 2 Bedroom House with Private Office',
         },
         {
@@ -75,7 +75,7 @@ export function SuitesGalleryComponent() {
                                 }}
                             >
                                 {/* Centering and Scaling Adjustments */}
-                                <div className="relative overflow-hidden flex justify-center items-center h-[60vh] bg-gray-100">
+                                <div className="relative overflow-hidden flex justify-center items-center h-[60vh] bg-gray-100 rounded-sm">
                                     <Image
                                         src={suite.image}
                                         alt={suite.alt}
