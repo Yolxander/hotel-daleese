@@ -47,7 +47,7 @@ export function OurStorySection() {
                 transition={{ duration: 0.6, delay: 0.4 }}
                 className="mb-6 text-[22px]"
             >
-              Our journey started in Canada, where Rosa spent over 20 years working in commercial real estate and hospitality-focused projects, while Dave built his career as a skilled plumber on residential and commercial developments. Although our careers were thriving, we shared a deeper vision — to create a place where thoughtful design, genuine hospitality, and meaningful connection come together.
+              Our journey started in Canada, where Rosa spent over 20 years working in commercial real estate and hospitality-focused projects, while Dave built his career as a skilled plumber on residential and commercial developments. Although our careers were thriving, we shared a deeper vision; to create a place where thoughtful design, genuine hospitality, and meaningful connection come together.
             </motion.p>
             <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -63,7 +63,7 @@ export function OurStorySection() {
                 transition={{ duration: 0.6, delay: 0.6 }}
                 className="mb-6 text-[22px]"
             >
-              From the beginning, we have been deeply involved in shaping every detail of the property — from renovations and design choices to guest experience and service standards. Today, Hotel Daleese continues to operate with the same care and attention through our dedicated on-site team, who share our commitment to warm, personalized hospitality.
+              From the beginning, we have been deeply involved in shaping every detail of the property; from renovations and design choices to guest experience and service standards. Today, Hotel Daleese continues to operate with the same care and attention through our dedicated on-site team, who share our commitment to warm, personalized hospitality.
             </motion.p>
             <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -95,7 +95,7 @@ export function OurStorySection() {
                 transition={{ duration: 0.6, delay: 1.0 }}
                 className="mb-6 text-[22px]"
             >
-              Our time in Costa Rica has shaped us in unforgettable ways — teaching us new perspectives, introducing us to rich culture, and reinforcing the importance of community, balance, and beauty in everyday life.
+              Our time in Costa Rica has shaped us in unforgettable ways, teaching us new perspectives, introducing us to rich culture, and reinforcing the importance of community, balance, and beauty in everyday life.
             </motion.p>
             <motion.p
                 initial={{ opacity: 0, y: 20 }}

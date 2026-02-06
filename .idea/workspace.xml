@@ -5,16 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c7e99333-aede-4333-a5d5-366958e0f415" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Layer_1.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chair.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/upload-to-supabase.ts" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/upload-to-supabase.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/amenities/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/amenities/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/gallery/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/gallery/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/amenities/amenities-card-logo-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/amenities/amenities-card-logo-section.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/amenities/amenities-gallery-lightbox.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/amenities/amenities-gallery-lightbox.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/amenities/amenities-hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/amenities/amenities-hero.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/gallery/features-gallery.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/gallery/features-gallery.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/our-story/our-story-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/our-story/our-story-section.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +55,7 @@
     "git-widget-placeholder": "main",
     "javascript.nodejs.core.library.configured.version": "22.2.0",
     "javascript.nodejs.core.library.typings.version": "22.2.0",
-    "last_opened_file_path": "/Users/humancontact/Downloads/demos/nextjs/hotel-daleese/src",
+    "last_opened_file_path": "/Users/humancontact/Downloads/demos/nextjs/hotel-daleese/src/public",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -79,11 +70,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/public" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/components/amenities" />
       <recent name="$PROJECT_DIR$/src/app/suites" />
-      <recent name="$PROJECT_DIR$/src/app/suites/suite-1" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/components/landing_page" />
@@ -149,6 +140,7 @@
       <workItem from="1768953894024" duration="10739000" />
       <workItem from="1769664789521" duration="286000" />
       <workItem from="1770169488872" duration="1771000" />
+      <workItem from="1770360228079" duration="2100000" />
     </task>
     <servers />
   </component>
