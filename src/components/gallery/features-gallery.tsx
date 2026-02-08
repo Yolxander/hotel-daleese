@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
@@ -119,9 +119,53 @@ function buildGalleryItems(imageUrls: string[]): GalleryItem[] {
   }));
 }
 
+/** Deterministic shuffle so gallery order is fixed but random-looking (like Casa Daleese). */
+function shuffledForDisplay<T>(array: T[], seed: number): T[] {
+  const arr = [...array];
+  let s = seed;
+  const random = () => {
+    s = (s * 1103515245 + 12345) & 0x7fffffff;
+    return s / 0x7fffffff;
+  };
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+
+// Row pattern: 2, 3, 4, 3, 2, 4, 3, 2, ... for varied layout
+const ROW_SIZES = [2, 3, 4, 3, 2, 4, 3, 2, 3, 4];
+const INITIAL_ROWS = 4;
+const ROWS_PER_LOAD = 4;
+
+function chunkIntoRows<T>(items: T[]): T[][] {
+  const rows: T[][] = [];
+  let i = 0;
+  let patternIndex = 0;
+  while (i < items.length) {
+    const size = ROW_SIZES[patternIndex % ROW_SIZES.length];
+    const take = Math.min(size, items.length - i);
+    if (take > 0) rows.push(items.slice(i, i + take));
+    i += take;
+    patternIndex++;
+  }
+  return rows;
+}
+
 export function FeaturesGalleryComponent({ imageUrls = [] }: { imageUrls?: string[] }) {
   const urls = imageUrls?.length ? imageUrls : FALLBACK_IMAGE_URLS;
-  const items = buildGalleryItems(urls);
+  const items = useMemo(() => buildGalleryItems(urls), [urls]);
+  const shuffledItems = useMemo(() => shuffledForDisplay(items, 0xda1e5e), [items]);
+  const allRows = useMemo(() => chunkIntoRows(shuffledItems), [shuffledItems]);
+
+  const [visibleRowCount, setVisibleRowCount] = useState(INITIAL_ROWS);
+  const visibleRows = useMemo(
+    () => allRows.slice(0, visibleRowCount),
+    [allRows, visibleRowCount]
+  );
+  const hasMoreRows = visibleRowCount < allRows.length;
+
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [ref, inView] = useInView({
@@ -137,11 +181,11 @@ export function FeaturesGalleryComponent({ imageUrls = [] }: { imageUrls?: strin
   const closeLightbox = () => setLightboxOpen(false);
 
   const goToPrevious = () => {
-    setCurrentImageIndex((prev) => (prev === 0 ? items.length - 1 : prev - 1));
+    setCurrentImageIndex((prev) => (prev === 0 ? shuffledItems.length - 1 : prev - 1));
   };
 
   const goToNext = () => {
-    setCurrentImageIndex((prev) => (prev === items.length - 1 ? 0 : prev + 1));
+    setCurrentImageIndex((prev) => (prev === shuffledItems.length - 1 ? 0 : prev + 1));
   };
 
   const containerVariants = {
@@ -162,8 +206,8 @@ export function FeaturesGalleryComponent({ imageUrls = [] }: { imageUrls?: strin
   };
 
   useEffect(() => {
-    items.forEach((item) => preloadImage(item.src));
-  }, [items]);
+    shuffledItems.forEach((item) => preloadImage(item.src));
+  }, [shuffledItems]);
 
   return (
     <motion.section
@@ -174,32 +218,58 @@ export function FeaturesGalleryComponent({ imageUrls = [] }: { imageUrls?: strin
       className="bg-white py-16"
     >
       <div className="container mx-auto px-4">
-        <motion.div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-          {items.map((feature, index) => (
+        <div className="flex flex-col gap-4">
+          {visibleRows.map((rowItems, rowIndex) => (
             <motion.div
-              key={feature.id}
-              className="aspect-[3/4] cursor-pointer min-h-0"
-              variants={itemVariants}
-              onClick={() => openLightbox(index)}
+              key={rowIndex}
+              className="grid w-full gap-4"
+              style={{
+                gridTemplateColumns: `repeat(${rowItems.length}, minmax(0, 1fr))`,
+              }}
+              variants={containerVariants}
             >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={feature.src}
-                alt={feature.alt}
-                width={300}
-                height={400}
-                loading="lazy"
-                decoding="async"
-                referrerPolicy="no-referrer"
-                className="w-full h-full object-cover rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 min-h-0"
-              />
+              {rowItems.map((feature) => {
+                const globalIndex = shuffledItems.indexOf(feature);
+                return (
+                  <motion.div
+                    key={feature.id}
+                    className="aspect-[4/3] cursor-pointer min-h-0 overflow-hidden rounded-lg"
+                    variants={itemVariants}
+                    onClick={() => openLightbox(globalIndex)}
+                  >
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={feature.src}
+                      alt={feature.alt}
+                      width={400}
+                      height={300}
+                      loading="lazy"
+                      decoding="async"
+                      referrerPolicy="no-referrer"
+                      className="w-full h-full object-cover rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 min-h-0"
+                    />
+                  </motion.div>
+                );
+              })}
             </motion.div>
           ))}
-        </motion.div>
+        </div>
+
+        {hasMoreRows && (
+          <div className="mt-8 flex justify-center">
+            <button
+              type="button"
+              onClick={() => setVisibleRowCount((prev) => prev + ROWS_PER_LOAD)}
+              className="px-6 py-3 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors font-medium"
+            >
+              Show more
+            </button>
+          </div>
+        )}
 
         {lightboxOpen && (
           <Lightbox
-            items={items}
+            items={shuffledItems}
             currentIndex={currentImageIndex}
             onClose={closeLightbox}
             onPrev={goToPrevious}

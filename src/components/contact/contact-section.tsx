@@ -143,9 +143,6 @@ export default function ContactSection() {
           <motion.div variants={itemVariants} className="md:w-1/2 text-white">
             <h2 className="text-4xl mb-2">Contact Us</h2>
             <div className="w-full h-px bg-white mb-6"></div>
-            <p className="mb-4 text-[22px] font-semibold">
-              Adults Only - Hotel Daleese is an adults-only boutique hotel.
-            </p>
             <p className="mb-6 text-[22px]">
               We always look forward to speaking with our guests. If you have any
               questions, do not hesitate to reach out. We do our best to reply as quickly as
