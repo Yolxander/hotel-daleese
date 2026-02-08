@@ -6,6 +6,9 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getSignedUrl, getSignedUrls } from '@/lib/firebase-storage';
 
+// Uses request.nextUrl.searchParams — must be dynamic, not statically rendered
+export const dynamic = 'force-dynamic';
+
 /**
  * GET /api/images?path=default/uploads/image.jpg
  * Returns a signed URL for a single image

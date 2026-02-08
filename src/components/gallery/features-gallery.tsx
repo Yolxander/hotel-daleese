@@ -136,8 +136,8 @@ function shuffledForDisplay<T>(array: T[], seed: number): T[] {
 
 // Row pattern: 2, 3, 4, 3, 2, 4, 3, 2, ... for varied layout
 const ROW_SIZES = [2, 3, 4, 3, 2, 4, 3, 2, 3, 4];
-const INITIAL_ROWS = 4;
-const ROWS_PER_LOAD = 4;
+const INITIAL_ROWS = 2;
+const ROWS_PER_LOAD = 2;
 
 function chunkIntoRows<T>(items: T[]): T[][] {
   const rows: T[][] = [];
@@ -205,9 +205,10 @@ export function FeaturesGalleryComponent({ imageUrls = [] }: { imageUrls?: strin
     },
   };
 
+  // Only preload images that are currently visible (first 2 rows, then more as user clicks "Show more")
   useEffect(() => {
-    shuffledItems.forEach((item) => preloadImage(item.src));
-  }, [shuffledItems]);
+    visibleRows.flat().forEach((item) => preloadImage(item.src));
+  }, [visibleRows]);
 
   return (
     <motion.section
@@ -230,6 +231,7 @@ export function FeaturesGalleryComponent({ imageUrls = [] }: { imageUrls?: strin
             >
               {rowItems.map((feature) => {
                 const globalIndex = shuffledItems.indexOf(feature);
+                const isFirstRow = rowIndex === 0;
                 return (
                   <motion.div
                     key={feature.id}
@@ -243,8 +245,9 @@ export function FeaturesGalleryComponent({ imageUrls = [] }: { imageUrls?: strin
                       alt={feature.alt}
                       width={400}
                       height={300}
-                      loading="lazy"
+                      loading={isFirstRow ? 'eager' : 'lazy'}
                       decoding="async"
+                      fetchPriority={isFirstRow ? 'high' : 'low'}
                       referrerPolicy="no-referrer"
                       className="w-full h-full object-cover rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 min-h-0"
                     />
