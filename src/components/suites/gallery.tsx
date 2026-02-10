@@ -166,7 +166,7 @@ export default function ImageGallery({ galleryItems }: { galleryItems: GalleryIt
                 ))}
             </motion.div>
             
-            {/* Load More Button */}
+            {/* Show More Button */}
             {hasMore && (
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -174,14 +174,13 @@ export default function ImageGallery({ galleryItems }: { galleryItems: GalleryIt
                     transition={{ duration: 0.6, delay: 0.3 }}
                     className="flex justify-center mt-8"
                 >
-                    <Button
+                    <button
+                        type="button"
                         onClick={loadMore}
-                        variant="outline"
-                        size="lg"
-                        className="px-8 py-6 text-lg"
+                        className="px-6 py-3 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors font-medium"
                     >
-                        Load More ({galleryItems.length - visibleCount} remaining)
-                    </Button>
+                        Show more
+                    </button>
                 </motion.div>
             )}
             

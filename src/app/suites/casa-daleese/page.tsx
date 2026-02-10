@@ -4,7 +4,7 @@ import { Suite_Section } from '@/components/suites/suite-section'
 import SuiteFacilities from '@/components/suites/suite-facilities'
 import ImageGallery from "@/components/suites/gallery"
 import {SuiteNavigationComponent} from "@/components/suites/suite-navigation";
-import { getCasaDaleeseImageUrls, STATIC_CASA_DALEESE_IMAGE_URLS } from '@/lib/get-casa-daleese-images';
+import { getCasaDaleeseImageUrls, STATIC_CASA_DALEESE_IMAGE_URLS, SPA_CASA_DALEESE_IMAGE_URLS } from '@/lib/get-casa-daleese-images';
 
 type GalleryItem = {
     src: string
@@ -80,6 +80,10 @@ export default async function Page() {
     if (imageUrls.length === 0) {
         imageUrls = STATIC_CASA_DALEESE_IMAGE_URLS;
     }
+
+    // Exclude SPA images from main gallery (they live in SPA_CASA_DALEESE_IMAGE_URLS)
+    const spaSet = new Set(SPA_CASA_DALEESE_IMAGE_URLS);
+    imageUrls = imageUrls.filter((url) => !spaSet.has(url));
 
     // Fixed display order that differs from source list (deterministic shuffle)
     const displayOrder = shuffledForDisplay(imageUrls, 0xcafe);
