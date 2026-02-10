@@ -3,15 +3,15 @@
  * Used by the /gallery page FeaturesGalleryComponent
  */
 
+import { unstable_cache } from 'next/cache';
 import { listFiles, getPublicUrl } from './supabase-storage';
 
 const BUCKET_NAME = 'hotel-daleese';
 const MAX_GALLERY_IMAGES = 30;
+const CACHE_TAG = 'hotel-daleese-gallery-urls';
+const CACHE_REVALIDATE_SECONDS = 60 * 60; // 1 hour
 
-/**
- * Get image URLs from Supabase Storage bucket hotel-daleese (up to 30)
- */
-export async function getHotelDaleeseImageUrls(): Promise<string[]> {
+async function getHotelDaleeseImageUrlsUncached(): Promise<string[]> {
   try {
     const files = await listFiles(BUCKET_NAME);
 
@@ -34,6 +34,16 @@ export async function getHotelDaleeseImageUrls(): Promise<string[]> {
     return STATIC_HOTEL_DALEESE_IMAGE_URLS;
   }
 }
+
+/**
+ * Get image URLs from Supabase Storage bucket hotel-daleese (up to 30).
+ * Cached so the gallery does not refetch when navigating away and back.
+ */
+export const getHotelDaleeseImageUrls = unstable_cache(
+  getHotelDaleeseImageUrlsUncached,
+  [CACHE_TAG],
+  { revalidate: CACHE_REVALIDATE_SECONDS, tags: [CACHE_TAG] }
+);
 
 /**
  * Static fallback when bucket fetch fails — all 30 from hotel-daleese bucket so gallery always shows

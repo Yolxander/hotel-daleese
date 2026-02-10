@@ -1,6 +1,7 @@
 'use client'
 
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect, useMemo, useRef } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
@@ -172,6 +173,10 @@ export function FeaturesGalleryComponent({ imageUrls = [] }: { imageUrls?: strin
     triggerOnce: true,
     threshold: 0.1,
   });
+  // Once the section has been visible, keep it visible so images don't re-run when leaving viewport
+  const hasBeenVisibleRef = useRef(false);
+  if (inView) hasBeenVisibleRef.current = true;
+  const showContent = hasBeenVisibleRef.current;
 
   const openLightbox = (index: number) => {
     setCurrentImageIndex(index);
@@ -205,16 +210,11 @@ export function FeaturesGalleryComponent({ imageUrls = [] }: { imageUrls?: strin
     },
   };
 
-  // Only preload images that are currently visible (first 2 rows, then more as user clicks "Show more")
-  useEffect(() => {
-    visibleRows.flat().forEach((item) => preloadImage(item.src));
-  }, [visibleRows]);
-
   return (
     <motion.section
       ref={ref}
       initial="hidden"
-      animate={inView ? "visible" : "hidden"}
+      animate={showContent ? "visible" : "hidden"}
       variants={containerVariants}
       className="bg-white py-16"
     >
@@ -235,21 +235,19 @@ export function FeaturesGalleryComponent({ imageUrls = [] }: { imageUrls?: strin
                 return (
                   <motion.div
                     key={feature.id}
-                    className="aspect-[4/3] cursor-pointer min-h-0 overflow-hidden rounded-lg"
+                    className="aspect-[4/3] cursor-pointer min-h-0 overflow-hidden rounded-lg relative"
                     variants={itemVariants}
                     onClick={() => openLightbox(globalIndex)}
                   >
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
+                    {/* next/image caches so images don't reload when leaving and returning to the page */}
+                    <Image
                       src={feature.src}
                       alt={feature.alt}
-                      width={400}
-                      height={300}
-                      loading={isFirstRow ? 'eager' : 'lazy'}
-                      decoding="async"
-                      fetchPriority={isFirstRow ? 'high' : 'low'}
+                      fill
+                      sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
+                      loading={isFirstRow ? "eager" : "lazy"}
+                      className="object-cover rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 min-h-0"
                       referrerPolicy="no-referrer"
-                      className="w-full h-full object-cover rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 min-h-0"
                     />
                   </motion.div>
                 );

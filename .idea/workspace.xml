@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c7e99333-aede-4333-a5d5-366958e0f415" name="Changes" comment="" />
+    <list default="true" id="c7e99333-aede-4333-a5d5-366958e0f415" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/components/gallery/features-gallery.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/gallery/features-gallery.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/get-hotel-daleese-images.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/get-hotel-daleese-images.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -140,6 +143,7 @@
       <workItem from="1770169488872" duration="1771000" />
       <workItem from="1770360228079" duration="4187000" />
       <workItem from="1770503886522" duration="2163000" />
+      <workItem from="1770691544749" duration="3504000" />
     </task>
     <servers />
   </component>
