@@ -94,7 +94,7 @@ export function BookingFormComponent() {
                 arrivalDate: '',
                 departureDate: '',
                 adults: '',
-                kids: '',
+                suite: '',
                 hasPet: '',
                 oneMoreThing: '',
                 honeypot: '', // Reset honeypot field
