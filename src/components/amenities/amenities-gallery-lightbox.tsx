@@ -65,16 +65,18 @@ const Lightbox: React.FC<LightboxProps> = ({ galleryItems, currentIndex, onClose
                 exit={{ scale: 0.9, opacity: 0 }}
                 transition={{ duration: 0.3 }}
             >
-                <div className="relative p-4 w-full max-w-5xl h-[90vh]">
-                    <Image
-                        key={galleryItems[currentIndex].id}
+                <div className="p-4">
+                    <motion.img
+                        key={currentIndex}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.3 }}
                         src={galleryItems[currentIndex].src}
                         alt={galleryItems[currentIndex].alt}
-                        fill
-                        className="rounded-lg shadow-lg object-contain"
+                        className="max-h-[90vh] object-contain rounded-lg shadow-lg"
+                        loading="eager"
                         referrerPolicy="no-referrer"
-                        unoptimized
-                        sizes="(max-width: 1280px) 100vw, 1280px"
                     />
                 </div>
             </motion.div>

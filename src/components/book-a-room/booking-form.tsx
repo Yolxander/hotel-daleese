@@ -18,7 +18,7 @@ export function BookingFormComponent() {
         arrivalDate: '',
         departureDate: '',
         adults: '',
-        kids: '',
+        suite: '',
         hasPet: '',
         oneMoreThing: '',
         honeypot: '', // Honeypot field for spam prevention
@@ -77,7 +77,7 @@ export function BookingFormComponent() {
                     arrivalDate: formData.arrivalDate,
                     departureDate: formData.departureDate,
                     adults: formData.adults,
-                    kids: formData.kids,
+                    suite: formData.suite,
                     hasPet: formData.hasPet,
                     oneMoreThing: formData.oneMoreThing,
                     turnstileToken: turnstileToken, // Include the Turnstile token
@@ -142,11 +142,11 @@ export function BookingFormComponent() {
             options: ['', '1', '2', '3', '4'],
         },
         {
-            name: 'kids',
+            name: 'suite',
             type: 'select',
-            label: 'Number of Kids',
-            placeholder: 'Number of Kids',
-            options: ['', '0', '1', '2', '3', '4'],
+            label: 'Select Suite',
+            placeholder: 'Select Suite',
+            options: ['', 'Casa Daleese', 'Suite 1', 'Suite 2', 'Suite 3', 'Suite 4'],
         },
         {
             name: 'hasPet',
