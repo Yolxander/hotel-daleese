@@ -12,7 +12,7 @@ export function SuitesGalleryComponent() {
         {
             id: 'casa',
             name: 'Casa Daleese',
-            image: 'https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/casa-daleese/IMG_0857.jpg',
+            image: 'https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/casa-daleese/IMG_0880.jpg',
             alt: 'Casa Daleese - 2 Bedroom House with Private Office',
         },
         {

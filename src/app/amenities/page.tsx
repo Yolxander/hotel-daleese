@@ -29,7 +29,7 @@ const amenities = [
 const GALLERY_DEFINITION: { id: string; path?: string; src?: string; alt: string }[] = [
     { id: "1", src: "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/IMG_0843.jpg", alt: "Hotel Daleese gallery 23" },
     { id: "2", src: "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/IMG_1632.jpg", alt: "Outdoor lounge area" },
-    { id: "3", path: "default/uploads/673eaf00ea361.jpg", alt: "Hotel amenities" },
+    { id: "3", src: "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/casa-daleese/IMG_0838.jpg", alt: "Outdoor lounge area"},
     { id: "4", src: "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/IMG_0508.jpg", alt: "Property grounds" },
 ] as const
 

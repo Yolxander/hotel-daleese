@@ -12,16 +12,16 @@ function getSupabaseConfig() {
   return { supabaseUrl, supabaseKey };
 }
 
-// Initialize Supabase client (lazy initialization)
+// Initialize Supabase client (lazy initialization) - prefers service role, falls back to anon
 let supabaseClient: ReturnType<typeof createClient> | null = null;
 
-function getSupabaseClient() {
+export function getSupabaseClient() {
   if (supabaseClient) {
     return supabaseClient;
   }
 
   const { supabaseUrl, supabaseKey } = getSupabaseConfig();
-  
+
   if (!supabaseUrl || !supabaseKey) {
     console.warn('Supabase URL or key not configured. Some functions may not work.');
     return null;
@@ -35,6 +35,24 @@ function getSupabaseClient() {
   });
 
   return supabaseClient;
+}
+
+// Admin client: service role only. Use for storage bucket create/upload so RLS does not block.
+let supabaseAdminClient: ReturnType<typeof createClient> | null = null;
+
+export function getSupabaseAdminClient(): ReturnType<typeof createClient> | null {
+  if (supabaseAdminClient) {
+    return supabaseAdminClient;
+  }
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || process.env.SUPABASE_URL;
+  const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  if (!supabaseUrl || !serviceRoleKey) {
+    return null;
+  }
+  supabaseAdminClient = createClient(supabaseUrl, serviceRoleKey, {
+    auth: { autoRefreshToken: false, persistSession: false }
+  });
+  return supabaseAdminClient;
 }
 
 // Removed unused proxy - using getSupabaseClient() directly instead
@@ -129,7 +147,8 @@ export async function uploadBuffer(
     upsert?: boolean;
   }
 ): Promise<string> {
-  const supabase = getSupabaseClient();
+  // Prefer admin (service role) so uploads bypass storage RLS
+  const supabase = getSupabaseAdminClient() ?? getSupabaseClient();
   if (!supabase) {
     throw new Error('Supabase client not initialized');
   }
@@ -152,18 +171,16 @@ export async function uploadBuffer(
 }
 
 /**
- * Check if a bucket exists
- * @param bucketName - Name of the bucket
- * @returns True if bucket exists, false otherwise
+ * Check if a bucket exists. Uses service role so RLS does not block.
  */
 export async function bucketExists(bucketName: string): Promise<boolean> {
-  const supabase = getSupabaseClient();
+  const supabase = getSupabaseAdminClient() ?? getSupabaseClient();
   if (!supabase) {
     throw new Error('Supabase client not initialized');
   }
 
   const { data, error } = await supabase.storage.listBuckets();
-  
+
   if (error) {
     throw new Error(`Failed to list buckets: ${error.message}`);
   }
@@ -171,23 +188,26 @@ export async function bucketExists(bucketName: string): Promise<boolean> {
   return data?.some(bucket => bucket.name === bucketName) ?? false;
 }
 
+const BUCKET_CREATE_REQUIRES_SERVICE_ROLE =
+  'Creating storage buckets requires SUPABASE_SERVICE_ROLE_KEY in .env.local (bypasses RLS).';
+
 /**
- * Create a bucket if it doesn't exist
+ * Create a bucket if it doesn't exist. Uses service role only so RLS does not block.
  * @param bucketName - Name of the bucket
- * @param public - Whether the bucket should be public (default: true)
+ * @param isPublic - Whether the bucket should be public (default: true)
  * @returns True if bucket was created, false if it already exists
  */
 export async function createBucketIfNotExists(
   bucketName: string,
   isPublic: boolean = true
 ): Promise<boolean> {
-  const supabase = getSupabaseClient();
+  const supabase = getSupabaseAdminClient();
   if (!supabase) {
-    throw new Error('Supabase client not initialized');
+    throw new Error(BUCKET_CREATE_REQUIRES_SERVICE_ROLE);
   }
 
   const exists = await bucketExists(bucketName);
-  
+
   if (exists) {
     return false;
   }

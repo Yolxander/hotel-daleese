@@ -1,5 +1,12 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Environment variables
+
+Copy `.env.example` to `.env.local` and fill in:
+
+- **Supabase**: `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`, and `SUPABASE_SERVICE_ROLE_KEY` for storage and the blog database. See [SUPABASE_UPLOAD_SETUP.md](SUPABASE_UPLOAD_SETUP.md) for details.
+- **Admin blog**: `ADMIN_SECRET` – used to protect `/admin` and `/api/admin/*`. Set it and log in at `/admin` to create blog posts that appear on `/blog`.
+
 ## Getting Started
 
 First, run the development server:
