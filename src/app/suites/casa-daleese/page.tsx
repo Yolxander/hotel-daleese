@@ -6,6 +6,9 @@ import ImageGallery from "@/components/suites/gallery"
 import {SuiteNavigationComponent} from "@/components/suites/suite-navigation";
 import { getCasaDaleeseImageUrls, STATIC_CASA_DALEESE_IMAGE_URLS, SPA_CASA_DALEESE_IMAGE_URLS } from '@/lib/get-casa-daleese-images';
 
+// Avoid static generation timeout (60s) when Supabase is slow; render on request
+export const dynamic = "force-dynamic";
+
 type GalleryItem = {
     src: string
     alt: string

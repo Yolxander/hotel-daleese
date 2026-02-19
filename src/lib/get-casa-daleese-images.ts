@@ -3,17 +3,31 @@
  * Can fetch dynamically or use a static list
  */
 
+import { unstable_cache } from 'next/cache';
 import { listFiles, getPublicUrl } from './supabase-storage';
 
 const BUCKET_NAME = 'casa-daleese';
+const CACHE_TAG = 'casa-daleese-gallery-urls';
+const CACHE_REVALIDATE_SECONDS = 60 * 60; // 1 hour
+const SUPABASE_FETCH_TIMEOUT_MS = 8000; // 8s then fallback to static
 
-/**
- * Get all image URLs from Supabase Storage bucket
- * Only returns new Casa Daleese images (IMG_0787 to IMG_0891 range)
- */
-export async function getCasaDaleeseImageUrls(): Promise<string[]> {
+function withTimeout<T>(promise: Promise<T>, ms: number, fallback: T): Promise<T> {
+  return Promise.race([
+    promise,
+    new Promise<T>((_, reject) =>
+      setTimeout(() => reject(new Error('Supabase fetch timeout')), ms)
+    ),
+  ]).catch(() => fallback);
+}
+
+async function getCasaDaleeseImageUrlsUncached(): Promise<string[]> {
   try {
-    const files = await listFiles(BUCKET_NAME);
+    const files = await withTimeout(
+      listFiles(BUCKET_NAME),
+      SUPABASE_FETCH_TIMEOUT_MS,
+      [] as string[]
+    );
+    if (files.length === 0) return STATIC_CASA_DALEESE_IMAGE_URLS;
     
     // Filter for image files and only include new Casa Daleese images (IMG_0787 to IMG_0891)
     const imageFiles = files.filter(file => {
@@ -39,18 +53,21 @@ export async function getCasaDaleeseImageUrls(): Promise<string[]> {
     }
 
     const urls = imageFiles.map(file => getPublicUrl(BUCKET_NAME, file));
-    
-    // Sort by filename for consistent ordering
     const sortedUrls = urls.sort();
-    console.log(`Fetched ${sortedUrls.length} new Casa Daleese images from Supabase Storage`);
     return sortedUrls;
-  } catch (error) {
-    console.error('Error fetching Casa Daleese images from Supabase:', error);
-    console.log('Falling back to static URLs');
-    // Return static URLs on error instead of empty array
+  } catch {
     return STATIC_CASA_DALEESE_IMAGE_URLS;
   }
 }
+
+/**
+ * Get image URLs from Supabase with caching (1h) and timeout (8s) to avoid slow/blocked builds and requests.
+ */
+export const getCasaDaleeseImageUrls = unstable_cache(
+  getCasaDaleeseImageUrlsUncached,
+  [CACHE_TAG],
+  { revalidate: CACHE_REVALIDATE_SECONDS, tags: [CACHE_TAG] }
+);
 
 /**
  * SPA / highlight images (separate from main gallery)
@@ -69,7 +86,6 @@ export const SPA_CASA_DALEESE_IMAGE_URLS: string[] = [
  */
 export const STATIC_CASA_DALEESE_IMAGE_URLS: string[] = [
   'https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/casa-daleese/IMG_0787.jpg',
-  'https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/casa-daleese/IMG_0788.jpg',
   'https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/casa-daleese/IMG_0789.jpg',
   'https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/casa-daleese/IMG_0811.jpg',
   'https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/casa-daleese/IMG_0812.jpg',
@@ -80,11 +96,9 @@ export const STATIC_CASA_DALEESE_IMAGE_URLS: string[] = [
   'https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/casa-daleese/IMG_0835.jpg',
   'https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/casa-daleese/IMG_0844.jpg',
   'https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/casa-daleese/IMG_0845.jpg',
-  'https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/casa-daleese/IMG_0847.jpg',
   'https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/casa-daleese/IMG_0848.jpg',
   'https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/casa-daleese/IMG_0849.jpg',
   'https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/casa-daleese/IMG_0850.jpg',
-  'https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/casa-daleese/IMG_0851.jpg',
   'https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/casa-daleese/IMG_0853.jpg',
   'https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/casa-daleese/IMG_0854.jpg',
   'https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/casa-daleese/IMG_0855.jpg',

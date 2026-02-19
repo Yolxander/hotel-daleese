@@ -6,6 +6,8 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
+import { RichTextEditor } from './rich-text-editor';
+import { FeaturedImagePreview } from './featured-image-preview';
 import type { BlogPost } from '@/lib/blog';
 
 function slugFromTitle(title: string): string {
@@ -149,11 +151,11 @@ export function AdminPostEditForm({ postId }: { postId: string }) {
               </div>
               <div>
                 <label className="mb-1.5 block text-sm font-medium text-gray-700">Content</label>
-                <Textarea
+                <RichTextEditor
                   value={content}
-                  onChange={(e) => setContent(e.target.value)}
+                  onChange={setContent}
                   placeholder="Write your full post here…"
-                  rows={12}
+                  minHeight="240px"
                   className="w-full"
                 />
               </div>
@@ -164,6 +166,10 @@ export function AdminPostEditForm({ postId }: { postId: string }) {
                   accept="image/*"
                   onChange={(e) => setImage(e.target.files?.[0] ?? null)}
                   className="w-full"
+                />
+                <FeaturedImagePreview
+                  currentUrl={post.image_url}
+                  selectedFile={image}
                 />
                 {post.image_url && !image && (
                   <p className="mt-1 text-xs text-gray-500">Current image is set. Upload a new file to replace.</p>

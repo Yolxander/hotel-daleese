@@ -10,10 +10,25 @@ const BUCKET_NAME = 'hotel-daleese';
 const MAX_GALLERY_IMAGES = 30;
 const CACHE_TAG = 'hotel-daleese-gallery-urls';
 const CACHE_REVALIDATE_SECONDS = 60 * 60; // 1 hour
+const SUPABASE_FETCH_TIMEOUT_MS = 8000; // 8s then fallback to static (avoids build/runtime hang)
+
+function withTimeout<T>(promise: Promise<T>, ms: number, fallback: T): Promise<T> {
+  return Promise.race([
+    promise,
+    new Promise<T>((_, reject) =>
+      setTimeout(() => reject(new Error('Supabase fetch timeout')), ms)
+    ),
+  ]).catch(() => fallback);
+}
 
 async function getHotelDaleeseImageUrlsUncached(): Promise<string[]> {
   try {
-    const files = await listFiles(BUCKET_NAME);
+    const files = await withTimeout(
+      listFiles(BUCKET_NAME),
+      SUPABASE_FETCH_TIMEOUT_MS,
+      [] as string[]
+    );
+    if (files.length === 0) return STATIC_HOTEL_DALEESE_IMAGE_URLS;
 
     const imageFiles = files.filter((file) => {
       const ext = file.split('.').pop()?.toLowerCase();

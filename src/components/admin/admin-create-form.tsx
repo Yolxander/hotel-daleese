@@ -6,6 +6,8 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
+import { RichTextEditor } from './rich-text-editor';
+import { FeaturedImagePreview } from './featured-image-preview';
 import type { BlogPost } from '@/lib/blog';
 
 function slugFromTitle(title: string): string {
@@ -109,11 +111,11 @@ export function AdminCreateForm({ onSuccess, onCancel }: AdminCreateFormProps) {
             </div>
             <div>
               <label className="mb-1.5 block text-sm font-medium text-gray-700">Content</label>
-              <Textarea
+              <RichTextEditor
                 value={content}
-                onChange={(e) => setContent(e.target.value)}
+                onChange={setContent}
                 placeholder="Write your full post here…"
-                rows={12}
+                minHeight="240px"
                 className="w-full"
               />
             </div>
@@ -125,6 +127,7 @@ export function AdminCreateForm({ onSuccess, onCancel }: AdminCreateFormProps) {
                 onChange={(e) => setImage(e.target.files?.[0] ?? null)}
                 className="w-full"
               />
+              <FeaturedImagePreview selectedFile={image} />
             </div>
             {message && (
               <p className={message.type === 'ok' ? 'text-green-600 text-sm' : 'text-red-600 text-sm'}>

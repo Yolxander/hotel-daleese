@@ -12,6 +12,8 @@ type GalleryItem = {
     alt: string
 }
 
+const isSupabaseUrl = (src: string) => src.includes('supabase.co')
+
 // Lightbox Component
 const Lightbox = ({
                       currentIndex,
@@ -125,8 +127,17 @@ export default function ImageGallery({ galleryItems }: { galleryItems: GalleryIt
         )
     }
 
+    // Preload next batch when "Show more" is clicked so images are in cache when they render (helps mobile)
+    const preloadImage = (src: string) => {
+        if (typeof window === 'undefined') return
+        const img = new window.Image()
+        img.src = src
+    }
+
     const loadMore = () => {
-        setVisibleCount((prev) => Math.min(prev + IMAGES_PER_PAGE, galleryItems.length))
+        const nextCount = Math.min(visibleCount + IMAGES_PER_PAGE, galleryItems.length)
+        galleryItems.slice(visibleCount, nextCount).forEach((item) => preloadImage(item.src))
+        setVisibleCount(nextCount)
     }
 
     return (
@@ -155,7 +166,8 @@ export default function ImageGallery({ galleryItems }: { galleryItems: GalleryIt
                                         alt={item.alt}
                                         fill
                                         style={{ objectFit: 'cover' }}
-                                        unoptimized={item.src.includes('storage.googleapis.com') && item.src.includes('Signature=')}
+                                        unoptimized={isSupabaseUrl(item.src) || (item.src.includes('storage.googleapis.com') && item.src.includes('Signature='))}
+                                        loading={index < 6 ? 'eager' : 'lazy'}
                                         priority={index < 6}
                                     />
                                 </div>

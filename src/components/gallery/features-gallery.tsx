@@ -6,19 +6,43 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 
-const BUCKET_BASE = 'https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese';
-// Fallback when server doesn't pass imageUrls — all 30 from hotel-daleese bucket so gallery always shows
-const FALLBACK_IMAGE_URLS = [
-  `${BUCKET_BASE}/IMG_9625.jpg`, `${BUCKET_BASE}/IMG_9621.jpg`, `${BUCKET_BASE}/IMG_9618.jpg`,
-  `${BUCKET_BASE}/IMG_9617.jpg`, `${BUCKET_BASE}/IMG_9613.jpg`, `${BUCKET_BASE}/IMG_9580.jpg`,
-  `${BUCKET_BASE}/IMG_8791.jpg`, `${BUCKET_BASE}/IMG_7629.jpg`, `${BUCKET_BASE}/IMG_6559.jpg`,
-  `${BUCKET_BASE}/IMG_6558.jpg`, `${BUCKET_BASE}/IMG_6343.jpg`, `${BUCKET_BASE}/IMG_6339.jpg`,
-  `${BUCKET_BASE}/IMG_1632.jpg`, `${BUCKET_BASE}/IMG_1631.jpg`, `${BUCKET_BASE}/IMG_1630.jpg`,
-  `${BUCKET_BASE}/IMG_1628.jpg`, `${BUCKET_BASE}/IMG_1627.jpg`, `${BUCKET_BASE}/IMG_1625.jpg`,
-  `${BUCKET_BASE}/IMG_1611.jpg`, `${BUCKET_BASE}/IMG_1610.jpg`, `${BUCKET_BASE}/IMG_1609.jpg`,
-  `${BUCKET_BASE}/IMG_1162.jpg`, `${BUCKET_BASE}/IMG_0843.jpg`, `${BUCKET_BASE}/IMG_0842.jpg`,
-  `${BUCKET_BASE}/IMG_0646.jpg`, `${BUCKET_BASE}/IMG_0644.jpg`, `${BUCKET_BASE}/IMG_0638.jpg`,
-  `${BUCKET_BASE}/IMG_0635.jpg`, `${BUCKET_BASE}/IMG_0632.jpg`, `${BUCKET_BASE}/IMG_0508.jpg`,
+const isSupabaseUrl = (src: string) => src.includes('supabase.co');
+
+/** Use cached proxy URL for Supabase images so the browser caches them and they aren't re-fetched every time. */
+function getCachedImageUrl(src: string): string {
+  if (isSupabaseUrl(src)) {
+    return `/api/cached-image?url=${encodeURIComponent(src)}`;
+  }
+  return src;
+}
+
+/** Hardcoded gallery images (hotel-daleese bucket). Edit this list to change what appears in the gallery. */
+const GALLERY_IMAGE_URLS = [
+  'https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/IMG_9625.jpg',
+  'https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/IMG_9621.jpg',
+  'https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/IMG_9618.jpg',
+  'https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/IMG_9580.jpg',
+  'https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/IMG_8791.jpg',
+  'https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/IMG_7629.jpg',
+  'https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/IMG_6559.jpg',
+  'https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/IMG_6558.jpg',
+  'https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/IMG_6343.jpg',
+  'https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/IMG_6339.jpg',
+  'https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/IMG_1632.jpg',
+  'https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/IMG_1631.jpg',
+  'https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/IMG_1630.jpg',
+  'https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/IMG_1628.jpg',
+  'https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/IMG_1625.jpg',
+  'https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/IMG_1611.jpg',
+  'https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/IMG_1609.jpg',
+  'https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/IMG_1162.jpg',
+  'https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/IMG_0843.jpg',
+  'https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/IMG_0842.jpg',
+  'https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/IMG_0646.jpg',
+  'https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/IMG_0644.jpg',
+  'https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/IMG_0635.jpg',
+  'https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/IMG_0632.jpg',
+  'https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/IMG_0508.jpg',
 ];
 
 // Preload image function
@@ -113,11 +137,11 @@ function Lightbox({
 }
 
 function buildGalleryItems(imageUrls: string[]): GalleryItem[] {
-  return imageUrls.map((src, i) => ({
-    id: `gallery-${i}`,
-    src,
-    alt: `Hotel Daleese gallery ${i + 1}`,
-  }));
+  return imageUrls.map((src, i) => {
+    const filename = src.split('/').pop() ?? `image-${i + 1}`;
+    const alt = `Hotel Daleese ${filename.replace(/\.[^.]+$/, '')}`;
+    return { id: `gallery-${i}`, src: getCachedImageUrl(src), alt };
+  });
 }
 
 /** Deterministic shuffle so gallery order is fixed but random-looking (like Casa Daleese). */
@@ -154,9 +178,8 @@ function chunkIntoRows<T>(items: T[]): T[][] {
   return rows;
 }
 
-export function FeaturesGalleryComponent({ imageUrls = [] }: { imageUrls?: string[] }) {
-  const urls = imageUrls?.length ? imageUrls : FALLBACK_IMAGE_URLS;
-  const items = useMemo(() => buildGalleryItems(urls), [urls]);
+export function FeaturesGalleryComponent() {
+  const items = useMemo(() => buildGalleryItems(GALLERY_IMAGE_URLS), []);
   const shuffledItems = useMemo(() => shuffledForDisplay(items, 0xda1e5e), [items]);
   const allRows = useMemo(() => chunkIntoRows(shuffledItems), [shuffledItems]);
 
@@ -239,13 +262,14 @@ export function FeaturesGalleryComponent({ imageUrls = [] }: { imageUrls?: strin
                     variants={itemVariants}
                     onClick={() => openLightbox(globalIndex)}
                   >
-                    {/* next/image caches so images don't reload when leaving and returning to the page */}
+                    {/* unoptimized so browser caches the cached-image API response; lazy for rows below fold */}
                     <Image
                       src={feature.src}
                       alt={feature.alt}
                       fill
                       sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
                       loading={isFirstRow ? "eager" : "lazy"}
+                      unoptimized={feature.src.startsWith("/api/cached-image")}
                       className="object-cover rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 min-h-0"
                       referrerPolicy="no-referrer"
                     />
@@ -260,7 +284,13 @@ export function FeaturesGalleryComponent({ imageUrls = [] }: { imageUrls?: strin
           <div className="mt-8 flex justify-center">
             <button
               type="button"
-              onClick={() => setVisibleRowCount((prev) => prev + ROWS_PER_LOAD)}
+              onClick={() => {
+                // Preload next batch of images so they're in cache when rows render (helps mobile)
+                const nextRowCount = Math.min(visibleRowCount + ROWS_PER_LOAD, allRows.length);
+                const nextRows = allRows.slice(visibleRowCount, nextRowCount);
+                nextRows.flat().forEach((item) => preloadImage(item.src));
+                setVisibleRowCount((prev) => prev + ROWS_PER_LOAD);
+              }}
               className="px-6 py-3 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors font-medium"
             >
               Show more
