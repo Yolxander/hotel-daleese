@@ -8,6 +8,9 @@ import { listFiles, getPublicUrl } from './supabase-storage';
 
 const BUCKET_NAME = 'casa-daleese';
 const CACHE_TAG = 'casa-daleese-gallery-urls';
+
+/** Image filenames to exclude from the Casa Daleese gallery. */
+const EXCLUDED_IMAGE_FILES = new Set(['IMG_0857.jpg']);
 const CACHE_REVALIDATE_SECONDS = 60 * 60; // 1 hour
 const SUPABASE_FETCH_TIMEOUT_MS = 8000; // 8s then fallback to static
 
@@ -31,6 +34,8 @@ async function getCasaDaleeseImageUrlsUncached(): Promise<string[]> {
     
     // Filter for image files and only include new Casa Daleese images (IMG_0787 to IMG_0891)
     const imageFiles = files.filter(file => {
+      if (EXCLUDED_IMAGE_FILES.has(file)) return false;
+
       const ext = file.split('.').pop()?.toLowerCase();
       if (!['jpg', 'jpeg', 'png', 'webp'].includes(ext || '')) {
         return false;
@@ -103,7 +108,6 @@ export const STATIC_CASA_DALEESE_IMAGE_URLS: string[] = [
   'https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/casa-daleese/IMG_0854.jpg',
   'https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/casa-daleese/IMG_0855.jpg',
   'https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/casa-daleese/IMG_0856.jpg',
-  'https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/casa-daleese/IMG_0857.jpg',
   'https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/casa-daleese/IMG_0858.jpg',
   'https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/casa-daleese/IMG_0860.jpg',
   'https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/casa-daleese/IMG_0861.jpg',
