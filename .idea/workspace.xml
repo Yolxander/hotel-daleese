@@ -4,34 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c7e99333-aede-4333-a5d5-366958e0f415" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/amenities/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/amenities/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/blog/[slug]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/blog/[slug]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/contact/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/contact/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/suites/suite-1/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/suites/suite-1/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/suites/suite-2/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/suites/suite-2/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/suites/suite-3/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/suites/suite-3/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/suites/suite-4/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/suites/suite-4/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/amenities/amenities-card-logo-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/amenities/amenities-card-logo-section.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/amenities/amenities-hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/amenities/amenities-hero.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/blog/travel-blog-post.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/blog/travel-blog-post.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/book-a-room/booking-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/book-a-room/booking-form.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/coming-soon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/coming-soon.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/landing_page/feature-cards.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/landing_page/feature-cards.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/landing_page/hero-with-navbar-component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/landing_page/hero-with-navbar-component.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/landing_page/hero-with-navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/landing_page/hero-with-navbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/landing_page/hotel-home-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/landing_page/hotel-home-section.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/life-in-uvita/faq-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/life-in-uvita/faq-section.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/life-in-uvita/life-in-costa-rica.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/life-in-uvita/life-in-costa-rica.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/life-in-uvita/pura-vida-way.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/life-in-uvita/pura-vida-way.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/life-in-uvita/restaurant-gallery.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/life-in-uvita/restaurant-gallery.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/our-story/our-story-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/our-story/our-story-section.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/suites/suites-gallery.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/suites/suites-gallery.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/tours/outdoor-activities.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tours/outdoor-activities.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/tours/tours.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tours/tours.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/firebase-storage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/firebase-storage.ts" afterDir="false" />
-    </list>
+    <list default="true" id="c7e99333-aede-4333-a5d5-366958e0f415" name="Changes" comment="update images to use supabase instead of google firebase-storage.ts" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -170,10 +143,24 @@
       <workItem from="1770691544749" duration="3504000" />
       <workItem from="1770744350996" duration="7667000" />
       <workItem from="1771470613835" duration="156000" />
+      <workItem from="1776039947990" duration="243000" />
     </task>
+    <task id="LOCAL-00001" summary="update images to use supabase instead of google firebase-storage.ts">
+      <option name="closed" value="true" />
+      <created>1776040028708</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1776040028708</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update images to use supabase instead of google firebase-storage.ts" />
+    <option name="LAST_COMMIT_MESSAGE" value="update images to use supabase instead of google firebase-storage.ts" />
   </component>
 </project>

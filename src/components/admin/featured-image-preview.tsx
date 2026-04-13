@@ -35,6 +35,7 @@ export function FeaturedImagePreview({
         {selectedFile ? 'New image preview:' : 'Current image:'}
       </p>
       <div className="relative aspect-video w-full max-w-md overflow-hidden rounded-lg border border-gray-200 bg-gray-50">
+        {/* eslint-disable-next-line @next/next/no-img-element -- blob: URLs and arbitrary preview URLs */}
         <img
           src={previewUrl}
           alt="Featured image preview"

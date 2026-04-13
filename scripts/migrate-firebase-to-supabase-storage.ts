@@ -52,6 +52,13 @@ import {
   getSupabaseAdminClient,
 } from '../src/lib/supabase-storage';
 
+/** Supabase client has no generated `Database` type, so `.from('blog_posts')` rows infer as `never` without this. */
+interface BlogPostMigrationRow {
+  id: string;
+  image_url: string | null;
+  content: string;
+}
+
 // ---------------------------------------------------------------------------
 // Constants
 // ---------------------------------------------------------------------------
@@ -379,7 +386,7 @@ async function rewriteBlogPostsInDb(records: MigrationRecord[]): Promise<void> {
 
   console.log('\n=== Updating blog_posts in Supabase DB ===\n');
 
-  const { data: posts, error: fetchErr } = await supabase
+  const { data, error: fetchErr } = await supabase
     .from('blog_posts')
     .select('id, image_url, content');
 
@@ -388,7 +395,8 @@ async function rewriteBlogPostsInDb(records: MigrationRecord[]): Promise<void> {
     return;
   }
 
-  if (!posts || posts.length === 0) {
+  const posts = (data ?? []) as BlogPostMigrationRow[];
+  if (posts.length === 0) {
     console.log('  No blog posts found.');
     return;
   }
@@ -428,8 +436,8 @@ async function rewriteBlogPostsInDb(records: MigrationRecord[]): Promise<void> {
       continue;
     }
 
-    const { error: updateErr } = await supabase
-      .from('blog_posts')
+    // Table not in generated Supabase types — entire chain infers `never` without a cast.
+    const { error: updateErr } = await (supabase.from('blog_posts') as any)
       .update({ image_url: imageUrl, content })
       .eq('id', post.id);
 
