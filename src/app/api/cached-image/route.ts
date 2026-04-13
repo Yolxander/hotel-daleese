@@ -11,6 +11,9 @@ const CACHE_MAX_AGE = 31536000; // 1 year — browser cache only (see Cache-Cont
 // logs errors on large Supabase images. Supabase Pro is unrelated; this is a Next limit.
 // Browser caching still works via Cache-Control on our response.
 
+/** Never statically cache this handler — responses vary by `url` query param. */
+export const dynamic = "force-dynamic";
+
 export async function GET(request: NextRequest) {
   const url = request.nextUrl.searchParams.get("url");
   if (!url) {
@@ -46,6 +49,8 @@ export async function GET(request: NextRequest) {
     return new NextResponse(body, {
       headers: {
         "Content-Type": contentType,
+        // Vary helps intermediaries not reuse one cached body for different ?url= values
+        Vary: "*",
         "Cache-Control": `public, max-age=${CACHE_MAX_AGE}, immutable`,
       },
     });

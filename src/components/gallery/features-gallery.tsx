@@ -6,16 +6,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 
-const isSupabaseUrl = (src: string) => src.includes('supabase.co');
-
-/** Use cached proxy URL for Supabase images so the browser caches them and they aren't re-fetched every time. */
-function getCachedImageUrl(src: string): string {
-  if (isSupabaseUrl(src)) {
-    return `/api/cached-image?url=${encodeURIComponent(src)}`;
-  }
-  return src;
-}
-
 export type FeaturesGalleryProps = {
   /** Public Supabase storage URLs (hotel-daleese bucket). Deduped in the component. */
   imageUrls: string[];
@@ -112,11 +102,12 @@ function Lightbox({
   );
 }
 
+/** Use raw Supabase public URLs — do not proxy via /api/cached-image (CDN cache key pitfalls). */
 function buildGalleryItems(imageUrls: string[]): GalleryItem[] {
   return imageUrls.map((src, i) => {
-    const filename = src.split('/').pop() ?? `image-${i + 1}`;
-    const alt = `Hotel Daleese ${filename.replace(/\.[^.]+$/, '')}`;
-    return { id: `gallery-${i}`, src: getCachedImageUrl(src), alt };
+    const filename = src.split('/').pop()?.split('?')[0] ?? `image-${i + 1}`;
+    const alt = `Hotel Daleese ${decodeURIComponent(filename).replace(/\.[^.]+$/, '')}`;
+    return { id: `gallery-${i}`, src, alt };
   });
 }
 
@@ -244,7 +235,7 @@ export function FeaturesGalleryComponent({ imageUrls }: FeaturesGalleryProps) {
                     variants={itemVariants}
                     onClick={() => openLightbox(globalIndex)}
                   >
-                    {/* unoptimized so browser caches the cached-image API response; lazy for rows below fold */}
+                    {/* Large originals: skip Next optimization on serverless; load correct bytes per URL from Supabase CDN */}
                     <Image
                       key={feature.id}
                       src={feature.src}
@@ -252,7 +243,7 @@ export function FeaturesGalleryComponent({ imageUrls }: FeaturesGalleryProps) {
                       fill
                       sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
                       loading={isFirstRow ? "eager" : "lazy"}
-                      unoptimized={feature.src.startsWith("/api/cached-image")}
+                      unoptimized
                       className="object-cover rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 min-h-0"
                       referrerPolicy="no-referrer"
                     />
