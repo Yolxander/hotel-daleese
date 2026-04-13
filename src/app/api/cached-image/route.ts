@@ -5,8 +5,11 @@
 import { NextRequest, NextResponse } from "next/server";
 
 const ALLOWED_ORIGIN = "https://kvirwlcodrpwnwzvfcqr.supabase.co";
-const CACHE_MAX_AGE = 31536000; // 1 year in seconds
-const REVALIDATE_SECONDS = 60 * 60 * 24 * 7; // Revalidate server cache every 7 days
+const CACHE_MAX_AGE = 31536000; // 1 year — browser cache only (see Cache-Control below)
+
+// Avoid next: { revalidate } on fetch: Next.js Data Cache rejects bodies over 2MB and
+// logs errors on large Supabase images. Supabase Pro is unrelated; this is a Next limit.
+// Browser caching still works via Cache-Control on our response.
 
 export async function GET(request: NextRequest) {
   const url = request.nextUrl.searchParams.get("url");
@@ -27,9 +30,7 @@ export async function GET(request: NextRequest) {
   }
 
   try {
-    const res = await fetch(url, {
-      next: { revalidate: REVALIDATE_SECONDS },
-    });
+    const res = await fetch(url, { cache: "no-store" });
 
     if (!res.ok) {
       return NextResponse.json(

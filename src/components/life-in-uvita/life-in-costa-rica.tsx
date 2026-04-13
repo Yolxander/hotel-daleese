@@ -27,7 +27,7 @@ export function LifeInCostaRicaComponent() {
             <motion.div
                 className="absolute inset-0 w-full h-full"
                 style={{
-                    backgroundImage: "url('https://storage.googleapis.com/sempre-studios-893c8.appspot.com/uploads/Casa%20Turul/Live%20in%20Uvita/671ed0ecd880b.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=16447035600&Signature=eCL7nogw38sGwWib2FbFf08Od0EUXnmnY4suNr2OX%2FfF6X6hVYB3QunyyMLwwQJ%2FvOSPVAfjz8yi1y1L9JUoujmoCf0UQipt30vAnFKIHNYohBuWG7zEstGo9suShTlZFIQA%2BV%2Bg2jkCkXoSmTbraMCx2MqPzrtdtKX7bt06VMvPvK2kWo%2F9AnlEwd%2FTwbM5VhCffOsDXUNkNjZPEoMptPkjRTj%2BB3zr7dKvGRso6vw%2BYbRzQGLQUvdIDFyzv%2BemUR2YTYfPeolg%2BSP8sSzFSMUWCe1z45yCGhBdRp7NFHYDG8NgaKvkNEdKUKXOSMPMooi02ubClFkSC%2Fs%2FOikw%2BQ%3D%3D')",
+                    backgroundImage: "url('https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/uploads/Casa%20Turul/Live%20in%20Uvita/671ed0ecd880b.jpg')",
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                     y: backgroundY,

@@ -121,7 +121,7 @@ export function OurStorySection() {
               className="w-full md:w-1/2 space-y-4 mb-6 md:pt-[220px] pt-[50px]"
           >
             <Image
-                src="https://storage.googleapis.com/sempre-studios-893c8.appspot.com/uploads/Casa%20Turul/Our%20Story/671daa5c98cab.jpeg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=16447035600&Signature=zYDgqxB9rtmK9nUec4SptyKDEP9yWLkadtmgHSJoI7l7Lt%2F9OgjUvPorlI7tq2w5brgK05J0kVpGXw0i3Zl2mVt%2F8EBt3R0pHzcFiXcWL6YlGX44ADgsShLTK4nv2%2FjdwTNgShLpBG%2BHURP45wh9O6vfGChiU0phyfnZJVonkdNr6c1zvwFKUF3JQ0vx0S2%2BXxOMkOTfeoAWKPx0qp%2BzJpaVhqttYLTfSyb0vz457ROMfMlM8ZY7CSSLoND3ugLzHokQoguVeEKnZfTv3w%2F5ixKUmrdAaH8GFLk2FfrUUWlonxu7G1zEzsHqD4gnoM2yQ3f2g08jPiNq9Dp6WVdUvg%3D%3D"
+                src="https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/uploads/Casa%20Turul/Our%20Story/671daa5c98cab.jpeg"
                 alt="Rosa and Dave sitting in beach chairs"
                 width={600}
                 height={400}
@@ -129,7 +129,7 @@ export function OurStorySection() {
                 unoptimized={true}
             />
             <Image
-                src="https://storage.googleapis.com/sempre-studios-893c8.appspot.com/default/uploads/67401e51161d4.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=16447035600&Signature=ix8E%2BklOLvKvTpbbVjqt8kPLb3vf%2FwrNGrxizXGFERdxJEsdBXh7jbtj0jyaLEGrrfaCjrcE0WRiVFEzokfGzkjSfx8g6Kf8Xov7smqH4Kzi9%2F8pq8kRhP8NyV0AiOe2A5izAQULBcTW0AD5LOyCsT3stFHBUAj4ml%2BmNjiubhOGyj%2FmY2OJVWQKqNZHiKEbLY26RurZ1i2iJvKZtU80TYeX9PCiojucqsSp15N8R2fk36eY75FeOYuf1YnWLZWuMGD51zuzdFDFphlDOHKouRd3MDBzBkEws%2Fw%2BltgF8e%2FRuweIXhVafdHYPFb0o%2BqKjGJsr5uuvW5sSqFZTuA8VQ%3D%3D"
+                src="https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/default/uploads/67401e51161d4.jpg"
             alt="Hotel Daleese property"
                 width={600}
                 height={300}

@@ -106,7 +106,7 @@ export function FaqSection() {
               className="w-full md:w-1/2 relative aspect-square"
           >
             <Image
-                src="https://storage.googleapis.com/sempre-studios-893c8.appspot.com/uploads/Casa%20Turul/Live%20in%20Uvita/671efba46ef0a.jpeg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=16447035600&Signature=US%2FIvIUnbSXWhqlvGtKltUXDyfzlc3slMvO8iBzwjpcHfTt%2F11fAEwcFNnzf7DhUAUYL%2FIg6ORNvN5hmxBX%2BmYm%2FWHmMXtaJ3%2BYXTCGDQOiKmo55KO32YLIJ20VYYNx7cgPpFKMCPWyQSUwKzh3svKzGwqfkcfQNUZKTqthhWL6qlqInfprF7BfVcyAa3JF5Z2X%2Fpoef5Nruk%2B01PQ4AruqOSKnCNgqUFrLgQgPHp04zm7GOcSrrRJKf%2FqJuLMlg4wCQIjUH3uYwMuTvkQ9fK%2FaReqxDAlzpEFg0vmYs4a5CYvJ2hLTNpTKPZPMEVUc%2FdsvxJ922EgSEJzyBySWZow%3D%3D"
+                src="https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/uploads/Casa%20Turul/Live%20in%20Uvita/671efba46ef0a.jpeg"
                 alt="Colorful toucan perched on a branch"
                 fill
                 style={{ objectFit: 'cover' }}

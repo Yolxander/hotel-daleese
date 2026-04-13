@@ -182,7 +182,7 @@ export function BookingFormComponent() {
                     className="absolute inset-0"
                     style={{
                         backgroundImage:
-                            'url("https://storage.googleapis.com/sempre-studios-893c8.appspot.com/uploads/Casa%20Turul/Gallery/6720646ee2450.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=16447035600&Signature=fKq7MvlI0R%2Ftao1JGBQcuc2eWqvpFKf8avl85GJeuCVGvEVTJ2pNguK5AsgblLqobX3P%2BXiZ7WOZYFfK4I%2BKSl8S86zh0mlp%2F66Kh9y%2Bv5HSD8nQS9obp%2BCILnbWXpv%2B9al2fA34cgP84zkMFDHfIeTPHje9WfbtP2NdioS%2FHYldeFS7M03yHgiMu6ahI%2FLBW7kqncBFftZP2xeSdlVikZOTuzrlS6BpltNz6QmqHTLNiwFJyeYawvsumYkjvxO2EXQYOhChnwYK3YISyivW6thXRa4gq%2BV5OGaf%2F7fUVYEfkzL1HS5loSeCubux1ysI2y4CZPP3okHcMMdqCdjA8Q%3D%3D")',
+                            'url("https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/uploads/Casa%20Turul/Gallery/6720646ee2450.jpg")',
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
                         minHeight: '100%',

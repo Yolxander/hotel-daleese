@@ -16,7 +16,7 @@ export function AmenitiesHeroComponent() {
                 className="relative h-full w-full"
             >
                 <Image
-                    src="https://storage.googleapis.com/sempre-studios-893c8.appspot.com/uploads/Casa%20Turul/About/671d219ef18e7.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=16447035600&Signature=IiXm9jOgAAiF229TrRT3TuWX7J7LHGaH3wPEI8cgDE9kaETEUY752fVh%2BuQTlaWrV4guDvSw64kXSZtLzUS%2Bxl4uDj8CM701RPQdSKktyEVrsuVe8X9YUJ9nO6c9SIFTuOr3%2FbsOq2nBz3fqGaM1GGOh430mzP3H%2FdKP%2B%2FAqx7OvG44c%2BPPrKZZyjbmu7PREz%2Bz%2FOC69RUhpRYWvXok1X6xBI8fKU1lWUvz23G5ivJ9JAa3xz6p8ou2rNiqm0355P%2B85jNjbcgapFB7E38A6fd8pjPd973X9VxJ%2B3Q0%2BFby4YT9%2FVcPjENMAwYjkgqIkhgBp4pmL8NgeUF20bqZYKQ%3D%3D"
+                    src="https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/uploads/Casa%20Turul/About/671d219ef18e7.jpg"
                     alt="Luxurious pool area with tropical surroundings"
                     fill
                     style={{ objectFit: 'cover', objectPosition: 'center' }}

@@ -16,7 +16,7 @@ export type BlogPostListItem = {
 };
 
 const DEFAULT_IMAGE =
-  'https://storage.googleapis.com/sempre-studios-893c8.appspot.com/uploads/Casa%20Turul/Blog/671fd74a7475b.jpeg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=16447035600&Signature=ZZj9WnT2jzn1Cqn6iNFjYYUQHDad9CPy9lphGKiEXinT04cb4S5BkUMoZAb%2Bg4qz7HrUeNbrnd9chgFalifRop8Xd2gGveODVWxOBFE8KwCqf7EbOZQCylCzc1zkH%2BZJd%2BL17xbycTRXs7Z0r%2F%2BVa%2BeDUmu5C%2FNKCJ2Ye%2FwXdBquVuEjO9CCcvVb9tqEZapjlST9DJocXfPxx7xi5RIwcEqbhky7Ei3FwIdYqCHUEYtTm2yt0BZ%2B0qpe6vQtMDgZ%2B1Eej8X9YlEGWwq3hIO%2FUxd1doRIurKkonPbtfC2GQp3uPpJG2Y5N%2BPAp561s8XIrRCQt1qrgH%2BW93kHDMdr9A%3D%3D';
+  'https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/uploads/Casa%20Turul/Blog/671fd74a7475b.jpeg';
 
 function formatDate(iso: string | null): string {
   if (!iso) return '';

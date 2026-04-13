@@ -5,7 +5,6 @@
 
 import { Storage } from '@google-cloud/storage';
 import { initializeApp, getApps, cert } from 'firebase-admin/app';
-import { getStorage } from 'firebase-admin/storage';
 import fs from 'fs';
 
 // Initialize Google Cloud Storage
@@ -93,51 +92,18 @@ const bucketName = 'sempre-studios-893c8.appspot.com';
 const bucket = storage.bucket(bucketName);
 
 /**
- * Generate a download URL for a file in Firebase Storage
- * This returns the token-based URL format (firebasestorage.googleapis.com) that works better with Next.js Image
+ * Generate a signed read URL for a file in Firebase Storage (via @google-cloud/storage).
  * @param filePath - Path to the file in the bucket (e.g., 'default/uploads/image.jpg')
- * @returns Download URL with token (format: firebasestorage.googleapis.com/...?alt=media&token=...)
  */
 export async function getDownloadUrl(filePath: string): Promise<string> {
-  try {
-    // Use Firebase Admin SDK to get token-based download URLs
-    const adminStorage = getStorage();
-    const bucket = adminStorage.bucket(bucketName);
-    const file = bucket.file(filePath);
-    
-    // Check if file exists
-    const [exists] = await file.exists();
-    if (!exists) {
-      throw new Error(`File not found: ${filePath}`);
-    }
-    
-    // Get download URL (token-based, works better with Next.js)
-    // This returns URLs in format: firebasestorage.googleapis.com/v0/b/...?alt=media&token=...
-    const [url] = await file.getSignedUrl({
-      action: 'read',
-      expires: '03-09-2491', // Far future date (year 2491)
-    });
-    
-    // Convert signed URL to download URL format if needed
-    // Firebase Admin SDK's getSignedUrl returns signed URLs, but we can also use getDownloadURL
-    // For now, return the signed URL - it will work with unoptimized={true}
-    // Note: For true token-based URLs, you'd need to use the Firebase client SDK
-    return url;
-  } catch (error) {
-    console.error('Error generating download URL:', error);
-    // Fallback to Google Cloud Storage SDK
-    try {
-      const file = bucket.file(filePath);
-      const [url] = await file.getSignedUrl({
-        action: 'read',
-        expires: Date.now() + 31536000 * 1000, // 1 year
-      });
-      return url;
-    } catch (fallbackError) {
-      console.error('Fallback also failed:', fallbackError);
-      throw error;
-    }
-  }
+  // Use @google-cloud/storage only. Do not call file.exists() first: the JSON API used by
+  // exists() can return 403 (e.g. delinquent billing) even when signing still works, which
+  // produced noisy false errors and a redundant fallback path.
+  const [url] = await bucket.file(filePath).getSignedUrl({
+    action: 'read',
+    expires: Date.now() + 31536000 * 1000, // 1 year
+  });
+  return url;
 }
 
 /**

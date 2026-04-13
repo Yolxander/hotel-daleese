@@ -25,7 +25,7 @@ export function HotelHomeSectionComponent() {
                 className="absolute inset-0"
             >
                 <Image
-                    src="https://storage.googleapis.com/sempre-studios-893c8.appspot.com/uploads/67336fd10e763.jpg?GoogleAccessId=firebase-adminsdk-gkp49%40sempre-studios-893c8.iam.gserviceaccount.com&Expires=16447035600&Signature=ooMM1Dv5u4XefO8EwiDzFAK7FMtNmv2bvlc%2BAqNYzU7hTR6KK7FbOdhNMCvM27WTbgU5znSzzBA4VLean%2B9a%2B1%2BPaMzsgqyPSGt9sh5CCpttNxUOkz%2B9dCpMBPxHcr%2FObOw2F76j5bGWqtt9HDjEZ%2BmUGWqeY7bg1jHI%2FauBU4du0wrRb7HQ9WQ0Hw2CDJ%2FWKQKzvnQM%2F7j9sRNZhlKHlv6lbn9uVkze4cS%2BHQY2ddADrHuSqx3lgpUDX2e5W1VzlqlSsY9pf1j%2F8JOyei2vspCjbCah6Qn8ZyGMjiBw7zDIVnbxH2vidY5ivICSB8G496M2eN3ELYxdKD1GhGLCKQ%3D%3D"
+                    src="https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/uploads/67336fd10e763.jpg"
                     alt="Tropical hotel pool area with lush vegetation and outdoor dining"
                     fill
                     style={{ objectFit: 'cover' }}

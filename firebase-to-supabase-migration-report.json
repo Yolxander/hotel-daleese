@@ -1,0 +1,365 @@
+{
+  "runAt": "2026-04-13T00:18:56.798Z",
+  "dryRun": false,
+  "supabaseBucket": "hotel-daleese",
+  "totalObjects": 71,
+  "successful": 71,
+  "failed": 0,
+  "migrations": [
+    {
+      "objectName": "default/uploads/673de7f509709.jpeg",
+      "newUrl": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/default/uploads/673de7f509709.jpeg",
+      "success": true
+    },
+    {
+      "objectName": "default/uploads/673de7f57a89b.jpg",
+      "newUrl": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/default/uploads/673de7f57a89b.jpg",
+      "success": true
+    },
+    {
+      "objectName": "default/uploads/673de7f5c042d.jpg",
+      "newUrl": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/default/uploads/673de7f5c042d.jpg",
+      "success": true
+    },
+    {
+      "objectName": "default/uploads/673de7f623bf6.jpg",
+      "newUrl": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/default/uploads/673de7f623bf6.jpg",
+      "success": true
+    },
+    {
+      "objectName": "default/uploads/673de7f6851e5.jpg",
+      "newUrl": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/default/uploads/673de7f6851e5.jpg",
+      "success": true
+    },
+    {
+      "objectName": "default/uploads/673de7f6eabf1.jpg",
+      "newUrl": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/default/uploads/673de7f6eabf1.jpg",
+      "success": true
+    },
+    {
+      "objectName": "default/uploads/673de7f757eec.jpg",
+      "newUrl": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/default/uploads/673de7f757eec.jpg",
+      "success": true
+    },
+    {
+      "objectName": "default/uploads/673de7f7b1473.jpg",
+      "newUrl": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/default/uploads/673de7f7b1473.jpg",
+      "success": true
+    },
+    {
+      "objectName": "default/uploads/673de7f809c17.jpg",
+      "newUrl": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/default/uploads/673de7f809c17.jpg",
+      "success": true
+    },
+    {
+      "objectName": "default/uploads/673e436317fc5.jpeg",
+      "newUrl": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/default/uploads/673e436317fc5.jpeg",
+      "success": true
+    },
+    {
+      "objectName": "default/uploads/673e4364289a7.jpeg",
+      "newUrl": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/default/uploads/673e4364289a7.jpeg",
+      "success": true
+    },
+    {
+      "objectName": "default/uploads/673e436d9a9b9.jpeg",
+      "newUrl": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/default/uploads/673e436d9a9b9.jpeg",
+      "success": true
+    },
+    {
+      "objectName": "default/uploads/673e43777c6a7.jpg",
+      "newUrl": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/default/uploads/673e43777c6a7.jpg",
+      "success": true
+    },
+    {
+      "objectName": "default/uploads/673e43780549b.jpg",
+      "newUrl": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/default/uploads/673e43780549b.jpg",
+      "success": true
+    },
+    {
+      "objectName": "default/uploads/673e4378475fc.jpg",
+      "newUrl": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/default/uploads/673e4378475fc.jpg",
+      "success": true
+    },
+    {
+      "objectName": "default/uploads/673e43788473e.jpg",
+      "newUrl": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/default/uploads/673e43788473e.jpg",
+      "success": true
+    },
+    {
+      "objectName": "default/uploads/673e4378c89e2.jpg",
+      "newUrl": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/default/uploads/673e4378c89e2.jpg",
+      "success": true
+    },
+    {
+      "objectName": "default/uploads/673e443c44370.jpg",
+      "newUrl": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/default/uploads/673e443c44370.jpg",
+      "success": true
+    },
+    {
+      "objectName": "default/uploads/673e443d25fbc.jpg",
+      "newUrl": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/default/uploads/673e443d25fbc.jpg",
+      "success": true
+    },
+    {
+      "objectName": "default/uploads/673e4d014d65c.jpg",
+      "newUrl": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/default/uploads/673e4d014d65c.jpg",
+      "success": true
+    },
+    {
+      "objectName": "default/uploads/673e4d0b846b7.jpg",
+      "newUrl": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/default/uploads/673e4d0b846b7.jpg",
+      "success": true
+    },
+    {
+      "objectName": "default/uploads/673e4d0c2e3b8.jpg",
+      "newUrl": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/default/uploads/673e4d0c2e3b8.jpg",
+      "success": true
+    },
+    {
+      "objectName": "default/uploads/673e4d0c9e943.jpg",
+      "newUrl": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/default/uploads/673e4d0c9e943.jpg",
+      "success": true
+    },
+    {
+      "objectName": "default/uploads/673e4d1f31271.jpg",
+      "newUrl": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/default/uploads/673e4d1f31271.jpg",
+      "success": true
+    },
+    {
+      "objectName": "default/uploads/673e4d1fc7c30.jpg",
+      "newUrl": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/default/uploads/673e4d1fc7c30.jpg",
+      "success": true
+    },
+    {
+      "objectName": "default/uploads/673e4d28e456e.jpg",
+      "newUrl": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/default/uploads/673e4d28e456e.jpg",
+      "success": true
+    },
+    {
+      "objectName": "default/uploads/673e4d298e8b5.jpg",
+      "newUrl": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/default/uploads/673e4d298e8b5.jpg",
+      "success": true
+    },
+    {
+      "objectName": "default/uploads/673eab70502b5.jpg",
+      "newUrl": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/default/uploads/673eab70502b5.jpg",
+      "success": true
+    },
+    {
+      "objectName": "default/uploads/673eab7102af3.jpg",
+      "newUrl": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/default/uploads/673eab7102af3.jpg",
+      "success": true
+    },
+    {
+      "objectName": "default/uploads/673eab71708ff.jpg",
+      "newUrl": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/default/uploads/673eab71708ff.jpg",
+      "success": true
+    },
+    {
+      "objectName": "default/uploads/673eab71dbb9c.jpg",
+      "newUrl": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/default/uploads/673eab71dbb9c.jpg",
+      "success": true
+    },
+    {
+      "objectName": "default/uploads/673eab724853b.jpg",
+      "newUrl": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/default/uploads/673eab724853b.jpg",
+      "success": true
+    },
+    {
+      "objectName": "default/uploads/673eab72b0240.jpg",
+      "newUrl": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/default/uploads/673eab72b0240.jpg",
+      "success": true
+    },
+    {
+      "objectName": "default/uploads/673eab731dbce.jpg",
+      "newUrl": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/default/uploads/673eab731dbce.jpg",
+      "success": true
+    },
+    {
+      "objectName": "default/uploads/673eab88003bd.jpg",
+      "newUrl": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/default/uploads/673eab88003bd.jpg",
+      "success": true
+    },
+    {
+      "objectName": "default/uploads/673eab88b32aa.jpg",
+      "newUrl": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/default/uploads/673eab88b32aa.jpg",
+      "success": true
+    },
+    {
+      "objectName": "default/uploads/673eab89394be.jpg",
+      "newUrl": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/default/uploads/673eab89394be.jpg",
+      "success": true
+    },
+    {
+      "objectName": "default/uploads/673eaedfed605.jpg",
+      "newUrl": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/default/uploads/673eaedfed605.jpg",
+      "success": true
+    },
+    {
+      "objectName": "default/uploads/673eaf00ea361.jpg",
+      "newUrl": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/default/uploads/673eaf00ea361.jpg",
+      "success": true
+    },
+    {
+      "objectName": "default/uploads/67401e51161d4.jpg",
+      "newUrl": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/default/uploads/67401e51161d4.jpg",
+      "success": true
+    },
+    {
+      "objectName": "default/uploads/6742797b4e785.png",
+      "newUrl": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/default/uploads/6742797b4e785.png",
+      "success": true
+    },
+    {
+      "objectName": "uploads/67322841779f6.jpg",
+      "newUrl": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/uploads/67322841779f6.jpg",
+      "success": true
+    },
+    {
+      "objectName": "uploads/67336fd10e763.jpg",
+      "newUrl": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/uploads/67336fd10e763.jpg",
+      "success": true
+    },
+    {
+      "objectName": "uploads/673653582121f.jpg",
+      "newUrl": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/uploads/673653582121f.jpg",
+      "success": true
+    },
+    {
+      "objectName": "uploads/Casa Turul/About/671d219ef18e7.jpg",
+      "newUrl": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/uploads/Casa%20Turul/About/671d219ef18e7.jpg",
+      "success": true
+    },
+    {
+      "objectName": "uploads/Casa Turul/Blog/671fd74a7475b.jpeg",
+      "newUrl": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/uploads/Casa%20Turul/Blog/671fd74a7475b.jpeg",
+      "success": true
+    },
+    {
+      "objectName": "uploads/Casa Turul/Contact/6720311d840cc.jpg",
+      "newUrl": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/uploads/Casa%20Turul/Contact/6720311d840cc.jpg",
+      "success": true
+    },
+    {
+      "objectName": "uploads/Casa Turul/Gallery/6720646ee2450.jpg",
+      "newUrl": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/uploads/Casa%20Turul/Gallery/6720646ee2450.jpg",
+      "success": true
+    },
+    {
+      "objectName": "uploads/Casa Turul/Home/671c830dbadbf.png",
+      "newUrl": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/uploads/Casa%20Turul/Home/671c830dbadbf.png",
+      "success": true
+    },
+    {
+      "objectName": "uploads/Casa Turul/Live in Uvita/671ed0ecd880b.jpg",
+      "newUrl": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/uploads/Casa%20Turul/Live%20in%20Uvita/671ed0ecd880b.jpg",
+      "success": true
+    },
+    {
+      "objectName": "uploads/Casa Turul/Live in Uvita/671ee2aed3819.jpeg",
+      "newUrl": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/uploads/Casa%20Turul/Live%20in%20Uvita/671ee2aed3819.jpeg",
+      "success": true
+    },
+    {
+      "objectName": "uploads/Casa Turul/Live in Uvita/671efba46ef0a.jpeg",
+      "newUrl": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/uploads/Casa%20Turul/Live%20in%20Uvita/671efba46ef0a.jpeg",
+      "success": true
+    },
+    {
+      "objectName": "uploads/Casa Turul/Live in Uvita/671f0d42ac32b.jpg",
+      "newUrl": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/uploads/Casa%20Turul/Live%20in%20Uvita/671f0d42ac32b.jpg",
+      "success": true
+    },
+    {
+      "objectName": "uploads/Casa Turul/Live in Uvita/671f0d433ca96.jpg",
+      "newUrl": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/uploads/Casa%20Turul/Live%20in%20Uvita/671f0d433ca96.jpg",
+      "success": true
+    },
+    {
+      "objectName": "uploads/Casa Turul/Live in Uvita/671f0d439d589.jpg",
+      "newUrl": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/uploads/Casa%20Turul/Live%20in%20Uvita/671f0d439d589.jpg",
+      "success": true
+    },
+    {
+      "objectName": "uploads/Casa Turul/Live in Uvita/671f0d43e2643.jpg",
+      "newUrl": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/uploads/Casa%20Turul/Live%20in%20Uvita/671f0d43e2643.jpg",
+      "success": true
+    },
+    {
+      "objectName": "uploads/Casa Turul/Live in Uvita/671f0d443e66d.jpg",
+      "newUrl": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/uploads/Casa%20Turul/Live%20in%20Uvita/671f0d443e66d.jpg",
+      "success": true
+    },
+    {
+      "objectName": "uploads/Casa Turul/Live in Uvita/671f0d44d464f.jpg",
+      "newUrl": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/uploads/Casa%20Turul/Live%20in%20Uvita/671f0d44d464f.jpg",
+      "success": true
+    },
+    {
+      "objectName": "uploads/Casa Turul/Live in Uvita/671f0d45281c9.jpg",
+      "newUrl": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/uploads/Casa%20Turul/Live%20in%20Uvita/671f0d45281c9.jpg",
+      "success": true
+    },
+    {
+      "objectName": "uploads/Casa Turul/Live in Uvita/671f0d4575be6.jpg",
+      "newUrl": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/uploads/Casa%20Turul/Live%20in%20Uvita/671f0d4575be6.jpg",
+      "success": true
+    },
+    {
+      "objectName": "uploads/Casa Turul/Live in Uvita/671f10cf23579.jpg",
+      "newUrl": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/uploads/Casa%20Turul/Live%20in%20Uvita/671f10cf23579.jpg",
+      "success": true
+    },
+    {
+      "objectName": "uploads/Casa Turul/Live in Uvita/671f1a8937870.jpg",
+      "newUrl": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/uploads/Casa%20Turul/Live%20in%20Uvita/671f1a8937870.jpg",
+      "success": true
+    },
+    {
+      "objectName": "uploads/Casa Turul/Our Story/671daa5c98cab.jpeg",
+      "newUrl": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/uploads/Casa%20Turul/Our%20Story/671daa5c98cab.jpeg",
+      "success": true
+    },
+    {
+      "objectName": "uploads/Casa Turul/Tours & Attractions/671f237963de4.jpeg",
+      "newUrl": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/uploads/Casa%20Turul/Tours%20&%20Attractions/671f237963de4.jpeg",
+      "success": true
+    },
+    {
+      "objectName": "uploads/Casa Turul/Tours & Attractions/671f2379e36ce.jpeg",
+      "newUrl": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/uploads/Casa%20Turul/Tours%20&%20Attractions/671f2379e36ce.jpeg",
+      "success": true
+    },
+    {
+      "objectName": "uploads/Casa Turul/Tours & Attractions/671f237a351cd.jpeg",
+      "newUrl": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/uploads/Casa%20Turul/Tours%20&%20Attractions/671f237a351cd.jpeg",
+      "success": true
+    },
+    {
+      "objectName": "uploads/Casa Turul/Tours & Attractions/671f237a6fcd2.jpeg",
+      "newUrl": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/uploads/Casa%20Turul/Tours%20&%20Attractions/671f237a6fcd2.jpeg",
+      "success": true
+    },
+    {
+      "objectName": "uploads/Casa Turul/Tours & Attractions/671f237acd9a0.jpeg",
+      "newUrl": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/uploads/Casa%20Turul/Tours%20&%20Attractions/671f237acd9a0.jpeg",
+      "success": true
+    },
+    {
+      "objectName": "uploads/Casa Turul/Tours & Attractions/671f237b2005e.jpeg",
+      "newUrl": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/uploads/Casa%20Turul/Tours%20&%20Attractions/671f237b2005e.jpeg",
+      "success": true
+    },
+    {
+      "objectName": "uploads/Casa Turul/Tours & Attractions/671f237b88018.jpeg",
+      "newUrl": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/uploads/Casa%20Turul/Tours%20&%20Attractions/671f237b88018.jpeg",
+      "success": true
+    },
+    {
+      "objectName": "uploads/Casa Turul/Tours & Attractions/671f237c11d48.jpeg",
+      "newUrl": "https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/uploads/Casa%20Turul/Tours%20&%20Attractions/671f237c11d48.jpeg",
+      "success": true
+    }
+  ]
+}
