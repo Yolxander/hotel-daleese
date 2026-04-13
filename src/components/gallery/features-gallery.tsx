@@ -16,34 +16,10 @@ function getCachedImageUrl(src: string): string {
   return src;
 }
 
-/** Hardcoded gallery images (hotel-daleese bucket). Edit this list to change what appears in the gallery. */
-const GALLERY_IMAGE_URLS = [
-  'https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/IMG_9625.jpg',
-  'https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/IMG_9621.jpg',
-  'https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/IMG_9618.jpg',
-  'https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/IMG_9580.jpg',
-  'https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/IMG_8791.jpg',
-  'https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/IMG_7629.jpg',
-  'https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/IMG_6559.jpg',
-  'https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/IMG_6558.jpg',
-  'https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/IMG_6343.jpg',
-  'https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/IMG_6339.jpg',
-  'https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/IMG_1632.jpg',
-  'https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/IMG_1631.jpg',
-  'https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/IMG_1630.jpg',
-  'https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/IMG_1628.jpg',
-  'https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/IMG_1625.jpg',
-  'https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/IMG_1611.jpg',
-  'https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/IMG_1609.jpg',
-  'https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/IMG_1162.jpg',
-  'https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/IMG_0843.jpg',
-  'https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/IMG_0842.jpg',
-  'https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/IMG_0646.jpg',
-  'https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/IMG_0644.jpg',
-  'https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/IMG_0635.jpg',
-  'https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/IMG_0632.jpg',
-  'https://kvirwlcodrpwnwzvfcqr.supabase.co/storage/v1/object/public/hotel-daleese/IMG_0508.jpg',
-];
+export type FeaturesGalleryProps = {
+  /** Public Supabase storage URLs (hotel-daleese bucket). Deduped in the component. */
+  imageUrls: string[];
+};
 
 // Preload image function
 const preloadImage = (src: string) => {
@@ -178,9 +154,15 @@ function chunkIntoRows<T>(items: T[]): T[][] {
   return rows;
 }
 
-export function FeaturesGalleryComponent() {
-  const items = useMemo(() => buildGalleryItems(GALLERY_IMAGE_URLS), []);
+export function FeaturesGalleryComponent({ imageUrls }: FeaturesGalleryProps) {
+  const uniqueSourceUrls = useMemo(() => Array.from(new Set(imageUrls)), [imageUrls]);
+  const items = useMemo(() => buildGalleryItems(uniqueSourceUrls), [uniqueSourceUrls]);
   const shuffledItems = useMemo(() => shuffledForDisplay(items, 0xda1e5e), [items]);
+  const indexById = useMemo(() => {
+    const m = new Map<string, number>();
+    shuffledItems.forEach((item, idx) => m.set(item.id, idx));
+    return m;
+  }, [shuffledItems]);
   const allRows = useMemo(() => chunkIntoRows(shuffledItems), [shuffledItems]);
 
   const [visibleRowCount, setVisibleRowCount] = useState(INITIAL_ROWS);
@@ -245,7 +227,7 @@ export function FeaturesGalleryComponent() {
         <div className="flex flex-col gap-4">
           {visibleRows.map((rowItems, rowIndex) => (
             <motion.div
-              key={rowIndex}
+              key={`gallery-row-${rowIndex}-${rowItems.map((f) => f.id).join("-")}`}
               className="grid w-full gap-4"
               style={{
                 gridTemplateColumns: `repeat(${rowItems.length}, minmax(0, 1fr))`,
@@ -253,7 +235,7 @@ export function FeaturesGalleryComponent() {
               variants={containerVariants}
             >
               {rowItems.map((feature) => {
-                const globalIndex = shuffledItems.indexOf(feature);
+                const globalIndex = indexById.get(feature.id) ?? 0;
                 const isFirstRow = rowIndex === 0;
                 return (
                   <motion.div
@@ -264,6 +246,7 @@ export function FeaturesGalleryComponent() {
                   >
                     {/* unoptimized so browser caches the cached-image API response; lazy for rows below fold */}
                     <Image
+                      key={feature.id}
                       src={feature.src}
                       alt={feature.alt}
                       fill

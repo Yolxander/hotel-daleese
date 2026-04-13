@@ -35,9 +35,11 @@ async function getHotelDaleeseImageUrlsUncached(): Promise<string[]> {
       return ['jpg', 'jpeg', 'png', 'webp'].includes(ext || '');
     });
 
-    const sorted = [...imageFiles].sort();
+    const sorted = Array.from(new Set(imageFiles)).sort();
     const limited = sorted.slice(0, MAX_GALLERY_IMAGES);
-    const urls = limited.map((file) => getPublicUrl(BUCKET_NAME, file));
+    const urls = Array.from(
+      new Set(limited.map((file) => getPublicUrl(BUCKET_NAME, file)))
+    );
 
     if (urls.length > 0) {
       return urls;

@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c7e99333-aede-4333-a5d5-366958e0f415" name="Changes" comment="update images to use supabase instead of google firebase-storage.ts" />
+    <list default="true" id="c7e99333-aede-4333-a5d5-366958e0f415" name="Changes" comment="fixed build">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -144,6 +146,7 @@
       <workItem from="1770744350996" duration="7667000" />
       <workItem from="1771470613835" duration="156000" />
       <workItem from="1776039947990" duration="243000" />
+      <workItem from="1776111379236" duration="689000" />
     </task>
     <task id="LOCAL-00001" summary="update images to use supabase instead of google firebase-storage.ts">
       <option name="closed" value="true" />
@@ -153,7 +156,15 @@
       <option name="project" value="LOCAL" />
       <updated>1776040028708</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="fixed build">
+      <option name="closed" value="true" />
+      <created>1776111778760</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1776111778761</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -161,6 +172,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update images to use supabase instead of google firebase-storage.ts" />
-    <option name="LAST_COMMIT_MESSAGE" value="update images to use supabase instead of google firebase-storage.ts" />
+    <MESSAGE value="fixed build" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed build" />
   </component>
 </project>
